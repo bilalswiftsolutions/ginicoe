@@ -19,4 +19,9 @@ class Customer extends Model
         'customer_token',
         'customer_stauts'
     ];
+
+    public function oldPassword()
+    {
+        return $this->hasMany(OldPassword::class,'csutomer_id');
+    }
 }

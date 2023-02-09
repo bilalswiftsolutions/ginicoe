@@ -41,6 +41,15 @@ class ResetPasswordController extends Controller
             return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
         }
         
+        $user = Customer::with(['oldPassword'])->where('customer_email', $request->current_email)->first();
+
+     
+        foreach ($user->oldPassword as $old_password) {
+           
+            if (Hash::check($request->password, $old_password->password)) {
+                throw ValidationException::withMessages(['same_password' => __(' you are not allowed to use your last 4 password to comply the password security policy.')]);
+            }
+        }
         
         $request->validate([
             'new_password' => 'required',
