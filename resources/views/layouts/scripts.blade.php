@@ -42,3 +42,4 @@
 <script src="{{ asset('public/frontend/js/select2.full.js') }}"></script>
 <script src="{{ asset('public/frontend/js/toastr.min.js') }}"></script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="{{ asset('public/frontend/js/jquery.validate.min.js') }}"></script>

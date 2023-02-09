@@ -41,7 +41,6 @@ class LoginController extends Controller
         	$saved_password = $check_email->password;
         	$given_password = $request->password;
 
-          
         	if(\Hash::check($given_password,$saved_password) == false)
         	{
         		return redirect()->back()->with('error', 'Password is wrong');

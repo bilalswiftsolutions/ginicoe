@@ -20,11 +20,12 @@
                 <div class="col-md-12">
                     <div class="reg-login-form">
                         <div class="inner">
-                            <form action="{{ route('customer.forget_password.store') }}" method="post">
+                            <form id="forgetPassworForm" action="{{ route('customer.forget_password.store') }}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Email address</label>
                                     <input type="text" class="form-control" name="customer_email">
+                                    <span style="float: left;color:red"> </span><br>
                                 </div>
 
                                 @if($g_setting->google_recaptcha_status == 'Show')
@@ -42,4 +43,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $("#forgetPassworForm").validate({
+            errorPlacement: function(error, element) {
+
+                error.appendTo(element.siblings("span"));
+            },
+            rules: {
+             
+                
+                customer_email: {
+                    required: true,
+                    email: true,
+                    maxlength: 50
+                },
+
+
+            },
+            messages: {
+    
+                customer_email: "Please enter a valid email address",
+
+            }
+        });
+    </script>
 @endsection

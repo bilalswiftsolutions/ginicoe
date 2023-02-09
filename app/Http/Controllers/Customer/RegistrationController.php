@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use App\Mail\RegistrationEmailToCustomer;
 use App\Models\Customer;
+use App\Models\OldPassword;
 use Illuminate\Http\Request;
 use Hash;
 use DB;
@@ -67,6 +68,8 @@ class RegistrationController extends Controller
         $data['customer_status'] = 'Pending';
 
         $customer->fill($data)->save();
+        OldPassword::create(['customer_id'=>$customer->id,'password'=>$customer->customer_password]);
+
 
         // Send Email
         $email_template_data = DB::table('email_templates')->where('id', 6)->first();

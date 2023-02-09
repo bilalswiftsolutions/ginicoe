@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\OldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use DB;
 use Hash;
+use Illuminate\Validation\ValidationException;
 
 class ResetPasswordController extends Controller
 {
@@ -39,6 +41,7 @@ class ResetPasswordController extends Controller
             return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
         }
         
+        
         $request->validate([
             'new_password' => 'required',
             'retype_password' => 'required|same:new_password',
@@ -48,6 +51,8 @@ class ResetPasswordController extends Controller
         $data['customer_token'] = '';
 
         Customer::where('customer_email', $request->current_email)->update($data);
+        OldPassword::create(['customer_email'=>$request->current_email,'password'=>$data['customer_password']]);
+
 
         return redirect()->route('customer.login')->with('success', 'Password is reset successfully!');
     }

@@ -34,7 +34,7 @@
                                             <h1 class="h4 text-gray-900 mb-4">Admin Login</h1>
                                         </div>
 
-                                        <form action="{{ route('admin.login.store') }}" class="user" method="post">
+                                        <form id="adminLoginForm" action="{{ route('admin.login.store') }}" class="user" method="post">
                                             @csrf
                                             <div class="form-group">
                                                 <input id="email" type="email" class="form-control form-control-user" name="email" value="{{ old('email') }}" autocomplete="email" autofocus placeholder="Email Address">
@@ -59,7 +59,7 @@
             </div>
 
         </div>
-
+        
         @include('admin.includes.scripts-footer')
 
     </body>
