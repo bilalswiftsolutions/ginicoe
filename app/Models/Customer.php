@@ -22,6 +22,6 @@ class Customer extends Model
 
     public function oldPassword()
     {
-        return $this->hasMany(OldPassword::class,'csutomer_id');
+        return $this->hasMany(OldPassword::class,'customer_id');
     }
 }
