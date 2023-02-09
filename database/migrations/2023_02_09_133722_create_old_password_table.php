@@ -13,7 +13,7 @@ class CreateOldPasswordTable extends Migration
      */
     public function up()
     {
-        Schema::create('old_password', function (Blueprint $table) {
+        Schema::create('old_passwords', function (Blueprint $table) {
             $table->id();
             $table->integer('customer_id');
             $table->string('password');
