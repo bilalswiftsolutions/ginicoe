@@ -46,7 +46,7 @@ class ResetPasswordController extends Controller
      
         foreach ($user->oldPassword as $old_password) {
            
-            if (Hash::check($request->password, $old_password->password)) {
+            if (Hash::check($request->new_password, $old_password->password)) {
                 throw ValidationException::withMessages(['same_password' => __(' you are not allowed to use your last 4 password to comply the password security policy.')]);
             }
         }
@@ -59,9 +59,9 @@ class ResetPasswordController extends Controller
         $data['customer_password'] = Hash::make($request->new_password);
         $data['customer_token'] = '';
 
-        $customer = Customer::where('customer_email',$request->current_email)->first();
+        
         Customer::where('customer_email', $request->current_email)->update($data);
-        OldPassword::create(['customer_id'=>$customer->id,'password'=>$data['customer_password']]);
+        OldPassword::create(['customer_id'=>$user->id,'password'=>$data['customer_password']]);
 
 
         return redirect()->route('customer.login')->with('success', 'Password is reset successfully!');
