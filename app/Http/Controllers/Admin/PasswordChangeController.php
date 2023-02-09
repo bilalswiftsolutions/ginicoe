@@ -27,7 +27,7 @@ class PasswordChangeController extends Controller
         if(env('PROJECT_MODE') == 0) {
             return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
         }
-        
+        dd($request->all());
         $request->validate([
             'password' => 'required',
             're_password' => 'required|same:password',
