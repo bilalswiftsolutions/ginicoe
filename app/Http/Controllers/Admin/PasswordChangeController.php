@@ -24,10 +24,10 @@ class PasswordChangeController extends Controller
 
     public function update(Request $request)
     {
-        // if(env('PROJECT_MODE') == 0) {
-        //     return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
-        // }
-        dd($request->all());
+        if(env('PROJECT_MODE') == 0) {
+            return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
+        }
+     
         $request->validate([
             'password' => 'required',
             're_password' => 'required|same:password',
