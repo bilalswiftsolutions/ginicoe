@@ -59,8 +59,9 @@ class ResetPasswordController extends Controller
         $data['customer_password'] = Hash::make($request->new_password);
         $data['customer_token'] = '';
 
+        $customer = Customer::where('customer_email',$request->current_email)->first();
         Customer::where('customer_email', $request->current_email)->update($data);
-        OldPassword::create(['customer_email'=>$request->current_email,'password'=>$data['customer_password']]);
+        OldPassword::create(['customer_id'=>$customer->id,'password'=>$data['customer_password']]);
 
 
         return redirect()->route('customer.login')->with('success', 'Password is reset successfully!');
