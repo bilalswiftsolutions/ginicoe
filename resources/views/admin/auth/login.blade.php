@@ -48,6 +48,10 @@
                                         <div class="text-center">
                                             <a class="small" href="{{ route('admin.forget_password') }}">Forgot Password?</a>
                                         </div>
+
+                                        <div class="text-center">
+                                            <a class="small" href="{{ route('admin.register') }}">New User?</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

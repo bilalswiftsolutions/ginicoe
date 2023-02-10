@@ -6,47 +6,65 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Admin;
 use Illuminate\Http\Request;
 use Hash;
+use DB;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Validation\ValidationException;
+
 
 class LoginController extends Controller
 {
-	public function __construct()
+    public function __construct()
     {
-    	$this->middleware(function ($request, $next) {
-			if($request->session()->has('admin')) {
-				return redirect()->route('admin.dashboard');
-			}
-			return $next($request);
-		});
+        $this->middleware(function ($request, $next) {
+            if ($request->session()->has('admin')) {
+                return redirect()->route('admin.dashboard');
+            }
+            return $next($request);
+        });
     }
 
     public function index()
     {
-    	return view('admin.auth.login');
+        $g_setting = DB::table('general_settings')->where('id', 1)->first();
+        return view('admin.auth.login', compact('g_setting'));
     }
 
     public function store(Request $request)
     {
+        $check_email = Admin::where('email', $request->email)->first();
+        if ($check_email) {
+            if (Cache::get("try_{$check_email->id}") == 5) {
+                Cache::increment("try_{$check_email->id}");
+                throw ValidationException::withMessages(['lock_account_warning' => __('Your account will be blocked in another wrong attempt')]);
+            }
+            if (Cache::get("try_{$check_email->id}") >= 5) {
+                Admin::where('email', $request->email)->update(['status' => 0]);
+                Cache::forget("try_{$check_email->id}");
+                throw ValidationException::withMessages(['lock_account_message' => __('Your account has been blocked. Contact your administrator')]);
+            }
+        }
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        $check_email = Admin::where('email',$request->email)->first();
-        if(!$check_email)
-        {
-        	return redirect()->back()->with('error', 'Email address not found');
-        }
-        else
-        {
-        	$saved_password = $check_email->password;
-        	$given_password = $request->password;
 
-        	if(\Hash::check($given_password,$saved_password) == false)
-        	{
-        		return redirect()->back()->with('error', 'Password is wrong');
-        	}
-        }
+        if (!$check_email) {
 
+            return redirect()->back()->with('error', 'Email address not found');
+        } else {
+            $saved_password = $check_email->password;
+            $given_password = $request->password;
+
+            if (Hash::check($given_password, $saved_password) == false) {
+                Cache::increment("try_{$check_email->id}");
+                return redirect()->back()->with('error', 'Password is wrong');
+            }
+        }
+        if ($check_email->status == 0) {
+            Cache::increment("try_{$check_email->id}");
+            return redirect()->back()->with('error', 'Customer is not active');
+        }
         // Saving data into session
         session(['role' => 'admin']);
         session(['id' => $check_email->id]);

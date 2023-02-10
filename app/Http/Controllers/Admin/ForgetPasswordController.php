@@ -43,7 +43,7 @@ class ForgetPasswordController extends Controller
             $message = str_replace('[[reset_link]]', $reset_link, $message);
 
             $data['token'] = $token;
-            Admin::where('id',1)->update($data);
+            Admin::where('email', $check_email->email)->update($data);
 
             Mail::to($request->email)->send(new ResetPasswordMessageToAdmin($subject,$message));
         }

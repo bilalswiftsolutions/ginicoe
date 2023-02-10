@@ -36,6 +36,7 @@
 
                                 <form action="{{ url('admin/reset-password/update') }}" class="user" method="post">
                                     @csrf
+                                    <input type="hidden" name="email" value="{{$email_from_url}}" />
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" name="new_password" autofocus placeholder="New Password">
                                     </div>

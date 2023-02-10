@@ -48,6 +48,7 @@ use App\Http\Controllers\Admin\JobController as JobControllerForAdmin;
 use App\Http\Controllers\Admin\FaqController as FaqControllerForAdmin;
 use App\Http\Controllers\Admin\ProductController as ProductControllerForAdmin;
 use App\Http\Controllers\Admin\OrderController as OrderControllerForAdmin;
+use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\RoleController;
 
 use App\Http\Controllers\Customer\CheckoutController;
@@ -157,6 +158,9 @@ Route::get('admin/dashboard', [DashboardControllerForAdmin::class,'index'])->nam
 Route::get('admin', function () {return redirect('admin/login');});
 Route::get('admin/login', [LoginControllerForAdmin::class,'index'])->name('admin.login');
 Route::post('admin/login/store', [LoginControllerForAdmin::class,'store'])->name('admin.login.store');
+Route::get('admin/register', [RegisterController::class,'index'])->name('admin.register');
+Route::post('admin/register/store', [RegisterController::class,'store'])->name('admin.register.store');
+Route::get('admin/registration/verify/{token}/{email}', [RegisterController::class,'verify']);
 Route::get('admin/logout', [LogoutControllerForAdmin::class,'index'])->name('admin.logout');
 Route::get('admin/forget-password', [ForgetPasswordControllerForAdmin::class,'index'])->name('admin.forget_password');
 Route::post('admin/forget-password/store', [ForgetPasswordControllerForAdmin::class,'store'])->name('admin.forget_password.store');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOldPasswordTable extends Migration
+class AddStatusColumnInAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateOldPasswordTable extends Migration
      */
     public function up()
     {
-        Schema::create('old_passwords', function (Blueprint $table) {
-            $table->id();
-            $table->integer('customer_id')->nullable();
-            $table->integer('admin_id')->nullable();
-            $table->string('password');
-            $table->timestamps();
+        Schema::table('admins', function (Blueprint $table) {
+            $table->boolean('status')->after('email')->default(0);
         });
     }
 
@@ -29,6 +25,8 @@ class CreateOldPasswordTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('old_password');
+        Schema::table('admins', function (Blueprint $table) {
+           $table->dropColumn('status');
+        });
     }
 }
