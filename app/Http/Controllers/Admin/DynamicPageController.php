@@ -112,6 +112,7 @@ class DynamicPageController extends Controller
         }
         
         $dynamic_page = DynamicPage::findOrFail($id);
+        if(file_exists(public_path('uploads/'.$dynamic_page->dynamic_page_banner)))
         unlink(public_path('uploads/'.$dynamic_page->dynamic_page_banner));
         $dynamic_page->delete();
         return Redirect()->back()->with('success', 'Dynamic Page is deleted successfully!');
