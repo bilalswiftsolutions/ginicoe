@@ -133,6 +133,17 @@
         </li>
         @endif
 
+        
+        <!-- Dynamic Pages -->
+        @php if( in_array('Dynamic Pages', $arr_one) || session('role_id')==1 ): @endphp
+        <li class="nav-item @if($conName[1] == 'dynamic-page') active @endif">
+            <a class="nav-link" href="{{ route('admin.dynamic_page.index') }}">
+                <i class="fas fa-cube"></i>
+                <span>Dynamic Pages</span>
+            </a>
+        </li>
+        @endif
+
 
 
         <!-- Admin Users Section -->
@@ -198,15 +209,6 @@
 
 
 
-        <!-- Dynamic Pages -->
-        @php if( in_array('Dynamic Pages', $arr_one) || session('role_id')==1 ): @endphp
-        <li class="nav-item @if($conName[1] == 'dynamic-page') active @endif">
-            <a class="nav-link" href="{{ route('admin.dynamic_page.index') }}">
-                <i class="fas fa-cube"></i>
-                <span>Dynamic Pages</span>
-            </a>
-        </li>
-        @endif
 
         <!-- Menu Manage -->
         @php if( in_array('Menu Manage', $arr_one) || session('role_id')==1 ): @endphp
