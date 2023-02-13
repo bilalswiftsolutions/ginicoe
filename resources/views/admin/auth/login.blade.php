@@ -42,6 +42,13 @@
                                             <div class="form-group">
                                                 <input id="password" type="password" class="form-control form-control-user" name="password" placeholder="Password">
                                             </div>
+                                  
+                                            @if($g_setting->google_recaptcha_status == 'Show')
+                                <div class="form-group">
+                                    <div class="g-recaptcha" data-sitekey="{{ $g_setting->google_recaptcha_site_key }}"></div>
+                                    
+                                </div>
+                                @endif
                                             <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                                         </form>
                                         <hr>

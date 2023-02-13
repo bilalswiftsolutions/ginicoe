@@ -7,3 +7,4 @@
 <link rel="stylesheet" href="{{ asset('public/backend/css/summernote-bs4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('public/backend/css/spacing.css') }}">
 <link rel="stylesheet" href="{{ asset('public/backend/css/style.css') }}">
+<script src='https://www.google.com/recaptcha/api.js'></script>
