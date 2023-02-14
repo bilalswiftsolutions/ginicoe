@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Hash;
 use DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\ValidationException;
 
 class RegisterController extends Controller
 {
@@ -33,6 +34,16 @@ class RegisterController extends Controller
 
         $admin = new Admin();
         $data = $request->only($admin->getFillable());
+
+        if (!preg_match('/^(?!.*(.)(?:.*\1)).*$/',$request->password)) {
+            throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
+
+        }
+
+        if (!preg_match('/^(?!.*(.)\1)[a-z0-9]*$/',$request->password)) {
+            throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
+
+        }
 
         $request->validate(
             [

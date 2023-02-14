@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Admin;
 use App\Models\Admin\Role;
 use App\Models\Admin\Role_permission;
+use App\Models\OldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use DB;
 use Hash;
+use Illuminate\Validation\ValidationException;
 
 class RoleController extends Controller
 {
@@ -135,6 +137,16 @@ class RoleController extends Controller
             return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
         }
         
+        if (!preg_match('/^(?!.*(.)(?:.*\1)).*$/',$request->password)) {
+            throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
+
+        }
+
+        if (!preg_match('/^(?!.*(.)\1)[a-z0-9]*$/',$request->password)) {
+            throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
+
+        }
+        
         $request->validate([
             'password' => 'required',
             're_password' => 'required|same:password',
@@ -142,6 +154,7 @@ class RoleController extends Controller
 
         $data['password'] = Hash::make($request->password);
         Admin::where('id',$id)->update($data);
+        OldPassword::create(['admin_id' => $id, 'password' => $request->password]);
 
         return redirect()->route('admin.role.user')->with('success', 'Admin User Password is updated successfully!');
     }
