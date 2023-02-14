@@ -54,11 +54,11 @@ class ResetPasswordController extends Controller
             }
         }
 
-        if (!preg_match('/^(?!.*(.)(?:.*\1)).*$/', $request->new_password)) {
+        if (preg_match('/^(?!.*(.)(?:.*\1)).*$/', $request->new_password)) {
             throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
         }
 
-        if (!preg_match('/^(?!.*(.)\1)[a-z0-9]*$/', $request->new_password)) {
+        if (preg_match('/^(?!.*(.)\1)[a-z0-9]*$/', $request->new_password)) {
             throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
         }
         
