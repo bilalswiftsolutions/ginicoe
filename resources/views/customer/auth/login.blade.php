@@ -42,7 +42,7 @@
                                 <button type="submit" class="btn btn-primary btn-arf">Login</button>
                                 <a href="{{ route('customer.forget_password') }}" class="btn btn-warning">Forget Password</a>
                                 <div class="new-user">
-                                    <a href="{{ route('customer.registration') }}">New User? Make Registration</a>
+                                    <a href="{{ route('customer.registration') }}">New User? Make SignUP</a>
                                 </div>
                             </form>
                         </div>

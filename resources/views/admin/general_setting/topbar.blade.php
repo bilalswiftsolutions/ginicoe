@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Top Bar Registration Status</label>
+                            <label for="">Top Bar SignUP Status</label>
                             <div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="top_bar_registration_status" id="rr5" value="Show" @if($general_setting->top_bar_registration_status == 'Show') checked @endif>

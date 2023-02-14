@@ -37,7 +37,7 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Admin Registration</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">SignUP</h1>
                                     </div>
 
                                     <form id="adminRegisterForm" action="{{ route('admin.register.store') }}"
@@ -77,7 +77,7 @@
                                         @endif
                                         @endforeach
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Register</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">SignUP</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
