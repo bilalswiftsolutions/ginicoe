@@ -103,5 +103,8 @@
         border-color: #fff!important;
     }
 
-
+   .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+    display: none;
+   }
+   
 </style>

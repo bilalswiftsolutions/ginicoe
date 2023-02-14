@@ -370,5 +370,6 @@
                 pageLanguage: 'en'
             }, 'google_translate');
         }
+  
     </script>
 @endsection
