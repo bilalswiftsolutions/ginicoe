@@ -28,7 +28,10 @@ $menu_arr = array();
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-
+                        
+                        <li class="nav-item">
+                            <a href="{{ url('/') }}" class="nav-link">Home</a>
+                        </li>
                         @if($menu_arr['Home'] == 'Show')
                         <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link">Home</a>
@@ -133,6 +136,9 @@ $menu_arr = array();
                             <a href="{{ route('front.contact') }}" class="nav-link ">Contact</a>
                         </li>
                         @endif
+                        <li class="nav-item col-md-2"  style="width:10px;">
+                            <div style="width:10px;" id="google_translate"></div>
+                        </li>
 
                     </ul>
                 </div>

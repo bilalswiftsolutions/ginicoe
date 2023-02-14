@@ -38,7 +38,7 @@
 </div> --}}
 
     <video id="ginicoe_video" width="100%" controls loop autoplay muted>
-        <source src="{{ asset('public/uploads/'.$general_setting->video) }}" type="video/mp4">
+        <source src="{{ asset('public/uploads/' . $general_setting->video) }}" type="video/mp4">
 
 
     </video>
@@ -365,6 +365,10 @@
         </div>
     @endif
     <script>
-        document.getElementById('ginicoe_video').play();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate');
+        }
     </script>
 @endsection

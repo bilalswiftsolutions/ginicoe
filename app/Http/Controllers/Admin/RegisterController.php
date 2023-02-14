@@ -45,6 +45,17 @@ class RegisterController extends Controller
 
         }
 
+      
+            $parts = preg_split('/\s+/', $request->name);
+         
+            foreach ($parts as $part) {
+                
+                if (str_contains($request->new_password, $part)) {
+                    throw ValidationException::withMessages(['contain_name' => __('You can not use name in your password')]);
+                }
+            }
+        
+
         $request->validate(
             [
                 'name' => 'required',
