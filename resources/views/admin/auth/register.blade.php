@@ -37,7 +37,8 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">SignUp to Reduce Income Inequality</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">SignUP to</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Reduce Income Inequality</h1>
                                     </div>
 
                                     <form id="adminRegisterForm" action="{{ route('admin.register.store') }}"
