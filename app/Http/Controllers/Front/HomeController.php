@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\GeneralSetting;
 use Illuminate\Http\Request;
 use DB;
 
@@ -17,6 +18,7 @@ class HomeController extends Controller
     	$projects = DB::table('projects')->get();
     	$team_members = DB::table('team_members')->get();
     	$blogs = DB::table('blogs')->get();
-        return view('pages.index', compact('sliders','page_home','why_choose_items','services', 'testimonials','projects','team_members','blogs'));
+		$general_setting = GeneralSetting::select('video')->where('id',1)->first();
+        return view('pages.index', compact('general_setting','sliders','page_home','why_choose_items','services', 'testimonials','projects','team_members','blogs'));
     }
 }

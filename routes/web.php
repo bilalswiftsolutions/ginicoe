@@ -222,6 +222,12 @@ Route::post('admin/slider/update/{id}', [SliderController::class,'update']);
 Route::get('admin/setting/general/logo/edit', [GeneralSettingController::class,'logo_edit'])->name('admin.general_setting.logo');
 Route::post('admin/setting/general/logo/update', [GeneralSettingController::class,'logo_update']);
 
+/* --------------------------------------- */
+/* Video - Admin */
+/* --------------------------------------- */
+Route::get('admin/setting/general/video/edit', [GeneralSettingController::class,'video_edit'])->name('admin.general_setting.video');
+Route::post('admin/setting/general/video/update', [GeneralSettingController::class,'video_update']);
+
 
 /* --------------------------------------- */
 /* Favicon - Admin */

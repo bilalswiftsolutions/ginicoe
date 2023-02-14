@@ -48,6 +48,39 @@ class GeneralSettingController extends Controller
 
     }
 
+    public function video_edit()
+    {
+        $general_setting = GeneralSetting::where('id',1)->first();
+        return view('admin.general_setting.video', compact('general_setting'));
+    }
+
+    public function video_update(Request $request)
+    {
+        if(env('PROJECT_MODE') == 0) {
+            return redirect()->back()->with('error', env('PROJECT_NOTIFICATION'));
+        }
+        
+        $request->validate([
+            'video' => 'required|mimes:mp4|max:300048'
+        ]);
+
+        // Unlink old photo
+        if(file_exists(public_path('uploads/'.$request->current_video)))
+        unlink(public_path('uploads/'.$request->current_video));
+
+        // Uploading new photo
+        $ext = $request->file('video')->extension();
+        $final_name = 'video_'.time().'.'.$ext;
+        $request->file('video')->move(public_path('uploads/'), $final_name);
+
+        $data['video'] = $final_name;
+
+        GeneralSetting::where('id',1)->update($data);
+
+        return redirect()->back()->with('success', 'Video is updated successfully!');
+
+    }
+
     public function favicon_edit()
     {
         $general_setting = GeneralSetting::where('id',1)->first();

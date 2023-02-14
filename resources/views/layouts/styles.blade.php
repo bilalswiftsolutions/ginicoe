@@ -12,8 +12,10 @@
 <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('public/frontend/css/spacing.css') }}">
 <link rel="stylesheet" href="{{ asset('public/frontend/css/cookieconsent.min.css') }}">
+<link rel="stylesheet" href="{{ asset('public/frontend/css/video_slider.css') }}">
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
+
 
 <style>
     #preloader #status {

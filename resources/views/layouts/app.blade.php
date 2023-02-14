@@ -529,6 +529,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                             @endforeach
                         </ul>
                     </div>
+                    <div id="google_translate_element"></div>
                 </div>
             </div>
         </div>
@@ -543,6 +544,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                     <ul>
                         <li><a href="{{ route('front.term') }}">Terms and Conditions</a></li>
                         <li><a href="{{ route('front.privacy') }}">Privacy Policy</a></li>
+                 
                     </ul>
                 </div>
             </div>
