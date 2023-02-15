@@ -93,16 +93,16 @@ class RegisterController extends Controller
             ]
         );
 
-        if ($g_setting->google_recaptcha_status == 'Show') {
-            $request->validate(
-                [
-                    'g-recaptcha-response' => 'required'
-                ],
-                [
-                    'g-recaptcha-response.required' => 'You must have to input recaptcha correctly'
-                ]
-            );
-        }
+        // if ($g_setting->google_recaptcha_status == 'Show') {
+        //     $request->validate(
+        //         [
+        //             'g-recaptcha-response' => 'required'
+        //         ],
+        //         [
+        //             'g-recaptcha-response.required' => 'You must have to input recaptcha correctly'
+        //         ]
+        //     );
+        // }
 
         unset($request->confirm_password);
         $data['password'] = Hash::make($request->password);
