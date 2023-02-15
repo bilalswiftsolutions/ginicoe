@@ -10,7 +10,7 @@
                     <form method="POST" action="{{ route('2fa.post') }}">
                         @csrf
   
-                        <p class="text-center">We sent code to your phone : {{ substr(session('phone'), 0, 5) . '******' . substr(session('phone'),  -2) }}</p>
+                        <p class="text-center">We sent code to your phone : {{ substr(session('phone'), 0, 5) . '******' . substr(session('phone'),  -2) }} and Email: {{session('email')}}</p>
   
                         @if ($message = Session::get('success'))
                             <div class="row">
