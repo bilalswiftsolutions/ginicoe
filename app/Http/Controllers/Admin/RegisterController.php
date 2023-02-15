@@ -82,7 +82,7 @@ class RegisterController extends Controller
                 'email' => 'required|email|unique:admins',
                 'password' => 'required|min:8|max:32',
                 'confirm_password' => 'required|same:password',
-                'phone'=>'required|phone_number'
+                'phone'=>'required'
             ],
             [],
             [
