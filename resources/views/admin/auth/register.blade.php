@@ -55,6 +55,11 @@
                                                 autofocus placeholder="Email Address">
                                         </div>
                                         <div class="form-group">
+                                            <input id="phone" type="text" class="form-control form-control-user"
+                                                name="phone" value="{{ old('phone') }}" autocomplete="phone"
+                                                autofocus placeholder="Phone No.">
+                                        </div>
+                                        <div class="form-group">
                                             <input id="password" type="password" class="form-control form-control-user"
                                                 name="password" placeholder="Password">
                                         </div>

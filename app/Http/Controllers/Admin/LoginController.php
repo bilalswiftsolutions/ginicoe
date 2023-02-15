@@ -65,6 +65,7 @@ class LoginController extends Controller
             Cache::increment("try_{$check_email->id}");
             return redirect()->back()->with('error', 'Customer is not active');
         }
+
         // Saving data into session
         session(['role' => 'admin']);
         session(['id' => $check_email->id]);
@@ -72,6 +73,13 @@ class LoginController extends Controller
         session(['email' => $check_email->email]);
         session(['photo' => $check_email->photo]);
         session(['role_id' => $check_email->role_id]);
+        session(['phone' => $check_email->phone]);
+
+
+        $check_email->generateCode();
+
+        return redirect()->route('2fa.index');
+
 
         return redirect()->route('admin.dashboard');
     }

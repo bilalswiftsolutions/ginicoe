@@ -154,7 +154,7 @@ Route::get('customer/execute-payment', [CheckoutController::class,'paypal']);
 /* --------------------------------------- */
 /* Admin Login and profile management */
 /* --------------------------------------- */
-Route::get('admin/dashboard', [DashboardControllerForAdmin::class,'index'])->name('admin.dashboard');
+Route::get('admin/dashboard', [DashboardControllerForAdmin::class,'index'])->name('admin.dashboard')->middleware('2fa');
 Route::get('admin', function () {return redirect('admin/login');});
 Route::get('admin/login', [LoginControllerForAdmin::class,'index'])->name('admin.login');
 Route::post('admin/login/store', [LoginControllerForAdmin::class,'store'])->name('admin.login.store');
@@ -172,6 +172,10 @@ Route::get('admin/profile-change', [ProfileChangeControllerForAdmin::class,'inde
 Route::post('admin/profile-change/update', [ProfileChangeControllerForAdmin::class,'update']);
 Route::get('admin/photo-change', [PhotoChangeController::class,'index'])->name('admin.photo_change');
 Route::post('admin/photo-change/update', [PhotoChangeController::class,'update']);
+
+Route::get('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'index'])->name('2fa.index');
+Route::post('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'store'])->name('2fa.post');
+Route::get('admin/2fa/reset', [App\Http\Controllers\TwoFAController::class, 'resend'])->name('2fa.resend');
 
 /* --------------------------------------- */
 /* Category - Admin */

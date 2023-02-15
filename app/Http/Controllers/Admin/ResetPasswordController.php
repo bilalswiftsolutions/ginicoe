@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Admin;
+use App\Models\CommonlyUsedPassword;
 use App\Models\OldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -54,12 +55,22 @@ class ResetPasswordController extends Controller
             }
         }
 
-        if (preg_match('/^(?!.*(.)(?:.*\1)).*$/', $request->new_password)) {
+        if (preg_match('/(.)\1/', $request->new_password)) {
             throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
         }
 
-        if (preg_match('/^(?!.*(.)\1)[a-z0-9]*$/', $request->new_password)) {
+        if (preg_match('/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/i', $request->new_password) || preg_match("/\d{3,}/", $request->new_password)) {
             throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
+        }
+        if(count($this->checkBankNameValidation($request->new_password)) > 0)
+        {
+            throw ValidationException::withMessages(['consec_char' => __('You can not use Bank Name in your Password')]);
+
+        }
+        if(CommonlyUsedPassword::where('password',$request->new_password)->exists())
+        {
+            throw ValidationException::withMessages(['commonly_used_password' => __('You can not use Commonly used password')]);
+
         }
         
 
@@ -83,5 +94,95 @@ class ResetPasswordController extends Controller
 
 
         return redirect()->route('admin.login')->with('success', 'Password is reset successfully!');
+    }
+
+   
+    
+    public function checkBankNameValidation($password)
+    {
+        $banks = array(
+            "5th 3rd",
+            "Acorns",
+            "Alliance Data",
+            "Alliant Credit Union",
+            "Ally",
+            "Ally Mobile Banking",
+            "AloStar Commerce",
+            "American Express",
+            "America",
+            "Internet USA",
+            "Bank5 Connect",
+            "Barclays Delaware",
+            "BB&T",
+            "BBVA",
+            "Betterment",
+            "BMO Harris Mobile Banking",
+            "Capital One",
+            "Capital One 360",
+            "Charles Schwab",
+            "Chase Mobile",
+            "Chime",
+            "CIT",
+            "Citi Mobile",
+            "Citibank",
+            "Compass",
+            "Connexus Credit Unition",
+            "Credit One",
+            "Discover",
+            "E*Trade Mobile",
+            "E-Trade",
+            "Fidelity",
+            "FifthThird",
+            "Fintech",
+            "First National",
+            "First Premiere",
+            "Goldman Sachs",
+            "HSBC",
+            "Incredible",
+            "JPMorganChase",
+            "Key",
+            "LearnVest",
+            "M1 Finance",
+            "Micro investment",
+            "Mint",
+            "Motif Explorer",
+            "Moven",
+            "Nationwide",
+            "Nationwide",
+            "Navy Federal Credit Union",
+            "Pentagon Federal Credit Union",
+            "PNC",
+            "Reddit",
+            "Regions",
+            "Robinhood",
+            "Rocket Mortgage",
+            "Sallie Mae",
+            "SigFg",
+            "Simple – Better Banking",
+            "Simplify With Apps and Services",
+            "SoFi Lending",
+            "Stash",
+            "Stockpile",
+            "Sun Trust",
+            "SunTrust",
+            "Synchrony",
+            "TD Ameritrade",
+            "TD",
+            "TradeHero",
+            "Truist",
+            "U.S.",
+            "Union",
+            "USAA",
+            "Wealthfront",
+            "Wells Fargo",
+            "Yahoo",
+            "YNA"
+        );
+        
+        $string_to_check = $password;
+        $matches = array_filter($banks, function($bank) use ($string_to_check) {
+            return strpos($string_to_check, $bank) !== false;
+        });
+        return $matches;
     }
 }
