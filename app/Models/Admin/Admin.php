@@ -55,7 +55,7 @@ class Admin extends Model
 
     
         } catch (Exception $e) {
-            dd($e->getMessage());
+           
             info("Error: ". $e->getMessage());
         }
     }

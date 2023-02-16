@@ -154,7 +154,7 @@ Route::get('customer/execute-payment', [CheckoutController::class,'paypal']);
 /* --------------------------------------- */
 /* Admin Login and profile management */
 /* --------------------------------------- */
-Route::get('admin/dashboard', [DashboardControllerForAdmin::class,'index'])->name('admin.dashboard')->middleware('2fa');
+
 Route::get('admin', function () {return redirect('admin/login');});
 Route::get('admin/login', [LoginControllerForAdmin::class,'index'])->name('admin.login');
 Route::post('admin/login/store', [LoginControllerForAdmin::class,'store'])->name('admin.login.store');
@@ -166,16 +166,20 @@ Route::get('admin/forget-password', [ForgetPasswordControllerForAdmin::class,'in
 Route::post('admin/forget-password/store', [ForgetPasswordControllerForAdmin::class,'store'])->name('admin.forget_password.store');
 Route::get('admin/reset-password/{token}/{email}', [ResetPasswordControllerForAdmin::class,'index']);
 Route::post('admin/reset-password/update', [ResetPasswordControllerForAdmin::class,'update']);
+
+Route::get('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'index'])->name('2fa.index');
+Route::post('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'store'])->name('2fa.post');
+Route::get('admin/2fa/reset', [App\Http\Controllers\TwoFAController::class, 'resend'])->name('2fa.resend');
+
+
+Route::group(['middleware' => '2fa'], function () {
 Route::get('admin/password-change', [PasswordChangeControllerForAdmin::class,'index'])->name('admin.password_change');
 Route::post('admin/password-change/update', [PasswordChangeControllerForAdmin::class,'update']);
 Route::get('admin/profile-change', [ProfileChangeControllerForAdmin::class,'index'])->name('admin.profile_change');
 Route::post('admin/profile-change/update', [ProfileChangeControllerForAdmin::class,'update']);
 Route::get('admin/photo-change', [PhotoChangeController::class,'index'])->name('admin.photo_change');
 Route::post('admin/photo-change/update', [PhotoChangeController::class,'update']);
-
-Route::get('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'index'])->name('2fa.index');
-Route::post('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'store'])->name('2fa.post');
-Route::get('admin/2fa/reset', [App\Http\Controllers\TwoFAController::class, 'resend'])->name('2fa.resend');
+Route::get('admin/dashboard', [DashboardControllerForAdmin::class,'index'])->name('admin.dashboard')->middleware('2fa');
 
 /* --------------------------------------- */
 /* Category - Admin */
@@ -632,3 +636,4 @@ Route::get('admin/role/edit/{id}', [RoleController::class,'edit']);
 Route::post('admin/role/update/{id}', [RoleController::class,'update']);
 Route::get('admin/role/access-setup/{id}', [RoleController::class,'access_setup']);
 Route::post('admin/role/access-setup-update/{id}', [RoleController::class,'access_setup_update']);
+});
