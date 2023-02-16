@@ -36,24 +36,25 @@ class Admin extends Model
         );
   
         $receiverNumber = session('phone');
-        $message = "2FA login code is ". $code;
-    
+        $message = "Your Ginicoe Verification Code is: ". $code;
+ 
         try {
    
-            if(false){
+            
             $account_sid = getenv("TWILIO_SID");
             $auth_token = getenv("TWILIO_TOKEN");
             $twilio_number = getenv("TWILIO_FROM");
-    
+
             $client = new Client($account_sid, $auth_token);
             $client->messages->create($receiverNumber, [
                 'from' => $twilio_number, 
                 'body' => $message]);
-            }
+            
             Mail::to(session('email'))->send(new Send2FAMail('2FA Code from Ginicoe',$message));
 
     
         } catch (Exception $e) {
+            dd($e->getMessage());
             info("Error: ". $e->getMessage());
         }
     }
