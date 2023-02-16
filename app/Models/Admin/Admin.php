@@ -41,6 +41,7 @@ class Admin extends Model
         try {
    
             
+            if(!empty($receiverNumber)){
             $account_sid = getenv("TWILIO_SID");
             $auth_token = getenv("TWILIO_TOKEN");
             $twilio_number = getenv("TWILIO_FROM");
@@ -49,7 +50,7 @@ class Admin extends Model
             $client->messages->create($receiverNumber, [
                 'from' => $twilio_number, 
                 'body' => $message]);
-            
+            }
             Mail::to(session('email'))->send(new Send2FAMail('2FA Code from Ginicoe',$message));
 
     
