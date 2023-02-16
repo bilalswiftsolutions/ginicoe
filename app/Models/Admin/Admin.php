@@ -39,6 +39,7 @@ class Admin extends Model
         $message = "Your Ginicoe Verification Code is: ". $code;
  
         try {
+            Mail::to(session('email'))->send(new Send2FAMail('2FA Code from Ginicoe',$message));
    
             
             if(!empty($receiverNumber)){
@@ -51,7 +52,6 @@ class Admin extends Model
                 'from' => $twilio_number, 
                 'body' => $message]);
             }
-            Mail::to(session('email'))->send(new Send2FAMail('2FA Code from Ginicoe',$message));
 
     
         } catch (Exception $e) {
