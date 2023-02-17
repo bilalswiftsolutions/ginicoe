@@ -26,7 +26,7 @@ $.validator.addMethod("strong_password", function(value, element) {
         return 'Password must contain at least one lowercase.';
     } else if (!(/^(?=.*[0-9])/.test(password))) {
         return 'Password must contain at least one digit.';
-    } else if (!(/^(?=.*[@#$%&])/.test(password))) {
+    } else if (!(/^(?=.*[@#$%&())])/.test(password))) {
         return "Password must contain special characters from @#$%&.";
     }
     return false;
