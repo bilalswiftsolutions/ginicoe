@@ -35,10 +35,10 @@ class RegisterController extends Controller
 
 
 
-        $email_domain = "@" . substr(strstr($request->email, '@'), 1);
-        if (!in_array($email_domain, ["@gmail", "@yahoo.com", "@outlook.com", "@hotmail.com", "@mail.com", "@icloud.com", "@zohomail.com", "@tutanota.com", "@aol.com", "@yandex.com"])) {
-            throw ValidationException::withMessages(['in_valid_email' => __('You can only use these email provider address @gmail, @yahoo.com, @outlook.com, @hotmail.com, @mail.com, @icloud.com, @zohomail.com, @tutanota.com, @aol.com, @yandex.com')]);
-        }
+        // $email_domain = "@" . substr(strstr($request->email, '@'), 1);
+        // if (!in_array($email_domain, ["@gmail", "@yahoo.com", "@outlook.com", "@hotmail.com", "@mail.com", "@icloud.com", "@zohomail.com", "@tutanota.com", "@aol.com", "@yandex.com"])) {
+        //     throw ValidationException::withMessages(['in_valid_email' => __('You can only use these email provider address @gmail, @yahoo.com, @outlook.com, @hotmail.com, @mail.com, @icloud.com, @zohomail.com, @tutanota.com, @aol.com, @yandex.com')]);
+        // }
 
         $admin = new Admin();
         $data = $request->only($admin->getFillable());

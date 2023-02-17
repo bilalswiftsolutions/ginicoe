@@ -3,25 +3,9 @@
         ->where('id', 1)
         ->first();
 @endphp
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>SignUP</title>
-
-    @include('admin.includes.styles')
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    @include('admin.includes.scripts')
-
-</head>
-
-<body class="bg-gradient-primary">
+@section('content')
     <div class="container v-center">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -41,47 +25,61 @@
                                         <h1 class="h4 text-gray-900 mb-4">Reduce Income Inequality</h1>
                                     </div>
 
-                                    <form id="adminRegisterForm" action="{{ route('admin.register.store') }}"
-                                        class="user" method="post">
+                                    <form id="adminRegisterForm" action="{{ route('admin.register.store') }}" class="user"
+                                        method="post">
                                         @csrf
                                         <div class="form-group">
                                             <input id="name" type="text" class="form-control form-control-user"
                                                 name="name" value="{{ old('name') }}" autocomplete="name" autofocus
                                                 placeholder="Name">
+                                            <p style="color:red;"></p>
                                         </div>
+
+
                                         <div class="form-group">
                                             <input id="email" type="email" class="form-control form-control-user"
-                                                name="email" value="{{ old('email') }}" autocomplete="email"
-                                                autofocus placeholder="Email Address">
+                                                name="email" value="{{ old('email') }}" autocomplete="email" autofocus
+                                                placeholder="Email Address">
+                                            <p style="color:red;"></p>
                                         </div>
+
                                         <div class="form-group">
                                             <input id="phone" type="text" class="form-control form-control-user"
-                                                name="phone" value="{{ old('phone') }}" autocomplete="phone"
-                                                autofocus placeholder="Phone No.">
+                                                name="phone" value="{{ old('phone') }}" autocomplete="phone" autofocus
+                                                placeholder="Phone No.">
+                                            <p style="color:red;"></p>
                                         </div>
                                         <div class="form-group">
                                             <input id="password" type="password" class="form-control form-control-user"
                                                 name="password" placeholder="Password">
+                                            <p style="color:red"></p>
                                         </div>
                                         <div class="form-group">
                                             <input id="confirm_password" type="password"
                                                 class="form-control form-control-user" name="confirm_password"
                                                 placeholder="Confirm Password">
+                                            <p style="color:red"></p>
                                         </div>
-                                        <div class="row mt-1 mb-2">
-                                        @foreach($roles as $role)
-                                        @if($role->role_name != 'Admin')
-                                        <div class="col-md-6">
-                                        <div class="form-check">
-                                            <input class=" form-check-input" @if($loop->iteration == 2) checked @endif type="radio" value="{{$role->id}}"
-                                                name="role_id" >
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                {{$role->role_name}}
-                                            </label>
-                                        </div>
-                                        </div>
-                                        @endif
-                                        @endforeach
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    @foreach ($roles as $role)
+                                                        @if ($role->role_name != 'Admin')
+                                                            <div class="col-md-6">
+                                                                <div class="form-check" style="float: left">
+                                                                    <input class=" form-check-input"
+                                                                        @if ($loop->iteration == 2) checked @endif
+                                                                        type="radio" value="{{ $role->id }}"
+                                                                        name="role_id">
+                                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                                        {{ $role->role_name }}
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
+                                            </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">SignUP</button>
                                     </form>
@@ -105,8 +103,77 @@
 
     </div>
 
-    @include('admin.includes.scripts-footer')
+    <script>
+        $.validator.addMethod('noemail', function(value) {
+            return /.+@(gmail|yahoo|aol|zoho|proton|mail|tutanota|icloud|hotmail|outlook)\.com$/
+                .test(value);
+        }, 'This email address is not allowed.');
 
-</body>
+        $.validator.addMethod('identical_char', function(value) {
+            return /^(?!.*(.)\1)[ -~]+$/
+                .test(value);
+        }, 'Identical Characters are not allowed.');
 
-</html>
+        $.validator.addMethod('consecutive_char', function(value) {
+            return /^(?!.*\d{2})[\s\S]+$/
+                .test(value);
+        }, 'Consecutive Characters are not allowed.');
+
+        $("#adminRegisterForm").validate({
+            errorPlacement: function(error, element) {
+
+                error.appendTo(element.siblings('p'));
+            },
+            rules: {
+                name: {
+                    required: true,
+                    maxlength: 25
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                    maxlength: 25,
+                    identical_char: true,
+                    consecutive_char: true,
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#password",
+                    maxlength: 25
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    maxlength: 50,
+                    noemail: true,
+                },
+                phone: {
+                    required: true,
+                    maxlength: 15,
+                },
+                role_id: {
+                    required: true,
+                }
+
+
+            },
+            messages: {
+                name: "Please enter your Name",
+
+
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 8 characters long"
+                },
+                confirm_password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 8 characters long",
+                    equalTo: "Please enter the same password as above"
+                },
+                email: "Please enter a valid email address",
+
+            }
+        });
+    </script>
+@endsection
