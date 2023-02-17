@@ -41,7 +41,7 @@ class ResetPasswordController extends Controller
         foreach ($user->oldPassword as $old_password) {
 
             if (Hash::check($request->new_password, $old_password->password)) {
-                throw ValidationException::withMessages(['same_password' => __('You are not allowed to use your last 4 password to comply the password security policy.')]);
+                throw ValidationException::withMessages(['same_password' => __('You are not allowed to use your last 5 password to comply the password security policy.')]);
             }
         }
         if ($user) {
@@ -55,13 +55,7 @@ class ResetPasswordController extends Controller
             }
         }
 
-        if (preg_match('/(.)\1/', $request->new_password)) {
-            throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
-        }
-
-        if (preg_match('/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/i', $request->new_password) || preg_match("/\d{3,}/", $request->new_password)) {
-            throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
-        }
+     
         if(count($this->checkBankNameValidation($request->new_password)) > 0)
         {
             throw ValidationException::withMessages(['consec_char' => __('You can not use Bank Name in your Password')]);

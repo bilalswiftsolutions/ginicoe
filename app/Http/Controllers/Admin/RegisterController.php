@@ -35,11 +35,7 @@ class RegisterController extends Controller
 
 
 
-        // $email_domain = "@" . substr(strstr($request->email, '@'), 1);
-        // if (!in_array($email_domain, ["@gmail", "@yahoo.com", "@outlook.com", "@hotmail.com", "@mail.com", "@icloud.com", "@zohomail.com", "@tutanota.com", "@aol.com", "@yandex.com"])) {
-        //     throw ValidationException::withMessages(['in_valid_email' => __('You can only use these email provider address @gmail, @yahoo.com, @outlook.com, @hotmail.com, @mail.com, @icloud.com, @zohomail.com, @tutanota.com, @aol.com, @yandex.com')]);
-        // }
-
+  
         $admin = new Admin();
         $data = $request->only($admin->getFillable());
 
@@ -55,13 +51,7 @@ class RegisterController extends Controller
         }
 
 
-        // if (preg_match('/(.)\1/', $request->password)) {
-        //     throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
-        // }
-
-        // if (preg_match('/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/i', $request->password) || preg_match("/\d{3,}/", $request->password)) {
-        //     throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
-        // }
+       
         if (count($this->checkBankNameValidation($request->password)) > 0) {
             throw ValidationException::withMessages(['consec_char' => __('We have a little problem. Please remove bank name from the Password.')]);
         }
