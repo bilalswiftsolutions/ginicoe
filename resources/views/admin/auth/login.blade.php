@@ -124,6 +124,7 @@
                     required: true,
                     minlength: 8,
                     maxlength: 32,
+                    
                  
                 },
                

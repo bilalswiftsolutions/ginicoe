@@ -61,15 +61,7 @@
 
     @include('admin.includes.scripts-footer')
     <script>
-        $.validator.addMethod('identical_char', function(value) {
-            return /^(?!.*(.)\1)[ -~]+$/
-                .test(value);
-        }, 'Identical Characters are not allowed.');
-
-        $.validator.addMethod('consecutive_char', function(value) {
-            return /^(?!.*\d{2})[\s\S]+$/
-                .test(value);
-        }, 'Consecutive Characters are not allowed.');
+      
 
         $("#adminResetPasswordForm").validate({
             errorPlacement: function(error, element) {
@@ -82,8 +74,8 @@
                  
                     minlength: 8,
                     maxlength: 32,
-                    consecutive_char: true,
-                    identical_char: true,
+                    strong_password: true,
+                  
                 },
                 retype_password: {
                     required: true,
