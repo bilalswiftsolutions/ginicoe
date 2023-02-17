@@ -3,25 +3,14 @@
         ->where('id', 1)
         ->first();
 @endphp
-<!DOCTYPE html>
-<html lang="en">
+@php
+    $general_setting = DB::table('general_settings')
+        ->where('id', 1)
+        ->first();
+@endphp
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Reset Password</title>
-
-    @include('admin.includes.styles')
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    @include('admin.includes.scripts')
-
-</head>
-
-<body class="bg-gradient-primary">
+@section('content')
     <div class="container v-center">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -48,7 +37,8 @@
                                             <input id="email" type="email" class="form-control form-control-user"
                                                 name="email" value="{{ old('email') }}" autocomplete="email"
                                                 autofocus placeholder="Email Address">
-                                         
+
+                                                <p style="color:red;"></p>
 
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">Send
@@ -73,7 +63,23 @@
     @include('admin.includes.scripts-footer')
 
 
-    
-</body>
+    <script>
+        $("#adminForgetPassworForm").validate({
+            errorPlacement: function(error, element) {
 
-</html>
+                error.appendTo(element.siblings('p'));
+            },
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                    maxlength: 50,
+                    noemail: true,
+                },
+            },
+            messages: {         
+                email: "Please enter a valid email address",
+            }
+        });
+    </script>
+  @endsection
