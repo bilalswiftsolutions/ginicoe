@@ -102,7 +102,7 @@ class GeneralSettingController extends Controller
 
         // Uploading new photo
         $ext = $request->file('favicon')->extension();
-        $final_name = 'favicon'.'.'.$ext;
+        $final_name = 'favicon'.time().'.'.$ext;
         $request->file('favicon')->move(public_path('uploads/'), $final_name);
 
         $data['favicon'] = $final_name;
