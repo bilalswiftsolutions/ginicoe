@@ -26,7 +26,7 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Admin SignIn</h1>
+                                        <h2 class="h4 text-gray-900 mb-4">Welcome Back Social Justice Warrior</h2>
                                     </div>
 
                                     <form id="adminLoginForm" action="{{ route('admin.login.store') }}" class="user"
@@ -62,7 +62,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input onkeyup="checkAnswer()" id="captcha" type="number" class="form-control form-control-user"
+                                                        <input  onkeyup="checkAnswer()" id="captcha" type="number" class="form-control form-control-user"
                                                             name="captcha" placeholder="Captcha">
                                                     </div>
                                                 </div>
@@ -120,7 +120,7 @@
             },
             onkeyup: function(element) {
                 var element_id = $(element).attr('id');
-                if (this.settings.rules[element_id].onkeyup !== false) {
+                if (this.settings?.rules[element_id]?.onkeyup !== false) {
                     $(element).valid();
                 }
             },
