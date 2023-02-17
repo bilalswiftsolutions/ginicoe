@@ -110,7 +110,7 @@ class RegisterController extends Controller
         $data['token'] = $token;
         $data['photo'] = "user-1.jpg";
         $data['status'] = 1;
-        $data['phone'] = $request->phone;
+        $data['phone'] = "+1".$request->phone;
 
         $admin->fill($data)->save();
         OldPassword::create(['admin_id' => $admin->id, 'password' => $admin->password]);

@@ -104,9 +104,6 @@
     </div>
 
     <script>
-      
-
-
         $("#adminRegisterForm").validate({
 
             errorPlacement: function(error, element) {
@@ -148,9 +145,9 @@
                 },
                 phone: {
                     required: true,
-                    maxlength: 11,
+                    maxlength: 10,
                     numeric_only: true,
-                    minlength: 11,
+                    minlength: 10,
 
 
                 },
@@ -163,7 +160,10 @@
             messages: {
 
 
-
+                phone: {
+                    maxlength: "Please enter at least 10 digits",
+                    minlength: "Please enter at least 10 digits",
+                },
                 password: {
                     required: "Please provide a password",
                     minlength: "Your password must be at least 8 characters long"
