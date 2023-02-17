@@ -123,9 +123,8 @@
                 password: {
                     required: true,
                     minlength: 8,
-                    maxlength: 25,
-                    identical_char: true,
-                    consecutive_char: true,
+                    maxlength: 32,
+                 
                 },
                
                 email: {

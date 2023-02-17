@@ -29,9 +29,7 @@ $menu_arr = array();
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         
-                        <li class="nav-item">
-                            <a href="{{ url('/') }}" class="nav-link">Home</a>
-                        </li>
+                      
                         @if($menu_arr['Home'] == 'Show')
                         <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link">Home</a>

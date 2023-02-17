@@ -22,7 +22,7 @@
 
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">SignUP to</h1>
-                                        <h1 class="h4 text-gray-900 mb-4">Reduce Income Inequality</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Advance Social Justice</h1>
                                     </div>
 
                                     <form id="adminRegisterForm" action="{{ route('admin.register.store') }}" class="user"
@@ -104,37 +104,34 @@
     </div>
 
     <script>
-        $.validator.addMethod('noemail', function(value) {
-            return /.+@(gmail|yahoo|aol|zoho|proton|mail|tutanota|icloud|hotmail|outlook)\.com$/
-                .test(value);
-        }, 'This email address is not allowed.');
+      
 
-        $.validator.addMethod('identical_char', function(value) {
-            return /^(?!.*(.)\1)[ -~]+$/
-                .test(value);
-        }, 'Identical Characters are not allowed.');
-
-        $.validator.addMethod('consecutive_char', function(value) {
-            return /^(?!.*\d{2})[\s\S]+$/
-                .test(value);
-        }, 'Consecutive Characters are not allowed.');
 
         $("#adminRegisterForm").validate({
+
             errorPlacement: function(error, element) {
 
                 error.appendTo(element.siblings('p'));
             },
+            onkeyup: function(element) {
+                var element_id = $(element).attr('id');
+                if (this.settings.rules[element_id].onkeyup !== false) {
+                    $(element).valid();
+                }
+            },
             rules: {
                 name: {
                     required: true,
-                    maxlength: 25
+                    maxlength: 25,
+                    lettersonly: true,
+
                 },
                 password: {
                     required: true,
                     minlength: 8,
                     maxlength: 25,
-                    identical_char: true,
-                    consecutive_char: true,
+                    strong_password: true,
+
                 },
                 confirm_password: {
                     required: true,
@@ -147,10 +144,15 @@
                     email: true,
                     maxlength: 50,
                     noemail: true,
+
                 },
                 phone: {
                     required: true,
-                    maxlength: 15,
+                    maxlength: 11,
+                    numeric_only: true,
+                    minlength: 11,
+
+
                 },
                 role_id: {
                     required: true,
@@ -159,7 +161,7 @@
 
             },
             messages: {
-                name: "Please enter your Name",
+
 
 
                 password: {

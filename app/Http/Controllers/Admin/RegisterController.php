@@ -62,18 +62,18 @@ class RegisterController extends Controller
         }
 
 
-        if (preg_match('/(.)\1/', $request->password)) {
-            throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
-        }
+        // if (preg_match('/(.)\1/', $request->password)) {
+        //     throw ValidationException::withMessages(['identical_char' => __('Identical Characters are not allowed')]);
+        // }
 
-        if (preg_match('/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/i', $request->password) || preg_match("/\d{3,}/", $request->password)) {
-            throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
-        }
+        // if (preg_match('/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz)/i', $request->password) || preg_match("/\d{3,}/", $request->password)) {
+        //     throw ValidationException::withMessages(['consec_char' => __('Consecutive Characters are not allowed')]);
+        // }
         if (count($this->checkBankNameValidation($request->password)) > 0) {
-            throw ValidationException::withMessages(['consec_char' => __('You can not use Bank Name in your Password')]);
+            throw ValidationException::withMessages(['consec_char' => __('We have a little problem. Please remove bank name from the Password.')]);
         }
         if (CommonlyUsedPassword::where('password', $request->password)->exists()) {
-            throw ValidationException::withMessages(['commonly_used_password' => __('You can not use Commonly used password')]);
+            throw ValidationException::withMessages(['commonly_used_password' => __('we have a little problem commonly used passwords are not allowed')]);
         }
 
 

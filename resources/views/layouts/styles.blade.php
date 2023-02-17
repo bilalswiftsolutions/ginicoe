@@ -106,5 +106,8 @@
    .VIpgJd-ZVi9od-l4eHX-hSRGPd{
     display: none;
    }
-   
+   input.error
+{
+ border:1px solid red;
+}
 </style>
