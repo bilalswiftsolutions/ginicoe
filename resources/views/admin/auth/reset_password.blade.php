@@ -68,6 +68,12 @@
 
                 error.appendTo(element.siblings('p'));
             },
+            onkeyup: function(element) {
+                var element_id = $(element).attr('id');
+                if (this.settings.rules[element_id].onkeyup !== false) {
+                    $(element).valid();
+                }
+            },
             rules: {
                 new_password: {
                     required: true,
