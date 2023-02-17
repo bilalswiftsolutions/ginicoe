@@ -500,7 +500,7 @@
         <div class="col-md-4">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 mt-2 font-weight-bold text-primary">Login Page Banner</h6>
+                    <h6 class="m-0 mt-2 font-weight-bold text-primary">SignIn Page Banner</h6>
                 </div>
                 <div class="card-body">
                     <form action="{{ url('admin/setting/general/banner/update') }}" method="post" enctype="multipart/form-data">
@@ -526,7 +526,7 @@
         <div class="col-md-4">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 mt-2 font-weight-bold text-primary">SignUP Banner</h6>
+                    <h6 class="m-0 mt-2 font-weight-bold text-primary">SignUp Banner</h6>
                 </div>
                 <div class="card-body">
                     <form action="{{ url('admin/setting/general/banner/update') }}" method="post" enctype="multipart/form-data">

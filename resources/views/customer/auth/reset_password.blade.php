@@ -39,7 +39,7 @@
                                 @endif
 
                                 <button type="submit" class="btn btn-primary btn-arf">Update</button>
-                                <a href="{{ route('customer.login') }}" class="btn btn-warning">Back to Login Page</a>
+                                <a href="{{ route('customer.login') }}" class="btn btn-warning">Back to SignIn Page</a>
                             </form>
                         </div>
                     </div>

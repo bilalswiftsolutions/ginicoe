@@ -4,11 +4,11 @@
     <div class="page-banner" style="background-image: url({{ asset('public/uploads/'.$g_setting->banner_login) }})">
         <div class="bg-page"></div>
         <div class="text">
-            <h1>Customer Login</h1>
+            <h1>Customer SignIn</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Login</li>
+                    <li class="breadcrumb-item active" aria-current="page">Customer SignIn</li>
                 </ol>
             </nav>
         </div>
@@ -42,7 +42,7 @@
                                 <button type="submit" class="btn btn-primary btn-arf">Login</button>
                                 <a href="{{ route('customer.forget_password') }}" class="btn btn-warning">Forget Password</a>
                                 <div class="new-user">
-                                    <a href="{{ route('customer.registration') }}">New User? Make SignUP</a>
+                                    <a href="{{ route('customer.registration') }}">New User? Make SignUp</a>
                                 </div>
                             </form>
                         </div>

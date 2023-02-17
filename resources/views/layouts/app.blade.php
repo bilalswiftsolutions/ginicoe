@@ -443,13 +443,13 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                                 
                                 @if($g_setting->top_bar_login_status == 'Show')
                                 <li class="login_top_menu">
-                                    <a href="{{ route('admin.login') }}">Login</a>
+                                    <a href="{{ route('admin.login') }}">SignIn</a>
                                 </li>
                                 @endif
 
                                 @if($g_setting->top_bar_registration_status == 'Show')
                                 <li class="registration_top_menu">
-                                    <a href="{{ route('admin.register') }}">SignUP</a>
+                                    <a href="{{ route('admin.register') }}">SignUp</a>
                                 </li>
                                 @endif
                                     

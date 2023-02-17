@@ -263,7 +263,7 @@
                                 </label>
                             </div>
                             <div class="returning-customer-login-section d_n">
-                                <h4>Login</h4>
+                                <h4>SignIn</h4>
                                 <div class="row mb_10">
                                     <div class="col">
                                         <input type="text" class="form-control" placeholder="Email Address" name="customer_email">
@@ -272,7 +272,7 @@
                                         <input type="password" class="form-control" placeholder="Password" name="customer_password">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn btn-primary">SignIn</button>
                             </div>
                         </div>
                     </form>

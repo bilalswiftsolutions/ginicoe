@@ -26,7 +26,7 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Admin Login</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Admin SignIn</h1>
                                     </div>
 
                                     <form id="adminLoginForm" action="{{ route('admin.login.store') }}" class="user"
@@ -68,7 +68,7 @@
                                                 </div>
                                             </div>
                                         @endif
-                                        <button disabled id="submit" type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        <button disabled id="submit" type="submit" class="btn btn-primary btn-user btn-block">SignIn</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

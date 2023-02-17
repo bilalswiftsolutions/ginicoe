@@ -21,7 +21,7 @@
                                 <div class="p-5">
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">SignUP to</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">SignUp to</h1>
                                         <h1 class="h4 text-gray-900 mb-4">Advance Social Justice</h1>
                                     </div>
 
@@ -81,7 +81,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">SignUP</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">SignUp</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
