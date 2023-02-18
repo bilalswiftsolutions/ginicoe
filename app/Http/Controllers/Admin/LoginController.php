@@ -76,11 +76,9 @@ class LoginController extends Controller
         session(['phone' => $check_email->phone]);
 
 
-        Cache::forget("try_{$check_email->id}");
-      
         $check_email->generateCode();
+
         return redirect()->route('2fa.index');
-        
 
 
         return redirect()->route('admin.dashboard');
