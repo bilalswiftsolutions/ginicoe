@@ -13,4 +13,5 @@ class AdminCode extends Model
         'admin_id',
         'code',
     ];
+    
 }

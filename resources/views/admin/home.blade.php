@@ -1,16 +1,19 @@
 @extends('admin.admin_layouts')
 
 @section('admin_content')
-    
     @php
-    $total_post = DB::table('blogs')->count();
-    $total_projects = DB::table('projects')->count();
-    $total_services = DB::table('services')->count();
-    $total_team_members = DB::table('team_members')->count();
-    $total_photos = DB::table('photos')->count();
-    $total_videos = DB::table('videos')->count();
-    $total_completed_orders = DB::table('orders')->where('payment_status','Completed')->count();
-    $total_pending_orders = DB::table('orders')->where('payment_status','Pending')->count();
+        $total_post = DB::table('blogs')->count();
+        $total_projects = DB::table('projects')->count();
+        $total_services = DB::table('services')->count();
+        $total_team_members = DB::table('team_members')->count();
+        $total_photos = DB::table('photos')->count();
+        $total_videos = DB::table('videos')->count();
+        $total_completed_orders = DB::table('orders')
+            ->where('payment_status', 'Completed')
+            ->count();
+        $total_pending_orders = DB::table('orders')
+            ->where('payment_status', 'Pending')
+            ->count();
     @endphp
 
     <div class="row">
@@ -18,7 +21,7 @@
             <h1 class="h3 mb-3 text-gray-800">Dashboard</h1>
         </div>
     </div>
-
+    @if (session('role_id') == 1)
     <!-- Box Start -->
     <div class="row dashboard-page">
 
@@ -152,5 +155,32 @@
         </div>
 
     </div>
+    @endif
     <!-- // Box End -->
+    @if (session('role_id') != 1)
+        @php
+            
+            $admin = \App\Helper\Helper::auth_admin();
+            
+        @endphp
+
+        @if ($admin->role->role_name == 'Consumer')
+            @include('admin.includes.cards.consumer')
+        @endif
+        @if ($admin->role->role_name == 'Merchent')
+            @include('admin.includes.cards.merchent')
+        @endif
+        @if ($admin->role->role_name == 'Bank')
+            @include('admin.includes.cards.bank')
+        @endif
+        @if ($admin->role->role_name == 'Govt')
+            @include('admin.includes.cards.govt')
+        @endif
+        @if ($admin->role->role_name == 'Healthcare')
+            @include('admin.includes.cards.healthcare')
+        @endif
+        @if ($admin->role->role_name == 'Education')
+            @include('admin.includes.cards.education')
+        @endif
+    @endif
 @endsection

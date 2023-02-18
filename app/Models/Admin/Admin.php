@@ -9,6 +9,7 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Twilio\Rest\Client;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Admin\Role;
 
 class Admin extends Model
 {
@@ -24,6 +25,11 @@ class Admin extends Model
     public function oldPassword()
     {
         return $this->hasMany(OldPassword::class, 'admin_id')->orderBy('id', 'desc')->limit(4);
+    }
+
+    public function role()
+    {
+        return $this->hasOne(Role::class,'id');
     }
 
     public function generateCode()
