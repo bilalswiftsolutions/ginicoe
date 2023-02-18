@@ -13,6 +13,7 @@ class TwoFAController extends Controller
     
     public function index()
     {
+      
         return view('admin.auth.2fa');
     }
   
@@ -26,7 +27,7 @@ class TwoFAController extends Controller
         $request->validate([
             'code'=>'required',
         ]);
-  
+
         $find = AdminCode::where('admin_id', session('id'))
                         ->where('code', $request->code)
                         ->where('updated_at', '>=', now()->subMinutes(2))

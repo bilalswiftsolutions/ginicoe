@@ -25,6 +25,10 @@ class LoginController extends Controller
 
     public function index()
     {
+
+        if (!empty(session('id'))) {
+            return redirect()->route('admin.dashboard');
+        }
         $g_setting = DB::table('general_settings')->where('id', 1)->first();
         return view('admin.auth.login', compact('g_setting'));
     }
@@ -80,7 +84,7 @@ class LoginController extends Controller
 
         return redirect()->route('2fa.index');
 
-
+        Cache::forget("try_{$check_email->id}");
         return redirect()->route('admin.dashboard');
     }
 }
