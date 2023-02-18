@@ -77,10 +77,10 @@ class LoginController extends Controller
 
 
         Cache::forget("try_{$check_email->id}");
-        if(getenv("TWILIO_ENABLE") == "true"){
+      
         $check_email->generateCode();
         return redirect()->route('2fa.index');
-        }
+        
 
 
         return redirect()->route('admin.dashboard');
