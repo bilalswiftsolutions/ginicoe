@@ -31,3 +31,7 @@ $.validator.addMethod("strong_password", function(value, element) {
     }
     return false;
 });
+
+$.validator.addMethod("no_space", function(value, element) {
+    return value.indexOf(" ") < 0 && value != "";
+}, "Spaces are not allowed.");

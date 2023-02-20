@@ -9,5 +9,5 @@
 <script src="{{ asset('public/backend/js/jquery.timepicker.js') }}"></script>
 <script src="{{ asset('public/backend/js/jquery-ui.js') }}"></script>
 <script src="{{ asset('public/backend/js/summernote-bs4.min.js') }}"></script>
-
 <script src="{{ asset('public/frontend/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('public/backend/js/jquery.mask.js') }}"></script>

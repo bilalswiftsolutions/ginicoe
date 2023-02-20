@@ -25,6 +25,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         @php
+        $admin = App\Models\Admin\Admin::where('role_id',session('role_id'))->first();
         $url = Request::path();
         $conName = explode('/',$url);
         if(!isset($conName[3]))
@@ -54,6 +55,17 @@
 
             </a>
         </li>
+
+        @if ($admin->role->role_name == 'Consumer')
+
+        <li class="nav-item @if($conName[1] == 'this-is-me') active @endif">
+            <a class="nav-link" href="{{ route('admin.consumer.this_is_me') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>This Is Me</span>
+
+            </a>
+        </li>
+        @endif
 
         @php $arr_one = array(); @endphp
         @if(session('role_id')!=1)
