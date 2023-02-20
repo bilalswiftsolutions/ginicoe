@@ -436,7 +436,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                         @endphp
                     @endforeach
 
-                    @if($menu_arr['Shop'] == 'Show')
+                   
                     <div class="top-profile">
                         <ul>
                         
@@ -472,7 +472,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                             
                         </ul>
                     </div>
-                    @endif
+                   
 
 
                 </div>
