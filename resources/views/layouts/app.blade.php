@@ -439,7 +439,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                     @if($menu_arr['Shop'] == 'Show')
                     <div class="top-profile">
                         <ul>
-                            @if(!session()->get('customer_id'))
+                        
                                 
                                 @if($g_setting->top_bar_login_status == 'Show')
                                 <li class="login_top_menu">
@@ -453,7 +453,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
                                 </li>
                                 @endif
                                     
-                            @endif
+                           
 
                             @if(session()->get('customer_id'))
                             <li class="registration_top_menu">
