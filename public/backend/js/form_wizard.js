@@ -10,21 +10,17 @@ jQuery(document).ready(function () {
             .find(".form-wizard-steps .active");
         var next = jQuery(this);
         // var nextWizardStep = true;
-        parentFieldset.find(".wizard-required").each(function () {
-            var thisValue = jQuery(this).val();
+        // parentFieldset.find(".wizard-required").each(function () {
+        //     var thisValue = jQuery(this).val();
 
-            if (thisValue == "") {
-                jQuery(this).siblings(".wizard-form-error").slideDown();
-                nextWizardStep = false;
-            } else {
-                jQuery(this).siblings(".wizard-form-error").slideUp();
-            }
-        });
-        // if ($("#fieldset_one").find(":input").valid()) {
-        //     nextWizardStep = true;
-        // } else {
-        //     nextWizardStep = false;
-        // }
+        //     if (thisValue == "") {
+        //         jQuery(this).siblings(".wizard-form-error").slideDown();
+        //         nextWizardStep = false;
+        //     } else {
+        //         jQuery(this).siblings(".wizard-form-error").slideUp();
+        //     }
+        // });
+       console.log('OKAY',nextWizardStep)
         if (nextWizardStep) {
             next.parents(".wizard-fieldset").removeClass("show", "400");
             currentActiveStep
