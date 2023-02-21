@@ -88,7 +88,7 @@ body {
     text-align: center;
   }
   .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
-    background-color: #d65470;
+    background-color: #1cc88a;
     color: #ffffff;
     display: inline-block;
     min-width: 100px;

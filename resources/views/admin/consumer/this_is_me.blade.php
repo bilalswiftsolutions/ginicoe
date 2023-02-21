@@ -9,8 +9,8 @@
                 <form id="this_is_me_form" action="" method="post" role="form">
                     <div class="form-wizard-header">
                         <div class="progress" style="height: 50px;">
-                            <div id="progress_bar" class="progress-bar bg-danger" role="progressbar" style="width: 5.9%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Pedigree Info</div>
+                            <div id="progress_bar" class="progress-bar bg-success " role="progressbar" style="width: 5.9%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1. Pedigree Info</div>
                         </div>
                     </div>
                     @include('admin.includes.consumer.this_is_me_form.pidegree_info')

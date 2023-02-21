@@ -1,3 +1,7 @@
+$.validator.addMethod('noemail', function(value) {
+    return /^\d{5}$/.test(value);
+}, 'Zipcode is not valid');
+
 $("#this_is_me_form").validate({
     errorPlacement: function (error, element) { 
         error.appendTo(element.siblings("p"));

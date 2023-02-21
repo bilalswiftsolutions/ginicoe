@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
                 .next(".wizard-fieldset")
                 .find("h5")
                 .text();
-            console.log($(text).hasClass("show"));
+            console.log(text);
             $(".progress-bar")
                 .css("width", progress_bar + "%")
                 .text(text);

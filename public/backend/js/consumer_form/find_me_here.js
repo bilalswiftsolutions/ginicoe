@@ -1062,13 +1062,14 @@ var cities_by_state = {
     Vermont: ["Burlington"],
 };
 
+
 $("#state").change(function () {
     var state = $(this).val();
     var cities = cities_by_state[state];
 
     // Clear the city select and add the default option
     $("#city").empty().append('<option value="">Select a city</option>');
-console.log(cities)
+
     // Populate the city select with options based on the selected state
     // $("#city").append("<option selected></option>");
     $.each(cities, function (index, city) {
@@ -1076,3 +1077,37 @@ console.log(cities)
         $("#city").append(`<option value="${city}">` + city + "</option>");
     });
 });
+
+function sky_crapper_field()
+{
+    
+    if ($("input[name='do_you_live_in_sky_crapper']:checked").val() == "1") {
+        $("#sky_crapper_fields").show();
+   
+    } else {
+        $("#sky_crapper_fields").hide();
+      
+    }
+}
+
+function living_for_two_year()
+{
+    if ($("input[name='living_for_two_years']:checked").val() == "0") {
+        $("#old_address_section").show();
+   
+    } else {
+        $("#old_address_section").hide();
+      
+    }
+}
+
+function old_sky_crapper_field()
+{
+    if ($("input[name='old_do_you_live_in_sky_crapper']:checked").val() == "1") {
+        $("#old_sky_crapper_fields").show();
+   
+    } else {
+        $("#old_sky_crapper_fields").hide();
+      
+    }
+}
