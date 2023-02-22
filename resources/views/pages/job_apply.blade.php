@@ -111,11 +111,11 @@
                                         <span class="text-danger">(Only doc, docx or pdf are allowed)</span>
                                     </div>
 
-                                    @if($g_setting->google_recaptcha_status == 'Show')
+                                    {{-- @if($g_setting->google_recaptcha_status == 'Show')
                                         <div class="form-group">
                                             <div class="g-recaptcha" data-sitekey="{{ $g_setting->google_recaptcha_site_key }}"></div>
                                         </div>
-                                    @endif
+                                    @endif --}}
 
                                     <div class="form-group">
                                         <div>

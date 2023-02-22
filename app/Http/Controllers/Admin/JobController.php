@@ -19,7 +19,7 @@ class JobController extends Controller
 
     public function index()
     {
-        $job = Job::orderByRaw('LENGTH(job_order)', 'asc')->get();
+        $job = Job::orderBy('job_order', 'asc')->get();
         return view('admin.job.index', compact('job'));
     }
 

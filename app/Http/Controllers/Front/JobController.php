@@ -52,17 +52,17 @@ class JobController extends Controller
             'applicant_zip_code' => 'required',
             'applicant_expected_salary' => 'required',
             'applicant_cover_letter' => 'required',
-            'applicant_cv' => 'required|mimes:doc,docx,pdf|max:2048'
+            'applicant_cv' => 'required|mimes:doc,docx,pdf|max:5048'
         ]);
 
-        if($g_setting->google_recaptcha_status == 'Show') {
-            $request->validate([
-                'g-recaptcha-response' => 'required'
-            ],
-            [
-                'g-recaptcha-response.required' => 'You must have to input recaptcha correctly'
-            ]);
-        }
+        // if($g_setting->google_recaptcha_status == 'Show') {
+        //     $request->validate([
+        //         'g-recaptcha-response' => 'required'
+        //     ],
+        //     [
+        //         'g-recaptcha-response.required' => 'You must have to input recaptcha correctly'
+        //     ]);
+        // }
 
         $statement = DB::select("SHOW TABLE STATUS LIKE 'job_applications'");
         $ai_id = $statement[0]->Auto_increment;
