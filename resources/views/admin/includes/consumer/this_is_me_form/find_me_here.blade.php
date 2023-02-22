@@ -18,13 +18,13 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-lg-4">
+        {{-- <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="apartment_no" type="number" class="form-control wizard-required" id="apartment_no">
                 <label for="apartment_no" class="wizard-form-text-label">2.3 Apartment No.</label>
                 <p class="text_danger form_error"></p>
             </div>
-        </div>
+        </div> --}}
 
 
 
@@ -174,7 +174,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="county" type="number" class="form-control wizard-required" id="county">
+                <input name="county" type="text" class="form-control wizard-required" id="county">
                 <label for="county" class="wizard-form-text-label">2.13 County</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -182,7 +182,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="neighborhood_name" type="number" class="form-control wizard-required"
+                <input name="neighborhood_name" type="text" class="form-control wizard-required"
                     id="neighborhood_name">
                 <label for="neighborhood_name" class="wizard-form-text-label">2.14 Name of Neighborhood</label>
                 <p class="text_danger form_error"></p>
@@ -192,7 +192,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="zipcode" type="number" class="form-control wizard-required" id="zipcode">
-                <label for="zipcode" class="wizard-form-text-label">2.15 Zipcode</label>
+                <label for="zipcode" class="wizard-form-text-label">2.15 Zip Code</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -216,6 +216,7 @@
 
                 <label for="house_type" class="wizard-form-text-label">2.17 House Type</label>
                 <select class="form-control" name="house_type" id="house_type">
+                    <option></option>
                     <option value="apartment">Apartment</option>
                     <option value="co_op">Co-Op</option>
                     <option value="condo">Condo</option>
@@ -254,26 +255,11 @@
         </div>
 
         <div class="col-md-12 col-lg-12 row" style="display: none;" id="sky_crapper_fields">
-            <div class="col-md-4 col-lg-4">
-                <div class="form-group">
-                    <input name="house_number" type="text" class="form-control wizard-required"
-                        id="house_number">
-                    <label for="house_number" class="wizard-form-text-label">2.19 House No.</label>
-                    <p class="text_danger form_error"></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4">
-                <div class="form-group">
-                    <input name="building_name" type="number" class="form-control wizard-required"
-                        id="building_name">
-                    <label for="building_name" class="wizard-form-text-label">2.20 Building Name</label>
-                    <p class="text_danger form_error"></p>
-                </div>
-            </div>
+            
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="no_of_floor" type="number" class="form-control wizard-required" id="no_of_floor">
-                    <label for="no_of_floor" class="wizard-form-text-label">2.21 No of Floors Your Building</label>
+                    <label for="no_of_floor" class="wizard-form-text-label">2.19 No of Floors Your Building</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -282,7 +268,7 @@
                 <div class="form-group">
                     <input name="your_floor_no" type="text" class="form-control wizard-required"
                         id="your_floor_no">
-                    <label for="your_floor_no" class="wizard-form-text-label">2.22 Your Floor No.</label>
+                    <label for="your_floor_no" class="wizard-form-text-label">2.20 Your Floor No.</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -291,7 +277,7 @@
                 <div class="form-group">
                     <input name="apartment_no" type="text" class="form-control wizard-required"
                         id="apartment_no">
-                    <label for="apartment_no" class="wizard-form-text-label">2.23 Apartment No.</label>
+                    <label for="apartment_no" class="wizard-form-text-label">2.21 Apartment No.</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -300,7 +286,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="room_no" type="number" class="form-control wizard-required" id="room_no">
-                    <label for="room_no" class="wizard-form-text-label">2.24 Room No.</label>
+                    <label for="room_no" class="wizard-form-text-label">2.22 Room No.</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -309,7 +295,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="bed_no" type="number" class="form-control wizard-required" id="bed_no">
-                    <label for="bed_no" class="wizard-form-text-label">2.25 Bed No</label>
+                    <label for="bed_no" class="wizard-form-text-label">2.23 Bed No</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -325,7 +311,7 @@
     <hr>
     <div class="col-md-12 col-lg-12">
         <div class="form-group">
-            Have you lived at this address for 2 years or more?
+           2.24 Have you lived at this address for 2 years or more?
             <div class="wizard-form-radio">
                 <input onclick="living_for_two_year()" checked name="living_for_two_years" value="1"
                     id="radio1" type="radio">
@@ -344,7 +330,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_house_no" id="old_house_no" type="number" class="form-control wizard-required">
-                    <label for="old_house_no" class="wizard-form-text-label">2.26 House No.</label>
+                    <label for="old_house_no" class="wizard-form-text-label">2.25 House No.</label>
                     <p class="text_danger form_error"></p>
 
                 </div>
@@ -353,26 +339,26 @@
                 <div class="form-group">
                     <input name="old_building_name" type="text" class="form-control wizard-required"
                         id="old_building_name">
-                    <label for="old_building_name" class="wizard-form-text-label">2.27 Building Name</label>
+                    <label for="old_building_name" class="wizard-form-text-label">2.26 Building Name</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
 
-            <div class="col-md-4 col-lg-4">
+            {{-- <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_apartment_no" type="number" class="form-control wizard-required"
                         id="old_apartment_no">
-                    <label for="old_apartment_no" class="wizard-form-text-label">2.28 Apartment No.</label>
+                    <label for="old_apartment_no" class="wizard-form-text-label">2.27 Apartment No.</label>
                     <p class="text_danger form_error"></p>
                 </div>
-            </div>
+            </div> --}}
 
 
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_street_name" type="text" class="form-control wizard-required" id="old_street_name">
-                    <label for="old_street_name" class="wizard-form-text-label">2.29 Street Name</label>
+                    <label for="old_street_name" class="wizard-form-text-label">2.28 Street Name</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -380,7 +366,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
 
-                    <label for="old_state" class="wizard-form-text-label">2.30 State</label>
+                    <label for="old_state" class="wizard-form-text-label">2.29 State</label>
                     <select class="form-control" name="state" id="old_state" required>
                         <option></option>
                         <option value="Alabama">Alabama</option>
@@ -443,7 +429,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <label for="old_city" class="wizard-form-text-label">2.31 City</label>
+                    <label for="old_city" class="wizard-form-text-label">2.30 City</label>
                     <select class="form-control" name="old_city" id="old_city" required>
                     </select>
 
@@ -454,7 +440,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_town" type="text" class="form-control wizard-required" id="old_town">
-                    <label for="old_town" class="wizard-form-text-label">2.32 Town</label>
+                    <label for="old_town" class="wizard-form-text-label">2.31 Town</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -462,7 +448,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_township" type="text" class="form-control wizard-required" id="old_township">
-                    <label for="old_township" class="wizard-form-text-label">2.33 Township</label>
+                    <label for="old_township" class="wizard-form-text-label">2.32 Township</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -474,7 +460,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_parish" type="text" class="form-control wizard-required" id="old_parish">
-                    <label for="old_parish" class="wizard-form-text-label">2.34 Parish</label>
+                    <label for="old_parish" class="wizard-form-text-label">2.33 Parish</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -482,7 +468,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_village" type="text" class="form-control wizard-required" id="old_village">
-                    <label for="old_village" class="wizard-form-text-label">2.35 Village</label>
+                    <label for="old_village" class="wizard-form-text-label">2.34 Village</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -490,7 +476,15 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_hamlet" type="text" class="form-control wizard-required" id="old_hamlet">
-                    <label for="old_hamlet" class="wizard-form-text-label">2.36 Hamlet</label>
+                    <label for="old_hamlet" class="wizard-form-text-label">2.35 Hamlet</label>
+                    <p class="text_danger form_error"></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                <div class="form-group">
+                    <input name="old_district" type="text" class="form-control wizard-required" id="old_district">
+                    <label for="old_district" class="wizard-form-text-label">2.36 District</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -503,29 +497,21 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-lg-4">
-                <div class="form-group">
-                    <input name="old_district" type="text" class="form-control wizard-required" id="old_district">
-                    <label for="old_district" class="wizard-form-text-label">2.38 District</label>
-                    <p class="text_danger form_error"></p>
-                </div>
-            </div>
-
 
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input name="old_county" type="number" class="form-control wizard-required" id="old_county">
-                    <label for="old_county" class="wizard-form-text-label">2.39 County</label>
+                    <input name="old_county" type="text" class="form-control wizard-required" id="old_county">
+                    <label for="old_county" class="wizard-form-text-label">2.38 County</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input name="old_neighborhood_name" type="number" class="form-control wizard-required"
+                    <input name="old_neighborhood_name" type="text" class="form-control wizard-required"
                         id="old_neighborhood_name">
-                    <label for="old_neighborhood_name" class="wizard-form-text-label">2.40 Name of Neighborhood</label>
+                    <label for="old_neighborhood_name" class="wizard-form-text-label">2.39 Name of Neighborhood</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -533,7 +519,7 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
                     <input name="old_zipcode" type="number" class="form-control wizard-required" id="old_zipcode">
-                    <label for="old_zipcode" class="wizard-form-text-label">2.41 Zipcode</label>
+                    <label for="old_zipcode" class="wizard-form-text-label">2.40 Zip Code</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -543,7 +529,7 @@
                 <div class="form-group">
                     <input name="old_urbanization_name" type="text" class="form-control wizard-required"
                         id="old_urbanization_name">
-                    <label for="old_urbanization_name" class="wizard-form-text-label">2.42 Urbanization Name</label>
+                    <label for="old_urbanization_name" class="wizard-form-text-label">2.41 Urbanization Name</label>
                     <p class="text_danger form_error"></p>
                 </div>
             </div>
@@ -555,8 +541,9 @@
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
 
-                    <label for="old_house_type" class="wizard-form-text-label">2.43 House Type</label>
+                    <label for="old_house_type" class="wizard-form-text-label">2.42 House Type</label>
                     <select class="form-control" name="house_type" id="old_house_type">
+                        <option></option>
                         <option value="apartment">Apartment</option>
                         <option value="co_op">Co-Op</option>
                         <option value="condo">Condo</option>
@@ -583,7 +570,7 @@
 
             <div class="col-md-12 col-lg-12">
                 <div class="form-group">
-                    Do you live in Skycrapper?
+                   2.43 Do you live in Skycrapper?
                     <div class="wizard-form-radio">
                         <input onclick="old_sky_crapper_field()" name="old_do_you_live_in_sky_crapper" value="1" id="radio1"
                             type="radio">
@@ -598,24 +585,11 @@
             </div>
         
             <div class="col-md-12 col-lg-12 row" style="display: none;" id="old_sky_crapper_fields">
-                <div class="col-md-4 col-lg-4">
-                    <div class="form-group">
-                        <input name="old_house_number" type="text" class="form-control wizard-required" id="old_house_number">
-                        <label for="old_house_number" class="wizard-form-text-label">2.19 House No.</label>
-                        <p class="text_danger form_error"></p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <div class="form-group">
-                        <input name="old_building_name" type="number" class="form-control wizard-required" id="old_building_name">
-                        <label for="old_building_name" class="wizard-form-text-label">2.20 Building Name</label>
-                        <p class="text_danger form_error"></p>
-                    </div>
-                </div>
+                
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input name="old_no_of_floor" type="number" class="form-control wizard-required" id="old_no_of_floor">
-                        <label for="old_no_of_floor" class="wizard-form-text-label">2.21 No of Floors Your Building</label>
+                        <label for="old_no_of_floor" class="wizard-form-text-label">2.44 No of Floors Your Building</label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -623,7 +597,7 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input name="old_your_floor_no" type="text" class="form-control wizard-required" id="old_your_floor_no">
-                        <label for="old_your_floor_no" class="wizard-form-text-label">2.22 Your Floor No.</label>
+                        <label for="old_your_floor_no" class="wizard-form-text-label">2.45 Your Floor No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -631,7 +605,7 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input name="old_apartment_no" type="text" class="form-control wizard-required" id="old_apartment_no">
-                        <label for="old_apartment_no" class="wizard-form-text-label">2.23 Apartment No.</label>
+                        <label for="old_apartment_no" class="wizard-form-text-label">2.46 Apartment No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -640,7 +614,7 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input name="old_room_no" type="number" class="form-control wizard-required" id="old_room_no">
-                        <label for="old_room_no" class="wizard-form-text-label">2.24 Room No.</label>
+                        <label for="old_room_no" class="wizard-form-text-label">2.47 Room No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -649,7 +623,7 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input name="old_bed_no" type="number" class="form-control wizard-required" id="old_bed_no">
-                        <label for="old_bed_no" class="wizard-form-text-label">2.25 Bed No</label>
+                        <label for="old_bed_no" class="wizard-form-text-label">2.48 Bed No</label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -665,15 +639,15 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="area_code" type="number" class="form-control wizard-required" id="area_code">
-                <label for="area_code" class="wizard-form-text-label">2.44 Area Code</label>
+                <input name="primary_area_code" type="number" class="form-control wizard-required" id="primary_area_code">
+                <label for="primary_area_code" class="wizard-form-text-label">2.49 Area Code Primary Mobile No.</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="mobile_number" type="number" class="form-control wizard-required" id="mobile_number">
-                <label for="mobile_number" class="wizard-form-text-label">2.45 Mobile No.</label>
+                <input name="primary_mobile_number" type="number" class="form-control wizard-required" id="primary_mobile_number">
+                <label for="primary_mobile_number" class="wizard-form-text-label">2.50 Primary Mobile No.</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -681,16 +655,16 @@
             <div class="form-group">
                 <input name="alternate_area_code" type="number" class="form-control wizard-required"
                     id="alternate_area_code">
-                <label for="alternate_area_code" class="wizard-form-text-label">2.46 Alternate Mobile No. Area
+                <label for="alternate_area_code" class="wizard-form-text-label">2.51 Alternate Telephone no. Area
                     Code</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="alternate_mobile_number" type="number" class="form-control wizard-required"
-                    id="alternate_mobile_number">
-                <label for="alternate_mobile_number" class="wizard-form-text-label">2.47 Alternate Mobile No.</label>
+                <input name="alternate_telephone_number" type="number" class="form-control wizard-required"
+                    id="alternate_telephone_number">
+                <label for="alternate_telephone_number" class="wizard-form-text-label">2.52 Alternate Telephone No.</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -698,7 +672,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="email" type="email" class="form-control wizard-required" id="email">
-                <label for="email" class="wizard-form-text-label">2.48 Email</label>
+                <label for="email" class="wizard-form-text-label">2.53 Email</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -706,6 +680,6 @@
 
     <div class="form-group clearfix">
         <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetThisIsMe()" class="form-wizard-next-btn float-right">Next</a>
+        <a onclick="checkFieldSetThisIsMe()" id="find_me_here_next_button" class="form-wizard-next-btn-without-click float-right">Next</a>
     </div>
 </fieldset>

@@ -193,10 +193,10 @@ $("#this_is_me_form").validate({
             zipcode: true,
         },
         old_zipcode: {
-            required: true,
+            required: false,
             zipcode: true,
         },
-        area_code: {
+        primary_area_code: {
             required: true,
             minlength: 3,
             maxlength: 3,
@@ -206,12 +206,68 @@ $("#this_is_me_form").validate({
             minlength: 3,
             maxlength: 3,
         },
-        alternate_mobile_number: {
+        alternate_telephone_number: {
             required: true,
         },
-        mobile_number: {
+        primary_mobile_number: {
             required: true,
         },
     },
     messages: {},
 });
+
+function move_to_next_step(nextWizardStep)
+{
+   
+    var parentFieldset = $('#find_me_here_next_button').parents(".wizard-fieldset");
+    var currentActiveStep = $('#find_me_here_next_button')
+        .parents(".form-wizard")
+        .find(".form-wizard-steps .active");
+    var next = $('#find_me_here_next_button');
+  
+    if (nextWizardStep) {
+        console.log('HELLO',next)
+        next.parents(".wizard-fieldset").removeClass("show", "400");
+        currentActiveStep
+            .removeClass("active")
+            .addClass("activated")
+            .next()
+            .addClass("active", "400");
+        next.parents(".wizard-fieldset")
+            .next(".wizard-fieldset")
+            .addClass("show", "400");
+        parentFieldset.hide();
+
+        next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
+
+        progress_bar = progress_bar + 5.9;
+        console.log(progress_bar)
+        let text = next
+            .parents(".wizard-fieldset")
+            .next(".wizard-fieldset")
+            .find("h5")
+            .text();
+        console.log(text);
+        $(".progress-bar")
+            .css("width", progress_bar + "%")
+            .text(text);
+        jQuery(document)
+            .find(".wizard-fieldset")
+            .each(function () {
+                if ($('#find_me_here_next_button').hasClass("show")) {
+                    var formAtrr = $('#find_me_here_next_button').attr("data-tab-content");
+
+                    // jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
+                    // 	if(jQuery(this).attr('data-attr') == formAtrr){
+                    // 		jQuery(this).addClass('active');
+                    // 		var innerWidth = jQuery(this).innerWidth();
+                    // 		var position = jQuery(this).position();
+                    // 		jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
+                    // 	}else{
+                    // 		jQuery(this).removeClass('active');
+                    // 	}
+                    // });
+                }
+            });
+    }
+}

@@ -96,6 +96,16 @@ body {
     padding: 10px;
     text-align: center;
   }
+
+  .form-wizard .form-wizard-next-btn-without-click, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+    background-color: #1cc88a;
+    color: #ffffff;
+    display: inline-block;
+    min-width: 100px;
+    min-width: 120px;
+    padding: 10px;
+    text-align: center;
+  }
   .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
     color: #ffffff;
     opacity: 0.6;

@@ -1076,6 +1076,20 @@ $("#state").change(function () {
     });
 });
 
+$("#old_state").change(function () {
+    var state = $(this).val();
+    var cities = cities_by_state[state];
+
+    // Clear the city select and add the default option
+    $("#old_city").empty().append('<option value="">Select a city</option>');
+
+    // Populate the city select with options based on the selected state
+    // $("#city").append("<option selected></option>");
+    $.each(cities, function (index, city) {
+        $("#old_city").append(`<option value="${city}">` + city + "</option>");
+    });
+});
+
 function sky_crapper_field() {
     if ($("input[name='do_you_live_in_sky_crapper']:checked").val() == "1") {
         $("#sky_crapper_fields").show();
@@ -1103,20 +1117,32 @@ function old_sky_crapper_field() {
 }
 
 function checkFieldSetThisIsMe() {
-
-    if ($("#fieldset_two").find(":input").valid()) {
-        nextWizardStep = true;
-    } else {
-        nextWizardStep = false;
-    }
-    // nextWizardStep = true;
-    // console.log(nextWizardStep);
-
     var data = {};
-    
+    nextWizardStep = false;
     $("#fieldset_two input").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    
+    move_to_next_step(true);
+    // $.ajax({
+    //     url: "/ginicoe/admin/consumer/validate-address",
+    //     type: "GET",
+    //     dataType: "json",
+    //     data: data,
+    //     success: function (response) {
+    //         if (response.valid) {
+    //             console.log("valid", $("#fieldset_two").find(":input").valid());
+    //             if ($("#fieldset_two").find(":input").valid()) {
+    //                 move_to_next_step(true);
+    //             } else {
+    //                 move_to_next_step(false);
+    //             }
+    //         } else {
+    //         }
+    //     },
+    //     error: function (xhr, status, error) {
+    //         // Handle error here
+    //     },
+    // });
+
     console.log(data);
 }

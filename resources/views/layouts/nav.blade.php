@@ -41,7 +41,7 @@ $menu_arr = array();
                             <a href="{{ route('front.about') }}" class="nav-link ">About</a>
                         </li>
                         @endif
-
+{{-- @dd($menu_arr['Services']) --}}
                         @if($menu_arr['Services'] == 'Show')
                         <li class="nav-item">
                             <a href="{{ route('front.services') }}" class="nav-link ">Services</a>
@@ -65,7 +65,7 @@ $menu_arr = array();
                             $dynamic_pages = DB::table('dynamic_pages')->get();
                         @endphp
 
-
+{{-- @dd($menu_arr['Career']) --}}
                         @if(
                         ($menu_arr['Career'] == 'Hide') &&
                         ($menu_arr['Project'] == 'Hide') &&
@@ -77,7 +77,17 @@ $menu_arr = array();
                         )
 
                         @else
+                        @if($menu_arr['Career'] == 'Show')
                         <li class="nav-item">
+                            <a href="{{ route('front.career') }}" class="nav-link">Career</a>
+                        </li>
+                        @endif
+                        @foreach($dynamic_pages as $row)
+                        <li class="nav-item">
+                            <a href="{{ url('page/'.$row->dynamic_page_slug) }}" class="nav-link">{{ $row->dynamic_page_name }}</a>
+                        </li>
+                    @endforeach
+                        {{-- <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link dropdown-toggle">Pages</a>
                             <ul class="dropdown-menu">
 
@@ -125,7 +135,7 @@ $menu_arr = array();
                                 @endforeach
 
                             </ul>
-                        </li>
+                        </li> --}}
                         @endif
 
 
