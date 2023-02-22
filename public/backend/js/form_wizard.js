@@ -36,6 +36,7 @@ jQuery(document).ready(function () {
             next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
 
             progress_bar = progress_bar + 5.9;
+            console.log(progress_bar)
             let text = next
                 .parents(".wizard-fieldset")
                 .next(".wizard-fieldset")
@@ -79,6 +80,18 @@ jQuery(document).ready(function () {
 
         prev.parents(".wizard-fieldset").hide();
         prev.parents(".wizard-fieldset").prev(".wizard-fieldset").show();
+
+        progress_bar = progress_bar - 5.9;
+        console.log(progress_bar)
+
+        let text = prev
+        .parents(".wizard-fieldset")
+        .prev(".wizard-fieldset")
+        .find("h5")
+        .text();
+        $(".progress-bar")
+        .css("width", progress_bar + "%")
+        .text(text);
 
         currentActiveStep
             .removeClass("active")

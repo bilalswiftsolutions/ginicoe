@@ -51,7 +51,7 @@ use App\Http\Controllers\Admin\ProductController as ProductControllerForAdmin;
 use App\Http\Controllers\Admin\OrderController as OrderControllerForAdmin;
 use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\RoleController;
-
+use App\Http\Controllers\Admin\USPSAddressController;
 use App\Http\Controllers\Customer\CheckoutController;
 use App\Http\Controllers\Customer\DashboardController as DashboardControllerForCustomer;
 use App\Http\Controllers\Customer\ForgetPasswordController as ForgetPasswordControllerForCustomer;
@@ -649,4 +649,5 @@ Route::group(['middleware' => '2fa'], function () {
 /* --------------------------------------- */
 Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']], function () {
     Route::get('/this-is-me', [ThisIsMeController::class, 'this_is_me'])->name('admin.consumer.this_is_me');
+    Route::get('/validate-address', [USPSAddressController::class,'validateAddress']);
 });

@@ -1,4 +1,4 @@
-<fieldset class="wizard-fieldset">
+<fieldset class="wizard-fieldset" id="fieldset_two">
     <h5>2. You can find me here</h5>
     <div class="row">
 
@@ -162,20 +162,20 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-lg-4">
+        {{-- <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="district" type="text" class="form-control wizard-required" id="district">
                 <label for="district" class="wizard-form-text-label">2.13 District</label>
                 <p class="text_danger form_error"></p>
             </div>
-        </div>
+        </div> --}}
 
 
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="county" type="number" class="form-control wizard-required" id="county">
-                <label for="county" class="wizard-form-text-label">2.14 County</label>
+                <label for="county" class="wizard-form-text-label">2.13 County</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -184,7 +184,7 @@
             <div class="form-group">
                 <input name="neighborhood_name" type="number" class="form-control wizard-required"
                     id="neighborhood_name">
-                <label for="neighborhood_name" class="wizard-form-text-label">2.15 Name of Neighborhood</label>
+                <label for="neighborhood_name" class="wizard-form-text-label">2.14 Name of Neighborhood</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -192,7 +192,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="zipcode" type="number" class="form-control wizard-required" id="zipcode">
-                <label for="zipcode" class="wizard-form-text-label">2.16 Zipcode</label>
+                <label for="zipcode" class="wizard-form-text-label">2.15 Zipcode</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -202,7 +202,7 @@
             <div class="form-group">
                 <input name="urbanization_name" type="text" class="form-control wizard-required"
                     id="urbanization_name">
-                <label for="urbanization_name" class="wizard-form-text-label">2.17 Urbanization Name</label>
+                <label for="urbanization_name" class="wizard-form-text-label">2.16 Urbanization Name</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -214,7 +214,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
 
-                <label for="house_type" class="wizard-form-text-label">2.18 House Type</label>
+                <label for="house_type" class="wizard-form-text-label">2.17 House Type</label>
                 <select class="form-control" name="house_type" id="house_type">
                     <option value="apartment">Apartment</option>
                     <option value="co_op">Co-Op</option>
@@ -239,7 +239,7 @@
 
         <div class="col-md-12 col-lg-12">
             <div class="form-group">
-                Do you live in Skycrapper?
+                2.18 Do you live in Skycrapper?
                 <div class="wizard-form-radio">
                     <input onclick="sky_crapper_field()" name="do_you_live_in_sky_crapper" value="1"
                         id="radio1" type="radio">
@@ -706,6 +706,6 @@
 
     <div class="form-group clearfix">
         <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
-        <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+        <a onclick="checkFieldSetThisIsMe()" class="form-wizard-next-btn float-right">Next</a>
     </div>
 </fieldset>
