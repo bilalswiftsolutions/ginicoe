@@ -50,9 +50,17 @@
                                             <p style="color:red;"></p>
                                         </div>
                                         <div class="form-group">
-                                            <input id="password" type="password" class="form-control form-control-user"
-                                                name="password" placeholder="Password">
-                                            <p style="color:red"></p>
+                                            <div class="row">
+                                                <div class="col-md-11 col-sm-11 col-lg-11">
+                                                    <input id="password" type="password"
+                                                        class="form-control form-control-user" name="password"
+                                                        placeholder="Password">
+                                                    <p style="color:red"></p>
+                                                </div>
+                                                <div class="col-md-1 col-sm-1 col-lg-1" >
+                                                    <i class="fa fa-question mt-2 " data-toggle="tooltip" title="Your account security is important to us. Please create a strong password that is at least 8 characters long and includes a mix of uppercase and lowercase letters, numbers, and special characters such as !@#$%^&*"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <input id="confirm_password" type="password"
