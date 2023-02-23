@@ -51,7 +51,7 @@
         <li class="nav-item @if($conName[1] == 'dashboard') active @endif">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="fas fa-fw fa-home"></i>
-                <span>Dashboard</span>
+                <span>@if(session('role_id') ==  1) Admin @else FN LN @endif Dashboard</span>
 
             </a>
         </li>
@@ -243,7 +243,8 @@
         </li>
         @endif
 
-        <!-- Career Section -->
+        <!-- 
+            er Section -->
         @php if( in_array('Career Section', $arr_one) || session('role_id')==1 ): @endphp
         <li class="nav-item @if($conName[1] == 'job' || $conName[1] == 'job-application') active @endif">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCareer" aria-expanded="true" aria-controls="collapseCareer">
