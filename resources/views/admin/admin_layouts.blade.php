@@ -430,6 +430,14 @@
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
 
+                    @if(session('id') == 1)
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <button class="btn btn-success btn-sm mt-3" data-toggle="modal" data-target="#chart_modal">
+                            Make Graph
+                        </button>
+                    </li>
+                    @endif
 
                     <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
@@ -474,6 +482,48 @@
 
                 @yield('admin_content')
 
+                <div class="modal fade" id="chart_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Make Chart</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="container">
+                                    <div class="form-group">
+                                        <label for="">Label Values</label>
+                                        <input type="text" id="label_values" name="label_values" class="form-control"  autofocus>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Data Values</label>
+                                        <input type="text" id="data_values" name="data_values" class="form-control"  >
+                                    </div>
+
+                                    <div class="form-group">
+                                         <button type="button" class="btn btn-success btn-sm float-right" onclick="updateChart()">Make Chart</button>
+                                     
+                                    </div>
+                                    
+                                    <canvas id="myChart" style="display: none;background-color:white"></canvas>
+
+                                    
+                                </div>
+
+                             
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success btn-sm" onclick="downloadChart()">Download Jpg</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -491,6 +541,60 @@
 </a>
 
 @include('admin.includes.scripts-footer')
+<script>
+    // initial chart data and options
+    const data = {
+        labels: [],
+        datasets: [{
+            label: 'chart',
+            data: [],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    
+
+    // create chart instance
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+    
+    });
+
+    // update chart data and options
+    function updateChart() {
+        $('#myChart').show();
+        let label_values = document.getElementById('label_values').value;
+			 label_values = label_values.split(',');
+			chart.data.labels = label_values;
+
+            let data_values = document.getElementById('data_values').value;
+            data_values = data_values.split(',');
+			chart.data.datasets[0].data  = data_values;
+            if(label_values.length == data_values.length)
+			chart.update();
+            else
+            toastr.error('Lenght of Labels and values are not same')
+
+    }
+    function downloadChart() {
+        const hiddenCanvas = document.createElement('canvas');
+			hiddenCanvas.width = chart.width;
+			hiddenCanvas.height = chart.height;
+			const hiddenContext = hiddenCanvas.getContext('2d');
+			hiddenContext.drawImage(chart.canvas, 0, 0, chart.width, chart.height);
+			const url = hiddenCanvas.toDataURL('image/jpeg', 0.8);
+			const link = document.createElement('a');
+			link.download = 'chart.jpg';
+			link.href = url;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+            }
+</script>
 
 </body>
 </html>
