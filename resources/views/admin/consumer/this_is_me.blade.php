@@ -15,33 +15,9 @@
                     </div>
                     @include('admin.includes.consumer.this_is_me_form.pidegree_info')
                     @include('admin.includes.consumer.this_is_me_form.find_me_here')
-                    <fieldset class="wizard-fieldset">
-                        <h5>Bank Information</h5>
-                        <div class="form-group">
-                            <input type="text" class="form-control wizard-required" id="bname">
-                            <label for="bname" class="wizard-form-text-label">Bank Name*</label>
-                            <div class="wizard-form-error"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control wizard-required" id="brname">
-                            <label for="brname" class="wizard-form-text-label">Branch Name*</label>
-                            <div class="wizard-form-error"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control wizard-required" id="acname">
-                            <label for="acname" class="wizard-form-text-label">Account Name*</label>
-                            <div class="wizard-form-error"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control wizard-required" id="acon">
-                            <label for="acon" class="wizard-form-text-label">Account Number*</label>
-                            <div class="wizard-form-error"></div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
-                            <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
-                        </div>
-                    </fieldset>
+                    @include('admin.includes.consumer.this_is_me_form.gender_identity_information')
+                    @include('admin.includes.consumer.this_is_me_form.ethnicity_information')
+                    @include('admin.includes.consumer.this_is_me_form.my_neighborhood')
                     <fieldset class="wizard-fieldset">
                         <h5>Payment Information</h5>
                         <div class="form-group">
@@ -178,6 +154,9 @@
     <script src="{{ asset('public/backend/js/consumer_form/this_is_me_form.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/pidegree_info.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/find_me_here.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/gender_identity_information.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/ethnicity_info.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/my_neighborhood.js') }}"></script>
     <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
     <script src="{{ asset('public/backend/js/form_wizard.js') }}"></script>
 @endsection
