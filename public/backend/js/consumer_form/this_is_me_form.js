@@ -212,6 +212,50 @@ $("#this_is_me_form").validate({
         primary_mobile_number: {
             required: true,
         },
+        neighborhood_race_right:{
+            required: true,
+        },
+        name_of_neighborhood_household_head_right:{
+            required: true,
+        },
+        neghborhood_guid_right:{
+            required:true,
+        }
+
+
+        ,
+        neighborhood_race_left:{
+            required: true,
+        },
+        name_of_neighborhood_household_head_left:{
+            required: true,
+        },
+        neghborhood_guid_left:{
+            required:true,
+        }
+
+        ,
+        neighborhood_race_back:{
+            required: true,
+        },
+        name_of_neighborhood_household_head_back:{
+            required: true,
+        },
+        neghborhood_guid_back:{
+            required:true,
+        }
+
+
+        ,
+        neighborhood_race_front:{
+            required: true,
+        },
+        name_of_neighborhood_household_head_front:{
+            required: true,
+        },
+        neghborhood_guid_front:{
+            required:true,
+        }
     },
     messages: {},
 });
