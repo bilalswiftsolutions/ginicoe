@@ -105,7 +105,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="labor_union_name" type="text" class="form-control wizard-required" id="labor_union_name" required>
+                <input name="labor_union_name" type="text" class="form-control wizard-required" id="labor_union_name" >
                 <label for="labor_union_name" class="wizard-form-text-label">6.6 What is the name of Labor Union?</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -113,13 +113,14 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="your_union_membership_number" type="text" class="form-control wizard-required" id="your_union_membership_number" required>
+                <input name="your_union_membership_number" type="text" class="form-control wizard-required" id="your_union_membership_number" >
                 <label for="your_union_membership_number" class="wizard-form-text-label">6.7 What is your Union membership number?</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
     </div>
     <div class="form-group clearfix">
+        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetEmploymentInformation()" href="javascript:;" class="form-wizard-next-btn  float-right">Next</a>
     </div>
 </fieldset>

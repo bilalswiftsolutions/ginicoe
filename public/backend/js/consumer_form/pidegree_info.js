@@ -32,8 +32,8 @@ $("#verify_social_security_no").mask("000-00-0000");
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
-    console.log(nextWizardStep)
+    // nextWizardStep = true;
+    // console.log(nextWizardStep)
 
     var data = {};
     $("#fieldset_one input").each(function() {

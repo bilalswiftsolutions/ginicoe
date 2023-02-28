@@ -7,8 +7,8 @@ function checkFieldSetEthnicityInformation()
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
-    console.log(nextWizardStep)
+    // nextWizardStep = true;
+    // console.log(nextWizardStep)
 
     var data = {};
     $("#fieldset_four input").each(function() {
