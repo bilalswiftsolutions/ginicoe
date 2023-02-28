@@ -69,4 +69,11 @@ function checkFieldSetChargesCard()
         data[$(this).attr("name")] = $(this).val();
       });
       console.log(data)
+
+      if (nextWizardStep) {
+        $("#protect_cards_bar").addClass("completed");
+        $("#protect_cards_bar").children("div").eq(0).addClass("text-white");
+        $("#protect_cards_bar").removeClass("active");
+        // $("#facial_image_upload_bar").addClass("active");
+    }
 }

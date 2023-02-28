@@ -119,4 +119,11 @@ function checkFieldSetNeighborhood()
         data[$(this).attr("name")] = $(this).val();
       });
       console.log(data)
+
+      if (nextWizardStep) {
+        $("#neighborhood_bar").addClass("completed");
+        $("#neighborhood_bar").children("div").eq(0).addClass("text-white");
+        $("#neighborhood_bar").removeClass("active");
+        $("#employment_bar").addClass("active");
+    }
   }

@@ -1122,7 +1122,7 @@ function checkFieldSetThisIsMe() {
     $("#fieldset_two input").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    move_to_next_step(true);
+    move_to_next_step(true,'find_me_here_bar','gender_identity_bar');
     // $.ajax({
     //     url: "/ginicoe/admin/consumer/validate-address",
     //     type: "GET",

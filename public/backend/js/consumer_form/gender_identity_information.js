@@ -15,4 +15,11 @@ function checkFieldSetGenderIdentityInformation()
         data[$(this).attr("name")] = $(this).val();
       });
       console.log(data)
+
+      if (nextWizardStep) {
+        $("#gender_identity_bar").addClass("completed");
+        $("#gender_identity_bar").children("div").eq(0).addClass("text-white");
+        $("#gender_identity_bar").removeClass("active");
+        $("#enthnicity_bar").addClass("active");
+    }
   }

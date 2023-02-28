@@ -27,4 +27,11 @@ function checkFieldSetEmploymentInformation()
         data[$(this).attr("name")] = $(this).val();
       });
       console.log(data)
+
+      if (nextWizardStep) {
+        $("#employment_bar").addClass("completed");
+        $("#employment_bar").children("div").eq(0).addClass("text-white");
+        $("#employment_bar").removeClass("active");
+        $("#protect_cards_bar").addClass("active");
+    }
 }

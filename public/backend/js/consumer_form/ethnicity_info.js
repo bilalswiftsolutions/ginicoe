@@ -15,4 +15,11 @@ function checkFieldSetEthnicityInformation()
         data[$(this).attr("name")] = $(this).val();
       });
       console.log(data)
+
+      if (nextWizardStep) {
+        $("#enthnicity_bar").addClass("completed");
+        $("#enthnicity_bar").children("div").eq(0).addClass("text-white");
+        $("#enthnicity_bar").removeClass("active");
+        $("#neighborhood_bar").addClass("active");
+    }
   }

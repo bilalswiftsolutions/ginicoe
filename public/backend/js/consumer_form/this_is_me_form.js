@@ -520,7 +520,7 @@ $("#this_is_me_form").validate({
     messages: {},
 });
 
-function move_to_next_step(nextWizardStep) {
+function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
     var parentFieldset = $("#find_me_here_next_button").parents(
         ".wizard-fieldset"
     );
@@ -575,5 +575,12 @@ function move_to_next_step(nextWizardStep) {
                     // });
                 }
             });
+    }
+
+    if (nextWizardStep) {
+        $(`#${bar_id}`).addClass("completed");
+        $(`#${bar_id}`).children("div").eq(0).addClass("text-white");
+        $(`#${bar_id}`).removeClass("active");
+        $(`#${next_bar_id}`).addClass("active");
     }
 }

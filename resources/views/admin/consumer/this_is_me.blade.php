@@ -1,6 +1,83 @@
 @extends('admin.admin_layouts')
 
 @section('admin_content')
+<style>
+    .stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+</style>
     <div class="card shadow mb-4">
 
 
@@ -8,9 +85,40 @@
             <div class="form-wizard">
                 <form id="this_is_me_form" action="" method="post" role="form">
                     <div class="form-wizard-header">
-                        <div class="progress" style="height: 50px;">
-                            <div id="progress_bar" class="progress-bar bg-success " role="progressbar" style="width: 5.9%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1. Pedigree Info</div>
+                        <div class="stepper-wrapper">
+                            <div class="stepper-item active" id="pedigree_bar">
+                              <div class="step-counter">1</div>
+                              <div class="step-name">My Pedigree Info</div>
+                            </div>
+                            <div class="stepper-item" id="find_me_here_bar">
+                              <div class="step-counter">2</div>
+                              <div class="step-name">Find Me Here</div>
+                            </div>
+                            <div class="stepper-item" id="gender_identity_bar">
+                              <div class="step-counter">3</div>
+                              <div class="step-name">Gender Identity Information</div>
+                            </div>
+                            <div class="stepper-item" id="enthnicity_bar">
+                              <div class="step-counter">4</div>
+                              <div class="step-name">Ethnicity Information</div>
+                            </div>
+
+                            <div class="stepper-item" id="neighborhood_bar">
+                                <div class="step-counter" >5</div>
+                                <div class="step-name">My Neighborhood is</div>
+                              </div>
+
+                              <div class="stepper-item" id="employment_bar">
+                                <div class="step-counter">6</div>
+                                <div class="step-name">Employment Information</div>
+                              </div>
+
+                              <div class="stepper-item" id="protect_cards_bar">
+                                <div class="step-counter">7</div>
+                                <div class="step-name">Protect These Charge Cards</div>
+                              </div>
+
+                             
                         </div>
                     </div>
                     @include('admin.includes.consumer.this_is_me_form.pidegree_info')
