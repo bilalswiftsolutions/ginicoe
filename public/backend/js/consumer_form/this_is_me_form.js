@@ -212,65 +212,325 @@ $("#this_is_me_form").validate({
         primary_mobile_number: {
             required: true,
         },
-        neighborhood_race_right:{
+        neighborhood_race_right: {
             required: true,
         },
-        name_of_neighborhood_household_head_right:{
+        name_of_neighborhood_household_head_right: {
             required: true,
         },
-        neghborhood_guid_right:{
+        neghborhood_guid_right: {
+            required: true,
+        },
+
+        neighborhood_race_left: {
+            required: true,
+        },
+        name_of_neighborhood_household_head_left: {
+            required: true,
+        },
+        neghborhood_guid_left: {
+            required: true,
+        },
+
+        neighborhood_race_back: {
+            required: true,
+        },
+        name_of_neighborhood_household_head_back: {
+            required: true,
+        },
+        neghborhood_guid_back: {
+            required: true,
+        },
+
+        neighborhood_race_front: {
+            required: true,
+        },
+        name_of_neighborhood_household_head_front: {
+            required: true,
+        },
+        neghborhood_guid_front: {
+            required: true,
+        },
+        employer_name: {
+            required: true,
+            maxlength: 26,
+        },
+        job_title: {
+            required: true,
+            maxlength: 26,
+        },
+        employer_identification_number: {
+            required: true,
+            maxlength: 16,
+        },
+        anual_salary_last_year: {
+            required: true,
+        },
+        labor_union_name: {
+            required: false,
+            maxlength: 16,
+        },
+        your_union_membership_number: {
+            required: false,
+            maxlength: 16,
+        },
+
+
+        charge_card_to_protect_1:{
+            required: true,
+        },
+        card_number_1:{
             required:true,
-        }
+            maxlength:16,
+        },
+        nickname_1:{
+            required: true,
+            maxlength:25,
+        },
+        primary_first_name_1:{
+            required: true,
+            maxlength:24,
+        },
+        primary_mi_1:{
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_1:{
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_1:{
+            required: false,
+            maxlength: 20
+        },
+        secondary_last_name_1:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_mi_1:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_card_holder_relationship_1:{
+            required: false,
+        },
+        name_of_bank_1:{
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_1:{
+            required: true,
+            maxlength:20,
+        },
 
-
-        ,
-        neighborhood_race_left:{
+        charge_card_to_protect_3:{
             required: true,
         },
-        name_of_neighborhood_household_head_left:{
-            required: true,
-        },
-        neghborhood_guid_left:{
+        card_number_3:{
             required:true,
-        }
+            maxlength:16,
+        },
+        nickname_3:{
+            required: true,
+            maxlength:25,
+        },
+        primary_first_name_3:{
+            required: true,
+            maxlength:24,
+        },
+        primary_mi_3:{
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_3:{
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_3:{
+            required: false,
+            maxlength: 20
+        },
+        secondary_last_name_3:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_mi_3:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_card_holder_relationship_3:{
+            required: false,
+        },
+        name_of_bank_3:{
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_3:{
+            required: true,
+            maxlength:20,
+        },
 
-        ,
-        neighborhood_race_back:{
+
+        charge_card_to_protect_2:{
             required: true,
         },
-        name_of_neighborhood_household_head_back:{
-            required: true,
-        },
-        neghborhood_guid_back:{
+        card_number_2:{
             required:true,
-        }
+            maxlength:16,
+        },
+        nickname_2:{
+            required: true,
+            maxlength:25,
+        },
+        primary_first_name_2:{
+            required: true,
+            maxlength:24,
+        },
+        primary_mi_2:{
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_2:{
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_2:{
+            required: false,
+            maxlength: 20
+        },
+        secondary_last_name_2:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_mi_2:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_card_holder_relationship_2:{
+            required: false,
+        },
+        name_of_bank_2:{
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_2:{
+            required: true,
+            maxlength:20,
+        },
 
-
-        ,
-        neighborhood_race_front:{
+        charge_card_to_protect_5:{
             required: true,
         },
-        name_of_neighborhood_household_head_front:{
-            required: true,
-        },
-        neghborhood_guid_front:{
+        card_number_5:{
             required:true,
-        }
+            maxlength:16,
+        },
+        nickname_5:{
+            required: true,
+            maxlength:25,
+        },
+        primary_first_name_5:{
+            required: true,
+            maxlength:24,
+        },
+        primary_mi_5:{
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_5:{
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_5:{
+            required: false,
+            maxlength: 20
+        },
+        secondary_last_name_5:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_mi_5:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_card_holder_relationship_5:{
+            required: false,
+        },
+        name_of_bank_5:{
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_5:{
+            required: true,
+            maxlength:20,
+        },
+
+
+
+        charge_card_to_protect_4:{
+            required: true,
+        },
+        card_number_4:{
+            required:true,
+            maxlength:16,
+        },
+        nickname_4:{
+            required: true,
+            maxlength:25,
+        },
+        primary_first_name_4:{
+            required: true,
+            maxlength:24,
+        },
+        primary_mi_4:{
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_4:{
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_4:{
+            required: false,
+            maxlength: 20
+        },
+        secondary_last_name_4:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_mi_4:{
+            required: false,
+            maxlength:20,
+        },
+        secondary_card_holder_relationship_4:{
+            required: false,
+        },
+        name_of_bank_4:{
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_4:{
+            required: true,
+            maxlength:20,
+        },
+
+
+
     },
     messages: {},
 });
 
-function move_to_next_step(nextWizardStep)
-{
-   
-    var parentFieldset = $('#find_me_here_next_button').parents(".wizard-fieldset");
-    var currentActiveStep = $('#find_me_here_next_button')
+function move_to_next_step(nextWizardStep) {
+    var parentFieldset = $("#find_me_here_next_button").parents(
+        ".wizard-fieldset"
+    );
+    var currentActiveStep = $("#find_me_here_next_button")
         .parents(".form-wizard")
         .find(".form-wizard-steps .active");
-    var next = $('#find_me_here_next_button');
-  
+    var next = $("#find_me_here_next_button");
+
     if (nextWizardStep) {
-        console.log('HELLO',next)
+        console.log("HELLO", next);
         next.parents(".wizard-fieldset").removeClass("show", "400");
         currentActiveStep
             .removeClass("active")
@@ -285,7 +545,7 @@ function move_to_next_step(nextWizardStep)
         next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
 
         progress_bar = progress_bar + 5.9;
-        console.log(progress_bar)
+        console.log(progress_bar);
         let text = next
             .parents(".wizard-fieldset")
             .next(".wizard-fieldset")
@@ -298,8 +558,10 @@ function move_to_next_step(nextWizardStep)
         jQuery(document)
             .find(".wizard-fieldset")
             .each(function () {
-                if ($('#find_me_here_next_button').hasClass("show")) {
-                    var formAtrr = $('#find_me_here_next_button').attr("data-tab-content");
+                if ($("#find_me_here_next_button").hasClass("show")) {
+                    var formAtrr = $("#find_me_here_next_button").attr(
+                        "data-tab-content"
+                    );
 
                     // jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
                     // 	if(jQuery(this).attr('data-attr') == formAtrr){

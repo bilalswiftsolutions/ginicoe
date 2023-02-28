@@ -18,6 +18,8 @@
                     @include('admin.includes.consumer.this_is_me_form.gender_identity_information')
                     @include('admin.includes.consumer.this_is_me_form.ethnicity_information')
                     @include('admin.includes.consumer.this_is_me_form.my_neighborhood')
+                    @include('admin.includes.consumer.this_is_me_form.employment_information')
+                    @include('admin.includes.consumer.this_is_me_form.charges_card')
                     <fieldset class="wizard-fieldset">
                         <h5>Payment Information</h5>
                         <div class="form-group">
@@ -157,6 +159,8 @@
     <script src="{{ asset('public/backend/js/consumer_form/gender_identity_information.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/ethnicity_info.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/my_neighborhood.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/employment_information.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/charges_card.js') }}"></script>
     <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
     <script src="{{ asset('public/backend/js/form_wizard.js') }}"></script>
 @endsection

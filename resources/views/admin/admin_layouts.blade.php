@@ -56,6 +56,7 @@
             </a>
         </li>
 
+        @if(!empty($admin->role->role_name))
         @if ($admin->role->role_name == 'Consumer')
 
         <li class="nav-item @if($conName[1] == 'this-is-me') active @endif">
@@ -65,6 +66,7 @@
 
             </a>
         </li>
+        @endif
         @endif
 
         @php $arr_one = array(); @endphp
