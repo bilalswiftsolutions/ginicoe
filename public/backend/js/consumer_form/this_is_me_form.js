@@ -584,3 +584,14 @@ function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
         $(`#${next_bar_id}`).addClass("active");
     }
 }
+
+
+function previousStep(current_bar,previous_bar)
+{
+    
+        $(`#${previous_bar}`).removeClass("completed");
+        $(`#${previous_bar}`).children("div").eq(0).removeClass("text-white");
+        $(`#${previous_bar}`).addClass("active");
+        $(`#${current_bar}`).removeClass("active");
+    
+}

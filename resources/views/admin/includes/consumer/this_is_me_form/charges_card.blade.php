@@ -1027,7 +1027,7 @@
 
 
     <div class="form-group clearfix">
-        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+        <a href="javascript:;" onclick="previousStep('protect_cards_bar','employment_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetChargesCard()" href="javascript:;"
             class="form-wizard-next-btn  float-right">Next</a>
     </div>

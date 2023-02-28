@@ -723,7 +723,7 @@
     </div>
 
     <div class="form-group clearfix">
-        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+        <a href="javascript:;" onclick="previousStep('neighborhood_bar','enthnicity_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetNeighborhood()" href="javascript:;"
             class="form-wizard-next-btn  float-right">Next</a>
     </div>

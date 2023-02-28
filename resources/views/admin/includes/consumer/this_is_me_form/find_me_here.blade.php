@@ -679,7 +679,7 @@
     </div>
 
     <div class="form-group clearfix">
-        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+        <a href="javascript:;" onclick="previousStep('find_me_here_bar','pedigree_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetThisIsMe()" id="find_me_here_next_button" class="form-wizard-next-btn-without-click float-right">Next</a>
     </div>
 </fieldset>

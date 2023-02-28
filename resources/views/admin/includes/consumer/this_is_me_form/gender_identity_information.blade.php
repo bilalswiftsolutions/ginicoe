@@ -78,7 +78,7 @@
     
 
     <div class="form-group clearfix">
-        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+        <a href="javascript:;" onclick="previousStep('gender_identity_bar','find_me_here_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetGenderIdentityInformation()" href="javascript:;" class="form-wizard-next-btn  float-right">Next</a>
     </div>
 </fieldset>

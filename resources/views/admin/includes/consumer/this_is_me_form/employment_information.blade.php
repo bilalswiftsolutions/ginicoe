@@ -120,7 +120,7 @@
         </div>
     </div>
     <div class="form-group clearfix">
-        <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+        <a href="javascript:;" onclick="previousStep('employment_bar','neighborhood_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetEmploymentInformation()" href="javascript:;" class="form-wizard-next-btn  float-right">Next</a>
     </div>
 </fieldset>
