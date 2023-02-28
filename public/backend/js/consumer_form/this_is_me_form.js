@@ -513,6 +513,25 @@ $("#this_is_me_form").validate({
             required: true,
             maxlength:20,
         },
+        chin_description:{
+            required: true,
+        },
+        eyes_description:{
+            required: true,
+        },
+        hair_description:{
+            required: true,
+        },
+        mouth_description:{
+            required: true,
+        },
+        hair_description:{
+            required: true,
+        },
+        eyeware_prescription:{
+            required: true,
+        },
+        
 
 
 

@@ -61,7 +61,7 @@ function checkFieldSetChargesCard()
     } else {
         nextWizardStep = false;
     }
-    // nextWizardStep = true;
+    nextWizardStep = true;
   
 
     var data = {};
@@ -74,6 +74,6 @@ function checkFieldSetChargesCard()
         $("#protect_cards_bar").addClass("completed");
         $("#protect_cards_bar").children("div").eq(0).addClass("text-white");
         $("#protect_cards_bar").removeClass("active");
-        // $("#facial_image_upload_bar").addClass("active");
+        $("#facial_image_upload_bar").addClass("active");
     }
 }

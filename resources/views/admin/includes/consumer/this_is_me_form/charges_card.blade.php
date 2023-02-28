@@ -1019,13 +1019,6 @@
 
 
 
-
-
-
-
-
-
-
     <div class="form-group clearfix">
         <a href="javascript:;" onclick="previousStep('protect_cards_bar','employment_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetChargesCard()" href="javascript:;"

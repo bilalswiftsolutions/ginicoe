@@ -117,6 +117,19 @@
                                 <div class="step-counter">7</div>
                                 <div class="step-name">Protect These Charge Cards</div>
                               </div>
+                              <div class="stepper-item" id="facial_image_upload_bar">
+                                <div class="step-counter">8</div>
+                                <div class="step-name">Facial Image Upload</div>
+                              </div>
+                              <div class="stepper-item" id="head_n_face_bar">
+                                <div class="step-counter">9</div>
+                                <div class="step-name">Head & Face Info</div>
+                              </div>
+
+                              <div class="stepper-item" id="hair_bar">
+                                <div class="step-counter">10</div>
+                                <div class="step-name">Hair</div>
+                              </div>
 
                              
                         </div>
@@ -128,6 +141,10 @@
                     @include('admin.includes.consumer.this_is_me_form.my_neighborhood')
                     @include('admin.includes.consumer.this_is_me_form.employment_information')
                     @include('admin.includes.consumer.this_is_me_form.charges_card')
+                    @include('admin.includes.consumer.this_is_me_form.facial_image')
+                    @include('admin.includes.consumer.this_is_me_form.head_and_face_info')
+                    @include('admin.includes.consumer.this_is_me_form.hair')
+                    @include('admin.includes.consumer.this_is_me_form.distinguish_identifier')
                     <fieldset class="wizard-fieldset">
                         <h5>Payment Information</h5>
                         <div class="form-group">
@@ -269,6 +286,9 @@
     <script src="{{ asset('public/backend/js/consumer_form/my_neighborhood.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/employment_information.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/charges_card.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/facial_image_upload.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/head_and_face_info.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/hair.js') }}"></script>
     <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
     <script src="{{ asset('public/backend/js/form_wizard.js') }}"></script>
 @endsection
