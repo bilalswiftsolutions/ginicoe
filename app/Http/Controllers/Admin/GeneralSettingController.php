@@ -29,7 +29,7 @@ class GeneralSettingController extends Controller
         }
         
         $request->validate([
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         // Unlink old photo
@@ -94,7 +94,7 @@ class GeneralSettingController extends Controller
         }
         
         $request->validate([
-            'favicon' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'favicon' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         // Unlink old photo
@@ -127,7 +127,7 @@ class GeneralSettingController extends Controller
         }
         
         $request->validate([
-            'login_bg' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'login_bg' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         // Unlink old photo
@@ -251,7 +251,7 @@ class GeneralSettingController extends Controller
         if($request->file('preloader_photo'))
         {
             $request->validate([
-                'preloader_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'preloader_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo
@@ -391,7 +391,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_about'))
         {
             $request->validate([
-                'banner_about' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_about' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_about')->extension();
@@ -405,7 +405,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_service'))
         {
             $request->validate([
-                'banner_service' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_service' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_service')->extension();
@@ -419,7 +419,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_service_detail'))
         {
             $request->validate([
-                'banner_service_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_service_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_service_detail')->extension();
@@ -433,7 +433,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_blog'))
         {
             $request->validate([
-                'banner_blog' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_blog' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_blog')->extension();
@@ -447,7 +447,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_blog_detail'))
         {
             $request->validate([
-                'banner_blog_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_blog_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_blog_detail')->extension();
@@ -461,7 +461,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_category'))
         {
             $request->validate([
-                'banner_category' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_category' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_category')->extension();
@@ -475,7 +475,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_project'))
         {
             $request->validate([
-                'banner_project' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_project' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_project')->extension();
@@ -489,7 +489,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_project_detail'))
         {
             $request->validate([
-                'banner_project_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_project_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_project_detail')->extension();
@@ -503,7 +503,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_team_member'))
         {
             $request->validate([
-                'banner_team_member' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_team_member' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_team_member')->extension();
@@ -517,7 +517,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_team_member_detail'))
         {
             $request->validate([
-                'banner_team_member_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_team_member_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_team_member_detail')->extension();
@@ -531,7 +531,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_photo_gallery'))
         {
             $request->validate([
-                'banner_photo_gallery' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_photo_gallery' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_photo_gallery')->extension();
@@ -545,7 +545,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_video_gallery'))
         {
             $request->validate([
-                'banner_video_gallery' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_video_gallery' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_video_gallery')->extension();
@@ -559,7 +559,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_faq'))
         {
             $request->validate([
-                'banner_faq' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_faq' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_faq')->extension();
@@ -573,7 +573,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_product'))
         {
             $request->validate([
-                'banner_product' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_product' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_product')->extension();
@@ -587,7 +587,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_product_detail'))
         {
             $request->validate([
-                'banner_product_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_product_detail' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_product_detail')->extension();
@@ -601,7 +601,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_contact'))
         {
             $request->validate([
-                'banner_contact' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_contact' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_contact')->extension();
@@ -615,7 +615,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_search'))
         {
             $request->validate([
-                'banner_search' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_search' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_search')->extension();
@@ -629,7 +629,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_cart'))
         {
             $request->validate([
-                'banner_cart' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_cart' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_cart')->extension();
@@ -643,7 +643,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_checkout'))
         {
             $request->validate([
-                'banner_checkout' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_checkout' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_checkout')->extension();
@@ -657,7 +657,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_login'))
         {
             $request->validate([
-                'banner_login' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_login' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_login')->extension();
@@ -671,7 +671,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_registration'))
         {
             $request->validate([
-                'banner_registration' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_registration' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_registration')->extension();
@@ -685,7 +685,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_forget_password'))
         {
             $request->validate([
-                'banner_forget_password' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_forget_password' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_forget_password')->extension();
@@ -699,7 +699,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_customer_panel'))
         {
             $request->validate([
-                'banner_customer_panel' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_customer_panel' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_customer_panel')->extension();
@@ -713,7 +713,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_career'))
         {
             $request->validate([
-                'banner_career' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_career' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_career')->extension();
@@ -727,7 +727,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_job'))
         {
             $request->validate([
-                'banner_job' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_job' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_job')->extension();
@@ -741,7 +741,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_job_application'))
         {
             $request->validate([
-                'banner_job_application' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_job_application' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_job_application')->extension();
@@ -755,7 +755,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_term'))
         {
             $request->validate([
-                'banner_term' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_term' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_term')->extension();
@@ -769,7 +769,7 @@ class GeneralSettingController extends Controller
         if($request->hasFile('banner_privacy'))
         {
             $request->validate([
-                'banner_privacy' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'banner_privacy' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$request->current_photo));
             $ext = $request->file('banner_privacy')->extension();

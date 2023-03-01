@@ -57,7 +57,7 @@ class PageHomeController extends Controller
         if($request->hasFile('special_bg'))
         {
             $request->validate([
-                'special_bg' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'special_bg' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo
@@ -74,7 +74,7 @@ class PageHomeController extends Controller
         if($request->hasFile('special_video_bg'))
         {
             $request->validate([
-                'special_video_bg' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'special_video_bg' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo
@@ -124,7 +124,7 @@ class PageHomeController extends Controller
         if($request->hasFile('testimonial_bg'))
         {
             $request->validate([
-                'testimonial_bg' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'testimonial_bg' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo
@@ -183,7 +183,7 @@ class PageHomeController extends Controller
         if($request->hasFile('appointment_bg'))
         {
             $request->validate([
-                'appointment_bg' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'appointment_bg' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo
@@ -230,7 +230,7 @@ class PageHomeController extends Controller
         if($request->hasFile('newsletter_bg'))
         {
             $request->validate([
-                'newsletter_bg' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'newsletter_bg' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             // Unlink old photo

@@ -28,7 +28,7 @@ class PhotoChangeController extends Controller
         }
         
         $request->validate([
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         // Unlink old photo

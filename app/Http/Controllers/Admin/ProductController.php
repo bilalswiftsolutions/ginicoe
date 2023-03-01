@@ -43,7 +43,7 @@ class ProductController extends Controller
             'product_stock' => 'required',
             'product_content' => 'required',
             'product_content_short' => 'required',
-            'product_featured_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'product_featured_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         if(empty($data['product_slug'])) {
@@ -87,7 +87,7 @@ class ProductController extends Controller
                 'product_stock' => 'required',
                 'product_content' => 'required',
                 'product_content_short' => 'required',
-                'product_featured_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'product_featured_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$product->product_featured_photo));
             $ext = $request->file('product_featured_photo')->extension();

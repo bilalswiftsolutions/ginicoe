@@ -37,7 +37,7 @@ class PhotoController extends Controller
         $data = $request->only($photo->getFillable());
 
         $request->validate([
-            'photo_name' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'photo_name' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
             'photo_order' => 'numeric|min:0|max:32767'
         ]);
 
@@ -69,7 +69,7 @@ class PhotoController extends Controller
 
         if($request->hasFile('photo_name')) {
             $request->validate([
-                'photo_name' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+                'photo_name' => 'image|mimes:jpeg,png,jpg,gif|max:10000',
                 'photo_order' => 'numeric|min:0|max:32767'
             ]);
             unlink(public_path('uploads/'.$photo->photo_name));

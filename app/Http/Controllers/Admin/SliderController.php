@@ -34,7 +34,7 @@ class SliderController extends Controller
         }
         
         $request->validate([
-            'slider_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'slider_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
         ]);
 
         $statement = DB::select("SHOW TABLE STATUS LIKE 'sliders'");
@@ -73,7 +73,7 @@ class SliderController extends Controller
         if ($request->hasFile('slider_photo')) {
 
             $request->validate([
-                'slider_photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'slider_photo' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
 
             unlink(public_path('uploads/'.$slider->slider_photo));

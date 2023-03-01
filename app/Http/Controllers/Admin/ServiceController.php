@@ -39,7 +39,7 @@ class ServiceController extends Controller
         $request->validate([
             'name' => 'required|unique:services',
             'slug' => 'unique:services',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         if(empty($data['slug'])) {
@@ -81,7 +81,7 @@ class ServiceController extends Controller
                 'slug'   =>  [
                     Rule::unique('services')->ignore($id),
                 ],
-                'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'photo' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$service->photo));
             $ext = $request->file('photo')->extension();

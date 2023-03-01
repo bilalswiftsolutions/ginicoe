@@ -40,7 +40,7 @@ class TeamMemberController extends Controller
             'name' => 'required',
             'slug' => 'unique:team_members',
             'designation' => 'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000'
         ]);
 
         if(empty($data['slug'])) {
@@ -84,7 +84,7 @@ class TeamMemberController extends Controller
                 'designation'   =>  [
                     'required'
                 ],
-                'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+                'photo' => 'image|mimes:jpeg,png,jpg,gif|max:10000'
             ]);
             unlink(public_path('uploads/'.$team_member->photo));
             $ext = $request->file('photo')->extension();
