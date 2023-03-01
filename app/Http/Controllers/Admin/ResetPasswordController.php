@@ -23,9 +23,9 @@ class ResetPasswordController extends Controller
         $aa = DB::table('admins')->where('email', $email_from_url)->first();
         $expected_url = url('admin/reset-password/' . $aa->token . '/' . $aa->email);
         $current_url = url()->current();
-        if ($expected_url != $current_url) {
-            return redirect()->route('admin.login');
-        }
+        // if ($expected_url != $current_url) {
+        //     return redirect()->route('admin.login');
+        // }
         return view('admin.auth.reset_password', compact('email_from_url'));
     }
 
