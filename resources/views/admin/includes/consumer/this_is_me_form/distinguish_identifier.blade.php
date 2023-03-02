@@ -79,39 +79,39 @@
                     <div class="form-group">
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="right_eye">
+                            <input type="checkbox" class="form-check-input"  name="right_eye" id="right_eye">
                             <label class="form-check-label" for="right_eye">Right Eye</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="left_eye">
+                            <input type="checkbox" class="form-check-input"  name="left_eye" id="left_eye">
                             <label class="form-check-label" for="left_eye">Left Eye</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="nose_job">
+                            <input type="checkbox" class="form-check-input"  name="nose_job" id="nose_job">
                             <label class="form-check-label" for="nose_job">Nose Job</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="cheeks">
+                            <input type="checkbox" class="form-check-input"  name="cheeks" id="cheeks">
                             <label class="form-check-label" for="cheeks">Cheeks</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="mouth">
+                            <input type="checkbox" class="form-check-input"  name="mouth" id="mouth">
                             <label class="form-check-label" for="mouth">Mouth</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="chin">
+                            <input type="checkbox" class="form-check-input"  name="chin" id="chin">
                             <label class="form-check-label" for="chin">Chin</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="fore_head">
+                            <input type="checkbox" class="form-check-input"  name="fore_head" id="fore_head">
                             <label class="form-check-label" for="fore_head">Fore Head</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="face_lift">
+                            <input type="checkbox" class="form-check-input"  name="face_lift" id="face_lift">
                             <label class="form-check-label" for="face_lift">Face Lift</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="lips">
+                            <input type="checkbox" class="form-check-input"  name="lips" id="lips">
                             <label class="form-check-label" for="lips">Lips</label>
                         </div>
                         <p class="text_danger form_error"></p>

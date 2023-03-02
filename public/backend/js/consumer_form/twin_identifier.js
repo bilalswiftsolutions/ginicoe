@@ -17,6 +17,6 @@ function checkFieldSetTwinIdentifier()
         $("#twin_identifier_bar").addClass("completed");
         $("#twin_identifier_bar").children("div").eq(0).addClass("text-white");
         $("#twin_identifier_bar").removeClass("active");
-        $("#next").addClass("active");
+        $("#open_bar").addClass("active");
     }
 }
