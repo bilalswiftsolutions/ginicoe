@@ -51,7 +51,7 @@
         <li class="nav-item @if($conName[1] == 'dashboard') active @endif">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="fas fa-fw fa-home"></i>
-                <span>@if(session('role_id') ==  1) Admin @else FN LN @endif Dashboard</span>
+                <span>@if(session('role_id') ==  1) Admin @else {{session('name')}} @endif Dashboard</span>
 
             </a>
         </li>

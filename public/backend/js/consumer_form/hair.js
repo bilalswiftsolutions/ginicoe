@@ -16,6 +16,6 @@ function checkFieldSetHair() {
         $("#hair_bar").addClass("completed");
         $("#hair_bar").children("div").eq(0).addClass("text-white");
         $("#hair_bar").removeClass("active");
-        // $("#employment_bar").addClass("active");
+         $("#distinguish_bar").addClass("active");
     }
 }

@@ -532,6 +532,72 @@ $("#this_is_me_form").validate({
             required: true,
         },
         
+        dominant_hand_writing_side:{
+            required:true,
+        },
+        are_you_twin:{
+            required:true,
+        },
+        twin_type:{
+            required:false,
+        },
+
+        twin_first_name:{
+            required:false,
+            maxlength: 20,
+        },
+        twin_mi :{
+            required:false,
+            maxlength:1,
+        },
+
+        twin_last_name:{
+            required:false,
+            maxlength:20,
+        },
+        twin_difference_description :{
+            required:false,
+            maxlength: 150,
+        },
+        birth_mark_located :{
+            required:false,
+        },
+
+        twin_birth_mark_located:{
+            required:false,
+        },
+        my_freckles_located :{
+            required:false,
+        },
+        twin_freckles_located:{
+            required:false,
+        },
+        my_moles_located :{
+            required:false,
+        },
+        twin_moles_located :{
+            required:false,
+        },
+        hair_are_different:{
+            required:false,
+        },
+        my_eye_color :{
+            required:false,
+        },
+        twin_eye_color:{
+            required:false,
+        },
+        my_hair_color:{
+            required:false,
+        },
+        twin_hair_color :{
+            required:false,
+        },
+        facial_surgery_date:{
+            required: false,
+            maxlength:20,
+        }
+
 
 
 

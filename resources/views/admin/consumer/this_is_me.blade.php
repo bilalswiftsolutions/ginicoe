@@ -131,6 +131,17 @@
                                 <div class="step-name">Hair</div>
                               </div>
 
+                              
+                              <div class="stepper-item" id="distinguish_bar">
+                                <div class="step-counter">11</div>
+                                <div class="step-name">Distinguishing Identifiers</div>
+                              </div>
+
+                              <div class="stepper-item" id="twin_identifier_bar">
+                                <div class="step-counter">12</div>
+                                <div class="step-name">Twin Identifier</div>
+                              </div>
+
                              
                         </div>
                     </div>
@@ -145,6 +156,7 @@
                     @include('admin.includes.consumer.this_is_me_form.head_and_face_info')
                     @include('admin.includes.consumer.this_is_me_form.hair')
                     @include('admin.includes.consumer.this_is_me_form.distinguish_identifier')
+                    @include('admin.includes.consumer.this_is_me_form.twin_identifier')
                     <fieldset class="wizard-fieldset">
                         <h5>Payment Information</h5>
                         <div class="form-group">
@@ -289,6 +301,8 @@
     <script src="{{ asset('public/backend/js/consumer_form/facial_image_upload.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/head_and_face_info.js') }}"></script>
     <script src="{{ asset('public/backend/js/consumer_form/hair.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/distinguish_identifiers.js') }}"></script>
+    <script src="{{ asset('public/backend/js/consumer_form/twin_identifier.js') }}"></script>
     <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
     <script src="{{ asset('public/backend/js/form_wizard.js') }}"></script>
 @endsection
