@@ -92,11 +92,11 @@
                             <textarea name="visitor_message" class="form-control h-200" cols="30" rows="10"></textarea>
                         </div>
 
-                        @if($g_setting->google_recaptcha_status == 'Show')
+                        {{-- @if($g_setting->google_recaptcha_status == 'Show')
                         <div class="form-group">
                             <div class="g-recaptcha" data-sitekey="{{ $g_setting->google_recaptcha_site_key }}"></div>
                         </div>
-                        @endif
+                        @endif --}}
 
                         <button type="submit" class="btn btn-primary mt_10">Send Message</button>
                     </form>

@@ -30,14 +30,14 @@ class ContactController extends Controller
             'visitor_message' => 'required'
         ]);
 
-        if($g_setting->google_recaptcha_status == 'Show') {
-            $request->validate([
-                'g-recaptcha-response' => 'required'
-            ],
-            [
-                'g-recaptcha-response.required'    => 'You must have to input recaptcha correctly'
-            ]);
-        }
+        // if($g_setting->google_recaptcha_status == 'Show') {
+        //     $request->validate([
+        //         'g-recaptcha-response' => 'required'
+        //     ],
+        //     [
+        //         'g-recaptcha-response.required'    => 'You must have to input recaptcha correctly'
+        //     ]);
+        // }
 
         // Send Email
         $email_template_data = DB::table('email_templates')->where('id', 1)->first();

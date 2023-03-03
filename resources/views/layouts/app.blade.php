@@ -54,6 +54,7 @@ $footer_col_2 = DB::table('footer_columns')->orderBy('column_item_order', 'asc')
 
     @if($conName[0] == 'service')
         @php
+        dd($conName[1]);
             $item_row = DB::table('services')->where('slug',$conName[1])->first();
         @endphp
         <meta name="description" content="{{ $item_row->seo_meta_description }}">
