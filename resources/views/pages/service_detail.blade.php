@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <div class="sidebar">
                         <div class="widget">
                             <h3>All Services</h3>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
