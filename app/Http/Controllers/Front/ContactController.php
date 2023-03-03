@@ -51,7 +51,7 @@ class ContactController extends Controller
 
         $admin_data = DB::table('admins')->where('id',1)->first();
 
-        Mail::to($admin_data->email)->send(new ContactPageMessage($subject,$message));
+        Mail::to('supportcenter@ginicoe.com')->send(new ContactPageMessage($subject,$message));
 
         return redirect()->back()->with('success', 'Message is sent successfully! Admin will contact you soon');
     }
