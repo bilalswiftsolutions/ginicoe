@@ -311,24 +311,16 @@
         @endif
 
         <!-- Customer -->
-        @php if( in_array('Customer Section', $arr_one) || session('role_id')==1 ): @endphp
+        {{-- @php if( in_array('Customer Section', $arr_one) || session('role_id')==1 ): @endphp
         <li class="nav-item @if($conName[1] == 'customer') active @endif">
             <a class="nav-link" href="{{ route('admin.customer.index') }}">
                 <i class="fas fa-users"></i>
                 <span>Customer Section</span>
             </a>
         </li>
-        @endif
+        @endif --}}
 
-        <!-- Why Choose Us -->
-        @php if( in_array('Why Choose Us', $arr_one) || session('role_id')==1 ): @endphp
-        <li class="nav-item @if($conName[1] == 'why-choose') active @endif">
-            <a class="nav-link" href="{{ route('admin.why_choose.index') }}">
-                <i class="fas fa-arrows-alt"></i>
-                <span>Why Choose Us</span>
-            </a>
-        </li>
-        @endif
+     
 
         <!-- Services -->
         @php if( in_array('Service', $arr_one) || session('role_id')==1 ): @endphp
@@ -339,6 +331,16 @@
             </a>
         </li>
         @endif
+
+           <!-- Why Choose Us -->
+           @php if( in_array('Why Choose Us', $arr_one) || session('role_id')==1 ): @endphp
+           <li class="nav-item @if($conName[1] == 'why-choose') active @endif">
+               <a class="nav-link" href="{{ route('admin.why_choose.index') }}">
+                   <i class="fas fa-arrows-alt"></i>
+                   <span>Why Choose Us</span>
+               </a>
+           </li>
+           @endif
 
         <!-- Testimonials -->
         @php if( in_array('Testimonial', $arr_one) || session('role_id')==1 ): @endphp

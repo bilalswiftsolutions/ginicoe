@@ -17,8 +17,17 @@
                     <input type="text" name="name" class="form-control" value="{{ $why_choose->name }}" autofocus>
                 </div>
                 <div class="form-group">
+                    <label for="">Slug *</label>
+                    <input required type="text" name="slug" class="form-control" value="{{ $why_choose->slug }}" autofocus>
+                </div>
+                <div class="form-group">
                     <label for="">Description</label>
                     <textarea name="description" class="form-control h_100" cols="30" rows="10">{{ $why_choose->description }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Page Content</label>
+                    <textarea name="page_content" class="form-control h_100 editor" cols="30" rows="10">{{ $why_choose->page_content }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="">Existing Photo</label>

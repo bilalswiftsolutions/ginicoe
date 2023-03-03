@@ -59,15 +59,18 @@
                 <div class="row">
                     @foreach ($why_choose_items as $row)
                         <div class="col-md-4">
-                            <div class="feature-item wow fadeInUp">
-                                <div class="icon">
-                                    <img src="{{ asset('public/uploads/' . $row->photo) }}" alt="">
+                            <a href="{{ url('why-choose/' . $row->slug) }}">
+
+                                <div class="feature-item wow fadeInUp">
+                                    <div class="icon">
+                                        <img src="{{ asset('public/uploads/' . $row->photo) }}" alt="">
+                                    </div>
+                                    <h4>{{ $row->name }}</h4>
+                                    <p>
+                                        {!! nl2br(e($row->description)) !!}
+                                    </p>
                                 </div>
-                                <h4>{{ $row->name }}</h4>
-                                <p>
-                                    {!! nl2br(e($row->description)) !!}
-                                </p>
-                            </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>
@@ -370,6 +373,5 @@
                 pageLanguage: 'en'
             }, 'google_translate');
         }
-  
     </script>
 @endsection

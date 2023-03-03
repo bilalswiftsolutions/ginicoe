@@ -81,17 +81,29 @@ use App\Http\Controllers\Front\SubscriptionController;
 use App\Http\Controllers\Front\TeamMemberController as TeamMemberControllerForFront;
 use App\Http\Controllers\Front\TermController;
 use App\Http\Controllers\Front\VideoGalleryController;
-
+use App\Http\Controllers\Front\WhyChooseController as FrontWhyChooseController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /* --------------------------------------- */
 /* Front End */
 /* --------------------------------------- */
 
+Route::get('/run-commands', function () {
+    Artisan::call('migrate');
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    Artisan::call('route:cache');
+    return redirect()->back()->with('success','Command Run successfully');
+});
+
+
 Route::get('/', [HomeController::class, 'index']);
 Route::get('about', [AboutController::class, 'index'])->name('front.about');
 Route::get('services', [ServiceControllerForFront::class, 'index'])->name('front.services');
 Route::get('service/{slug}', [ServiceControllerForFront::class, 'detail']);
+Route::get('why-choose/{slug}', [FrontWhyChooseController ::class, 'detail']);
 Route::get('blog', [BlogControllerForFront::class, 'index'])->name('front.blogs');
 Route::get('blog/{slug}', [BlogControllerForFront::class, 'detail']);
 Route::post('blog/comment', [BlogControllerForFront::class, 'comment'])->name('front.comment');
