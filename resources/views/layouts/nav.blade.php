@@ -41,6 +41,17 @@
                                 <a href="{{ route('front.about') }}" class="nav-link ">About</a>
                             </li>
                         @endif
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link dropdown-toggle">Customers</a>
+                            <ul class="dropdown-menu">
+                                @foreach ($why_choose_items as $row)
+                                    <li class="nav-item">
+                                        <a href="{{ url('why-choose/' . $row->slug) }}"
+                                            class="nav-link">{{ $row->name }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
                         {{-- @dd($menu_arr['Services']) --}}
                         @if ($menu_arr['Services'] == 'Show')
                             <li class="nav-item">
@@ -76,11 +87,7 @@
                                 $menu_arr['Team Members'] == 'Hide' &&
                                 !$dynamic_pages)
                         @else
-                            @if ($menu_arr['Career'] == 'Show')
-                                <li class="nav-item">
-                                    <a href="{{ route('front.career') }}" class="nav-link">Career</a>
-                                </li>
-                            @endif
+                           
                             @foreach ($dynamic_pages as $row)
                                 <li class="nav-item">
                                     <a href="{{ url('page/' . $row->dynamic_page_slug) }}"
@@ -137,17 +144,12 @@
                             </ul>
                         </li> --}}
                         @endif
-                        <li class="nav-item">
-                            <a href="javascript:void(0);" class="nav-link dropdown-toggle">Customers</a>
-                            <ul class="dropdown-menu">
-                                @foreach ($why_choose_items as $row)
-                                    <li class="nav-item">
-                                        <a href="{{ url('why-choose/' . $row->slug) }}" class="nav-link">{{ $row->name }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
 
+                        @if ($menu_arr['Career'] == 'Show')
+                        <li class="nav-item">
+                            <a href="{{ route('front.career') }}" class="nav-link">Career</a>
+                        </li>
+                    @endif
                         @if ($menu_arr['Contact'] == 'Show')
                             <li class="nav-item">
                                 <a href="{{ route('front.contact') }}" class="nav-link ">Contact</a>
