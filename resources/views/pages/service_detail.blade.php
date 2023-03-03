@@ -18,7 +18,7 @@
     <div class="page-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="single-section">
                         <div class="featured-photo">
                             {{-- <img src="{{ asset('public/uploads/'.$service_detail->photo) }}"> --}}
