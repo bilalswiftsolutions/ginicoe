@@ -25,7 +25,7 @@
                         </div>
                         <div class="text">
                             <h2>{{ $why_choose_detail->name }}</h2>
-                            {!!  $why_choose_detail->description !!}
+                            {!!  $why_choose_detail->page_content !!}
                         </div>
                     </div>
                 </div>
