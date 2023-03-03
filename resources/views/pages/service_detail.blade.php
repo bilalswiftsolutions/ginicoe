@@ -20,9 +20,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="single-section">
-                        <div class="featured-photo">
+                        {{-- <div class="featured-photo">
                             <img src="{{ asset('public/uploads/'.$service_detail->photo) }}">
-                        </div>
+                        </div> --}}
                         <div class="text">
                             <h2>{{ $service_detail->name }}</h2>
                             {!!  $service_detail->description !!}
