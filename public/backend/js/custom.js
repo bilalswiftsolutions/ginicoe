@@ -1,6 +1,7 @@
 (function ($) {
     "use strict";
     $(".editor").summernote({
+        lineHeights: ['0.5', '1.0'],
         toolbar: [
             ['style', ['bold', 'italic', 'underline', 'clear']],
             ['font', ['fontname', 'fontsize']],
