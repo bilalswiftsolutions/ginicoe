@@ -6,7 +6,9 @@
 @foreach ($menus as $row)
     @php
         $menu_arr[$row->menu_name] = $row->menu_status;
+        $why_choose_items = DB::table('why_choose_items')->get();
     @endphp
+    
 @endforeach
 
 <!-- Start Navbar Area -->
@@ -74,7 +76,7 @@
 
                         @php
                             $dynamic_pages = DB::table('dynamic_pages')->get();
-                            $why_choose_items = DB::table('why_choose_items')->get();
+                           
                         @endphp
 
                         {{-- @dd($menu_arr['Career']) --}}
