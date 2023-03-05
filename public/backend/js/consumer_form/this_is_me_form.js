@@ -66,10 +66,10 @@ $("#this_is_me_form").validate({
             equalTo: "#social_security_no",
         },
         // Find me here form
-        house_no: {
+        house_address: {
             required: true,
             minlength: 1,
-            maxlength: 8,
+            maxlength: 45,
         },
         building_name: {
             required: true,
@@ -77,7 +77,7 @@ $("#this_is_me_form").validate({
             maxlength: 50,
         },
         apartment_no: {
-            required: true,
+            required: false,
             minlength: 1,
             maxlength: 4,
         },
@@ -93,38 +93,38 @@ $("#this_is_me_form").validate({
             required: true,
         },
         town: {
-            required: true,
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
         township: {
-            required: true,
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
         parish: {
-            required: true,
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
         village: {
-            required: true,
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
         hamlet: {
-            required: true,
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
         district: {
             required: true,
-            minlength: 4,
+            minlength: 3,
             maxlength: 30,
         },
         county: {
-            required: true,
-            minlength: 4,
+            required: false,
+            minlength: 3,
             maxlength: 30,
         },
         neighborhood_name: {
@@ -151,7 +151,7 @@ $("#this_is_me_form").validate({
 
         house_number: {
             required: false,
-            minlength: 4,
+            minlength: 1,
             maxlength: 30,
         },
 
@@ -162,30 +162,30 @@ $("#this_is_me_form").validate({
         },
 
         no_of_floor: {
-            required: false,
-            minlength: 4,
+       
+            minlength: 1,
             maxlength: 30,
         },
 
         your_floor_no: {
-            required: false,
-            minlength: 4,
+          
+            minlength: 1,
             maxlength: 30,
         },
 
         apartment_no: {
-            required: false,
+        
             minlength: 4,
             maxlength: 30,
         },
         room_no: {
-            required: false,
-            minlength: 4,
+           
+            minlength: 1,
             maxlength: 30,
         },
         bed_no: {
-            required: false,
-            minlength: 4,
+           
+            minlength: 1,
             maxlength: 30,
         },
         zipcode: {
@@ -196,14 +196,144 @@ $("#this_is_me_form").validate({
             required: false,
             zipcode: true,
         },
+
+
+
+
+        old_house_address: {
+        
+            minlength: 1,
+            maxlength: 45,
+        },
+        old_building_name: {
+  
+            minlength: 3,
+            maxlength: 50,
+        },
+        old_apartment_no: {
+           
+            minlength: 1,
+            maxlength: 4,
+        },
+        old_street_name: {
+         
+            minlength: 5,
+            maxlength: 256,
+        },
+        old_state: {
+          
+        },
+        old_city: {
+        
+        },
+        old_town: {
+       
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_township: {
+        
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_parish: {
+           
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_village: {
+        
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_hamlet: {
+        
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_district: {
+          
+            minlength: 3,
+            maxlength: 30,
+        },
+        old_county: {
+           
+            minlength: 3,
+            maxlength: 30,
+        },
+        old_neighborhood_name: {
+         
+            minlength: 4,
+            maxlength: 30,
+        },
+
+       
+
+        old_urbanization_name: {
+          
+            minlength: 4,
+            maxlength: 30,
+        },
+
+        old_house_type: {
+          
+        },
+
+        old_house_number: {
+            
+            minlength: 1,
+            maxlength: 30,
+        },
+
+        old_building_name: {
+           
+            minlength: 4,
+            maxlength: 30,
+        },
+
+        old_no_of_floor: {
+       
+            minlength: 1,
+            maxlength: 30,
+        },
+
+        old_your_floor_no: {
+          
+            minlength: 1,
+            maxlength: 30,
+        },
+
+        old_apartment_no: {
+        
+            minlength: 4,
+            maxlength: 30,
+        },
+        old_room_no: {
+           
+            minlength: 1,
+            maxlength: 30,
+        },
+        old_bed_no: {
+           
+            minlength: 1,
+            maxlength: 30,
+        },
+       
+        old_zipcode: {
+            required: false,
+            zipcode: true,
+        },
+
+
+        
         primary_area_code: {
             required: true,
-            minlength: 3,
+            minlength: 2,
             maxlength: 3,
         },
         alternate_area_code: {
             required: true,
-            minlength: 3,
+            minlength: 2,
             maxlength: 3,
         },
         alternate_telephone_number: {

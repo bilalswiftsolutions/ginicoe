@@ -4,8 +4,8 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="house_no" id="house_no" type="number" class="form-control wizard-required">
-                <label for="house_no" class="wizard-form-text-label">2.1 House No.</label>
+                <input name="house_address" id="house_address" type="text" class="form-control wizard-required">
+                <label for="house_address" class="wizard-form-text-label">2.1 House Address</label>
                 <p class="text_danger form_error"></p>
 
             </div>
@@ -95,6 +95,8 @@
                     <option value="Wyoming">Wyoming</option>
 
                 </select>
+                <p class="text_danger form_error"></p>
+
             </div>
         </div>
 
@@ -105,6 +107,7 @@
                 <label for="city" class="wizard-form-text-label">2.6 City</label>
                 <select class="form-control" name="city" id="city" required>
                 </select>
+                <p class="text_danger form_error"></p>
 
             </div>
         </div>
@@ -240,7 +243,7 @@
 
         <div class="col-md-12 col-lg-12">
             <div class="form-group">
-                2.18 Do you live in Skycrapper?
+                2.18 Do you live in multi-storey building?
                 <div class="wizard-form-radio">
                     <input onclick="sky_crapper_field()" name="do_you_live_in_sky_crapper" value="1"
                         id="radio1" type="radio">
@@ -329,8 +332,8 @@
         <div class="row" style="display: none;" id="old_address_section">
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input name="old_house_no" id="old_house_no" type="number" class="form-control wizard-required">
-                    <label for="old_house_no" class="wizard-form-text-label">2.25 House No.</label>
+                    <input name="old_house_address" id="old_house_address" type="text" class="form-control wizard-required">
+                    <label for="old_house_address" class="wizard-form-text-label">2.25 House Address</label>
                     <p class="text_danger form_error"></p>
 
                 </div>
@@ -481,13 +484,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-lg-4">
-                <div class="form-group">
-                    <input name="old_district" type="text" class="form-control wizard-required" id="old_district">
-                    <label for="old_district" class="wizard-form-text-label">2.36 District</label>
-                    <p class="text_danger form_error"></p>
-                </div>
-            </div>
+         
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
@@ -570,7 +567,7 @@
 
             <div class="col-md-12 col-lg-12">
                 <div class="form-group">
-                   2.43 Do you live in Skycrapper?
+                   2.43 Do you lived in multi-storey building?
                     <div class="wizard-form-radio">
                         <input onclick="old_sky_crapper_field()" name="old_do_you_live_in_sky_crapper" value="1" id="radio1"
                             type="radio">

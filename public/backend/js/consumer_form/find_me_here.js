@@ -1093,16 +1093,59 @@ $("#old_state").change(function () {
 function sky_crapper_field() {
     if ($("input[name='do_you_live_in_sky_crapper']:checked").val() == "1") {
         $("#sky_crapper_fields").show();
+        $('#no_of_floor').prop('required',true)
+        $('#your_floor_no').prop('required',true)
+        $('#apartment_no').prop('required',true)
+        $('#room_no').prop('required',true)
+        $('#bed_no').prop('required',true)
     } else {
         $("#sky_crapper_fields").hide();
+        $('#no_of_floor').prop('required',false)
+        $('#your_floor_no').prop('required',false)
+        $('#apartment_no').prop('required',false)
+        $('#room_no').prop('required',false)
+        $('#bed_no').prop('required',false)
     }
 }
 
 function living_for_two_year() {
     if ($("input[name='living_for_two_years']:checked").val() == "0") {
         $("#old_address_section").show();
+        $('#old_house_address').prop('required',true)
+        $('#old_building_name').prop('required',true)
+        $('#old_street_name').prop('required',true)
+        $('#old_state').prop('required',true)
+        $('#old_city').prop('required',true)
+        $('#old_town').prop('required',true)
+        $('#old_township').prop('required',true)
+        $('#old_parish').prop('required',true)
+        $('#old_village').prop('required',true)
+        $('#old_hamlet').prop('required',true)
+        $('#old_district').prop('required',true)
+        $('#old_county').prop('required',true)
+        $('#old_neighborhood_name').prop('required',true)
+        $('#old_zipcode').prop('required',true)
+        $('#old_urbanization_name').prop('required',true)
+        $('#old_house_type').prop('required',true)
+
     } else {
         $("#old_address_section").hide();
+        $('#old_house_address').prop('required',false)
+        $('#old_building_name').prop('required',false)
+        $('#old_street_name').prop('required',false)
+        $('#old_state').prop('required',false)
+        $('#old_city').prop('required',false)
+        $('#old_town').prop('required',false)
+        $('#old_township').prop('required',false)
+        $('#old_parish').prop('required',false)
+        $('#old_village').prop('required',false)
+        $('#old_hamlet').prop('required',false)
+        $('#old_district').prop('required',false)
+        $('#old_county').prop('required',false)
+        $('#old_neighborhood_name').prop('required',false)
+        $('#old_zipcode').prop('required',false)
+        $('#old_urbanization_name').prop('required',false)
+        $('#old_house_type').prop('required',false)
     }
 }
 
@@ -1111,8 +1154,19 @@ function old_sky_crapper_field() {
         $("input[name='old_do_you_live_in_sky_crapper']:checked").val() == "1"
     ) {
         $("#old_sky_crapper_fields").show();
+        $('#no_of_floor').prop('required',true)
+        $('#your_floor_no').prop('required',true)
+        $('#apartment_no').prop('required',true)
+        $('#room_no').prop('required',true)
+        $('#bed_no').prop('required',true)
     } else {
         $("#old_sky_crapper_fields").hide();
+      
+        $('#no_of_floor').prop('required',false)
+        $('#your_floor_no').prop('required',false)
+        $('#apartment_no').prop('required',false)
+        $('#room_no').prop('required',false)
+        $('#bed_no').prop('required',false)
     }
 }
 
@@ -1122,7 +1176,12 @@ function checkFieldSetThisIsMe() {
     $("#fieldset_two input").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    move_to_next_step(true,'find_me_here_bar','gender_identity_bar');
+    if ($("#fieldset_two").find(":input").valid()) {
+        nextWizardStep = true;
+    } else {
+        nextWizardStep = false;
+    }
+    move_to_next_step(nextWizardStep,'find_me_here_bar','gender_identity_bar');
     // $.ajax({
     //     url: "/ginicoe/admin/consumer/validate-address",
     //     type: "GET",
