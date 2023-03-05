@@ -784,7 +784,7 @@ $("#this_is_me_form").validate({
             maxlength: 26,  
         },
         place_of_birth:{
-            required: true,
+           
        
         },
         name_of_mid_wife:{

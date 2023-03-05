@@ -4,14 +4,14 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="number_of_brother" type="number" class="form-control wizard-required" id="number_of_brother">
+                <input name="number_of_brother"  type="number" class="form-control wizard-required" id="number_of_brother">
                 <label for="number_of_brother" class="wizard-form-text-label">15.1 How many brothers do you have living?</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="olders_brother_name" type="text" class="form-control wizard-required"
+                <input name="olders_brother_name"  type="text" class="form-control wizard-required"
                     id="olders_brother_name">
                 <label for="olders_brother_name" class="wizard-form-text-label">15.2 What is your oldest brother’s first
                     name? </label>
