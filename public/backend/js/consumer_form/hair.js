@@ -4,7 +4,7 @@ function checkFieldSetHair() {
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
 
     var data = {};
     $("#fieldset_ten input").each(function () {

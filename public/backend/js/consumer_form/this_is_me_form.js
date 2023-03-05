@@ -397,11 +397,11 @@ $("#this_is_me_form").validate({
             required: true,
         },
         labor_union_name: {
-            required: false,
+          
             maxlength: 16,
         },
         your_union_membership_number: {
-            required: false,
+
             maxlength: 16,
         },
 
@@ -430,19 +430,19 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         secondary_first_name_1:{
-            required: false,
+      
             maxlength: 20
         },
         secondary_last_name_1:{
-            required: false,
+          
             maxlength:20,
         },
         secondary_mi_1:{
-            required: false,
+        
             maxlength:20,
         },
         secondary_card_holder_relationship_1:{
-            required: false,
+            
         },
         name_of_bank_1:{
             required: true,
@@ -477,19 +477,19 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         secondary_first_name_3:{
-            required: false,
+           
             maxlength: 20
         },
         secondary_last_name_3:{
-            required: false,
+        
             maxlength:20,
         },
         secondary_mi_3:{
-            required: false,
+            
             maxlength:20,
         },
         secondary_card_holder_relationship_3:{
-            required: false,
+        
         },
         name_of_bank_3:{
             required: true,
@@ -525,19 +525,19 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         secondary_first_name_2:{
-            required: false,
+          
             maxlength: 20
         },
         secondary_last_name_2:{
-            required: false,
+        
             maxlength:20,
         },
         secondary_mi_2:{
-            required: false,
+        
             maxlength:20,
         },
         secondary_card_holder_relationship_2:{
-            required: false,
+          
         },
         name_of_bank_2:{
             required: true,
@@ -572,19 +572,19 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         secondary_first_name_5:{
-            required: false,
+           
             maxlength: 20
         },
         secondary_last_name_5:{
-            required: false,
+       
             maxlength:20,
         },
         secondary_mi_5:{
-            required: false,
+          
             maxlength:20,
         },
         secondary_card_holder_relationship_5:{
-            required: false,
+      
         },
         name_of_bank_5:{
             required: true,
@@ -621,19 +621,19 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         secondary_first_name_4:{
-            required: false,
+           
             maxlength: 20
         },
         secondary_last_name_4:{
-            required: false,
+           
             maxlength:20,
         },
         secondary_mi_4:{
-            required: false,
+           
             maxlength:20,
         },
         secondary_card_holder_relationship_4:{
-            required: false,
+         
         },
         name_of_bank_4:{
             required: true,
@@ -673,61 +673,312 @@ $("#this_is_me_form").validate({
         },
 
         twin_first_name:{
-            required:false,
+         required: true,
             maxlength: 20,
         },
         twin_mi :{
-            required:false,
+            required: true,
             maxlength:1,
         },
 
         twin_last_name:{
-            required:false,
+            required: true,
             maxlength:20,
         },
         twin_difference_description :{
-            required:false,
+             required: true,
             maxlength: 150,
         },
         birth_mark_located :{
-            required:false,
+            maxlength:20,
+           
         },
 
         twin_birth_mark_located:{
-            required:false,
+            maxlength:20,
+         required: true,
         },
         my_freckles_located :{
-            required:false,
+            maxlength:20,
+           
         },
         twin_freckles_located:{
-            required:false,
+            maxlength:20,
+           
         },
         my_moles_located :{
-            required:false,
+            maxlength:20,
+       
         },
         twin_moles_located :{
-            required:false,
+            maxlength:20,
+      
         },
         hair_are_different:{
-            required:false,
+            maxlength:20,
+       
         },
         my_eye_color :{
-            required:false,
+            maxlength:20,
+         
         },
         twin_eye_color:{
-            required:false,
+            maxlength:20,
+         
         },
         my_hair_color:{
-            required:false,
+            maxlength:20,
+           
         },
         twin_hair_color :{
-            required:false,
+            maxlength:20,
+           
         },
         facial_surgery_date:{
             required: false,
             maxlength:20,
-        }
+        },
+        agoraphobia:{
+            required: true,
+            maxlength:26,
+        },
 
+        medical_house_address:{
+            required: true,
+            maxlength: 26,
+        },
+
+        medical_street:{
+            required: true,
+            maxlength: 26,
+        },
+
+        medical_country:{
+            required: false,
+            maxlength: 26,
+        },
+        medical_zipcode:{
+            required: true,
+            maxlength: 26,
+        },
+        medical_guid:{
+            required: true,
+            maxlength: 26,
+        },
+        number_of_brother :{
+            required: false,
+            maxlength: 26,  
+        },
+        olders_brother_name:{
+            required: false,
+            maxlength: 26,  
+        },
+        number_of_sister:{
+            required: false,
+            maxlength: 26,  
+        },
+        youngest_sister_name :{
+            required: false,
+            maxlength: 26,  
+        },
+
+        name_of_hospital_you_born_in:{
+            required: false,
+            maxlength: 26,  
+        },
+        place_of_birth:{
+            required: true,
+       
+        },
+        name_of_mid_wife:{
+            required: false,
+            maxlength: 26,  
+        },
+         
+        last_name_of_mid_wife:{
+            required: false,
+            maxlength: 26,  
+        } ,
+        exact_location_of_first_reponder:{
+            required: false,
+            maxlength: 26,  
+        },
+        first_name_of_mid_wife:{
+            required: false,
+            maxlength: 26,  
+        },
+        address_description:{
+            required: false,
+            maxlength: 26,  
+        },
+
+        birth_house_address:{
+            maxlength: 26,  
+        },
+        birth_street:{
+            maxlength: 26,  
+        },
+
+        birth_country:{
+            maxlength: 26,  
+        },
+        birth_city:{
+            required: false,
+             
+        },
+        birth_zipcode:{
+            maxlength: 26,  
+        },
+
+        birth_address_description:{
+            maxlength: 26,  
+        },
+        your_age:{
+            maxlength: 26,  
+        },
+        alien_id_number :{
+        maxlength: 26,
+      },
+      country_of_issuance_foriegn_country :{
+        maxlength: 26,
+      },
+      foreign_passport_number:{
+        maxlength: 26,
+      },
+
+      country_of_issuance_foreign_passport :{
+        maxlength: 26,
+      },
+
+      visa_number:{
+        maxlength: 26,
+      },
+
+      us_permit :{
+        maxlength: 26,
+      },
+
+      us_govt_id_number :{
+        maxlength: 26,
+      },
+      us_driving_license_number:{
+        
+        maxlength: 26,
+      },
+
+      us_state:{
+      
+        maxlength: 26,
+      },
+
+      foreign_country_driving_license_number:{
+      
+        maxlength: 26,
+      },
+
+      foreign_dl_number :{
+    
+        maxlength: 26,
+      },
+
+      foreign_id_number:{
+        
+        maxlength: 26,
+      },
+
+      us_education_doc :{
+        
+        maxlength: 26,
+      },
+
+      witsec :{
+     
+        maxlength: 26,
+      },
+
+      old_first_name :{
+      
+        maxlength: 26,
+      },
+
+      old_last_name :{
+  
+        maxlength: 26,
+      },
+
+      old_mi :{
+      
+        maxlength: 1,
+      },
+
+      old_spouse_first_name :{
+     
+        maxlength: 26,
+      },
+      old_spouse_mi :{
+      
+        maxlength: 1,
+      },
+
+      old_first_name_1st_daughter :{
+      
+        maxlength: 26,
+      },
+
+      old_last_name_1st_daughter :{
+    
+        maxlength: 26,
+      },
+      old_mi_1st_daughter :{
+   
+        maxlength: 1,
+      },
+
+      
+
+      old_first_name_2nd_daughter :{
+      
+        maxlength: 26,
+      },
+
+      old_last_name_2nd_daughter :{
+    
+        maxlength: 26,
+      },
+      old_mi_2nd_daughter :{
+   
+        maxlength: 1,
+      },
+
+
+      old_first_name_2nd_son :{
+      
+        maxlength: 26,
+      },
+
+      old_last_name_2nd_son :{
+    
+        maxlength: 26,
+      },
+      old_mi_2nd_son :{
+   
+        maxlength: 1,
+      },
+
+      
+      old_first_name_1st_son :{
+      
+        maxlength: 26,
+      },
+
+      old_last_name_1st_son :{
+    
+        maxlength: 26,
+      },
+      old_mi_1st_son :{
+   
+        maxlength: 1,
+      },
 
 
 

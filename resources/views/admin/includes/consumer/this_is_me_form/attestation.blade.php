@@ -5,7 +5,7 @@
             <div class="form-group">
 
                 <label for="how_you_heared_about_us" class="wizard-form-text-label">17.1 How did you hear about Us?  Please Select</label>
-                <select class="form-control" name="how_you_heared_about_us" id="how_you_heared_about_us" >
+                <select class="form-control" required name="how_you_heared_about_us" id="how_you_heared_about_us" >
                     <option></option>
                     <option value="friends_family_word_of_mouth">Friends / Family Word of Mouth</option>
                     <option value="counselor_bank_professional_referral">Counselor / Bank Professional referral</option>
@@ -35,8 +35,9 @@
             <div class="form-group">
 
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="i_confirm_data_is_accurate" id="i_confirm_data_is_accurate">
+                    <input required type="checkbox" class="form-check-input" name="i_confirm_data_is_accurate" id="i_confirm_data_is_accurate">
                     <label class="form-check-label" for="i_confirm_data_is_accurate">17.2 I attest that all information provided is accurate and current.</label>
+                   
                 </div>
             </div>
         </div>

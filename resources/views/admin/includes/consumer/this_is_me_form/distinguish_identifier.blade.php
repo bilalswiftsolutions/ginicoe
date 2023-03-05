@@ -114,7 +114,7 @@
                             <input type="checkbox" class="form-check-input"  name="lips" id="lips">
                             <label class="form-check-label" for="lips">Lips</label>
                         </div>
-                        <p class="text_danger form_error"></p>
+                       
                     </div>
                 </div>
 

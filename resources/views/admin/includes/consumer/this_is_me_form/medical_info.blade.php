@@ -92,6 +92,8 @@
                     <option value="Wyoming">Wyoming</option>
 
                 </select>
+                <p class="text_danger form_error"></p>
+
             </div>
         </div>
 
@@ -100,6 +102,7 @@
                 <label for="medical_city" class="wizard-form-text-label">14.6 City</label>
                 <select class="form-control" name="medical_city" id="medical_city" required>
                 </select>
+                <p class="text_danger form_error"></p>
 
             </div>
         </div>
@@ -167,7 +170,7 @@
                     <div class="form-group">
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="agoraphobia" id="agoraphobia">
+                            <input type="checkbox"  class="form-check-input" name="agoraphobia" id="agoraphobia">
                             <label class="form-check-label" for="agoraphobia">Agoraphobia </label>
                         </div>
                         <div class="form-check">

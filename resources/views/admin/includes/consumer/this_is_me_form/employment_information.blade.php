@@ -1,37 +1,7 @@
 <fieldset class="wizard-fieldset mt-4" id="fieldset_six">
     <h5>5. Employment inoformation</h5>
     <div class="row">
-        {{-- <div class="col-md-6 col-lg-6">
-            <div class="form-group">
-
-                <label for="neghborhood_race_right" class="wizard-form-text-label">5.1 what race are your nearest
-                    neighbors to the right of you?
-                </label>
-                <select class="form-control" name="neighborhood_race_right" id="neighborhood_race_right" required>
-                    <option></option>
-                    <option value="plahnet52">PLAHNET52 52 (5A’s & 2H’s)</option>
-                    <option value="pacific_islander_americans">Pacific Islander Americans</option>
-                    <option value="lgbtq">LGBTQ</option>
-                    <option value="african_americans">African Americans</option>
-                    <option value="asian">Asian</option>
-                    <option value="asian_indians">Asian Indians</option>
-                    <option value="alaska_natives">Alaska Natives</option>
-                    <option value="alaska_native_corporations">Alaska Native Corporations</option>
-                    <option value="hasidic_jews">Hasidic Jews</option>
-                    <option value="hispanic_americans">Hispanic-Americans</option>
-                    <option value="native_americans">Native Americans</option>
-                    <option value="ex_offenders">Ex-Offenders</option>
-                    <option value="tribal_entities">Tribal entities</option>
-                    <option value="decline">Decline</option>
-                    <option value="other_combination_not_described">Other Combination Not Described</option>
-                    <option value="other">Other</option>
-                    <option value="white">White</option>
-                </select>
-                <p class="text_danger form_error"></p>
-
-
-            </div>
-        </div> --}}
+      
 
 
 

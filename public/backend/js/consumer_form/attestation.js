@@ -6,7 +6,7 @@ function submitAttestation()
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
 
     var data = {};
     $("#fieldset_seventeen input").each(function () {

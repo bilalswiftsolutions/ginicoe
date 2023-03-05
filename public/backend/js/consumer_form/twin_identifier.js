@@ -5,7 +5,7 @@ function checkFieldSetTwinIdentifier()
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
 
     var data = {};
     $("#fieldset_twelve input").each(function () {

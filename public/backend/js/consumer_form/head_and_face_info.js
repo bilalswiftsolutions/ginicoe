@@ -4,7 +4,7 @@ function checkFieldSetHeadAndFace() {
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
 
     var data = {};
     $("#fieldset_nine input").each(function () {

@@ -22,7 +22,7 @@ function checkFieldSetFamilyAndMedicalHistory()
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
     // console.log(nextWizardStep)
 
     var data = {};

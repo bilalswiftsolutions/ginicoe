@@ -4,10 +4,13 @@ function are_you_active_memeber_of_labour_union_check()
     
     if ($("input[name='are_you_active_memeber_of_labour_union']:checked").val() == "1") {
         $("#are_you_active_memeber_of_labour_union_div").show();
+        $('#labor_union_name').prop('required',true)
+        $('#your_union_membership_number').prop('required',true)
      
     } else {
         $("#are_you_active_memeber_of_labour_union_div").hide();
-       
+        $('#labor_union_name').prop('required',false)
+        $('#your_union_membership_number').prop('required',false)
     }
 }
 
@@ -19,7 +22,7 @@ function checkFieldSetEmploymentInformation()
     } else {
         nextWizardStep = false;
     }
-    nextWizardStep = true;
+    // nextWizardStep = true;
   
 
     var data = {};

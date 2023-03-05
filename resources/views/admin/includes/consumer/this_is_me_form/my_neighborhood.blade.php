@@ -80,7 +80,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="neighborhood_house_address_right" type="text" class="form-control wizard-required"
-                    id="neighborhood_house_address">
+                    id="neighborhood_house_address_right">
                 <label for="neighborhood_house_address_right" class="wizard-form-text-label">5.5 House Address</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -258,7 +258,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="neighborhood_house_address_left" type="text" class="form-control wizard-required"
-                    id="neighborhood_house_address">
+                    id="neighborhood_house_address_left">
                 <label for="neighborhood_house_address_left" class="wizard-form-text-label">5.14 House Address</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -440,7 +440,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="neighborhood_house_address_back" type="text" class="form-control wizard-required"
-                    id="neighborhood_house_address">
+                    id="neighborhood_house_address_back">
                 <label for="neighborhood_house_address_back" class="wizard-form-text-label">5.23 House Address</label>
                 <p class="text_danger form_error"></p>
             </div>

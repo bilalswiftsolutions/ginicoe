@@ -75,7 +75,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <textarea name="twin_difference_description" type="text" class="form-control wizard-required"
-                    id="twin_difference_description"></textarea>
+                    id="twin_difference_description" required></textarea>
                 <label for="twin_difference_description" class="wizard-form-text-label">12.7 Please tell us what best
                     describes the difference between you and your twin.
                     Physical Differences??</label>
@@ -89,7 +89,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="birth_mark_located" class="wizard-form-text-label">12.8 My Birthmarks is located on?</label>
-                <select class="form-control" name="birth_mark_located" id="birth_mark_located" required>
+                <select class="form-control" required name="birth_mark_located" id="birth_mark_located" required>
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -132,7 +132,7 @@
             <div class="form-group">
                 <label for="twin_birth_mark_located" class="wizard-form-text-label">12.9 My closest twin's Birthmarks is
                     located on?</label>
-                <select class="form-control" name="twin_birth_mark_located" id="twin_birth_mark_located">
+                <select class="form-control" required name="twin_birth_mark_located" id="twin_birth_mark_located">
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -174,7 +174,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="my_freckles_located" class="wizard-form-text-label">12.10 My freckles is located on?</label>
-                <select class="form-control" name="my_freckles_located" id="my_freckles_located" required>
+                <select class="form-control" required name="my_freckles_located" id="my_freckles_located" required>
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -217,7 +217,7 @@
             <div class="form-group">
                 <label for="twin_freckles_located" class="wizard-form-text-label">12.11 My closest twin's freckles is
                     located on?</label>
-                <select class="form-control" name="twin_freckles_located" id="twin_freckles_located">
+                <select class="form-control" required name="twin_freckles_located" id="twin_freckles_located">
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -259,7 +259,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="my_moles_located" class="wizard-form-text-label">12.12 My moles is located on?</label>
-                <select class="form-control" name="my_moles_located" id="my_moles_located">
+                <select class="form-control" required name="my_moles_located" id="my_moles_located">
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -301,7 +301,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="twin_moles_located" class="wizard-form-text-label">12.13 My twin's moles is located on?</label>
-                <select class="form-control" name="twin_moles_located" id="twin_moles_located">
+                <select class="form-control" required name="twin_moles_located" id="twin_moles_located">
                     <option></option>
                     <option value="face_forehead">Face Forehead</option>
                     <option value="face_cheek_left">Face Cheek Left</option>
@@ -346,7 +346,7 @@
             <div class="form-group">
                 <label for="hair_are_different" class="wizard-form-text-label">12.14 My hair is different from my twin’s
                     because</label>
-                <select class="form-control" name="hair_are_different" id="hair_are_different">
+                <select class="form-control" required name="hair_are_different" id="hair_are_different">
                     <option></option>
                     <option value="1">My whorls spiral is clockwise and my twin's is counter-clockwise</option>
                     <option value="2">My cowlicks spiral is clockwise and my twin's is counter-clockwise</option>
@@ -363,7 +363,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="my_eye_color" class="wizard-form-text-label">12.15 My Eye Color?</label>
-                <select class="form-control" name="my_eye_color" id="my_eye_color">
+                <select class="form-control" required name="my_eye_color" id="my_eye_color">
                     <option></option>
                     <option value="amber">Amber</option>
                     <option value="blue">Blue</option>
@@ -381,7 +381,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="twin_eye_color" class="wizard-form-text-label">12.16 My Twin's Eye Color?</label>
-                <select class="form-control" name="twin_eye_color" id="twin_eye_color">
+                <select class="form-control" required name="twin_eye_color" id="twin_eye_color">
                     <option></option>
                     <option value="amber">Amber</option>
                     <option value="blue">Blue</option>
@@ -401,7 +401,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="my_hair_color" class="wizard-form-text-label">12.17 My current Hair Color</label>
-                <select class="form-control" name="my_hair_color" id="my_hair_color" required>
+                <select class="form-control" required name="my_hair_color" id="my_hair_color" required>
                     <option></option>
                     <option value="black">Black</option>
                     <option value="blonde">Blonde</option>
@@ -427,7 +427,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="twin_hair_color" class="wizard-form-text-label">12.18 My twin's current Hair Color</label>
-                <select class="form-control" name="twin_hair_color" id="twin_hair_color" required>
+                <select class="form-control" required name="twin_hair_color" id="twin_hair_color" required>
                     <option></option>
                     <option value="black">Black</option>
                     <option value="blonde">Blonde</option>
