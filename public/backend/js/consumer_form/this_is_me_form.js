@@ -738,10 +738,7 @@ $("#this_is_me_form").validate({
             required: false,
             maxlength:20,
         },
-        agoraphobia:{
-            required: true,
-            maxlength:26,
-        },
+    
 
         medical_house_address:{
             required: true,
