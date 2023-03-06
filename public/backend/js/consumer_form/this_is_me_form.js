@@ -85,7 +85,7 @@ $("#this_is_me_form").validate({
         street_name: {
             required: true,
             minlength: 5,
-            maxlength: 256,
+            maxlength: 50,
         },
         state: {
             required: true,
@@ -199,7 +199,59 @@ $("#this_is_me_form").validate({
             zipcode: true,
         },
 
+        neighborhood_house_address_right:{
+            maxlength: 30,
+        },
+        neighborhood_urbanization_name_right:{
+            maxlength: 30,
+        },
+        neighborhood_zipcode_right:{
+            zipcode: 30,
+        },
+        neighborhood_city_right :{
+            maxlength: 30,
+        },
 
+        neighborhood_house_address_left:{
+            maxlength: 30,
+        },
+        neighborhood_urbanization_name_left:{
+            maxlength: 30,
+        },
+        neighborhood_zipcode_left:{
+            zipcode: 30,
+        },
+        neighborhood_city_left :{
+            maxlength: 30,
+        },
+       
+
+        neighborhood_house_address_front:{
+            maxlength: 30,
+        },
+        neighborhood_urbanization_name_front:{
+            maxlength: 30,
+        },
+        neighborhood_zipcode_front:{
+            zipcode: 30,
+        },
+        neighborhood_city_front :{
+            maxlength: 30,
+        },
+
+
+        neighborhood_house_address_back:{
+            maxlength: 30,
+        },
+        neighborhood_urbanization_name_back:{
+            maxlength: 30,
+        },
+        neighborhood_zipcode_back:{
+            zipcode: 30,
+        },
+        neighborhood_city_back :{
+            maxlength: 30,
+        },
 
 
         old_house_address: {
@@ -883,6 +935,10 @@ $("#this_is_me_form").validate({
         maxlength: 26,
       },
 
+      passport_number:{
+        maxlength: 26,
+      },
+
       country_of_issuance_foreign_passport :{
         maxlength: 26,
       },
@@ -1016,6 +1072,43 @@ $("#this_is_me_form").validate({
    
         maxlength: 1,
       },
+
+      facial_neck_scars_description_div:{
+         maxlength:50,
+      },
+
+      facial_surgery_date:{
+        maxlength:50,
+     },
+
+     number_of_plastic_surgery :{
+        maxlength:50,
+     },
+
+     plastic_surgeon_name:{
+        maxlength:50,
+     },
+     first_name_of_surgeon:{
+        maxlength:50,
+     },
+     last_name_of_surgeon :{
+        maxlength:50,
+     }, 
+     
+     surgeon_house_address:{
+        maxlength:50,
+     },
+     surgeon_street:{
+        maxlength:50,
+     },
+     surgeon_zipcode :{
+        zipcode: true,
+     },
+
+     surgeon_telephone:{
+        maxlength:11,
+     },
+
 
 
 
