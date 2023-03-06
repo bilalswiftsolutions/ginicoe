@@ -55,6 +55,7 @@ $("#this_is_me_form").validate({
         date_of_birth: {
             required: true,
             date: true,
+            maxlength: 32,
         },
         social_security_no: {
             required: true,
@@ -191,6 +192,7 @@ $("#this_is_me_form").validate({
         zipcode: {
             required: true,
             zipcode: true,
+            
         },
         old_zipcode: {
             required: false,
@@ -218,7 +220,7 @@ $("#this_is_me_form").validate({
         old_street_name: {
          
             minlength: 5,
-            maxlength: 256,
+            maxlength: 32,
         },
         old_state: {
           
@@ -338,48 +340,62 @@ $("#this_is_me_form").validate({
         },
         alternate_telephone_number: {
             required: true,
+            maxlength: 11,
         },
         primary_mobile_number: {
             required: true,
+            maxlength: 11,
         },
         neighborhood_race_right: {
             required: true,
+            maxlength: 32,
         },
         name_of_neighborhood_household_head_right: {
             required: true,
+            maxlength: 32,
         },
         neghborhood_guid_right: {
             required: true,
+            maxlength: 32,
         },
 
         neighborhood_race_left: {
             required: true,
+            maxlength: 32,
         },
         name_of_neighborhood_household_head_left: {
             required: true,
+            maxlength: 32,
         },
         neghborhood_guid_left: {
             required: true,
+            maxlength: 32,
         },
 
         neighborhood_race_back: {
             required: true,
+            maxlength: 32,
         },
         name_of_neighborhood_household_head_back: {
             required: true,
+            maxlength: 32,
         },
         neghborhood_guid_back: {
             required: true,
+            maxlength: 32,
         },
 
         neighborhood_race_front: {
             required: true,
+            maxlength: 32,
         },
         name_of_neighborhood_household_head_front: {
             required: true,
+            maxlength: 32,
         },
         neghborhood_guid_front: {
             required: true,
+            maxlength: 32,
         },
         employer_name: {
             required: true,
@@ -395,10 +411,12 @@ $("#this_is_me_form").validate({
         },
         anual_salary_last_year: {
             required: true,
+            maxlength: 32,
         },
         labor_union_name: {
           
             maxlength: 16,
+
         },
         your_union_membership_number: {
 
@@ -408,6 +426,7 @@ $("#this_is_me_form").validate({
 
         charge_card_to_protect_1:{
             required: true,
+            maxlength: 16,
         },
         card_number_1:{
             required:true,
@@ -455,6 +474,7 @@ $("#this_is_me_form").validate({
 
         charge_card_to_protect_3:{
             required: true,
+            maxlength: 16,
         },
         card_number_3:{
             required:true,
@@ -550,6 +570,7 @@ $("#this_is_me_form").validate({
 
         charge_card_to_protect_5:{
             required: true,
+            maxlength: 16,
         },
         card_number_5:{
             required:true,
@@ -599,6 +620,7 @@ $("#this_is_me_form").validate({
 
         charge_card_to_protect_4:{
             required: true,
+            maxlength: 16,
         },
         card_number_4:{
             required:true,
@@ -645,31 +667,48 @@ $("#this_is_me_form").validate({
         },
         chin_description:{
             required: true,
+            maxlength: 50,
         },
         eyes_description:{
             required: true,
+            maxlength: 50,
+
         },
         hair_description:{
             required: true,
+            maxlength: 50,
+
         },
         mouth_description:{
             required: true,
+            maxlength: 50,
+
         },
         hair_description:{
             required: true,
+            maxlength: 50,
+
         },
         eyeware_prescription:{
             required: true,
+            maxlength: 50,
+
         },
         
         dominant_hand_writing_side:{
             required:true,
+            maxlength: 50,
+
         },
         are_you_twin:{
             required:true,
+            maxlength: 50,
+
         },
         twin_type:{
             required:false,
+            maxlength: 50,
+
         },
 
         twin_first_name:{
@@ -677,16 +716,16 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         twin_mi :{
-            required: true,
+            
             maxlength:1,
         },
 
         twin_last_name:{
-            required: true,
+           
             maxlength:20,
         },
         twin_difference_description :{
-             required: true,
+          
             maxlength: 150,
         },
         birth_mark_located :{
@@ -696,7 +735,7 @@ $("#this_is_me_form").validate({
 
         twin_birth_mark_located:{
             maxlength:20,
-         required: true,
+        
         },
         my_freckles_located :{
             maxlength:20,
@@ -735,7 +774,7 @@ $("#this_is_me_form").validate({
            
         },
         facial_surgery_date:{
-            required: false,
+          
             maxlength:20,
         },
     
@@ -785,6 +824,7 @@ $("#this_is_me_form").validate({
         },
         place_of_birth:{
            
+            maxlength: 26,  
        
         },
         name_of_mid_wife:{
