@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Admin Panel</title>
 
@@ -59,7 +60,7 @@
         @if(!empty($admin->role->role_name))
         @if ($admin->role->role_name == 'Consumer')
 
-        <li class="nav-item @if($conName[1] == 'this-is-me') active @endif">
+        <li class="nav-item @if($conName[2] == 'this-is-me') active @endif">
             <a class="nav-link" href="{{ route('admin.consumer.this_is_me') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>This Is Me</span>

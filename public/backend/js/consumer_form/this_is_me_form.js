@@ -1126,51 +1126,41 @@ function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
     var next = $("#find_me_here_next_button");
 
     if (nextWizardStep) {
-        console.log("HELLO", next);
         next.parents(".wizard-fieldset").removeClass("show", "400");
-        currentActiveStep
-            .removeClass("active")
-            .addClass("activated")
-            .next()
-            .addClass("active", "400");
-        next.parents(".wizard-fieldset")
-            .next(".wizard-fieldset")
-            .addClass("show", "400");
-        parentFieldset.hide();
+    currentActiveStep
+        .removeClass("active")
+        .addClass("activated")
+        .next()
+        .addClass("active", "400");
+    next.parents(".wizard-fieldset")
+        .next(".wizard-fieldset")
+        .addClass("show", "400");
+    parentFieldset.hide();
 
-        next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
+    next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
 
-        progress_bar = progress_bar + 5.9;
-        console.log(progress_bar);
-        let text = next
-            .parents(".wizard-fieldset")
-            .next(".wizard-fieldset")
-            .find("h5")
-            .text();
-        console.log(text);
-        $(".progress-bar")
-            .css("width", progress_bar + "%")
-            .text(text);
-        jQuery(document)
-            .find(".wizard-fieldset")
-            .each(function () {
-                if ($("#find_me_here_next_button").hasClass("show")) {
-                    var formAtrr = $("#find_me_here_next_button").attr(
-                        "data-tab-content"
-                    );
+    progress_bar = progress_bar + 5.9;
+    console.log(progress_bar);
+    let text = next
+        .parents(".wizard-fieldset")
+        .next(".wizard-fieldset")
+        .find("h5")
+        .text();
+    console.log(text);
+    $(".progress-bar")
+        .css("width", progress_bar + "%")
+        .text(text);
+    jQuery(document)
+        .find(".wizard-fieldset")
+        .each(function () {
+            if ($("#find_me_here_next_button").hasClass("show")) {
+                var formAtrr = $("#find_me_here_next_button").attr(
+                    "data-tab-content"
+                );
 
-                    // jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
-                    // 	if(jQuery(this).attr('data-attr') == formAtrr){
-                    // 		jQuery(this).addClass('active');
-                    // 		var innerWidth = jQuery(this).innerWidth();
-                    // 		var position = jQuery(this).position();
-                    // 		jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
-                    // 	}else{
-                    // 		jQuery(this).removeClass('active');
-                    // 	}
-                    // });
-                }
-            });
+               
+            }
+        });
     }
 
     if (nextWizardStep) {
@@ -1181,6 +1171,76 @@ function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
     }
 }
 
+function store_this_is_me_form_data(data,next_button_id)
+{
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    url = '/ginicoe/admin/consumer/this-is-me-store'
+    $.ajax({
+        type: "post",
+        url: url,
+        data: data,
+        dataType: "JSON",
+        success: function(data) {
+
+            if(data.success)
+            {
+                next_step(next_button_id);
+            }
+        }
+
+
+    });
+}
+
+function next_step(next_button_id)
+{
+    var parentFieldset = $(`#${next_button_id}`).parents(
+        ".wizard-fieldset"
+    );
+    var currentActiveStep = $(`#${next_button_id}`)
+        .parents(".form-wizard")
+        .find(".form-wizard-steps .active");
+    var next = $(`#${next_button_id}`);
+    next.parents(".wizard-fieldset").removeClass("show", "400");
+    currentActiveStep
+        .removeClass("active")
+        .addClass("activated")
+        .next()
+        .addClass("active", "400");
+    next.parents(".wizard-fieldset")
+        .next(".wizard-fieldset")
+        .addClass("show", "400");
+    parentFieldset.hide();
+
+    next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
+
+    progress_bar = progress_bar + 5.9;
+    console.log(progress_bar);
+    let text = next
+        .parents(".wizard-fieldset")
+        .next(".wizard-fieldset")
+        .find("h5")
+        .text();
+    console.log(text);
+    $(".progress-bar")
+        .css("width", progress_bar + "%")
+        .text(text);
+    jQuery(document)
+        .find(".wizard-fieldset")
+        .each(function () {
+            if ($("#find_me_here_next_button").hasClass("show")) {
+                var formAtrr = $("#find_me_here_next_button").attr(
+                    "data-tab-content"
+                );
+
+               
+            }
+        });
+}
 
 function previousStep(current_bar,previous_bar)
 {

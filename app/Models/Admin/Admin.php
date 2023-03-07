@@ -3,6 +3,7 @@
 namespace App\Models\Admin;
 
 use App\Mail\Send2FAMail;
+use App\Models\Admin\Consumer\MyPidegreeInformation;
 use App\Models\OldPassword;
 use App\Models\AdminCode;
 use Exception;
@@ -66,5 +67,10 @@ class Admin extends Model
            
             info("Error: " . $e->getMessage());
         }
+    }
+
+    public function my_pidegree_info()
+    {
+        return $this->hasOne(MyPidegreeInformation::class,'consumer_id');
     }
 }
