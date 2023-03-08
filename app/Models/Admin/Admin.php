@@ -3,6 +3,7 @@
 namespace App\Models\Admin;
 
 use App\Mail\Send2FAMail;
+use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
 use App\Models\OldPassword;
 use App\Models\AdminCode;
@@ -72,5 +73,10 @@ class Admin extends Model
     public function my_pidegree_info()
     {
         return $this->hasOne(MyPidegreeInformation::class,'consumer_id');
+    }
+
+    public function find_me_here()
+    {
+        return $this->hasOne(FindMeHere::class,'consumer_id');
     }
 }
