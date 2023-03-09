@@ -4,19 +4,18 @@ function get_nearest_neghbor_address_right() {
         "1"
     ) {
         $("#neighborhood_address_div_right").show();
-        $('#neighborhood_house_address_right').prop('required',true)
-        $('#neighborhood_urbanization_name_right').prop('required',true)
-        $('#neighborhood_zipcode_right').prop('required',true)
-        $('#neighborhood_state_right').prop('required',true)
-        $('#neighborhood_city_right').prop('required',true)
-       
+        $("#neighborhood_house_address_right").prop("required", true);
+        $("#neighborhood_urbanization_name_right").prop("required", true);
+        $("#neighborhood_zipcode_right").prop("required", true);
+        $("#neighborhood_state_right").prop("required", true);
+        $("#neighborhood_city_right").prop("required", true);
     } else {
         $("#neighborhood_address_div_right").hide();
-        $('#neighborhood_house_address_right').prop('required',false)
-        $('#neighborhood_urbanization_name_right').prop('required',false)
-        $('#neighborhood_zipcode_right').prop('required',false)
-        $('#neighborhood_state_right').prop('required',false)
-        $('#neighborhood_city_right').prop('required',false)
+        $("#neighborhood_house_address_right").prop("required", false);
+        $("#neighborhood_urbanization_name_right").prop("required", false);
+        $("#neighborhood_zipcode_right").prop("required", false);
+        $("#neighborhood_state_right").prop("required", false);
+        $("#neighborhood_city_right").prop("required", false);
     }
 }
 
@@ -43,18 +42,18 @@ function get_nearest_neghbor_address_left() {
         $("input[name='provide_neigborhood_address_left']:checked").val() == "1"
     ) {
         $("#neighborhood_address_div_left").show();
-        $('#neighborhood_house_address_left').prop('required',true)
-        $('#neighborhood_urbanization_name_left').prop('required',true)
-        $('#neighborhood_zipcode_left').prop('required',true)
-        $('#neighborhood_state_left').prop('required',true)
-        $('#neighborhood_city_left').prop('required',true)
+        $("#neighborhood_house_address_left").prop("required", true);
+        $("#neighborhood_urbanization_name_left").prop("required", true);
+        $("#neighborhood_zipcode_left").prop("required", true);
+        $("#neighborhood_state_left").prop("required", true);
+        $("#neighborhood_city_left").prop("required", true);
     } else {
         $("#neighborhood_address_div_left").hide();
-        $('#neighborhood_house_address_left').prop('required',false)
-        $('#neighborhood_urbanization_name_left').prop('required',false)
-        $('#neighborhood_zipcode_left').prop('required',false)
-        $('#neighborhood_state_left').prop('required',false)
-        $('#neighborhood_city_left').prop('required',false)
+        $("#neighborhood_house_address_left").prop("required", false);
+        $("#neighborhood_urbanization_name_left").prop("required", false);
+        $("#neighborhood_zipcode_left").prop("required", false);
+        $("#neighborhood_state_left").prop("required", false);
+        $("#neighborhood_city_left").prop("required", false);
     }
 }
 
@@ -81,18 +80,18 @@ function get_nearest_neghbor_address_back() {
         $("input[name='provide_neigborhood_address_back']:checked").val() == "1"
     ) {
         $("#neighborhood_address_div_back").show();
-        $('#neighborhood_house_address_back').prop('required',true)
-        $('#neighborhood_urbanization_name_back').prop('required',true)
-        $('#neighborhood_zipcode_back').prop('required',true)
-        $('#neighborhood_state_back').prop('required',true)
-        $('#neighborhood_city_back').prop('required',true)
+        $("#neighborhood_house_address_back").prop("required", true);
+        $("#neighborhood_urbanization_name_back").prop("required", true);
+        $("#neighborhood_zipcode_back").prop("required", true);
+        $("#neighborhood_state_back").prop("required", true);
+        $("#neighborhood_city_back").prop("required", true);
     } else {
         $("#neighborhood_address_div_back").hide();
-        $('#neighborhood_house_address_back').prop('required',false)
-        $('#neighborhood_urbanization_name_back').prop('required',false)
-        $('#neighborhood_zipcode_back').prop('required',false)
-        $('#neighborhood_state_back').prop('required',false)
-        $('#neighborhood_city_back').prop('required',false)
+        $("#neighborhood_house_address_back").prop("required", false);
+        $("#neighborhood_urbanization_name_back").prop("required", false);
+        $("#neighborhood_zipcode_back").prop("required", false);
+        $("#neighborhood_state_back").prop("required", false);
+        $("#neighborhood_city_back").prop("required", false);
     }
 }
 
@@ -121,18 +120,18 @@ function get_nearest_neghbor_address_front() {
     ) {
         $("#neighborhood_address_div_front").show();
 
-        $('#neighborhood_house_address_front').prop('required',true)
-        $('#neighborhood_urbanization_name_front').prop('required',true)
-        $('#neighborhood_zipcode_front').prop('required',true)
-        $('#neighborhood_state_front').prop('required',true)
-        $('#neighborhood_city_front').prop('required',true)
+        $("#neighborhood_house_address_front").prop("required", true);
+        $("#neighborhood_urbanization_name_front").prop("required", true);
+        $("#neighborhood_zipcode_front").prop("required", true);
+        $("#neighborhood_state_front").prop("required", true);
+        $("#neighborhood_city_front").prop("required", true);
     } else {
         $("#neighborhood_address_div_front").hide();
-        $('#neighborhood_house_address_front').prop('required',false)
-        $('#neighborhood_urbanization_name_front').prop('required',false)
-        $('#neighborhood_zipcode_front').prop('required',false)
-        $('#neighborhood_state_front').prop('required',false)
-        $('#neighborhood_city_front').prop('required',false)
+        $("#neighborhood_house_address_front").prop("required", false);
+        $("#neighborhood_urbanization_name_front").prop("required", false);
+        $("#neighborhood_zipcode_front").prop("required", false);
+        $("#neighborhood_state_front").prop("required", false);
+        $("#neighborhood_city_front").prop("required", false);
     }
 }
 
@@ -164,11 +163,22 @@ function checkFieldSetNeighborhood() {
 
     var data = {};
     $("#fieldset_five input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+        } else {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_five select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    data["form_section"] = "my_neighborhood_information";
 
     if (nextWizardStep) {
+        store_this_is_me_form_data(data, "my_neighborhood_button");
+
         $("#neighborhood_bar").addClass("completed");
         $("#neighborhood_bar").children("div").eq(0).addClass("text-white");
         $("#neighborhood_bar").removeClass("active");

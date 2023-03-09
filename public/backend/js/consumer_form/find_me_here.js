@@ -1184,10 +1184,7 @@ function checkFieldSetThisIsMe() {
         }
     });
     $("#fieldset_two select").each(function () {
-        
             data[$(this).attr("name")] = $(this).val();    
-
-        
     });
     data['form_section'] = 'find_me_here';
 

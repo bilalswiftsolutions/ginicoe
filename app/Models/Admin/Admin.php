@@ -3,7 +3,11 @@
 namespace App\Models\Admin;
 
 use App\Mail\Send2FAMail;
+use App\Models\Admin\Consumer\EmploymentInformation;
+use App\Models\Admin\Consumer\EthnicityInformation;
 use App\Models\Admin\Consumer\FindMeHere;
+use App\Models\Admin\Consumer\GenderIdentityInformation;
+use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
 use App\Models\OldPassword;
 use App\Models\AdminCode;
@@ -78,5 +82,24 @@ class Admin extends Model
     public function find_me_here()
     {
         return $this->hasOne(FindMeHere::class,'consumer_id');
+    }
+
+    public function gender_identity_info()
+    {
+        return $this->hasOne(GenderIdentityInformation::class,'consumer_id');
+    }
+    public function ethnicity_info()
+    {
+        return $this->hasOne(EthnicityInformation::class,'consumer_id');
+    }
+
+    public function my_neighborhood_info()
+    {
+        return $this->hasOne(MyNeighborhoodInformation::class,'consumer_id');
+    }
+
+    public function employment_info()
+    {
+        return $this->hasOne(EmploymentInformation::class,'consumer_id');
     }
 }

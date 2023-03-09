@@ -110,7 +110,7 @@
             <div class="form-group">
                 <label for="city" class="wizard-form-text-label">2.6 City</label>
                 <select class="form-control" name="city" id="city" required>
-                    <option value="{{ $find_me_here->city ?? '' }}" selected>{{ $find_me_here->city ?? ''}}</option>
+                    <option value="{{ $find_me_here->city ?? '' }}" selected>{{ $find_me_here->city ?? '' }}</option>
                 </select>
                 <p class="text_danger form_error"></p>
 
@@ -263,6 +263,7 @@
                     </option>
 
                 </select>
+                <p class="text_danger form_error"></p>
             </div>
         </div>
 
@@ -362,7 +363,7 @@
             id="old_address_section">
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input value="{{ $find_me_here->old_house_address ?? ''}}" name="old_house_address"
+                    <input value="{{ $find_me_here->old_house_address ?? '' }}" name="old_house_address"
                         id="old_house_address" type="text" class="form-control wizard-required">
                     <label for="old_house_address" class="wizard-form-text-label">2.25 House Address</label>
                     <p class="text_danger form_error"></p>
@@ -371,8 +372,8 @@
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input value="{{ $find_me_here->old_building_name ?? ''}}" name="old_building_name" type="text"
-                        class="form-control wizard-required" id="old_building_name">
+                    <input value="{{ $find_me_here->old_building_name ?? '' }}" name="old_building_name"
+                        type="text" class="form-control wizard-required" id="old_building_name">
                     <label for="old_building_name" class="wizard-form-text-label">2.26 Building Name</label>
                     <p class="text_danger form_error"></p>
                 </div>
@@ -391,7 +392,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input value="{{ $find_me_here->old_street_name ?? ''}}" name="old_street_name" type="text"
+                    <input value="{{ $find_me_here->old_street_name ?? '' }}" name="old_street_name" type="text"
                         class="form-control wizard-required" id="old_street_name">
                     <label for="old_street_name" class="wizard-form-text-label">2.28 Street Name</label>
                     <p class="text_danger form_error"></p>
@@ -468,8 +469,9 @@
                 <div class="form-group">
                     <label for="old_city" class="wizard-form-text-label">2.30 City</label>
                     <select class="form-control" name="old_city" id="old_city" required>
-                        <option value="{{ $find_me_here->old_city ?? ''}}" selected>{{ $find_me_here->old_city ?? '' }}</option>
-                    
+                        <option value="{{ $find_me_here->old_city ?? '' }}" selected>
+                            {{ $find_me_here->old_city ?? '' }}</option>
+
                     </select>
 
                 </div>
@@ -608,13 +610,13 @@
                 <div class="form-group">
                     2.43 Do you lived in multi-storey building?
                     <div class="wizard-form-radio">
-                        <input onclick="old_sky_crapper_field()" @if ((!empty($find_me_here) && $find_me_here->old_do_you_live_in_sky_crapper == 1)) checked @endif name="old_do_you_live_in_sky_crapper" value="1"
-                            id="radio1" type="radio">
+                        <input onclick="old_sky_crapper_field()" @if (!empty($find_me_here) && $find_me_here->old_do_you_live_in_sky_crapper == 1) checked @endif
+                            name="old_do_you_live_in_sky_crapper" value="1" id="radio1" type="radio">
                         <label for="radio1">Yes</label>
                     </div>
                     <div class="wizard-form-radio">
-                        <input onclick="old_sky_crapper_field()" @if ((!empty($find_me_here) && $find_me_here->old_do_you_live_in_sky_crapper == 0) || empty($find_me_here)) checked @endif name="old_do_you_live_in_sky_crapper"
-                            value="0" id="radio2" type="radio">
+                        <input onclick="old_sky_crapper_field()" @if ((!empty($find_me_here) && $find_me_here->old_do_you_live_in_sky_crapper == 0) || empty($find_me_here)) checked @endif
+                            name="old_do_you_live_in_sky_crapper" value="0" id="radio2" type="radio">
                         <label for="radio2">No</label>
                     </div>
                 </div>
@@ -624,8 +626,8 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
-                        <input value="{{$find_me_here->old_no_of_floor ?? ''}}" name="old_no_of_floor" type="number" class="form-control wizard-required"
-                            id="old_no_of_floor">
+                        <input value="{{ $find_me_here->old_no_of_floor ?? '' }}" name="old_no_of_floor"
+                            type="number" class="form-control wizard-required" id="old_no_of_floor">
                         <label for="old_no_of_floor" class="wizard-form-text-label">2.44 No of Floors Your
                             Building</label>
                         <p class="text_danger form_error"></p>
@@ -634,8 +636,8 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
-                        <input value="{{$find_me_here->old_your_floor_no ?? ''}}" name="old_your_floor_no" type="text" class="form-control wizard-required"
-                            id="old_your_floor_no">
+                        <input value="{{ $find_me_here->old_your_floor_no ?? '' }}" name="old_your_floor_no"
+                            type="text" class="form-control wizard-required" id="old_your_floor_no">
                         <label for="old_your_floor_no" class="wizard-form-text-label">2.45 Your Floor No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
@@ -643,8 +645,8 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
-                        <input value="{{$find_me_here->old_apartment_no ?? ''}}" name="old_apartment_no" type="text" class="form-control wizard-required"
-                            id="old_apartment_no">
+                        <input value="{{ $find_me_here->old_apartment_no ?? '' }}" name="old_apartment_no"
+                            type="text" class="form-control wizard-required" id="old_apartment_no">
                         <label for="old_apartment_no" class="wizard-form-text-label">2.46 Apartment No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
@@ -653,8 +655,8 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
-                        <input value="{{$find_me_here->old_room_no ?? ''}}" name="old_room_no" type="number" class="form-control wizard-required"
-                            id="old_room_no">
+                        <input value="{{ $find_me_here->old_room_no ?? '' }}" name="old_room_no" type="number"
+                            class="form-control wizard-required" id="old_room_no">
                         <label for="old_room_no" class="wizard-form-text-label">2.47 Room No.</label>
                         <p class="text_danger form_error"></p>
                     </div>
@@ -663,8 +665,8 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
-                        <input value="{{$find_me_here->old_bed_no ?? ''}}" name="old_bed_no" type="number" class="form-control wizard-required"
-                            id="old_bed_no">
+                        <input value="{{ $find_me_here->old_bed_no ?? '' }}" name="old_bed_no" type="number"
+                            class="form-control wizard-required" id="old_bed_no">
                         <label for="old_bed_no" class="wizard-form-text-label">2.48 Bed No</label>
                         <p class="text_danger form_error"></p>
                     </div>
@@ -681,8 +683,8 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$find_me_here->primary_area_code ?? ''}}" name="primary_area_code" type="number" class="form-control wizard-required"
-                    id="primary_area_code">
+                <input value="{{ $find_me_here->primary_area_code ?? '' }}" name="primary_area_code" type="number"
+                    class="form-control wizard-required" id="primary_area_code">
                 <label for="primary_area_code" class="wizard-form-text-label">2.49 Area Code Primary Mobile
                     No.</label>
                 <p class="text_danger form_error"></p>
@@ -690,16 +692,16 @@
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$find_me_here->primary_mobile_number ?? ''}}" name="primary_mobile_number" type="number" class="form-control wizard-required"
-                    id="primary_mobile_number">
+                <input value="{{ $find_me_here->primary_mobile_number ?? '' }}" name="primary_mobile_number"
+                    type="number" class="form-control wizard-required" id="primary_mobile_number">
                 <label for="primary_mobile_number" class="wizard-form-text-label">2.50 Primary Mobile No.</label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$find_me_here->alternate_area_code ?? ''}}" name="alternate_area_code" type="number" class="form-control wizard-required"
-                    id="alternate_area_code">
+                <input value="{{ $find_me_here->alternate_area_code ?? '' }}" name="alternate_area_code"
+                    type="number" class="form-control wizard-required" id="alternate_area_code">
                 <label for="alternate_area_code" class="wizard-form-text-label">2.51 Alternate Telephone no. Area
                     Code</label>
                 <p class="text_danger form_error"></p>
@@ -707,7 +709,8 @@
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$find_me_here->alternate_telephone_number ?? ''}}" name="alternate_telephone_number" type="number" class="form-control wizard-required"
+                <input value="{{ $find_me_here->alternate_telephone_number ?? '' }}"
+                    name="alternate_telephone_number" type="number" class="form-control wizard-required"
                     id="alternate_telephone_number">
                 <label for="alternate_telephone_number" class="wizard-form-text-label">2.52 Alternate Telephone
                     No.</label>
@@ -717,7 +720,8 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$find_me_here->email ?? ''}}" name="email" type="email" class="form-control wizard-required" id="email">
+                <input value="{{ $find_me_here->email ?? '' }}" name="email" type="email"
+                    class="form-control wizard-required" id="email">
                 <label for="email" class="wizard-form-text-label">2.53 Email</label>
                 <p class="text_danger form_error"></p>
             </div>
