@@ -3,10 +3,14 @@
 namespace App\Models\Admin;
 
 use App\Mail\Send2FAMail;
+use App\Models\Admin\Consumer\ChargeCardInformation;
+use App\Models\Admin\Consumer\DistinguishIdentifierInformation;
 use App\Models\Admin\Consumer\EmploymentInformation;
 use App\Models\Admin\Consumer\EthnicityInformation;
 use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
+use App\Models\Admin\Consumer\HairInformation;
+use App\Models\Admin\Consumer\HeadAndFaceInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
 use App\Models\OldPassword;
@@ -101,5 +105,24 @@ class Admin extends Model
     public function employment_info()
     {
         return $this->hasOne(EmploymentInformation::class,'consumer_id');
+    }
+
+    public function charge_card_info()
+    {
+        return $this->hasOne(ChargeCardInformation::class,'consumer_id');
+    }
+
+    public function head_and_face_info()
+    {
+        return $this->hasOne(HeadAndFaceInformation::class,'consumer_id');
+    }
+    public function hair_info()
+    {
+        return $this->hasOne(HairInformation::class,'consumer_id');
+    }
+
+    public function distinguish_identifier_info()
+    {
+        return $this->hasOne(DistinguishIdentifierInformation::class,'consumer_id');
     }
 }

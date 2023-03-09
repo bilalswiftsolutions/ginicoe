@@ -127,12 +127,24 @@ function checkFieldSetChargesCard()
   
 
     var data = {};
-    $("#fieldset_seven input").each(function() {
+    $("#fieldset_seven input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+        } else {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_seven select").each(function () {
         data[$(this).attr("name")] = $(this).val();
-      });
-      console.log(data)
+    });
+    data["form_section"] = "charge_card_information";
+
 
       if (nextWizardStep) {
+      store_this_is_me_form_data(data, "charge_card_information_button");
+
         $("#protect_cards_bar").addClass("completed");
         $("#protect_cards_bar").children("div").eq(0).addClass("text-white");
         $("#protect_cards_bar").removeClass("active");

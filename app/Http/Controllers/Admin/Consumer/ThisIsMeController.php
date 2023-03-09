@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Admin\Consumer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Admin;
+use App\Models\Admin\Consumer\ChargeCardInformation;
+use App\Models\Admin\Consumer\DistinguishIdentifierInformation;
 use App\Models\Admin\Consumer\EmploymentInformation;
 use App\Models\Admin\Consumer\EthnicityInformation;
 use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
+use App\Models\Admin\Consumer\HairInformation;
+use App\Models\Admin\Consumer\HeadAndFaceInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
 use Exception;
@@ -21,7 +25,8 @@ class ThisIsMeController extends Controller
         $consumer = Admin::with([
             'my_pidegree_info', 'find_me_here', 'gender_identity_info',
             'my_neighborhood_info',
-            'employment_info'
+            'employment_info',
+            'charge_card_info'
         ])->where('id', session('id'))->first();
         $my_pidegree_info = $consumer->my_pidegree_info;
         $find_me_here = $consumer->find_me_here;
@@ -29,6 +34,10 @@ class ThisIsMeController extends Controller
         $ethnicity_info = $consumer->ethnicity_info;
         $my_neighborhood_info = $consumer->my_neighborhood_info;
         $employment_info = $consumer->employment_info;
+        $charge_card_info = $consumer->charge_card_info;
+        $head_and_face_info = $consumer->head_and_face_info;
+        $hair_info = $consumer->hair_info;
+        $distinguish_identifier_info = $consumer->distinguish_identifier_info;
         return view('admin.consumer.this_is_me', compact(
             'my_pidegree_info',
             'find_me_here',
@@ -36,14 +45,18 @@ class ThisIsMeController extends Controller
             'ethnicity_info',
             'my_neighborhood_info',
             'employment_info',
-            
+            'charge_card_info',
+            'hair_info',
+            'head_and_face_info',
+            'distinguish_identifier_info'
+
         ));
     }
 
     public function this_is_me_store(Request $request)
     {
-        if ($request->form_section == 'find_me_here') {
-            //  dd($request->form_section);
+        if ($request->form_section == 'head_and_face_information') {
+            // dd($request->all());
         }
 
         $request['consumer_id'] = session('id');
@@ -67,6 +80,18 @@ class ThisIsMeController extends Controller
                 case 'employment_information':
                     $this->store_employement_info($request);
                     break;
+                case 'charge_card_information':
+                    $this->store_charge_card_info($request);
+                    break;
+                case 'head_and_face_information':
+                    $this->store_head_and_face_info($request);
+                    break;
+                case 'hair_information':
+                    $this->store_hair_info($request);
+                    break;
+                case 'distinguish_identifier_information':
+                    $this->distinguish_identifier_info($request);
+                    break;
 
                 default:
             }
@@ -75,6 +100,153 @@ class ThisIsMeController extends Controller
 
             return response()->json(['success' => false, 'message' => $e->getMessage()]);
         }
+    }
+
+    public function distinguish_identifier_info($request)
+    {
+        return DistinguishIdentifierInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'facial_neck_scars',
+                'facial_neck_scars_description',
+                'facial_or_neck_tattoos',
+                'facial_or_neck_tattoos_description',
+                'facial_plastic_surgery',
+                'right_eye',
+                'left_eye',
+                'nose_job',
+                'cheeks',
+                'mouth',
+                'chin',
+                'fore_head',
+                'face_lift',
+                'lips',
+                'facial_surgery_date',
+                'number_of_plastic_surgery',
+                'plastic_surgeon_name',
+                'first_name_of_surgeon',
+                'last_name_of_surgeon',
+                'surgeon_house_address',
+                'surgeon_street',
+                'surgeon_state',
+                'surgeon_city',
+                'surgeon_zipcode',
+                'surgeon_telephone',
+
+
+            )
+        );
+    }
+    public function store_hair_info($request)
+    {
+        return HairInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'natural_hair_color',
+                'hair_style',
+                'facial_hair_description',
+
+            )
+        );
+    }
+
+    public function store_head_and_face_info($request)
+    {
+        return  HeadAndFaceInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'chin_description',
+                'eyes_description',
+                'hair_description',
+                'mouth_description',
+                'eye_color',
+                'eyeware_prescription'
+            )
+        );
+    }
+
+    public function store_charge_card_info($request)
+    {
+        return  ChargeCardInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                // 'charge_card_to_protect_1',
+                'card_number_1',
+                'nickname_1',
+                'primary_first_name_1',
+                'primary_mi_1',
+                'primary_last_name_1',
+                'card_has_secondary_auth_user_1',
+                'secondary_first_name_1',
+                'secondary_last_name_1',
+                'secondary_mi_1',
+                'secondary_card_holder_relationship_1',
+                'name_of_bank_1',
+                'expiry_date_1',
+
+                // 'charge_card_to_protect_2',
+                'card_number_2',
+                'nickname_2',
+                'primary_first_name_2',
+                'primary_mi_2',
+                'primary_last_name_2',
+                'card_has_secondary_auth_user_2',
+                'secondary_first_name_2',
+                'secondary_last_name_2',
+                'secondary_mi_2',
+                'secondary_card_holder_relationship_2',
+                'name_of_bank_2',
+                'expiry_date_2',
+
+
+                // 'charge_card_to_protect_3',
+                'card_number_3',
+                'nickname_3',
+                'primary_first_name_3',
+                'primary_mi_3',
+                'primary_last_name_3',
+                'card_has_secondary_auth_user_3',
+                'secondary_first_name_3',
+                'secondary_last_name_3',
+                'secondary_mi_3',
+                'secondary_card_holder_relationship_3',
+                'name_of_bank_3',
+                'expiry_date_3',
+
+
+                // 'charge_card_to_protect_4',
+                'card_number_4',
+                'nickname_4',
+                'primary_first_name_4',
+                'primary_mi_4',
+                'primary_last_name_4',
+                'card_has_secondary_auth_user_4',
+                'secondary_first_name_4',
+                'secondary_last_name_4',
+                'secondary_mi_4',
+                'secondary_card_holder_relationship_4',
+                'name_of_bank_4',
+                'expiry_date_4',
+
+
+                // 'charge_card_to_protect_5',
+                'card_number_5',
+                'nickname_5',
+                'primary_first_name_5',
+                'primary_mi_5',
+                'primary_last_name_5',
+                'card_has_secondary_auth_user_5',
+                'secondary_first_name_5',
+                'secondary_last_name_5',
+                'secondary_mi_5',
+                'secondary_card_holder_relationship_5',
+                'name_of_bank_5',
+                'expiry_date_5',
+            )
+        );
     }
     public function store_employement_info($request)
     {

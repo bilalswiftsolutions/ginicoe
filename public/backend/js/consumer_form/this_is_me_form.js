@@ -753,7 +753,7 @@ $("#this_is_me_form").validate({
 
         },
         are_you_twin:{
-            required:true,
+           
             maxlength: 50,
 
         },
@@ -764,7 +764,7 @@ $("#this_is_me_form").validate({
         },
 
         twin_first_name:{
-         required: true,
+         
             maxlength: 20,
         },
         twin_mi :{

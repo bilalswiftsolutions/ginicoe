@@ -76,11 +76,32 @@ function checkFieldSetDistinguishIdentifier() {
 
     var data = {};
     $("#fieldset_eleven input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_eleven select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    data["form_section"] = "distinguish_identifier_information";
+
 
     if (nextWizardStep) {
+        store_this_is_me_form_data(
+            data,
+            "distinguish_identifier_information_button"
+        );
+
         $("#distinguish_bar").addClass("completed");
         $("#distinguish_bar").children("div").eq(0).addClass("text-white");
         $("#distinguish_bar").removeClass("active");
