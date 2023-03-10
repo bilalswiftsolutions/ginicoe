@@ -102,7 +102,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                <input value="{{$travel_info->us_driving_license_number}}" name="us_driving_license_number" type="text" class="form-control wizard-required" id="us_driving_license_number">
+                <input value="{{$travel_info->us_driving_license_number ?? ''}}" name="us_driving_license_number" type="text" class="form-control wizard-required" id="us_driving_license_number">
                 <label for="us_driving_license_number" class="wizard-form-text-label">16.11 U.S. driver’s license number</label>
                 <p class="text_danger form_error"></p>
             </div>
