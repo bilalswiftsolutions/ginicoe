@@ -93,7 +93,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                <input value="{{$travel_info->us_govt_id_number}}" name="us_govt_id_number" type="text" class="form-control wizard-required" id="us_govt_id_number">
+                <input value="{{$travel_info->us_govt_id_number ?? ''}}" name="us_govt_id_number" type="text" class="form-control wizard-required" id="us_govt_id_number">
                 <label for="us_govt_id_number" class="wizard-form-text-label">16.10 U.S. government id document number</label>
                 <p class="text_danger form_error"></p>
             </div>
