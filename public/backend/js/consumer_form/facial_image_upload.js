@@ -30,6 +30,6 @@ $('#facial_image').on('change', function() {
     data.append('form_section', 'facial_image_upload');
   
 
-    store_this_is_me_form_data(data, "facial_image_upload_button");
+    store_this_is_me_form_data_image(data, "facial_image_upload_button");
 
   });

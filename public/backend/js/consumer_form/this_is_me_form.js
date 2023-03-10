@@ -1048,6 +1048,35 @@ function store_this_is_me_form_data(data, next_button_id) {
         type: "post",
         url: url,
         data: data,
+     
+        dataType: "JSON",
+       
+        success: function (data) {
+            if (data.success) {
+                if (data?.data) {
+                    console.log(data?.data?.facial_image);
+                    var img = $("#facial_image_thumbnail");
+                    // set the source of the image
+                    img.attr("src", `${data?.data?.facial_image}`);
+                } else {
+                    next_step(next_button_id);
+                }
+            }
+        },
+    });
+}
+
+function store_this_is_me_form_data_image(data, next_button_id) {
+    $.ajaxSetup({
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+    });
+    url = "/admin/consumer/this-is-me-store";
+    $.ajax({
+        type: "post",
+        url: url,
+        data: data,
         processData: false,
         contentType: false,
         cache: false,
