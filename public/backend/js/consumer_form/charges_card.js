@@ -127,12 +127,33 @@ function checkFieldSetChargesCard()
   
 
     var data = {};
-    $("#fieldset_seven input").each(function() {
+    $("#fieldset_seven input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_seven select").each(function () {
         data[$(this).attr("name")] = $(this).val();
-      });
-      console.log(data)
+    });
+    $("#fieldset_seven textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    data["form_section"] = "charge_card_information";
+
 
       if (nextWizardStep) {
+      store_this_is_me_form_data(data, "charge_card_information_button");
+
         $("#protect_cards_bar").addClass("completed");
         $("#protect_cards_bar").children("div").eq(0).addClass("text-white");
         $("#protect_cards_bar").removeClass("active");

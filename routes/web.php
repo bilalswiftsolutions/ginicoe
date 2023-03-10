@@ -662,4 +662,9 @@ Route::group(['middleware' => '2fa'], function () {
 Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']], function () {
     Route::get('/this-is-me', [ThisIsMeController::class, 'this_is_me'])->name('admin.consumer.this_is_me');
     Route::get('/validate-address', [USPSAddressController::class,'validateAddress']);
+
+    Route::post('/this-is-me-store', [ThisIsMeController::class, 'this_is_me_store']);
+    Route::get('/return-later', [ThisIsMeController::class,'return_later']);
+
+
 });

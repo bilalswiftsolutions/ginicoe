@@ -27,11 +27,31 @@ function checkFieldSetMedicalInfo()
 
     var data = {};
     $("#fieldset_fourteen input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_fourteen select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    $("#fieldset_fourteen textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    data["form_section"] = "medical_information";
 
     if (nextWizardStep) {
+      store_this_is_me_form_data(data, "medical_information_information_button");
+
         $("#medical_info_bar").addClass("completed");
         $("#medical_info_bar").children("div").eq(0).addClass("text-white");
         $("#medical_info_bar").removeClass("active");

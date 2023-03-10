@@ -27,11 +27,32 @@ function checkFieldSetFamilyAndMedicalHistory()
 
     var data = {};
     $("#fieldset_fifteen input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_fifteen select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    $("#fieldset_fifteen textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    data["form_section"] = "family_and_medical_information";
+
 
     if (nextWizardStep) {
+      store_this_is_me_form_data(data, "family_and_medical_information");
+
         $("#family_history_bar").addClass("completed");
         $("#family_history_bar").children("div").eq(0).addClass("text-white");
         $("#family_history_bar").removeClass("active");

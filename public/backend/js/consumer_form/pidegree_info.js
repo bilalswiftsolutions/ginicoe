@@ -1,4 +1,5 @@
 var nextWizardStep = false;
+
 function check_cpn_usage() {
     if ($("input[name='cpn_usage']:checked").val() == "1") {
         $("#cpn_no_div").show();
@@ -7,6 +8,7 @@ function check_cpn_usage() {
     } else {
         $("#cpn_no_div").hide();
         $("#cpn_no").unmask();
+        $("#cpn_no").val('');
         $("#cpn_no").prop("required", false);
     }
 }
@@ -21,13 +23,32 @@ function checkFieldSetPidegree() {
         nextWizardStep = false;
     }
     // nextWizardStep = true;
-    // console.log(nextWizardStep)
-
     var data = {};
     $("#fieldset_one input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            console.log('input[name="' + $(this).attr("name") + '"]:checked')
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+         
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_one select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    $("#fieldset_one textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    data['form_section'] = 'my_pidegree_info';
+    
+    if (nextWizardStep) {
+    store_this_is_me_form_data(data,'my_pidegree_info_button');
+    }
 
     if (nextWizardStep) {
         $("#pedigree_bar").addClass("completed");
