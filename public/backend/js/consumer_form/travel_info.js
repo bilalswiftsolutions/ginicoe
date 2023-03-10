@@ -31,7 +31,11 @@ function checkFieldSetTravelInfo()
         data[$(this).attr("name")] = $(this).val();
     });
 
+    data["form_section"] = "travel_information";
+
+
     if (nextWizardStep) {
+      store_this_is_me_form_data(data, "travel_information_button");
         $("#travel_info_bar").addClass("completed");
         $("#travel_info_bar").children("div").eq(0).addClass("text-white");
         $("#travel_info_bar").removeClass("active");

@@ -31,16 +31,16 @@ class CreateDistinguishIdentifierInformationTable extends Migration
             $table->boolean('face_lift')->default(0);
             $table->boolean('lips')->default(0);
             $table->date('facial_surgery_date');
-            $table->string('number_of_plastic_surgery');
-            $table->string('plastic_surgeon_name');
-            $table->string('first_name_of_surgeon');
-            $table->string('last_name_of_surgeon');
-            $table->string('surgeon_house_address');
-            $table->string('surgeon_street');
-            $table->string('surgeon_state');
-            $table->string('surgeon_city');
-            $table->string('surgeon_zipcode');
-            $table->string('surgeon_telephone');
+            $table->string('number_of_plastic_surgery')->nullable();
+            $table->string('plastic_surgeon_name')->nullable();
+            $table->string('first_name_of_surgeon')->nullable();
+            $table->string('last_name_of_surgeon')->nullable();
+            $table->string('surgeon_house_address')->nullable();
+            $table->string('surgeon_street')->nullable();
+            $table->string('surgeon_state')->nullable();
+            $table->string('surgeon_city')->nullable();
+            $table->string('surgeon_zipcode')->nullable();
+            $table->string('surgeon_telephone')->nullable();
         
 
 

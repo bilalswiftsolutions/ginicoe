@@ -1,6 +1,6 @@
 
 function checkFieldSetFacialImageUpload() {
-    if ($("#fieldset_one").find(":input").valid()) {
+    if ($("#fieldset_eight").find(":input").valid()) {
         nextWizardStep = true;
     } else {
         nextWizardStep = false;
@@ -9,7 +9,7 @@ function checkFieldSetFacialImageUpload() {
     // console.log(nextWizardStep)
 
     var data = {};
-    $("#fieldset_one input").each(function () {
+    $("#fieldset_eight input").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
     console.log(data);
@@ -21,3 +21,15 @@ function checkFieldSetFacialImageUpload() {
         $("#head_n_face_bar").addClass("active");
     }
 }
+
+$('#facial_image').on('change', function() {
+    // Get the selected file
+    var file = $(this)[0].files[0];
+    var data = new FormData();
+    data.append('file', file);
+    data.append('form_section', 'facial_image_upload');
+  
+
+    store_this_is_me_form_data(data, "facial_image_upload_button");
+
+  });

@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin\Consumer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Admin;
+use App\Models\Admin\Consumer\AttestationInformation;
 use App\Models\Admin\Consumer\ChargeCardInformation;
 use App\Models\Admin\Consumer\DistinguishIdentifierInformation;
 use App\Models\Admin\Consumer\EmploymentInformation;
 use App\Models\Admin\Consumer\EthnicityInformation;
+use App\Models\Admin\Consumer\FacialImageUpload;
+use App\Models\Admin\Consumer\FamilyAndMedicalHistoryInformation;
 use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
 use App\Models\Admin\Consumer\HairInformation;
@@ -15,7 +18,9 @@ use App\Models\Admin\Consumer\HeadAndFaceInformation;
 use App\Models\Admin\Consumer\MedicalInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
+use App\Models\Admin\Consumer\TravelInformation;
 use App\Models\Admin\Consumer\TwinIdentifierInformation;
+use App\Models\Admin\FieldsetReturnBackData;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -28,7 +33,9 @@ class ThisIsMeController extends Controller
             'my_pidegree_info', 'find_me_here', 'gender_identity_info',
             'my_neighborhood_info',
             'employment_info',
-            'charge_card_info'
+            'charge_card_info',
+            'family_and_medical_info',
+            'this_is_me_return_back_data','facial_image'
         ])->where('id', session('id'))->first();
         $my_pidegree_info = $consumer->my_pidegree_info;
         $find_me_here = $consumer->find_me_here;
@@ -42,6 +49,12 @@ class ThisIsMeController extends Controller
         $distinguish_identifier_info = $consumer->distinguish_identifier_info;
         $twin_identifier_info = $consumer->twin_identifier_info;
         $medical_info = $consumer->medical_info;
+        $family_and_medical_info = $consumer->family_and_medical_info;
+        $travel_info = $consumer->travel_info;
+        $attestation_info = $consumer->attestation_info;
+        $facial_image = $consumer->facial_image;
+
+        $this_is_me_return_back_data = $consumer->this_is_me_return_back_data;
         return view('admin.consumer.this_is_me', compact(
             'my_pidegree_info',
             'find_me_here',
@@ -54,7 +67,13 @@ class ThisIsMeController extends Controller
             'head_and_face_info',
             'distinguish_identifier_info',
             'twin_identifier_info',
-            'medical_info'
+            'medical_info',
+            'family_and_medical_info',
+            'travel_info',
+            'attestation_info',
+            'this_is_me_return_back_data',
+            'facial_image'
+
 
         ));
     }
@@ -104,8 +123,21 @@ class ThisIsMeController extends Controller
                 case 'twin_identifier_information':
                     $this->twin_identifier_info($request);
                     break;
+                case 'facial_image_upload':
+
+                    return response()->json(['success'=>true,'data'=> $this->store_facial_image_upload($request)]);
+                    break;
                 case 'medical_information':
                     $this->store_medical_info($request);
+                    break;
+                case 'family_and_medical_information':
+                    $this->store_family_and_medical_info($request);
+                    break;
+                case 'travel_information':
+                    $this->store_travel_info($request);
+                    break;
+                case 'attestation_information':
+                    $this->store_attestation_info($request);
                     break;
 
                 default:
@@ -115,6 +147,110 @@ class ThisIsMeController extends Controller
 
             return response()->json(['success' => false, 'message' => $e->getMessage()]);
         }
+    }
+    public function store_facial_image_upload($request)
+    {
+        // Store the uploaded file in the public/uploads directory
+        $imageName = time() . '.' . $request->file->extension();
+        $request->file->move(public_path('facial_uploads'), $imageName);
+        return   FacialImageUpload::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+            ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
+        );
+    }
+    public function store_attestation_info($request)
+    {
+        return AttestationInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'how_you_heared_about_us',
+                'i_confirm_data_is_accurate'
+            )
+        );
+    }
+
+    public function store_travel_info($request)
+    {
+        return TravelInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'are_you_us_citizen',
+                'passport_number',
+                'alien_id_number',
+                'country_of_issuance_foriegn_country',
+                'foreign_passport_number',
+                'country_of_issuance_foreign_passport',
+                'are_you_on_visa',
+                'visa_number',
+                'us_permit',
+                'us_govt_id_number',
+                'us_driving_license_number',
+                'us_state',
+                'foreign_country_driving_license_number',
+                'foreign_dl_number',
+                'foreign_id_number',
+                'us_education_doc',
+                'witsec',
+                'old_first_name',
+                'old_last_name',
+                'old_mi',
+                'old_dob',
+                'old_spouse_first_name',
+                'old_spouse_last_name',
+                'old_spouse_mi',
+                'old_spouse_dob',
+                'old_first_name_1st_daughter',
+                'old_last_name_1st_daughter',
+                'old_mi_1st_daughter',
+                'old_dob_1st_daughter',
+                'old_first_name_2nd_daughter',
+                'old_last_name_2nd_daughter',
+                'old_mi_2nd_daughter',
+                'old_dob_2nd_daughter',
+                'old_first_name_1st_son',
+                'old_last_name_1st_son',
+                'old_mi_1st_son',
+                'old_dob_1st_son',
+                'old_first_name_2nd_son',
+                'old_last_name_2nd_son',
+                'old_mi_2nd_son',
+                'old_dob_2nd_son',
+                'to_see_global_look_alike',
+                'like_to_have_global_look_alike'
+            )
+        );
+    }
+    public function store_family_and_medical_info($request)
+    {
+        return FamilyAndMedicalHistoryInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'number_of_brother',
+                'olders_brother_name',
+                'number_of_sister',
+                'youngest_sister_name',
+                'place_of_birth',
+                'name_of_hospital_you_born_in',
+                'name_of_mid_wife',
+                'first_name_of_mid_wife',
+                'last_name_of_mid_wife',
+                'exact_location_of_first_reponder',
+                'address_description',
+                'birth_house_address',
+                'birth_street',
+                'birth_country',
+                'birth_state',
+                'birth_city',
+                'birth_zipcode',
+                'birth_address_description',
+                'your_age'
+            )
+        );
     }
     public function store_medical_info($request)
     {
@@ -544,5 +680,11 @@ class ThisIsMeController extends Controller
             'us_vetran',
             'consumer_presently_incarcerated'
         ));
+    }
+
+    public function return_later(Request $request)
+    {
+        FieldsetReturnBackData::updateOrCreate(['admin_id' => session('id')], $request->only('fieldset_id', 'module') + ['admin_id' => session('id')]);
+        return response()->json(['success' => true, 'message' => 'Data saved successfully']);
     }
 }

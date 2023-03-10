@@ -163,223 +163,184 @@ $("#this_is_me_form").validate({
         },
 
         no_of_floor: {
-       
             minlength: 1,
             maxlength: 30,
         },
 
         your_floor_no: {
-          
             minlength: 1,
             maxlength: 30,
         },
 
         apartment_no: {
-        
             minlength: 4,
             maxlength: 30,
         },
         room_no: {
-           
             minlength: 1,
             maxlength: 30,
         },
         bed_no: {
-           
             minlength: 1,
             maxlength: 30,
         },
         zipcode: {
             required: true,
             zipcode: true,
-            
         },
         old_zipcode: {
             required: false,
             zipcode: true,
         },
 
-        neighborhood_house_address_right:{
+        neighborhood_house_address_right: {
             maxlength: 30,
         },
-        neighborhood_urbanization_name_right:{
+        neighborhood_urbanization_name_right: {
             maxlength: 30,
         },
-        neighborhood_zipcode_right:{
+        neighborhood_zipcode_right: {
             zipcode: 30,
         },
-        neighborhood_city_right :{
+        neighborhood_city_right: {
             maxlength: 30,
         },
 
-        neighborhood_house_address_left:{
+        neighborhood_house_address_left: {
             maxlength: 30,
         },
-        neighborhood_urbanization_name_left:{
+        neighborhood_urbanization_name_left: {
             maxlength: 30,
         },
-        neighborhood_zipcode_left:{
+        neighborhood_zipcode_left: {
             zipcode: 30,
         },
-        neighborhood_city_left :{
+        neighborhood_city_left: {
             maxlength: 30,
         },
-       
 
-        neighborhood_house_address_front:{
+        neighborhood_house_address_front: {
             maxlength: 30,
         },
-        neighborhood_urbanization_name_front:{
+        neighborhood_urbanization_name_front: {
             maxlength: 30,
         },
-        neighborhood_zipcode_front:{
+        neighborhood_zipcode_front: {
             zipcode: 30,
         },
-        neighborhood_city_front :{
+        neighborhood_city_front: {
             maxlength: 30,
         },
 
-
-        neighborhood_house_address_back:{
+        neighborhood_house_address_back: {
             maxlength: 30,
         },
-        neighborhood_urbanization_name_back:{
+        neighborhood_urbanization_name_back: {
             maxlength: 30,
         },
-        neighborhood_zipcode_back:{
+        neighborhood_zipcode_back: {
             zipcode: 30,
         },
-        neighborhood_city_back :{
+        neighborhood_city_back: {
             maxlength: 30,
         },
-
 
         old_house_address: {
-        
             minlength: 1,
             maxlength: 45,
         },
         old_building_name: {
-  
             minlength: 3,
             maxlength: 50,
         },
         old_apartment_no: {
-           
             minlength: 1,
             maxlength: 4,
         },
         old_street_name: {
-         
             minlength: 5,
             maxlength: 32,
         },
-        old_state: {
-          
-        },
-        old_city: {
-        
-        },
+        old_state: {},
+        old_city: {},
         old_town: {
-       
             minlength: 4,
             maxlength: 30,
         },
         old_township: {
-        
             minlength: 4,
             maxlength: 30,
         },
         old_parish: {
-           
             minlength: 4,
             maxlength: 30,
         },
         old_village: {
-        
             minlength: 4,
             maxlength: 30,
         },
         old_hamlet: {
-        
             minlength: 4,
             maxlength: 30,
         },
         old_district: {
-          
             minlength: 3,
             maxlength: 30,
         },
         old_county: {
-           
             minlength: 3,
             maxlength: 30,
         },
         old_neighborhood_name: {
-         
             minlength: 4,
             maxlength: 30,
         },
-
-       
 
         old_urbanization_name: {
-          
             minlength: 4,
             maxlength: 30,
         },
 
-        old_house_type: {
-          
-        },
+        old_house_type: {},
 
         old_house_number: {
-            
             minlength: 1,
             maxlength: 30,
         },
 
         old_building_name: {
-           
             minlength: 4,
             maxlength: 30,
         },
 
         old_no_of_floor: {
-       
             minlength: 1,
             maxlength: 30,
         },
 
         old_your_floor_no: {
-          
             minlength: 1,
             maxlength: 30,
         },
 
         old_apartment_no: {
-        
             minlength: 4,
             maxlength: 30,
         },
         old_room_no: {
-           
             minlength: 1,
             maxlength: 30,
         },
         old_bed_no: {
-           
             minlength: 1,
             maxlength: 30,
         },
-       
+
         old_zipcode: {
             required: false,
             zipcode: true,
         },
 
-
-        
         primary_area_code: {
             required: true,
             minlength: 2,
@@ -466,657 +427,564 @@ $("#this_is_me_form").validate({
             maxlength: 32,
         },
         labor_union_name: {
-          
             maxlength: 16,
-
         },
         your_union_membership_number: {
-
             maxlength: 16,
         },
 
-
-        charge_card_to_protect_1:{
+        charge_card_to_protect_1: {
             required: true,
             maxlength: 16,
         },
-        card_number_1:{
-            required:true,
-            maxlength:16,
-        },
-        nickname_1:{
-            required: true,
-            maxlength:25,
-        },
-        primary_first_name_1:{
-            required: true,
-            maxlength:24,
-        },
-        primary_mi_1:{
-            required: true,
-            maxlength: 20,
-        },
-        primary_last_name_1:{
-            required: true,
-            maxlength: 20,
-        },
-        secondary_first_name_1:{
-      
-            maxlength: 20
-        },
-        secondary_last_name_1:{
-          
-            maxlength:20,
-        },
-        secondary_mi_1:{
-        
-            maxlength:20,
-        },
-        secondary_card_holder_relationship_1:{
-            
-        },
-        name_of_bank_1:{
-            required: true,
-            maxlength: true,
-        },
-        expiry_date_1:{
-            required: true,
-            maxlength:20,
-        },
-
-        charge_card_to_protect_3:{
+        card_number_1: {
             required: true,
             maxlength: 16,
         },
-        card_number_3:{
-            required:true,
-            maxlength:16,
-        },
-        nickname_3:{
+        nickname_1: {
             required: true,
-            maxlength:25,
+            maxlength: 25,
         },
-        primary_first_name_3:{
+        primary_first_name_1: {
             required: true,
-            maxlength:24,
+            maxlength: 24,
         },
-        primary_mi_3:{
+        primary_mi_1: {
             required: true,
             maxlength: 20,
         },
-        primary_last_name_3:{
+        primary_last_name_1: {
             required: true,
             maxlength: 20,
         },
-        secondary_first_name_3:{
-           
-            maxlength: 20
+        secondary_first_name_1: {
+            maxlength: 20,
         },
-        secondary_last_name_3:{
-        
-            maxlength:20,
+        secondary_last_name_1: {
+            maxlength: 20,
         },
-        secondary_mi_3:{
-            
-            maxlength:20,
+        secondary_mi_1: {
+            maxlength: 20,
         },
-        secondary_card_holder_relationship_3:{
-        
-        },
-        name_of_bank_3:{
+        secondary_card_holder_relationship_1: {},
+        name_of_bank_1: {
             required: true,
             maxlength: true,
         },
-        expiry_date_3:{
-            required: true,
-            maxlength:20,
-        },
-
-
-        charge_card_to_protect_2:{
-            required: true,
-        },
-        card_number_2:{
-            required:true,
-            maxlength:16,
-        },
-        nickname_2:{
-            required: true,
-            maxlength:25,
-        },
-        primary_first_name_2:{
-            required: true,
-            maxlength:24,
-        },
-        primary_mi_2:{
+        expiry_date_1: {
             required: true,
             maxlength: 20,
         },
-        primary_last_name_2:{
-            required: true,
-            maxlength: 20,
-        },
-        secondary_first_name_2:{
-          
-            maxlength: 20
-        },
-        secondary_last_name_2:{
-        
-            maxlength:20,
-        },
-        secondary_mi_2:{
-        
-            maxlength:20,
-        },
-        secondary_card_holder_relationship_2:{
-          
-        },
-        name_of_bank_2:{
-            required: true,
-            maxlength: true,
-        },
-        expiry_date_2:{
-            required: true,
-            maxlength:20,
-        },
 
-        charge_card_to_protect_5:{
+        charge_card_to_protect_3: {
             required: true,
             maxlength: 16,
         },
-        card_number_5:{
-            required:true,
-            maxlength:16,
-        },
-        nickname_5:{
-            required: true,
-            maxlength:25,
-        },
-        primary_first_name_5:{
-            required: true,
-            maxlength:24,
-        },
-        primary_mi_5:{
-            required: true,
-            maxlength: 20,
-        },
-        primary_last_name_5:{
-            required: true,
-            maxlength: 20,
-        },
-        secondary_first_name_5:{
-           
-            maxlength: 20
-        },
-        secondary_last_name_5:{
-       
-            maxlength:20,
-        },
-        secondary_mi_5:{
-          
-            maxlength:20,
-        },
-        secondary_card_holder_relationship_5:{
-      
-        },
-        name_of_bank_5:{
-            required: true,
-            maxlength: true,
-        },
-        expiry_date_5:{
-            required: true,
-            maxlength:20,
-        },
-
-
-
-        charge_card_to_protect_4:{
+        card_number_3: {
             required: true,
             maxlength: 16,
         },
-        card_number_4:{
-            required:true,
-            maxlength:16,
-        },
-        nickname_4:{
+        nickname_3: {
             required: true,
-            maxlength:25,
+            maxlength: 25,
         },
-        primary_first_name_4:{
+        primary_first_name_3: {
             required: true,
-            maxlength:24,
+            maxlength: 24,
         },
-        primary_mi_4:{
+        primary_mi_3: {
             required: true,
             maxlength: 20,
         },
-        primary_last_name_4:{
+        primary_last_name_3: {
             required: true,
             maxlength: 20,
         },
-        secondary_first_name_4:{
-           
-            maxlength: 20
+        secondary_first_name_3: {
+            maxlength: 20,
         },
-        secondary_last_name_4:{
-           
-            maxlength:20,
+        secondary_last_name_3: {
+            maxlength: 20,
         },
-        secondary_mi_4:{
-           
-            maxlength:20,
+        secondary_mi_3: {
+            maxlength: 20,
         },
-        secondary_card_holder_relationship_4:{
-         
-        },
-        name_of_bank_4:{
+        secondary_card_holder_relationship_3: {},
+        name_of_bank_3: {
             required: true,
             maxlength: true,
         },
-        expiry_date_4:{
+        expiry_date_3: {
             required: true,
-            maxlength:20,
-        },
-        chin_description:{
-            required: true,
-            maxlength: 50,
-        },
-        eyes_description:{
-            required: true,
-            maxlength: 50,
-
-        },
-        hair_description:{
-            required: true,
-            maxlength: 50,
-
-        },
-        mouth_description:{
-            required: true,
-            maxlength: 50,
-
-        },
-        hair_description:{
-            required: true,
-            maxlength: 50,
-
-        },
-        eyeware_prescription:{
-            required: true,
-            maxlength: 50,
-
-        },
-        
-        dominant_hand_writing_side:{
-            required:true,
-            maxlength: 50,
-
-        },
-        are_you_twin:{
-           
-            maxlength: 50,
-
-        },
-        twin_type:{
-            required:false,
-            maxlength: 50,
-
-        },
-
-        twin_first_name:{
-         
             maxlength: 20,
         },
-        twin_mi :{
-            
-            maxlength:1,
+
+        charge_card_to_protect_2: {
+            required: true,
+        },
+        card_number_2: {
+            required: true,
+            maxlength: 16,
+        },
+        nickname_2: {
+            required: true,
+            maxlength: 25,
+        },
+        primary_first_name_2: {
+            required: true,
+            maxlength: 24,
+        },
+        primary_mi_2: {
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_2: {
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_2: {
+            maxlength: 20,
+        },
+        secondary_last_name_2: {
+            maxlength: 20,
+        },
+        secondary_mi_2: {
+            maxlength: 20,
+        },
+        secondary_card_holder_relationship_2: {},
+        name_of_bank_2: {
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_2: {
+            required: true,
+            maxlength: 20,
         },
 
-        twin_last_name:{
-           
-            maxlength:20,
+        charge_card_to_protect_5: {
+            required: true,
+            maxlength: 16,
         },
-        twin_difference_description :{
-          
+        card_number_5: {
+            required: true,
+            maxlength: 16,
+        },
+        nickname_5: {
+            required: true,
+            maxlength: 25,
+        },
+        primary_first_name_5: {
+            required: true,
+            maxlength: 24,
+        },
+        primary_mi_5: {
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_5: {
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_5: {
+            maxlength: 20,
+        },
+        secondary_last_name_5: {
+            maxlength: 20,
+        },
+        secondary_mi_5: {
+            maxlength: 20,
+        },
+        secondary_card_holder_relationship_5: {},
+        name_of_bank_5: {
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_5: {
+            required: true,
+            maxlength: 20,
+        },
+
+        charge_card_to_protect_4: {
+            required: true,
+            maxlength: 16,
+        },
+        card_number_4: {
+            required: true,
+            maxlength: 16,
+        },
+        nickname_4: {
+            required: true,
+            maxlength: 25,
+        },
+        primary_first_name_4: {
+            required: true,
+            maxlength: 24,
+        },
+        primary_mi_4: {
+            required: true,
+            maxlength: 20,
+        },
+        primary_last_name_4: {
+            required: true,
+            maxlength: 20,
+        },
+        secondary_first_name_4: {
+            maxlength: 20,
+        },
+        secondary_last_name_4: {
+            maxlength: 20,
+        },
+        secondary_mi_4: {
+            maxlength: 20,
+        },
+        secondary_card_holder_relationship_4: {},
+        name_of_bank_4: {
+            required: true,
+            maxlength: true,
+        },
+        expiry_date_4: {
+            required: true,
+            maxlength: 20,
+        },
+        chin_description: {
+            required: true,
+            maxlength: 50,
+        },
+        eyes_description: {
+            required: true,
+            maxlength: 50,
+        },
+        hair_description: {
+            required: true,
+            maxlength: 50,
+        },
+        mouth_description: {
+            required: true,
+            maxlength: 50,
+        },
+        hair_description: {
+            required: true,
+            maxlength: 50,
+        },
+        eyeware_prescription: {
+            required: true,
+            maxlength: 50,
+        },
+
+        dominant_hand_writing_side: {
+            required: true,
+            maxlength: 50,
+        },
+        are_you_twin: {
+            maxlength: 50,
+        },
+        twin_type: {
+            required: false,
+            maxlength: 50,
+        },
+
+        twin_first_name: {
+            maxlength: 20,
+        },
+        twin_mi: {
+            maxlength: 1,
+        },
+
+        twin_last_name: {
+            maxlength: 20,
+        },
+        twin_difference_description: {
             maxlength: 150,
         },
-        birth_mark_located :{
-            maxlength:20,
-           
+        birth_mark_located: {
+            maxlength: 20,
         },
 
-        twin_birth_mark_located:{
-            maxlength:20,
-        
+        twin_birth_mark_located: {
+            maxlength: 20,
         },
-        my_freckles_located :{
-            maxlength:20,
-           
+        my_freckles_located: {
+            maxlength: 20,
         },
-        twin_freckles_located:{
-            maxlength:20,
-           
+        twin_freckles_located: {
+            maxlength: 20,
         },
-        my_moles_located :{
-            maxlength:20,
-       
+        my_moles_located: {
+            maxlength: 20,
         },
-        twin_moles_located :{
-            maxlength:20,
-      
+        twin_moles_located: {
+            maxlength: 20,
         },
-        hair_are_different:{
-            maxlength:20,
-       
+        hair_are_different: {
+            maxlength: 20,
         },
-        my_eye_color :{
-            maxlength:20,
-         
+        my_eye_color: {
+            maxlength: 20,
         },
-        twin_eye_color:{
-            maxlength:20,
-         
+        twin_eye_color: {
+            maxlength: 20,
         },
-        my_hair_color:{
-            maxlength:20,
-           
+        my_hair_color: {
+            maxlength: 20,
         },
-        twin_hair_color :{
-            maxlength:20,
-           
+        twin_hair_color: {
+            maxlength: 20,
         },
-        facial_surgery_date:{
-          
-            maxlength:20,
+        facial_surgery_date: {
+            maxlength: 20,
         },
-    
 
-        medical_house_address:{
+        medical_house_address: {
             required: true,
             maxlength: 26,
         },
 
-        medical_street:{
+        medical_street: {
             required: true,
             maxlength: 26,
         },
 
-        medical_country:{
+        medical_country: {
             required: false,
             maxlength: 26,
         },
-        medical_zipcode:{
+        medical_zipcode: {
             required: true,
             maxlength: 26,
         },
-        medical_guid:{
+        medical_guid: {
             required: true,
             maxlength: 26,
         },
-        number_of_brother :{
+        number_of_brother: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        olders_brother_name:{
+        olders_brother_name: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        number_of_sister:{
+        number_of_sister: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        youngest_sister_name :{
+        youngest_sister_name: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
 
-        name_of_hospital_you_born_in:{
+        name_of_hospital_you_born_in: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        place_of_birth:{
-           
-            maxlength: 26,  
-       
+        place_of_birth: {
+            maxlength: 26,
         },
-        name_of_mid_wife:{
+        name_of_mid_wife: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-         
-        last_name_of_mid_wife:{
+
+        last_name_of_mid_wife: {
             required: false,
-            maxlength: 26,  
-        } ,
-        exact_location_of_first_reponder:{
+            maxlength: 26,
+        },
+        exact_location_of_first_reponder: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        first_name_of_mid_wife:{
+        first_name_of_mid_wife: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
-        address_description:{
+        address_description: {
             required: false,
-            maxlength: 26,  
+            maxlength: 26,
         },
 
-        birth_house_address:{
-            maxlength: 26,  
+        birth_house_address: {
+            maxlength: 26,
         },
-        birth_street:{
-            maxlength: 26,  
+        birth_street: {
+            maxlength: 26,
         },
 
-        birth_country:{
-            maxlength: 26,  
+        birth_country: {
+            maxlength: 26,
         },
-        birth_city:{
+        birth_city: {
             required: false,
-             
         },
-        birth_zipcode:{
-            maxlength: 26,  
+        birth_zipcode: {
+            maxlength: 26,
         },
 
-        birth_address_description:{
-            maxlength: 26,  
+        birth_address_description: {
+            maxlength: 26,
         },
-        your_age:{
-            maxlength: 26,  
+        your_age: {
+            maxlength: 26,
         },
-        alien_id_number :{
-        maxlength: 26,
-      },
-      country_of_issuance_foriegn_country :{
-        maxlength: 26,
-      },
-      foreign_passport_number:{
-        maxlength: 26,
-      },
+        alien_id_number: {
+            maxlength: 26,
+        },
+        country_of_issuance_foriegn_country: {
+            maxlength: 26,
+        },
+        foreign_passport_number: {
+            maxlength: 26,
+        },
 
-      passport_number:{
-        maxlength: 26,
-      },
+        passport_number: {
+            maxlength: 26,
+        },
 
-      country_of_issuance_foreign_passport :{
-        maxlength: 26,
-      },
+        country_of_issuance_foreign_passport: {
+            maxlength: 26,
+        },
 
-      visa_number:{
-        maxlength: 26,
-      },
+        visa_number: {
+            maxlength: 26,
+        },
 
-      us_permit :{
-        maxlength: 26,
-      },
+        us_permit: {
+            maxlength: 26,
+        },
 
-      us_govt_id_number :{
-        maxlength: 26,
-      },
-      us_driving_license_number:{
-        
-        maxlength: 26,
-      },
+        us_govt_id_number: {
+            maxlength: 26,
+        },
+        us_driving_license_number: {
+            maxlength: 26,
+        },
 
-      us_state:{
-      
-        maxlength: 26,
-      },
+        us_state: {
+            maxlength: 26,
+        },
 
-      foreign_country_driving_license_number:{
-      
-        maxlength: 26,
-      },
+        foreign_country_driving_license_number: {
+            maxlength: 26,
+        },
 
-      foreign_dl_number :{
-    
-        maxlength: 26,
-      },
+        foreign_dl_number: {
+            maxlength: 26,
+        },
 
-      foreign_id_number:{
-        
-        maxlength: 26,
-      },
+        foreign_id_number: {
+            maxlength: 26,
+        },
 
-      us_education_doc :{
-        
-        maxlength: 26,
-      },
+        us_education_doc: {
+            maxlength: 26,
+        },
 
-      witsec :{
-     
-        maxlength: 26,
-      },
+        witsec: {
+            maxlength: 26,
+        },
 
-      old_first_name :{
-      
-        maxlength: 26,
-      },
+        old_first_name: {
+            maxlength: 26,
+        },
 
-      old_last_name :{
-  
-        maxlength: 26,
-      },
+        old_last_name: {
+            maxlength: 26,
+        },
 
-      old_mi :{
-      
-        maxlength: 1,
-      },
+        old_mi: {
+            maxlength: 1,
+        },
 
-      old_spouse_first_name :{
-     
-        maxlength: 26,
-      },
-      old_spouse_mi :{
-      
-        maxlength: 1,
-      },
+        old_spouse_first_name: {
+            maxlength: 26,
+        },
+        old_spouse_mi: {
+            maxlength: 1,
+        },
 
-      old_first_name_1st_daughter :{
-      
-        maxlength: 26,
-      },
+        old_first_name_1st_daughter: {
+            maxlength: 26,
+        },
 
-      old_last_name_1st_daughter :{
-    
-        maxlength: 26,
-      },
-      old_mi_1st_daughter :{
-   
-        maxlength: 1,
-      },
+        old_last_name_1st_daughter: {
+            maxlength: 26,
+        },
+        old_mi_1st_daughter: {
+            maxlength: 1,
+        },
 
-      
+        old_first_name_2nd_daughter: {
+            maxlength: 26,
+        },
 
-      old_first_name_2nd_daughter :{
-      
-        maxlength: 26,
-      },
+        old_last_name_2nd_daughter: {
+            maxlength: 26,
+        },
+        old_mi_2nd_daughter: {
+            maxlength: 1,
+        },
 
-      old_last_name_2nd_daughter :{
-    
-        maxlength: 26,
-      },
-      old_mi_2nd_daughter :{
-   
-        maxlength: 1,
-      },
+        old_first_name_2nd_son: {
+            maxlength: 26,
+        },
 
+        old_last_name_2nd_son: {
+            maxlength: 26,
+        },
+        old_mi_2nd_son: {
+            maxlength: 1,
+        },
 
-      old_first_name_2nd_son :{
-      
-        maxlength: 26,
-      },
+        old_first_name_1st_son: {
+            maxlength: 26,
+        },
 
-      old_last_name_2nd_son :{
-    
-        maxlength: 26,
-      },
-      old_mi_2nd_son :{
-   
-        maxlength: 1,
-      },
+        old_last_name_1st_son: {
+            maxlength: 26,
+        },
+        old_mi_1st_son: {
+            maxlength: 1,
+        },
 
-      
-      old_first_name_1st_son :{
-      
-        maxlength: 26,
-      },
+        facial_neck_scars_description_div: {
+            maxlength: 50,
+        },
 
-      old_last_name_1st_son :{
-    
-        maxlength: 26,
-      },
-      old_mi_1st_son :{
-   
-        maxlength: 1,
-      },
+        facial_surgery_date: {
+            maxlength: 50,
+        },
 
-      facial_neck_scars_description_div:{
-         maxlength:50,
-      },
+        number_of_plastic_surgery: {
+            maxlength: 50,
+        },
 
-      facial_surgery_date:{
-        maxlength:50,
-     },
+        plastic_surgeon_name: {
+            maxlength: 50,
+        },
+        first_name_of_surgeon: {
+            maxlength: 50,
+        },
+        last_name_of_surgeon: {
+            maxlength: 50,
+        },
 
-     number_of_plastic_surgery :{
-        maxlength:50,
-     },
+        surgeon_house_address: {
+            maxlength: 50,
+        },
+        surgeon_street: {
+            maxlength: 50,
+        },
+        surgeon_zipcode: {
+            zipcode: true,
+        },
 
-     plastic_surgeon_name:{
-        maxlength:50,
-     },
-     first_name_of_surgeon:{
-        maxlength:50,
-     },
-     last_name_of_surgeon :{
-        maxlength:50,
-     }, 
-     
-     surgeon_house_address:{
-        maxlength:50,
-     },
-     surgeon_street:{
-        maxlength:50,
-     },
-     surgeon_zipcode :{
-        zipcode: true,
-     },
-
-     surgeon_telephone:{
-        maxlength:11,
-     },
-
-
-
-
+        surgeon_telephone: {
+            maxlength: 11,
+        },
     },
     messages: {},
 });
 
-function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
+function move_to_next_step(nextWizardStep, bar_id, next_bar_id) {
     var parentFieldset = $("#find_me_here_next_button").parents(
         ".wizard-fieldset"
     );
@@ -1127,40 +995,38 @@ function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
 
     if (nextWizardStep) {
         next.parents(".wizard-fieldset").removeClass("show", "400");
-    currentActiveStep
-        .removeClass("active")
-        .addClass("activated")
-        .next()
-        .addClass("active", "400");
-    next.parents(".wizard-fieldset")
-        .next(".wizard-fieldset")
-        .addClass("show", "400");
-    parentFieldset.hide();
+        currentActiveStep
+            .removeClass("active")
+            .addClass("activated")
+            .next()
+            .addClass("active", "400");
+        next.parents(".wizard-fieldset")
+            .next(".wizard-fieldset")
+            .addClass("show", "400");
+        parentFieldset.hide();
 
-    next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
+        next.parents(".wizard-fieldset").next(".wizard-fieldset").show();
 
-    progress_bar = progress_bar + 5.9;
-    console.log(progress_bar);
-    let text = next
-        .parents(".wizard-fieldset")
-        .next(".wizard-fieldset")
-        .find("h5")
-        .text();
-    console.log(text);
-    $(".progress-bar")
-        .css("width", progress_bar + "%")
-        .text(text);
-    jQuery(document)
-        .find(".wizard-fieldset")
-        .each(function () {
-            if ($("#find_me_here_next_button").hasClass("show")) {
-                var formAtrr = $("#find_me_here_next_button").attr(
-                    "data-tab-content"
-                );
-
-               
-            }
-        });
+        progress_bar = progress_bar + 5.9;
+        console.log(progress_bar);
+        let text = next
+            .parents(".wizard-fieldset")
+            .next(".wizard-fieldset")
+            .find("h5")
+            .text();
+        console.log(text);
+        $(".progress-bar")
+            .css("width", progress_bar + "%")
+            .text(text);
+        jQuery(document)
+            .find(".wizard-fieldset")
+            .each(function () {
+                if ($("#find_me_here_next_button").hasClass("show")) {
+                    var formAtrr = $("#find_me_here_next_button").attr(
+                        "data-tab-content"
+                    );
+                }
+            });
     }
 
     if (nextWizardStep) {
@@ -1171,36 +1037,39 @@ function move_to_next_step(nextWizardStep,bar_id,next_bar_id) {
     }
 }
 
-function store_this_is_me_form_data(data,next_button_id)
-{
+function store_this_is_me_form_data(data, next_button_id) {
     $.ajaxSetup({
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
     });
-    url = '/ginicoe/admin/consumer/this-is-me-store'
+    url = "/ginicoe/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
         data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
         dataType: "JSON",
-        success: function(data) {
-
-            if(data.success)
-            {
-                next_step(next_button_id);
+        enctype: "multipart/form-data",
+        success: function (data) {
+            if (data.success) {
+                if (data?.data) {
+                    console.log(data?.data?.facial_image);
+                    var img = $("#facial_image_thumbnail");
+                    // set the source of the image
+                    img.attr("src", `${data?.data?.facial_image}`);
+                } else {
+                    next_step(next_button_id);
+                }
             }
-        }
-
-
+        },
     });
 }
 
-function next_step(next_button_id)
-{
-    var parentFieldset = $(`#${next_button_id}`).parents(
-        ".wizard-fieldset"
-    );
+function next_step(next_button_id) {
+    var parentFieldset = $(`#${next_button_id}`).parents(".wizard-fieldset");
     var currentActiveStep = $(`#${next_button_id}`)
         .parents(".form-wizard")
         .find(".form-wizard-steps .active");
@@ -1236,18 +1105,55 @@ function next_step(next_button_id)
                 var formAtrr = $("#find_me_here_next_button").attr(
                     "data-tab-content"
                 );
-
-               
             }
         });
 }
 
-function previousStep(current_bar,previous_bar)
-{
-    
-        $(`#${previous_bar}`).removeClass("completed");
-        $(`#${previous_bar}`).children("div").eq(0).removeClass("text-white");
-        $(`#${previous_bar}`).addClass("active");
-        $(`#${current_bar}`).removeClass("active");
-    
+function previousStep(current_bar, previous_bar) {
+    $(`#${previous_bar}`).removeClass("completed");
+    $(`#${previous_bar}`).children("div").eq(0).removeClass("text-white");
+    $(`#${previous_bar}`).addClass("active");
+    $(`#${current_bar}`).removeClass("active");
 }
+
+function switchFieldset(fieldset, element) {
+    $("fieldset").hide();
+    $(`#${fieldset}`).show();
+
+    var currentDiv = $(element);
+    console.log(currentDiv);
+    currentDiv.addClass("active");
+    currentDiv.prevAll(".stepper-item").addClass("completed");
+    currentDiv.prevAll(".stepper-item").removeClass("active");
+    currentDiv
+        .prevAll(".stepper-item")
+        .find(".step-counter")
+        .addClass("text-white");
+    currentDiv.nextAll(".stepper-item").removeClass("active completed");
+}
+
+function returnLater(fieldset, module) {
+    url = "/ginicoe/admin/consumer/return-later";
+    $.ajax({
+        type: "get",
+        url: url,
+        data: { fieldset_id: fieldset, module: module },
+        dataType: "JSON",
+        success: function (data) {
+            if (data.success) {
+                toastr.success("Form Saved successfully");
+            }
+        },
+    });
+}
+
+var currentDiv = $(".stepper-item.active");
+console.log(currentDiv);
+currentDiv.addClass("active");
+currentDiv.prevAll(".stepper-item").addClass("completed");
+currentDiv.prevAll(".stepper-item").removeClass("active");
+currentDiv
+    .prevAll(".stepper-item")
+    .find(".step-counter")
+    .addClass("text-white");
+currentDiv.nextAll(".stepper-item").removeClass("active completed");

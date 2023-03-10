@@ -3,10 +3,13 @@
 namespace App\Models\Admin;
 
 use App\Mail\Send2FAMail;
+use App\Models\Admin\Consumer\AttestationInformation;
 use App\Models\Admin\Consumer\ChargeCardInformation;
 use App\Models\Admin\Consumer\DistinguishIdentifierInformation;
 use App\Models\Admin\Consumer\EmploymentInformation;
 use App\Models\Admin\Consumer\EthnicityInformation;
+use App\Models\Admin\Consumer\FacialImageUpload;
+use App\Models\Admin\Consumer\FamilyAndMedicalHistoryInformation;
 use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
 use App\Models\Admin\Consumer\HairInformation;
@@ -14,6 +17,7 @@ use App\Models\Admin\Consumer\HeadAndFaceInformation;
 use App\Models\Admin\Consumer\MedicalInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
+use App\Models\Admin\Consumer\TravelInformation;
 use App\Models\Admin\Consumer\TwinIdentifierInformation;
 use App\Models\OldPassword;
 use App\Models\AdminCode;
@@ -137,5 +141,32 @@ class Admin extends Model
     public function medical_info()
     {
         return $this->hasOne(MedicalInformation::class,'consumer_id');
+    }
+
+    public function family_and_medical_info()
+    {
+        return $this->hasOne(FamilyAndMedicalHistoryInformation::class,'consumer_id');
+    }
+
+    
+    public function travel_info()
+    {
+        return $this->hasOne(TravelInformation::class,'consumer_id');
+    }
+
+
+    public function attestation_info()
+    {
+        return $this->hasOne(AttestationInformation::class,'consumer_id');
+    }
+
+    public function this_is_me_return_back_data()
+    {
+        return $this->hasOne(FieldsetReturnBackData::class,'admin_id')->where('module','consumer_this_is_me');
+    }
+
+    public function facial_image()
+    {
+        return $this->hasOne(FacialImageUpload::class,'consumer_id');
     }
 }

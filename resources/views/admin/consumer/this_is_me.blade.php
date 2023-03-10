@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     font-size: 12px;
@@ -86,81 +87,81 @@
                 <form id="this_is_me_form" action="" method="post" role="form">
                     <div class="form-wizard-header">
                         <div class="stepper-wrapper">
-                            <div class="stepper-item active" id="pedigree_bar">
+                            <div class="stepper-item  @if(empty($this_is_me_return_back_data) || $this_is_me_return_back_data->fieldset_id == 'fieldset_one') active @endif" onclick="switchFieldset('fieldset_one',this)" id="pedigree_bar">
                               <div class="step-counter">1</div>
                               <div class="step-name">My Pedigree Info</div>
                             </div>
-                            <div class="stepper-item" id="find_me_here_bar">
+                            <div class="stepper-item  @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_two') active @endif"  onclick="switchFieldset('fieldset_two',this)"  id="find_me_here_bar">
                               <div class="step-counter">2</div>
                               <div class="step-name">Find Me Here</div>
                             </div>
-                            <div class="stepper-item" id="gender_identity_bar">
+                            <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_three') active @endif" onclick="switchFieldset('fieldset_three',this)" id="gender_identity_bar">
                               <div class="step-counter">3</div>
                               <div class="step-name">Gender Identity Information</div>
                             </div>
-                            <div class="stepper-item" id="enthnicity_bar">
+                            <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_four') active @endif"  onclick="switchFieldset('fieldset_four',this)" id="enthnicity_bar">
                               <div class="step-counter">4</div>
                               <div class="step-name">Ethnicity Information</div>
                             </div>
 
-                            <div class="stepper-item" id="neighborhood_bar">
+                            <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_five') active @endif" onclick="switchFieldset('fieldset_five',this)" id="neighborhood_bar">
                                 <div class="step-counter" >5</div>
                                 <div class="step-name">My Neighborhood is</div>
                               </div>
 
-                              <div class="stepper-item" id="employment_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_six') active @endif" onclick="switchFieldset('fieldset_six',this)" id="employment_bar">
                                 <div class="step-counter">6</div>
                                 <div class="step-name">Employment Information</div>
                               </div>
 
-                              <div class="stepper-item" id="protect_cards_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_seven') active @endif" onclick="switchFieldset('fieldset_seven',this)" id="protect_cards_bar">
                                 <div class="step-counter">7</div>
                                 <div class="step-name">Protect These Charge Cards</div>
                               </div>
-                              <div class="stepper-item" id="facial_image_upload_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_eight') active @endif" onclick="switchFieldset('fieldset_eight',this)" id="facial_image_upload_bar">
                                 <div class="step-counter">8</div>
                                 <div class="step-name">Facial Image Upload</div>
                               </div>
-                              <div class="stepper-item" id="head_n_face_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_nine') active @endif" onclick="switchFieldset('fieldset_nine',this)" id="head_n_face_bar">
                                 <div class="step-counter">9</div>
                                 <div class="step-name">Head & Face Info</div>
                               </div>
 
-                              <div class="stepper-item" id="hair_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_ten') active @endif" onclick="switchFieldset('fieldset_ten',this)" id="hair_bar">
                                 <div class="step-counter">10</div>
                                 <div class="step-name">Hair</div>
                               </div>
 
                               
-                              <div class="stepper-item" id="distinguish_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_eleven') active @endif" onclick="switchFieldset('fieldset_eleven',this)" id="distinguish_bar">
                                 <div class="step-counter">11</div>
                                 <div class="step-name">Distinguishing Identifiers</div>
                               </div>
 
-                              <div class="stepper-item" id="twin_identifier_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_twelve') active @endif" onclick="switchFieldset('fieldset_twelve',this)" id="twin_identifier_bar">
                                 <div class="step-counter">12</div>
                                 <div class="step-name">Twin Identifier</div>
                               </div>
-                              <div class="stepper-item" id="open_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_thirteen') active @endif" onclick="switchFieldset('fieldset_thirteen',this)" id="open_bar">
                                 <div class="step-counter">13</div>
                                 <div class="step-name">Open</div>
                               </div>
-                              <div class="stepper-item" id="medical_info_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_fourteen') active @endif" onclick="switchFieldset('fieldset_fourteen',this)" id="medical_info_bar">
                                 <div class="step-counter">14</div>
                                 <div class="step-name">Medical Info</div>
                               </div>
 
-                              <div class="stepper-item" id="family_history_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_fifteen') active @endif" onclick="switchFieldset('fieldset_fifteen',this)" id="family_history_bar">
                                 <div class="step-counter">15</div>
                                 <div class="step-name">Family & Medical History</div>
                               </div>
 
-                              <div class="stepper-item" id="travel_info_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_sixteen') active @endif" onclick="switchFieldset('fieldset_sixteen',this)" id="travel_info_bar">
                                 <div class="step-counter">16</div>
                                 <div class="step-name">Travel Info</div>
                               </div>
 
-                              <div class="stepper-item" id="attestation_bar">
+                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_seventeen') active @endif" onclick="switchFieldset('fieldset_seventeen',this)" id="attestation_bar">
                                 <div class="step-counter">17</div>
                                 <div class="step-name">Attestation</div>
                               </div>

@@ -30,12 +30,17 @@ function submitAttestation()
     $("#fieldset_seventeen textarea").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    data["form_section"] = "attestation_information";
+
 
     if (nextWizardStep) {
+      store_this_is_me_form_data(data, "attestation_information_button");
+
         $("#attestation_bar").addClass("completed");
         $("#attestation_bar").children("div").eq(0).addClass("text-white");
         $("#attestation_bar").removeClass("active");
+        toastr.success('Form Completed')
+         location.reload()
        
     }
 }

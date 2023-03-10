@@ -87,7 +87,7 @@ body {
   .form-wizard .form-wizard-header {
     text-align: center;
   }
-  .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+  .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn,.form-wizard .form-wizard-return-btn,  .form-wizard .form-wizard-submit {
     background-color: #1cc88a;
     color: #ffffff;
     display: inline-block;
@@ -97,7 +97,7 @@ body {
     text-align: center;
   }
 
-  .form-wizard .form-wizard-next-btn-without-click, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+  .form-wizard .form-wizard-next-btn-without-click, .form-wizard .form-wizard-previous-btn,.form-wizard .form-wizard-return-btn,  .form-wizard .form-wizard-submit {
     background-color: #1cc88a;
     color: #ffffff;
     display: inline-block;
@@ -106,7 +106,7 @@ body {
     padding: 10px;
     text-align: center;
   }
-  .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+  .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover,.form-wizard .form-wizard-return-btn:hover,  .form-wizard .form-wizard-previous-btn:focus,.form-wizard .form-wizard-return-btn:focus,  .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
     color: #ffffff;
     opacity: 0.6;
     text-decoration: none;
@@ -129,6 +129,9 @@ body {
   } */
   
   .form-wizard .form-wizard-previous-btn {
+    background-color: #fb1647;
+  }
+  .form-wizard .form-wizard-return-btn {
     background-color: #fb1647;
   }
   .form-wizard .form-control {

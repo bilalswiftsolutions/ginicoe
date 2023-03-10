@@ -1,4 +1,4 @@
-<fieldset class="wizard-fieldset mt-4" id="fieldset_six">
+<fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_six') show @endif" id="fieldset_six">
     <h5>5. Employment inoformation</h5>
     <div class="row">
       
@@ -90,6 +90,8 @@
         </div>
     </div>
     <div class="form-group clearfix">
+        <a  href="javascript:;" onclick="returnLater('fieldset_six','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+
         <a href="javascript:;" onclick="previousStep('employment_bar','neighborhood_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetEmploymentInformation()" href="javascript:;" id="employment_information_button" class="form-wizard-next-btn  float-right">Next</a>
     </div>

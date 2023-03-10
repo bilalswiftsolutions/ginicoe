@@ -1,4 +1,4 @@
-<fieldset class="wizard-fieldset mt-4" id="fieldset_ten">
+<fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_ten') show @endif" id="fieldset_ten">
     <h5>10. Hair </h5>
     <div class="row">
         <div class="col-md-6 col-lg-6">
@@ -285,6 +285,8 @@
 
     </div>
     <div class="form-group clearfix">
+        <a  href="javascript:;" onclick="returnLater('fieldset_ten','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+
         <a href="javascript:;" onclick="previousStep('hair_bar','head_n_face_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetHair()" href="javascript:;" class="form-wizard-next-btn  float-right"

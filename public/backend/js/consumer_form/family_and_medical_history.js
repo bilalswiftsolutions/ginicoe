@@ -47,8 +47,12 @@ function checkFieldSetFamilyAndMedicalHistory()
     $("#fieldset_fifteen textarea").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
+    data["form_section"] = "family_and_medical_information";
+
 
     if (nextWizardStep) {
+      store_this_is_me_form_data(data, "family_and_medical_information");
+
         $("#family_history_bar").addClass("completed");
         $("#family_history_bar").children("div").eq(0).addClass("text-white");
         $("#family_history_bar").removeClass("active");

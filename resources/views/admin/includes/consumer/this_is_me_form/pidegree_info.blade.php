@@ -1,4 +1,4 @@
-<fieldset class="wizard-fieldset show mt-4" id="fieldset_one">
+<fieldset class="wizard-fieldset @if(empty($this_is_me_return_back_data) || $this_is_me_return_back_data->fieldset_id == 'fieldset_one') show @endif mt-4" id="fieldset_one">
     <h5>1. Personal Information</h5>
     <div class="row">
         <div class="col-md-4 col-lg-4">
@@ -133,6 +133,10 @@
     </div>
 
     <div class="form-group clearfix">
+
+
         <a onclick="checkFieldSetPidegree()" id="my_pidegree_info_button" href="javascript:;" class="form-wizard-next-btn-without-click  float-right">Next</a>
+   
+    
     </div>
 </fieldset>
