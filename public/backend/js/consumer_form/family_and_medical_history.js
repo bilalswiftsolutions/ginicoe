@@ -27,9 +27,26 @@ function checkFieldSetFamilyAndMedicalHistory()
 
     var data = {};
     $("#fieldset_fifteen input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $("#fieldset_fifteen select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
-    console.log(data);
+    $("#fieldset_fifteen textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
 
     if (nextWizardStep) {
         $("#family_history_bar").addClass("completed");

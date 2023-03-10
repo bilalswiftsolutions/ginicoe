@@ -11,8 +11,10 @@ use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
 use App\Models\Admin\Consumer\HairInformation;
 use App\Models\Admin\Consumer\HeadAndFaceInformation;
+use App\Models\Admin\Consumer\MedicalInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
+use App\Models\Admin\Consumer\TwinIdentifierInformation;
 use App\Models\OldPassword;
 use App\Models\AdminCode;
 use Exception;
@@ -20,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 use Twilio\Rest\Client;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Admin\Role;
+
 
 class Admin extends Model
 {
@@ -124,5 +127,15 @@ class Admin extends Model
     public function distinguish_identifier_info()
     {
         return $this->hasOne(DistinguishIdentifierInformation::class,'consumer_id');
+    }
+
+    public function twin_identifier_info()
+    {
+        return $this->hasOne(TwinIdentifierInformation::class,'consumer_id');
+    }
+
+    public function medical_info()
+    {
+        return $this->hasOne(MedicalInformation::class,'consumer_id');
     }
 }

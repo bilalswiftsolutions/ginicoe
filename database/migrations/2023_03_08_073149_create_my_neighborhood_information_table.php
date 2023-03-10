@@ -20,43 +20,43 @@ class CreateMyNeighborhoodInformationTable extends Migration
             $table->string('name_of_neighborhood_household_head_right');
             $table->string('neighborhood_guid_right');
             $table->boolean('provide_neigborhood_address_right')->default(0);
-            $table->string('neighborhood_house_address_right');
-            $table->string('neighborhood_urbanization_name_right');
-            $table->string('neighborhood_zipcode_right');
-            $table->string('neighborhood_state_right');
-            $table->string('neighborhood_city_right');
+            $table->string('neighborhood_house_address_right')->nullable();
+            $table->string('neighborhood_urbanization_name_right')->nullable();
+            $table->string('neighborhood_zipcode_right')->nullable();
+            $table->string('neighborhood_state_right')->nullable();
+            $table->string('neighborhood_city_right')->nullable();
 
             $table->string('neighborhood_race_left');
             $table->string('name_of_neighborhood_household_head_left');
             $table->string('neighborhood_guid_left');
             $table->boolean('provide_neigborhood_address_left')->default(0);
-            $table->string('neighborhood_house_address_left');
-            $table->string('neighborhood_urbanization_name_left');
-            $table->string('neighborhood_zipcode_left');
-            $table->string('neighborhood_state_left');
-            $table->string('neighborhood_city_left');
+            $table->string('neighborhood_house_address_left')->nullable();
+            $table->string('neighborhood_urbanization_name_left')->nullable();
+            $table->string('neighborhood_zipcode_left')->nullable();
+            $table->string('neighborhood_state_left')->nullable();
+            $table->string('neighborhood_city_left')->nullable();
 
 
             $table->string('neighborhood_race_front');
             $table->string('name_of_neighborhood_household_head_front');
             $table->string('neighborhood_guid_front');
             $table->boolean('provide_neigborhood_address_front')->default(0);
-            $table->string('neighborhood_house_address_front');
-            $table->string('neighborhood_urbanization_name_front');
-            $table->string('neighborhood_zipcode_front');
-            $table->string('neighborhood_state_front');
-            $table->string('neighborhood_city_front');
+            $table->string('neighborhood_house_address_front')->nullable();
+            $table->string('neighborhood_urbanization_name_front')->nullable();
+            $table->string('neighborhood_zipcode_front')->nullable();
+            $table->string('neighborhood_state_front')->nullable();
+            $table->string('neighborhood_city_front')->nullable();
 
 
             $table->string('neighborhood_race_back');
             $table->string('name_of_neighborhood_household_head_back');
             $table->string('neighborhood_guid_back');
             $table->boolean('provide_neigborhood_address_back')->default(0);
-            $table->string('neighborhood_house_address_back');
-            $table->string('neighborhood_urbanization_name_back');
-            $table->string('neighborhood_zipcode_back');
-            $table->string('neighborhood_state_back');
-            $table->string('neighborhood_city_back');
+            $table->string('neighborhood_house_address_back')->nullable();
+            $table->string('neighborhood_urbanization_name_back')->nullable();
+            $table->string('neighborhood_zipcode_back')->nullable();
+            $table->string('neighborhood_state_back')->nullable();
+            $table->string('neighborhood_city_back')->nullable();
            
             
             $table->timestamps();

@@ -1174,17 +1174,26 @@ function old_sky_crapper_field() {
 function checkFieldSetThisIsMe() {
     var data = {};
     nextWizardStep = false;
-    $("#fieldset_two input").each(function () {
-        if($(this).attr("type") == 'radio')
-        {
-            data[$(this).attr("name")] =   document.querySelector('input[name="'+$(this).attr("name")+'"]:checked').value;
-        }else{
-            data[$(this).attr("name")] = $(this).val();    
-
+   $("#fieldset_two input").each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
         }
     });
     $("#fieldset_two select").each(function () {
-            data[$(this).attr("name")] = $(this).val();    
+        data[$(this).attr("name")] = $(this).val();
+    });
+    $("#fieldset_two textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
     });
     data['form_section'] = 'find_me_here';
 

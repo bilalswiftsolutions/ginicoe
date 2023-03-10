@@ -105,11 +105,11 @@
             <div class="form-group">
                1.11 Are you US Vetran?
                 <div class="wizard-form-radio">
-                    <input @if($my_pidegree_info->us_vetran == 1) checked @endif name="us_vetran" value="1" id="radio1" type="radio">
+                    <input @if(!empty($my_pidegree_info->us_vetran) && $my_pidegree_info->us_vetran == 1) checked @endif name="us_vetran" value="1" id="radio1" type="radio">
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
-                    <input @if($my_pidegree_info->us_vetran == 0) checked @endif  name="us_vetran" value="0" id="radio2" type="radio">
+                    <input @if(empty($my_pidegree_info->us_vetran) || $my_pidegree_info->us_vetran == 0) checked @endif  name="us_vetran" value="0" id="radio2" type="radio">
                     <label for="radio2">No</label>
                 </div>
             </div>
@@ -118,11 +118,11 @@
             <div class="form-group">
                1.12 Is the consumer presently incarcerated? Y/N
                 <div class="wizard-form-radio">
-                    <input @if($my_pidegree_info->consumer_presently_incarcerated == 1) checked @endif name="consumer_presently_incarcerated" value="1" id="radio1" type="radio">
+                    <input @if(!empty($my_pidegree_info->us_vetran) && $my_pidegree_info->consumer_presently_incarcerated == 1) checked @endif name="consumer_presently_incarcerated" value="1" id="radio1" type="radio">
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
-                    <input @if($my_pidegree_info->consumer_presently_incarcerated == 0) checked @endif name="consumer_presently_incarcerated" value="0" id="radio2"
+                    <input @if(empty($my_pidegree_info->us_vetran) || $my_pidegree_info->consumer_presently_incarcerated == 0) checked @endif name="consumer_presently_incarcerated" value="0" id="radio2"
                         type="radio">
                     <label for="radio2">No</label>
                 </div>

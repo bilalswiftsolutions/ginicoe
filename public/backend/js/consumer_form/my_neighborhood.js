@@ -167,11 +167,20 @@ function checkFieldSetNeighborhood() {
             data[$(this).attr("name")] = document.querySelector(
                 'input[name="' + $(this).attr("name") + '"]:checked'
             ).value;
-        } else {
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
             data[$(this).attr("name")] = $(this).val();
         }
     });
     $("#fieldset_five select").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    $("#fieldset_five textarea").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
     data["form_section"] = "my_neighborhood_information";

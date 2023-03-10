@@ -21,8 +21,8 @@ class CreateEmploymentInformationTable extends Migration
             $table->string('employer_identification_number');
             $table->string('anual_salary_last_year');
             $table->boolean('are_you_active_memeber_of_labour_union')->default(0);
-            $table->string('labor_union_name');
-            $table->string('your_union_membership_number');
+            $table->string('labor_union_name')->nullable();
+            $table->string('your_union_membership_number')->nullable();
             $table->timestamps();
         });
     }

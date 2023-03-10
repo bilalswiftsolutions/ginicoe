@@ -12,8 +12,10 @@ use App\Models\Admin\Consumer\FindMeHere;
 use App\Models\Admin\Consumer\GenderIdentityInformation;
 use App\Models\Admin\Consumer\HairInformation;
 use App\Models\Admin\Consumer\HeadAndFaceInformation;
+use App\Models\Admin\Consumer\MedicalInformation;
 use App\Models\Admin\Consumer\MyNeighborhoodInformation;
 use App\Models\Admin\Consumer\MyPidegreeInformation;
+use App\Models\Admin\Consumer\TwinIdentifierInformation;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -38,6 +40,8 @@ class ThisIsMeController extends Controller
         $head_and_face_info = $consumer->head_and_face_info;
         $hair_info = $consumer->hair_info;
         $distinguish_identifier_info = $consumer->distinguish_identifier_info;
+        $twin_identifier_info = $consumer->twin_identifier_info;
+        $medical_info = $consumer->medical_info;
         return view('admin.consumer.this_is_me', compact(
             'my_pidegree_info',
             'find_me_here',
@@ -48,13 +52,16 @@ class ThisIsMeController extends Controller
             'charge_card_info',
             'hair_info',
             'head_and_face_info',
-            'distinguish_identifier_info'
+            'distinguish_identifier_info',
+            'twin_identifier_info',
+            'medical_info'
 
         ));
     }
 
     public function this_is_me_store(Request $request)
     {
+
         if ($request->form_section == 'head_and_face_information') {
             // dd($request->all());
         }
@@ -77,7 +84,9 @@ class ThisIsMeController extends Controller
                     break;
                 case 'my_neighborhood_information':
                     $this->store_my_neighborhood_info($request);
+                    break;
                 case 'employment_information':
+
                     $this->store_employement_info($request);
                     break;
                 case 'charge_card_information':
@@ -92,6 +101,12 @@ class ThisIsMeController extends Controller
                 case 'distinguish_identifier_information':
                     $this->distinguish_identifier_info($request);
                     break;
+                case 'twin_identifier_information':
+                    $this->twin_identifier_info($request);
+                    break;
+                case 'medical_information':
+                    $this->store_medical_info($request);
+                    break;
 
                 default:
             }
@@ -101,12 +116,137 @@ class ThisIsMeController extends Controller
             return response()->json(['success' => false, 'message' => $e->getMessage()]);
         }
     }
+    public function store_medical_info($request)
+    {
+        return MedicalInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'medical_house_address',
+                'medical_street',
+                'medical_country',
+                'medical_state',
+                'medical_city',
+                'medical_zipcode',
+                'medical_guid',
+                'want_to_know_law_inforcement',
+                'do_you_have_hidden_ailment',
+                'agoraphobia',
+                'generalized_anxiety_disorder_gad',
+                'panic_disorder',
+                'separation_anxiety_disorder',
+                'social_anxiety_disorder',
+                'specific_phobias',
+                'depressive_episodes',
+                'mania',
+                'breathing_related_sleep_disorders',
+                'hypersomnolence',
+                'insomnia_disorder',
+                'narcolepsy',
+                'parasomnias',
+                'restless_legs_syndrome',
+                'disruptive_mood_dysregulation_disorder',
+                'major_depressive_disorder',
+                'persistent_depressive_disorder',
+                'other_or_unspecified_depressive_disorder',
+                'premenstrual_dysphoric_disorder',
+                'medication_depressive_disorder',
+                'conduct_disorder',
+                'intermittent_explosive_disorder',
+                'kleptomania',
+                'oppositional_defiant_disorder',
+                'pyromania',
+                'dissociative_amnesia',
+                'dissociative_identity_disorder',
+                'derealization_disorder',
+                'anorexia_nervosa',
+                'binge_eating_disorder',
+                'bulimia_nervosa',
+                'pica',
+                'rumination_disorder',
+                'sleep_disorders',
+                'delirium',
+                'neurocognitive_disorders',
+                'adhd',
+                'autism_spectrum_disorder',
+                'communication_disorders',
+                'global_developmental_delay',
+                'intellectual_disability',
+                'obsessive_compulsive_disorder',
+                'body_dysmorphic_disorder',
+                'hoarding_disorder',
+                'trichotillomania',
+                'excoriation_disorder',
+                'ocd_medical_condition',
+                'antisocial_personality_disorder',
+                'avoidant_personality_disorder',
+                'borderline_personality_disorder',
+                'dependent_personality_disorder',
+                'histrionic_personality_disorder',
+                'narcissistic_personality_disorder',
+                'obsessive_compulsive_personality_disorder',
+                'paranoid_personality_disorder',
+                'schizoid_personality_disorder',
+                'schizotypal_personality_disorder',
+                'delusions',
+                'hallucinations',
+                'disorganized_speech',
+                'disorganized_behavior',
+                'negative_symptoms',
+                'conversion_disorder',
+                'factitious_disorder',
+                'illness_anxiety_disorder',
+                'somatic_symptom_disorder',
+                'acute_stress_disorder',
+                'adjustment_disorders',
+                'post_traumatic_stress_disorder',
+                'reactive_attachment_disorder',
+                'alcohol_related_disorders',
+                'inhalant_use_disorders',
+                'stimulant_use_disorder',
+                'tobacco_use_disorder',
+                'gambling_disorder'
 
+
+            )
+        );
+    }
+    public function twin_identifier_info($request)
+    {
+        return TwinIdentifierInformation::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'dominant_hand_writing_side',
+                'are_you_twin',
+                'twin_type',
+                'twin_first_name',
+                'twin_mi',
+                'twin_last_name',
+                'twin_difference_description',
+                'birth_mark_located',
+                'twin_birth_mark_located',
+                'my_freckles_located',
+                'twin_freckles_located',
+                'my_moles_located',
+                'twin_moles_located',
+                'hair_are_different',
+                'my_eye_color',
+                'twin_eye_color',
+                'my_hair_color',
+                'twin_hair_color',
+
+
+
+            )
+        );
+    }
     public function distinguish_identifier_info($request)
     {
         return DistinguishIdentifierInformation::updateOrCreate(
             ['consumer_id' => $request->consumer_id],
             $request->only(
+                'consumer_id',
                 'facial_neck_scars',
                 'facial_neck_scars_description',
                 'facial_or_neck_tattoos',

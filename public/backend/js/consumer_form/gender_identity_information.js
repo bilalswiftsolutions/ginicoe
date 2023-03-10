@@ -13,11 +13,20 @@ function checkFieldSetGenderIdentityInformation() {
             data[$(this).attr("name")] = document.querySelector(
                 'input[name="' + $(this).attr("name") + '"]:checked'
             ).value;
-        } else {
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
             data[$(this).attr("name")] = $(this).val();
         }
     });
     $("#fieldset_three select").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    $("#fieldset_three textarea").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
     data["form_section"] = "gender_identity_info";

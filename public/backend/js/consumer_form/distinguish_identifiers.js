@@ -93,6 +93,9 @@ function checkFieldSetDistinguishIdentifier() {
     $("#fieldset_eleven select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
+    $("#fieldset_eleven textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
     data["form_section"] = "distinguish_identifier_information";
 
 

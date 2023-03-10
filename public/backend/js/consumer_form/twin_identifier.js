@@ -26,6 +26,9 @@ function checkFieldSetTwinIdentifier()
     $("#fieldset_twelve select").each(function () {
         data[$(this).attr("name")] = $(this).val();
     });
+    $("#fieldset_twelve textarea").each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
     data["form_section"] = "twin_identifier_information";
 
     if (nextWizardStep) {

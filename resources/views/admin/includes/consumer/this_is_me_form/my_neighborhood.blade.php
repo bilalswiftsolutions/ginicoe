@@ -92,7 +92,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{ $my_neighborhood_info->neighborhood_house_address_right ?? '' }}"
+                <input value="{{ $my_neighborhood_info->id ?? '' }}"
                     name="neighborhood_house_address_right" type="text" class="form-control wizard-required"
                     id="neighborhood_house_address_right">
                 <label for="neighborhood_house_address_right" class="wizard-form-text-label">5.5 House Address</label>
