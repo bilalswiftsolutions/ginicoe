@@ -117,6 +117,6 @@
         <a  href="javascript:;" onclick="returnLater('fieldset_four','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
 
         <a href="javascript:;"  onclick="previousStep('enthnicity_bar','gender_identity_bar')" class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetEthnicityInformation()" href="javascript:;" id="ethnicity_information_button" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetEthnicityInformation()" href="javascript:;" id="ethnicity_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

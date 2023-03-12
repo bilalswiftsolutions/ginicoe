@@ -290,6 +290,6 @@
         <a href="javascript:;" onclick="previousStep('hair_bar','head_n_face_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetHair()" href="javascript:;" class="form-wizard-next-btn  float-right"
-            id="hair_information_button">Next</a>
+            id="hair_information_button">Save & Continue</a>
     </div>
 </fieldset>

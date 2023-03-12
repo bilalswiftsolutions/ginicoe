@@ -250,6 +250,6 @@
 
         <a href="javascript:;" onclick="previousStep('family_history_bar','medical_info_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetFamilyAndMedicalHistory()" href="javascript:;" id="family_and_medical_information_button" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetFamilyAndMedicalHistory()" href="javascript:;" id="family_and_medical_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

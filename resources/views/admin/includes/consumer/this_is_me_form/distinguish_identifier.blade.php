@@ -304,6 +304,6 @@
             class="form-wizard-previous-btn float-left">Previous</a>
 
         <a onclick="checkFieldSetDistinguishIdentifier()" href="javascript:;"
-            id="distinguish_identifier_information_button" class="form-wizard-next-btn  float-right">Next</a>
+            id="distinguish_identifier_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

@@ -150,6 +150,7 @@ class ThisIsMeController extends Controller
     }
     public function store_facial_image_upload($request)
     {
+        if(in_array($request->file->extension(),['png','jpg','jpeg'])){
         // Store the uploaded file in the public/uploads directory
         $imageName = time() . '.' . $request->file->extension();
         $request->file->move(public_path('facial_uploads'), $imageName);
@@ -159,6 +160,7 @@ class ThisIsMeController extends Controller
                 'consumer_id',
             ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
         );
+    }
     }
     public function store_attestation_info($request)
     {

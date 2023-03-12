@@ -726,6 +726,6 @@
 
         <a href="javascript:;" onclick="previousStep('medical_info_bar','open_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetMedicalInfo()" href="javascript:;" id="medical_information_information_button" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetMedicalInfo()" href="javascript:;" id="medical_information_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

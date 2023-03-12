@@ -6,7 +6,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="facial_image " class="text-danger">8.1 Facial Image Upload</label>
-                <input name="facial_image" type="file" class="form-control wizard-required" id="facial_image"   @if(empty($facial_image) && empty($facial_image->facial_image)) required @endif>
+                <input name="facial_image" type="file" <input type="file" name="myImage" accept="image/png, image/jpeg, image/jpeg" /> class="form-control wizard-required" id="facial_image"   @if(empty($facial_image) && empty($facial_image->facial_image)) required @endif>
                
                 <p class="text_danger form_error"></p>
             </div>
@@ -17,7 +17,7 @@
         <div class="col-md-4 col-lg-4"></div>
         <div class="col-md-4 col-lg-4">
            
-            <img id="facial_image_thumbnail" src="{{asset($facial_image->facial_image ?? 'https://media.istockphoto.com/id/1341046662/vector/picture-profile-icon-human-or-people-sign-and-symbol-for-template-design.jpg?s=612x612&w=0&k=20&c=A7z3OK0fElK3tFntKObma-3a7PyO8_2xxW0jtmjzT78=')}}" alt="..." class="img-thumbnail">
+            <img id="facial_image_thumbnail"  src="{{asset($facial_image->facial_image ?? 'https://media.istockphoto.com/id/1341046662/vector/picture-profile-icon-human-or-people-sign-and-symbol-for-template-design.jpg?s=612x612&w=0&k=20&c=A7z3OK0fElK3tFntKObma-3a7PyO8_2xxW0jtmjzT78=')}}" alt="..." class="img-thumbnail">
           
         </div>
         <div class="col-md-4 col-lg-4"></div>
@@ -33,6 +33,6 @@
         <a  href="javascript:;" onclick="returnLater('fieldset_eight','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
 
         <a href="javascript:;" onclick="previousStep('facial_image_upload_bar','protect_cards_bar')" class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetFacialImageUpload()" href="javascript:;" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetFacialImageUpload()" href="javascript:;" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

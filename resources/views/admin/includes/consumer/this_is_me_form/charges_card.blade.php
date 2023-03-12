@@ -1024,6 +1024,6 @@
 
         <a href="javascript:;" onclick="previousStep('protect_cards_bar','employment_bar')" class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetChargesCard()" id="charge_card_information_button" href="javascript:;"
-            class="form-wizard-next-btn  float-right">Next</a>
+            class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

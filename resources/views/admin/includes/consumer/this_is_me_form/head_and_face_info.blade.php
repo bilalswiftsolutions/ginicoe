@@ -130,6 +130,6 @@
         <a href="javascript:;" onclick="previousStep('head_n_face_bar','facial_image_upload_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetHeadAndFace()" id="head_and_face_information_button" href="javascript:;"
-            class="form-wizard-next-btn  float-right">Next</a>
+            class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

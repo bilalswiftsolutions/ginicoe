@@ -446,6 +446,6 @@
         <a  href="javascript:;" onclick="returnLater('fieldset_sixteen','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
 
         <a  href="javascript:;" onclick="previousStep('travel_info_bar','family_history_bar')" class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetTravelInfo()" id="travel_information_button" href="javascript:;" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetTravelInfo()" id="travel_information_button" href="javascript:;" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

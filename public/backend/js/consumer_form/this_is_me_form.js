@@ -1161,6 +1161,22 @@ function switchFieldset(fieldset, element) {
     currentDiv.nextAll(".stepper-item").removeClass("active completed");
 }
 
+function switchFieldsetFromSideBar(fieldset, element) {
+    $("fieldset").hide();
+    $(`#${fieldset}`).show();
+
+    var currentDiv = $(`#${element}`);
+    console.log(currentDiv);
+    currentDiv.addClass("active");
+    currentDiv.prevAll(".stepper-item").addClass("completed");
+    currentDiv.prevAll(".stepper-item").removeClass("active");
+    currentDiv
+        .prevAll(".stepper-item")
+        .find(".step-counter")
+        .addClass("text-white");
+    currentDiv.nextAll(".stepper-item").removeClass("active completed");
+}
+
 function returnLater(fieldset, module) {
     url = "/admin/consumer/return-later";
     $.ajax({

@@ -794,6 +794,6 @@
         <a href="javascript:;" onclick="previousStep('neighborhood_bar','enthnicity_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetNeighborhood()" id="my_neighborhood_button" href="javascript:;"
-            class="form-wizard-next-btn  float-right">Next</a>
+            class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

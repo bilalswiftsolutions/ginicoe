@@ -135,7 +135,7 @@
     <div class="form-group clearfix">
 
 
-        <a onclick="checkFieldSetPidegree()" id="my_pidegree_info_button" href="javascript:;" class="form-wizard-next-btn-without-click  float-right">Next</a>
+        <a onclick="checkFieldSetPidegree()" id="my_pidegree_info_button" href="javascript:;" class="form-wizard-next-btn-without-click  float-right">Save & Continue</a>
    
     
     </div>

@@ -581,6 +581,6 @@
         <a href="javascript:;" onclick="previousStep('twin_identifier_bar','distinguish_bar')"
             class="form-wizard-previous-btn float-left">Previous</a>
         <a onclick="checkFieldSetTwinIdentifier()" href="javascript:;" id="twin_identifier_information_button"
-            class="form-wizard-next-btn  float-right">Next</a>
+            class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>

@@ -93,6 +93,6 @@
         <a  href="javascript:;" onclick="returnLater('fieldset_six','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
 
         <a href="javascript:;" onclick="previousStep('employment_bar','neighborhood_bar')" class="form-wizard-previous-btn float-left">Previous</a>
-        <a onclick="checkFieldSetEmploymentInformation()" href="javascript:;" id="employment_information_button" class="form-wizard-next-btn  float-right">Next</a>
+        <a onclick="checkFieldSetEmploymentInformation()" href="javascript:;" id="employment_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>
