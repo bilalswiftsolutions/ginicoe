@@ -70,124 +70,110 @@
         @if($conName[2] == 'this-is-me')
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;"  onclick="switchFieldsetFromSideBar('fieldset_one','pedigree_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>My Pedigree Info</span>
+                
+                <span class="ml-1">1. My Pedigree Info</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_two','find_me_here_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Find Me Here</span>
+                <span class="ml-1">2. Find Me Here</span>
 
             </a>
         </li>
         
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_three','gender_identity_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Gender Identity Information</span>
+                <span class="ml-1">3. Gender Identity Information</span>
 
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_four','enthnicity_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Ethnicity Information</span>
+                <span class="ml-1">4. Ethnicity Information</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_five','neighborhood_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>My Neighborhood is</span>
+                <span class="ml-1">5. My Neighborhood is</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_six','employment_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Employment Information</span>
+                <span class="ml-1">6. Employment Information</span>
 
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_seven','protect_cards_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Protect Charge Cards</span>
+                <span class="ml-1">7. Protect Charge Cards</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_eight','facial_image_upload_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Facial Image Upload</span>
+                <span class="ml-1">8. Facial Image Upload</span>
 
             </a>
         </li>
          <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_nine','head_n_face_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Head & Face Info</span>
+                <span class="ml-1">9. Head & Face Info</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_ten','hair_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Hair</span>
+                <span class="ml-1">10. Hair</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_eleven','distinguish_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Distinguishing Identifiers</span>
+                <span class="ml-1">11. Distinguishing Identifiers</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_twelve','twin_identifier_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Twin Identifier</span>
+                <span class="ml-1">12. Twin Identifier</span>
 
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_thirteen','open_bar')">
                 <i class="fas fa-fw fa-user"></i>
-                <span>Open</span>
+                <span class="ml-1">Open</span>
 
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_fourteen','medical_info_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Medical Info</span>
+                <span class="ml-1">14. Medical Info</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_fifteen','family_history_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Family & Medical History</span>
+                <span class="ml-1">15. Family & Medical History</span>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_sixteen','travel_info_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Travel Info</span>
+                <span class="ml-1">16. Travel Info</span>
 
             </a>
         </li>
 
          <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_seventeen','attestation_bar')">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Attestation</span>
+               
+                <span class="ml-1">17. Attestation</span>
 
             </a>
         </li>

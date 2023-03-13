@@ -1,5 +1,6 @@
 <fieldset class="wizard-fieldset mt-4  @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_seven') show @endif" id="fieldset_seven">
     <h5>7. I Want To Protect These Charge Cards</h5>
+    <input type="hidden" name="form_section" value="charge_card_information" />
 
     {{-- Card 1::Begin --}}
     <div class="col-md-6 col-lg-6">
@@ -1020,9 +1021,9 @@
 
 
     <div class="form-group clearfix">
-        <a  href="javascript:;" onclick="returnLater('fieldset_seven','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+        <a  href="javascript:;" onclick="returnLater('fieldset_seven','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
 
-        <a href="javascript:;" onclick="previousStep('protect_cards_bar','employment_bar')" class="form-wizard-previous-btn float-left">Previous</a>
+        {{-- <a href="javascript:;" onclick="previousStep('protect_cards_bar','employment_bar')" class="form-wizard-previous-btn float-left">Previous</a> --}}
         <a onclick="checkFieldSetChargesCard()" id="charge_card_information_button" href="javascript:;"
             class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>

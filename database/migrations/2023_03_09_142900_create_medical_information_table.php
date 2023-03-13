@@ -16,13 +16,13 @@ class CreateMedicalInformationTable extends Migration
         Schema::create('medical_information', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id');
-            $table->string('medical_house_address');
-            $table->string('medical_street');
-            $table->string('medical_country');
-            $table->string('medical_state');
-            $table->string('medical_city');
-            $table->string('medical_zipcode');
-            $table->string('medical_guid');
+            $table->string('medical_house_address')->nullable();
+            $table->string('medical_street')->nullable();
+            $table->string('medical_country')->nullable();
+            $table->string('medical_state')->nullable();
+            $table->string('medical_city')->nullable();
+            $table->string('medical_zipcode')->nullable();
+            $table->string('medical_guid')->nullable();
             $table->boolean('want_to_know_law_inforcement')->default(0);
             $table->boolean('do_you_have_hidden_ailment')->default(0);
             $table->boolean('agoraphobia')->default(0);

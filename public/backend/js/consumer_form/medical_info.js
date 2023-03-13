@@ -16,6 +16,18 @@ console.log(cities)
     });
 });
 
+function check_do_you_have_hidden_ailment()
+{
+
+    if ($("input[name='do_you_have_hidden_ailment']:checked").val() == "1") {
+        $("#disablility_section").show();
+    
+    } else {
+        $("#disablility_section").hide();
+     
+    }
+}
+
 function checkFieldSetMedicalInfo()
 {
     if ($("#fieldset_fourteen").find(":input").valid()) {

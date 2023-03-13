@@ -30,7 +30,7 @@ class CreateDistinguishIdentifierInformationTable extends Migration
             $table->boolean('fore_head')->default(0);
             $table->boolean('face_lift')->default(0);
             $table->boolean('lips')->default(0);
-            $table->date('facial_surgery_date');
+            $table->date('facial_surgery_date')->nullable();
             $table->string('number_of_plastic_surgery')->nullable();
             $table->string('plastic_surgeon_name')->nullable();
             $table->string('first_name_of_surgeon')->nullable();

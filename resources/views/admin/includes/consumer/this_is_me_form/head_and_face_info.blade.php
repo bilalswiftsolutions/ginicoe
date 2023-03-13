@@ -1,5 +1,7 @@
 <fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_nine') show @endif" id="fieldset_nine">
     <h5>9. Head & Face Info</h5>
+    <input type="hidden" name="form_section" value="head_and_face_information" />
+
     <div class="row">
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
@@ -90,7 +92,7 @@
             <div class="form-group">
                 <label for="eye_color" class="wizard-form-text-label">9.5 What is your natural eye color?
                 </label>
-                <select class="form-control" name="eye_color" id="eye_color" required>
+                <select class="form-control" name="eye_color" id="eye_color" >
                     <option></option>
                     <option value="amber" @if (!empty($head_and_face_info) && $head_and_face_info->eye_color === 'amber') selected @endif>Amber</option>
                     <option value="black" @if (!empty($head_and_face_info) && $head_and_face_info->eye_color === 'black') selected @endif>Black</option>
@@ -125,10 +127,10 @@
 
     </div>
     <div class="form-group clearfix">
-        <a  href="javascript:;" onclick="returnLater('fieldset_nine','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+        <a  href="javascript:;" onclick="returnLater('fieldset_nine','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
 
-        <a href="javascript:;" onclick="previousStep('head_n_face_bar','facial_image_upload_bar')"
-            class="form-wizard-previous-btn float-left">Previous</a>
+        {{-- <a href="javascript:;" onclick="previousStep('head_n_face_bar','facial_image_upload_bar')"
+            class="form-wizard-previous-btn float-left">Previous</a> --}}
         <a onclick="checkFieldSetHeadAndFace()" id="head_and_face_information_button" href="javascript:;"
             class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>

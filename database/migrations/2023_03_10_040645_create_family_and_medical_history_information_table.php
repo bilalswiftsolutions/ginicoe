@@ -15,7 +15,7 @@ class CreateFamilyAndMedicalHistoryInformationTable extends Migration
     {
         Schema::create('family_and_medical_history_information', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('consumer_id');
+            $table->bigInteger('consumer_id')->nullable();
             $table->string('number_of_brother')->nullable();
             $table->string('olders_brother_name')->nullable();
             $table->string('number_of_sister')->nullable();

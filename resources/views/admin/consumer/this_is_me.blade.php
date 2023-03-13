@@ -142,10 +142,10 @@
                                 <div class="step-counter">12</div>
                                 <div class="step-name">Twin Identifier</div>
                               </div>
-                              <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_thirteen') active @endif" onclick="switchFieldset('fieldset_thirteen',this)" id="open_bar">
+                              {{-- <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_thirteen') active @endif" onclick="switchFieldset('fieldset_thirteen',this)" id="open_bar">
                                 <div class="step-counter">13</div>
                                 <div class="step-name">Open</div>
-                              </div>
+                              </div> --}}
                               <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_fourteen') active @endif" onclick="switchFieldset('fieldset_fourteen',this)" id="medical_info_bar">
                                 <div class="step-counter">14</div>
                                 <div class="step-name">Medical Info</div>
@@ -181,7 +181,7 @@
                     @include('admin.includes.consumer.this_is_me_form.hair')
                     @include('admin.includes.consumer.this_is_me_form.distinguish_identifier')
                     @include('admin.includes.consumer.this_is_me_form.twin_identifier')
-                    @include('admin.includes.consumer.this_is_me_form.open')
+                    {{-- @include('admin.includes.consumer.this_is_me_form.open') --}}
                     @include('admin.includes.consumer.this_is_me_form.medical_info')
                     @include('admin.includes.consumer.this_is_me_form.family_and_medical_history')
                     @include('admin.includes.consumer.this_is_me_form.travel_info')

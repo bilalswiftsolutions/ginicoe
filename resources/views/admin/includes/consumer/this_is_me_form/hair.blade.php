@@ -1,12 +1,14 @@
 <fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_ten') show @endif" id="fieldset_ten">
     <h5>10. Hair </h5>
+    <input type="hidden" name="form_section" value="hair_information" />
+
     <div class="row">
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
 
                 <label for="natural_hair_color" class="wizard-form-text-label">10.1 What is your natural hair color?
                 </label>
-                <select class="form-control" name="natural_hair_color" id="natural_hair_color" required>
+                <select class="form-control" name="natural_hair_color" id="natural_hair_color" >
                     <option></option>
                     <option value="black" @if (!empty($hair_info) && $hair_info->natural_hair_color === 'black') selected @endif>Black</option>
                     <option value="blonde" @if (!empty($hair_info) && $hair_info->natural_hair_color === 'blonde') selected @endif>Blonde</option>
@@ -35,7 +37,7 @@
                 <label for="hair_style" class="wizard-form-text-label">10.2 What is your most popular hair style
                     these days?
                 </label>
-                <select class="form-control" name="hair_style" id="hair_style" required>
+                <select class="form-control" name="hair_style" id="hair_style" >
                     <option></option>
                     <option value="1950s" @if (!empty($hair_info) && $hair_info->hair_style === '1950s') selected @endif>1950s</option>
                     <option value="afro" @if (!empty($hair_info) && $hair_info->hair_style === 'afro') selected @endif>Afro</option>
@@ -230,7 +232,7 @@
                 <label for="facial_hair_description" class="wizard-form-text-label">10.3 What best describes your
                     Facial Hair as of today?
                 </label>
-                <select class="form-control" name="facial_hair_description" id="facial_hair_description" required>
+                <select class="form-control" name="facial_hair_description" id="facial_hair_description" >
                     <option></option>
                     <option value="beard" @if (!empty($hair_info) && $hair_info->facial_hair_description === 'beard') selected @endif>Beard</option>
                     <option value="box_braids" @if (!empty($hair_info) && $hair_info->facial_hair_description === 'box_braids') selected @endif>Box Braids
@@ -285,10 +287,10 @@
 
     </div>
     <div class="form-group clearfix">
-        <a  href="javascript:;" onclick="returnLater('fieldset_ten','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+        <a  href="javascript:;" onclick="returnLater('fieldset_ten','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
 
-        <a href="javascript:;" onclick="previousStep('hair_bar','head_n_face_bar')"
-            class="form-wizard-previous-btn float-left">Previous</a>
+        {{-- <a href="javascript:;" onclick="previousStep('hair_bar','head_n_face_bar')"
+            class="form-wizard-previous-btn float-left">Previous</a> --}}
         <a onclick="checkFieldSetHair()" href="javascript:;" class="form-wizard-next-btn  float-right"
             id="hair_information_button">Save & Continue</a>
     </div>

@@ -647,32 +647,32 @@ $("#this_is_me_form").validate({
             maxlength: 20,
         },
         chin_description: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         eyes_description: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         hair_description: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         mouth_description: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         hair_description: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         eyeware_prescription: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
 
         dominant_hand_writing_side: {
-            required: true,
+            required: false,
             maxlength: 50,
         },
         are_you_twin: {
@@ -684,63 +684,79 @@ $("#this_is_me_form").validate({
         },
 
         twin_first_name: {
+            required: false,
             maxlength: 20,
         },
         twin_mi: {
+            required: false,
             maxlength: 1,
         },
 
         twin_last_name: {
+            required: false,
             maxlength: 20,
         },
         twin_difference_description: {
+            required: false,
             maxlength: 150,
         },
         birth_mark_located: {
+            required: false,
             maxlength: 20,
         },
 
         twin_birth_mark_located: {
+            required: false,
             maxlength: 20,
         },
         my_freckles_located: {
+            required: false,
             maxlength: 20,
         },
         twin_freckles_located: {
+            required: false,
             maxlength: 20,
         },
         my_moles_located: {
+            required: false,
             maxlength: 20,
         },
         twin_moles_located: {
+            required: false,
             maxlength: 20,
         },
         hair_are_different: {
+            required: false,
             maxlength: 20,
         },
         my_eye_color: {
+            required: false,
             maxlength: 20,
         },
         twin_eye_color: {
+            required: false,
             maxlength: 20,
         },
         my_hair_color: {
+            required: false,
             maxlength: 20,
         },
         twin_hair_color: {
+            required: false,
             maxlength: 20,
         },
         facial_surgery_date: {
+            required: false,
             maxlength: 20,
         },
 
         medical_house_address: {
-            required: true,
+            required: false,
             maxlength: 26,
         },
 
         medical_street: {
-            required: true,
+            required: false,
             maxlength: 26,
         },
 
@@ -749,11 +765,11 @@ $("#this_is_me_form").validate({
             maxlength: 26,
         },
         medical_zipcode: {
-            required: true,
+            required: false,
             maxlength: 26,
         },
         medical_guid: {
-            required: true,
+            required: false,
             maxlength: 26,
         },
         number_of_brother: {
@@ -778,6 +794,7 @@ $("#this_is_me_form").validate({
             maxlength: 26,
         },
         place_of_birth: {
+            required: false,
             maxlength: 26,
         },
         name_of_mid_wife: {
@@ -803,142 +820,180 @@ $("#this_is_me_form").validate({
         },
 
         birth_house_address: {
+            required: false,
             maxlength: 26,
         },
         birth_street: {
+            required: false,
             maxlength: 26,
         },
 
         birth_country: {
+            required: false,
             maxlength: 26,
         },
         birth_city: {
             required: false,
+            required: false,
         },
         birth_zipcode: {
+            required: false,
             maxlength: 26,
         },
 
         birth_address_description: {
+            required: false,
             maxlength: 26,
         },
         your_age: {
+            required: false,
             maxlength: 26,
         },
         alien_id_number: {
+            required: false,
             maxlength: 26,
         },
         country_of_issuance_foriegn_country: {
+            required: false,
             maxlength: 26,
         },
         foreign_passport_number: {
+            required: false,
             maxlength: 26,
         },
 
         passport_number: {
+            required: false,
             maxlength: 26,
         },
 
         country_of_issuance_foreign_passport: {
+            required: false,
             maxlength: 26,
         },
 
         visa_number: {
+            required: false,
             maxlength: 26,
         },
 
         us_permit: {
+            required: false,
             maxlength: 26,
         },
 
         us_govt_id_number: {
+            required: false,
             maxlength: 26,
         },
         us_driving_license_number: {
+            required: false,
             maxlength: 26,
         },
 
         us_state: {
+            required: false,
             maxlength: 26,
         },
 
         foreign_country_driving_license_number: {
+            required: false,
             maxlength: 26,
         },
 
         foreign_dl_number: {
+            required: false,
             maxlength: 26,
         },
 
         foreign_id_number: {
+            required: false,
             maxlength: 26,
         },
 
         us_education_doc: {
+            required: false,
             maxlength: 26,
         },
 
         witsec: {
+            required: false,
             maxlength: 26,
         },
 
         old_first_name: {
+            required: false,
             maxlength: 26,
         },
 
         old_last_name: {
+            required: false,
             maxlength: 26,
         },
 
         old_mi: {
+            required: false,
             maxlength: 1,
         },
 
         old_spouse_first_name: {
+            required: false,
             maxlength: 26,
         },
         old_spouse_mi: {
+            required: false,
             maxlength: 1,
         },
 
         old_first_name_1st_daughter: {
+            required: false,
             maxlength: 26,
         },
 
         old_last_name_1st_daughter: {
+            required: false,
             maxlength: 26,
         },
         old_mi_1st_daughter: {
+            required: false,
             maxlength: 1,
         },
 
         old_first_name_2nd_daughter: {
+            required: false,
             maxlength: 26,
         },
 
         old_last_name_2nd_daughter: {
+            required: false,
             maxlength: 26,
         },
         old_mi_2nd_daughter: {
+            required: false,
             maxlength: 1,
         },
 
         old_first_name_2nd_son: {
+            required: false,
             maxlength: 26,
         },
 
         old_last_name_2nd_son: {
+            required: false,
             maxlength: 26,
         },
         old_mi_2nd_son: {
+            required: false,
             maxlength: 1,
         },
 
         old_first_name_1st_son: {
+            required: false,
             maxlength: 26,
         },
 
         old_last_name_1st_son: {
+            required: false,
             maxlength: 26,
         },
         old_mi_1st_son: {
@@ -1037,13 +1092,13 @@ function move_to_next_step(nextWizardStep, bar_id, next_bar_id) {
     }
 }
 
-function store_this_is_me_form_data(data, next_button_id) {
+function store_this_is_me_form_data(data, next_button_id,goto_next =true) {
     $.ajaxSetup({
         headers: {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/admin/consumer/this-is-me-store";
+    url = "/ginicoe/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1059,6 +1114,7 @@ function store_this_is_me_form_data(data, next_button_id) {
                     // set the source of the image
                     img.attr("src", `${data?.data?.facial_image}`);
                 } else {
+                    if(goto_next)
                     next_step(next_button_id);
                 }
             }
@@ -1066,13 +1122,14 @@ function store_this_is_me_form_data(data, next_button_id) {
     });
 }
 
+
 function store_this_is_me_form_data_image(data, next_button_id) {
     $.ajaxSetup({
         headers: {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/admin/consumer/this-is-me-store";
+    url = "/ginicoe/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1178,7 +1235,41 @@ function switchFieldsetFromSideBar(fieldset, element) {
 }
 
 function returnLater(fieldset, module) {
-    url = "/admin/consumer/return-later";
+
+    if ($(`#${fieldset}`).find(":input").valid()) {
+        nextWizardStep = true;
+    } else {
+        nextWizardStep = false;
+    }
+
+    if(nextWizardStep){
+    var data = {};
+   
+    $(`#${fieldset} input`).each(function () {
+        if ($(this).attr("type") == "radio") {
+            data[$(this).attr("name")] = document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value;
+            console.log($(this).attr("name"),document.querySelector(
+                'input[name="' + $(this).attr("name") + '"]:checked'
+            ).value)
+        }
+        if ($(this).attr("type") == "checkbox") {
+            data[$(this).attr("name")] = $(this).is(":checked") ? 1 : 0;
+        } if($(this).attr("type") != "radio" && $(this).attr("type") != "checkbox") {
+            data[$(this).attr("name")] = $(this).val();
+        }
+    });
+    $(`#${fieldset} select`).each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+    $(`#${fieldset} textarea`).each(function () {
+        data[$(this).attr("name")] = $(this).val();
+    });
+  
+
+    store_this_is_me_form_data(data, null, false) 
+    url = "/ginicoe/admin/consumer/return-later";
     $.ajax({
         type: "get",
         url: url,
@@ -1190,6 +1281,7 @@ function returnLater(fieldset, module) {
             }
         },
     });
+}
 }
 
 var currentDiv = $(".stepper-item.active");

@@ -1,5 +1,7 @@
 <fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_four') show @endif" id="fieldset_four">
     <h5>4. Ethnicity Information</h5>
+    <input type="hidden" name="form_section" value="ethnicity_information" />
+
     <div class="row">
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
@@ -114,9 +116,9 @@
   
 
     <div class="form-group clearfix">
-        <a  href="javascript:;" onclick="returnLater('fieldset_four','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Return Later</a>
+        <a  href="javascript:;" onclick="returnLater('fieldset_four','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
 
-        <a href="javascript:;"  onclick="previousStep('enthnicity_bar','gender_identity_bar')" class="form-wizard-previous-btn float-left">Previous</a>
+        {{-- <a href="javascript:;"  onclick="previousStep('enthnicity_bar','gender_identity_bar')" class="form-wizard-previous-btn float-left">Previous</a> --}}
         <a onclick="checkFieldSetEthnicityInformation()" href="javascript:;" id="ethnicity_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>
