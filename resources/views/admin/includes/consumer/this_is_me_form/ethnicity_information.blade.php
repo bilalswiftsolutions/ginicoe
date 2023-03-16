@@ -8,7 +8,7 @@
 
                 <label for="race" class="wizard-form-text-label">4.1 What Race do you most see yourself as today?
                 </label>
-                <select class="form-control" name="race" id="race" required>
+                <select class="form-control" name="race" id="race" required  @if(!empty($attestation_info) ) disabled @endif>
                     <option></option>
                     <option value="plahnet52" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'plahnet52') selected="selected" @endif>PLAHNET52 52 (5A’s & 2H’s)</option>
                     <option value="pacific_islander_americans" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'pacific_islander_americans') selected="selected" @endif>Pacific Islander Americans</option>

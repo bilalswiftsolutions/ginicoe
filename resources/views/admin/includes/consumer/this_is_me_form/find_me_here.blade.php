@@ -191,7 +191,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{ $find_me_here->county ?? '' }}" name="county" type="text"
-                    class="form-control wizard-required" id="county">
+                    class="form-control wizard-required" id="county"  @if(!empty($attestation_info) ) disabled @endif>
                 <label for="county" class="wizard-form-text-label">2.13 County</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -216,12 +216,24 @@
         </div>
 
 
-        <div class="col-md-4 col-lg-4">
+        {{-- <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{ $find_me_here->urbanization_name ?? '' }}" name="urbanization_name" type="text"
                     class="form-control wizard-required" id="urbanization_name">
                 <label for="urbanization_name" class="wizard-form-text-label">2.16 Urbanization Name</label>
                 <p class="text_danger form_error"></p>
+            </div>
+        </div> --}}
+
+        <div class="col-md-4 col-lg-4">
+            <div class="form-group">
+
+                <label for="urbanization_name" class="wizard-form-text-label">2.16 Urbanization Name</label>
+                <select class="form-control" name="urbanization_name" id="urbanization_name">
+                    <option></option>
+                    <option @if (!empty($find_me_here) && $find_me_here->urbanization_name == 'puerto_rico') selected @endif value="puerto_rico">Puerto Rico</option>
+                    <option @if (!empty($find_me_here) && $find_me_here->urbanization_name == 'virgin_island') selected @endif value="virgin_island">Virgin Island</option>
+                </select>
             </div>
         </div>
 
@@ -299,7 +311,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input value="{{ $find_me_here->your_floor_no ?? '' }}" name="your_floor_no" type="text"
+                    <input value="{{ $find_me_here->your_floor_no ?? '' }}" name="your_floor_no" type="number"
                         class="form-control wizard-required" id="your_floor_no">
                     <label for="your_floor_no" class="wizard-form-text-label">2.20 Your Floor No.</label>
                     <p class="text_danger form_error"></p>
@@ -567,13 +579,15 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="form-group">
-                    <input name="old_urbanization_name" type="text" class="form-control wizard-required"
-                        id="old_urbanization_name">
+    
                     <label for="old_urbanization_name" class="wizard-form-text-label">2.41 Urbanization Name</label>
-                    <p class="text_danger form_error"></p>
+                    <select class="form-control" name="old_urbanization_name" id="old_urbanization_name">
+                        <option></option>
+                        <option @if (!empty($find_me_here) && $find_me_here->old_urbanization_name == 'puerto_rico') selected @endif value="puerto_rico">Puerto Rico</option>
+                        <option @if (!empty($find_me_here) && $find_me_here->old_urbanization_name == 'virgin_island') selected @endif value="virgin_island">Virgin Island</option>
+                    </select>
                 </div>
             </div>
-
 
 
 
@@ -639,7 +653,7 @@
                 <div class="col-md-4 col-lg-4">
                     <div class="form-group">
                         <input value="{{ $find_me_here->old_your_floor_no ?? '' }}" name="old_your_floor_no"
-                            type="text" class="form-control wizard-required" id="old_your_floor_no">
+                            type="number" class="form-control wizard-required" id="old_your_floor_no">
                         <label for="old_your_floor_no" class="wizard-form-text-label">2.45 Your Floor No.</label>
                         <p class="text_danger form_error"></p>
                     </div>

@@ -53,7 +53,14 @@
     <div class="form-group clearfix">
         <a  href="javascript:;" onclick="returnLater('fieldset_seventeen','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
         
-        {{-- <a  href="javascript:;" onclick="previousStep('attestation_bar','travel_info_bar')" class="form-wizard-previous-btn float-left">Previous</a> --}}
         <a  href="javascript:;" onclick="submitAttestation()" id="attestation_information_button" class="form-wizard-next-btn  float-right">Submit</a>
+        <a  href="javascript:;" onclick="review_form()" class="form-wizard-review-btn float-right mr-2">Review</a>
+
+    </div>
+
+    <div class="form-group " id="all_form_submit" style="display:none;">
+
+        <a  href="javascript:;" onclick="submit_full_form()"  class="form-wizard-review-btn  float-right" style="background-color: green;color:white">Submit</a>
+        
     </div>
 </fieldset>

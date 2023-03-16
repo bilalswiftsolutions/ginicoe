@@ -1202,6 +1202,12 @@ function checkFieldSetThisIsMe() {
     } else {
         nextWizardStep = false;
     }
+    $("#fieldset_two").find(":input").each(function() {
+        if (!$(this).valid()) {
+          nextWizardStep = false;
+          console.log("Field not valid: " + $(this).attr("name"));
+        }
+      });
 
     if (nextWizardStep) {
         store_this_is_me_form_data(data, "find_me_here_next_button");

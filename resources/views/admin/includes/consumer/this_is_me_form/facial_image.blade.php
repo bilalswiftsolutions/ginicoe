@@ -8,7 +8,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="facial_image " class="text-danger">8.1 Facial Image Upload</label>
-                <input name="facial_image" type="file" accept="image/png, image/jpeg, image/jpeg" class="form-control wizard-required" id="facial_image" >
+                <input name="facial_image" required type="file" accept="image/png, image/jpeg, image/jpeg" class="form-control wizard-required" id="facial_image" >
                
                 <p class="text_danger form_error"></p>
             </div>

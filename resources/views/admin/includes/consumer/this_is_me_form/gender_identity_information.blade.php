@@ -6,7 +6,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="sex_at_birth" class="wizard-form-text-label">3.1 Sex Assigned at Birth</label>
-                <select class="form-control" name="sex_at_birth" id="sex_at_birth" required>
+                <select class="form-control" name="sex_at_birth" id="sex_at_birth" required  @if(!empty($attestation_info) ) disabled @endif>
                     <option></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->sex_at_birth == 'choose_not_to_disclose') selected @endif value="choose_not_to_disclose"></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->sex_at_birth == 'female') selected @endif value="female">Female</option>

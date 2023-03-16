@@ -1,5 +1,5 @@
 <fieldset class="wizard-fieldset mt-4 @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_six') show @endif" id="fieldset_six">
-    <h5>5. Employment inoformation</h5>
+    <h5>6. Employment inoformation</h5>
     <input type="hidden" name="form_section" value="employment_information" />
 
     <div class="row">

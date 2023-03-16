@@ -5,6 +5,13 @@ $.validator.addMethod(
     },
     "Zipcode is not valid"
 );
+$.validator.addMethod(
+    "alphabet_only",
+    function (value) {
+        return /^[a-zA-Z]+$/.test(value);
+    },
+    "Use only Char"
+);
 
 $("#this_is_me_form").validate({
     errorPlacement: function (error, element) {
@@ -21,41 +28,46 @@ $("#this_is_me_form").validate({
             required: true,
             minlength: 2,
             maxlength: 32,
-            no_space: true,
+            alphabet_only: true,
         },
         lname: {
             required: true,
             minlength: 2,
             maxlength: 32,
-            no_space: true,
+            alphabet_only: true,
         },
         middle_initial: {
             required: true,
             minlength: 1,
             maxlength: 1,
-            no_space: true,
+            alphabet_only: true,
         },
         suffix: {
             required: true,
             minlength: 2,
             maxlength: 8,
-            no_space: true,
+            alphabet_only: true,
         },
         email: {
             required: true,
             email: true,
             minlength: 8,
             maxlength: 32,
+            noemail:true,
+        
         },
         nick_name: {
             required: true,
             minlength: 8,
             maxlength: 32,
+            alphabet_only: true,
+
         },
         date_of_birth: {
             required: true,
             date: true,
             maxlength: 32,
+            max: new Date().toISOString().split('T')[0],
         },
         social_security_no: {
             required: true,
@@ -76,11 +88,12 @@ $("#this_is_me_form").validate({
             required: true,
             minlength: 3,
             maxlength: 50,
+            alphabet_only: true,
         },
         apartment_no: {
             required: false,
-            minlength: 1,
-            maxlength: 4,
+            minlength: 4,
+            maxlength: 10,
         },
         street_name: {
             required: true,
@@ -142,8 +155,7 @@ $("#this_is_me_form").validate({
 
         urbanization_name: {
             required: true,
-            minlength: 4,
-            maxlength: 30,
+          
         },
 
         house_type: {
@@ -175,6 +187,7 @@ $("#this_is_me_form").validate({
         apartment_no: {
             minlength: 4,
             maxlength: 30,
+            only_dash: true,
         },
         room_no: {
             minlength: 1,
@@ -182,7 +195,7 @@ $("#this_is_me_form").validate({
         },
         bed_no: {
             minlength: 1,
-            maxlength: 30,
+            maxlength: 10,
         },
         zipcode: {
             required: true,
@@ -192,7 +205,16 @@ $("#this_is_me_form").validate({
             required: false,
             zipcode: true,
         },
-
+        height:{
+            required: true,
+            maxlength:10,
+            minlength:1,
+        },
+        weight:{
+            required: true,
+            maxlength:10,
+            minlength:1,
+        },
         neighborhood_house_address_right: {
             maxlength: 30,
         },
@@ -256,6 +278,7 @@ $("#this_is_me_form").validate({
         old_apartment_no: {
             minlength: 1,
             maxlength: 4,
+            only_dash: true,
         },
         old_street_name: {
             minlength: 5,
@@ -297,8 +320,7 @@ $("#this_is_me_form").validate({
         },
 
         old_urbanization_name: {
-            minlength: 4,
-            maxlength: 30,
+           
         },
 
         old_house_type: {},
@@ -325,7 +347,7 @@ $("#this_is_me_form").validate({
 
         old_apartment_no: {
             minlength: 4,
-            maxlength: 30,
+            maxlength: 10,
         },
         old_room_no: {
             minlength: 1,
@@ -1036,7 +1058,11 @@ $("#this_is_me_form").validate({
             maxlength: 11,
         },
     },
-    messages: {},
+    messages: {
+        date_of_birth:{
+            max: "Are you from Future?"
+        }
+    },
 });
 
 function move_to_next_step(nextWizardStep, bar_id, next_bar_id) {

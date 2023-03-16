@@ -8,7 +8,7 @@
 
                 <label for="natural_hair_color" class="wizard-form-text-label">10.1 What is your natural hair color?
                 </label>
-                <select class="form-control" name="natural_hair_color" id="natural_hair_color" >
+                <select class="form-control" name="natural_hair_color" id="natural_hair_color"  @if(!empty($attestation_info) ) disabled @endif>
                     <option></option>
                     <option value="black" @if (!empty($hair_info) && $hair_info->natural_hair_color === 'black') selected @endif>Black</option>
                     <option value="blonde" @if (!empty($hair_info) && $hair_info->natural_hair_color === 'blonde') selected @endif>Blonde</option>

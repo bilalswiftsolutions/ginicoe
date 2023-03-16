@@ -35,3 +35,8 @@ $.validator.addMethod("strong_password", function(value, element) {
 $.validator.addMethod("no_space", function(value, element) {
     return value.indexOf(" ") < 0 && value != "";
 }, "Spaces are not allowed.");
+
+
+$.validator.addMethod("only_dash", function(value, element) {
+    return this.optional(element) || /^[a-zA-Z0-9\-]+$/.test(value);
+  }, "Only dash allowed from meta char");
