@@ -62,12 +62,12 @@
                 11.5 Have you ever had facial plastic surgery?
                 <div class="wizard-form-radio">
                     <input onclick="facial_plastic_surgery_check()" name="facial_plastic_surgery" value="1"
-                        id="radio1" type="radio" @if (!empty($distinguish_identifier_info) && $distinguish_identifier_info->facial_plastic_surgery == 1) checked @endif  @if(!empty($attestation_info) ) disabled @endif>
+                        id="radio1" type="radio" @if (!empty($distinguish_identifier_info) && $distinguish_identifier_info->facial_plastic_surgery == 1) checked @endif  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
                     <input @if (empty($distinguish_identifier_info) || $distinguish_identifier_info->facial_plastic_surgery == 0) checked @endif onclick="facial_plastic_surgery_check()"
-                        name="facial_plastic_surgery" value="0" id="radio2" type="radio"  @if(!empty($attestation_info) ) disabled @endif>
+                        name="facial_plastic_surgery" value="0" id="radio2" type="radio"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                     <label for="radio2">No</label>
                 </div>
             </div>
@@ -83,39 +83,39 @@
                     <div class="form-group">
 
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->right_eye == 1 ) checked @endif class="form-check-input" name="right_eye" id="right_eye"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->right_eye == 1 ) checked @endif class="form-check-input" name="right_eye" id="right_eye"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="right_eye">Right Eye</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->left_eye == 1 ) checked @endif  class="form-check-input" name="left_eye" id="left_eye"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->left_eye == 1 ) checked @endif  class="form-check-input" name="left_eye" id="left_eye"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="left_eye">Left Eye</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->nose_job == 1 ) checked @endif  class="form-check-input" name="nose_job" id="nose_job"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->nose_job == 1 ) checked @endif  class="form-check-input" name="nose_job" id="nose_job"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="nose_job">Nose Job</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->cheeks == 1 ) checked @endif  class="form-check-input" name="cheeks" id="cheeks"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->cheeks == 1 ) checked @endif  class="form-check-input" name="cheeks" id="cheeks"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="cheeks">Cheeks</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->mouth == 1 ) checked @endif  class="form-check-input" name="mouth" id="mouth"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->mouth == 1 ) checked @endif  class="form-check-input" name="mouth" id="mouth"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="mouth">Mouth</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->chin == 1 ) checked @endif  class="form-check-input" name="chin" id="chin"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->chin == 1 ) checked @endif  class="form-check-input" name="chin" id="chin"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="chin">Chin</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->fore_head == 1 ) checked @endif  class="form-check-input" name="fore_head" id="fore_head"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->fore_head == 1 ) checked @endif  class="form-check-input" name="fore_head" id="fore_head"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="fore_head">Fore Head</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->face_lift == 1 ) checked @endif  class="form-check-input" name="face_lift" id="face_lift"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->face_lift == 1 ) checked @endif  class="form-check-input" name="face_lift" id="face_lift"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="face_lift">Face Lift</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->lips == 1 ) checked @endif  class="form-check-input" name="lips" id="lips"  @if(!empty($attestation_info) ) disabled @endif>
+                            <input type="checkbox" @if(!empty($distinguish_identifier_info) && $distinguish_identifier_info->lips == 1 ) checked @endif  class="form-check-input" name="lips" id="lips"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                             <label class="form-check-label" for="lips">Lips</label>
                         </div>
 
@@ -145,7 +145,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="form-group">
                         <input name="plastic_surgeon_name" type="number" class="form-control wizard-required"
-                            id="plastic_surgeon_name" value="{{$distinguish_identifier_info->plastic_surgeon_name ?? '' }}"  @if(!empty($attestation_info) ) disabled @endif>
+                            id="plastic_surgeon_name" value="{{$distinguish_identifier_info->plastic_surgeon_name ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="plastic_surgeon_name" class="wizard-form-text-label">11.9 What is the name of the
                             facial plastic surgeon who performed your last surgery?</label>
                         <p class="text_danger form_error"></p>
@@ -155,7 +155,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="form-group">
                         <input name="first_name_of_surgeon" type="text" class="form-control wizard-required"
-                            id="first_name_of_surgeon" value="{{$distinguish_identifier_info->first_name_of_surgeon ?? '' }}"  @if(!empty($attestation_info) ) disabled @endif>
+                            id="first_name_of_surgeon" value="{{$distinguish_identifier_info->first_name_of_surgeon ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="first_name_of_surgeon" class="wizard-form-text-label">11.9 First Name of
                             Surgeon</label>
                         <p class="text_danger form_error"></p>
@@ -165,7 +165,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="form-group">
                         <input name="last_name_of_surgeon" type="text" class="form-control wizard-required"
-                            id="last_name_of_surgeon" value="{{$distinguish_identifier_info->last_name_of_surgeon ?? '' }}"  @if(!empty($attestation_info) ) disabled @endif>
+                            id="last_name_of_surgeon" value="{{$distinguish_identifier_info->last_name_of_surgeon ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="last_name_of_surgeon" class="wizard-form-text-label">11.9 Last Name of
                             Surgeon</label>
                         <p class="text_danger form_error"></p>

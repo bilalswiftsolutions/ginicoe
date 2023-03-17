@@ -92,7 +92,7 @@
             <div class="form-group">
                 <label for="eye_color" class="wizard-form-text-label">9.5 What is your natural eye color?
                 </label>
-                <select class="form-control" name="eye_color" id="eye_color"  @if(!empty($attestation_info) ) disabled @endif>
+                <select class="form-control" name="eye_color" id="eye_color"  @if(!empty($head_and_face_info) ) disabled @endif>
                     <option></option>
                     <option value="amber" @if (!empty($head_and_face_info) && $head_and_face_info->eye_color === 'amber') selected @endif>Amber</option>
                     <option value="black" @if (!empty($head_and_face_info) && $head_and_face_info->eye_color === 'black') selected @endif>Black</option>
@@ -114,12 +114,12 @@
                 9.6 Do you require prescription eyewear?
                 <div class="wizard-form-radio">
                     <input name="eyeware_prescription" @if (!empty($head_and_face_info) && $head_and_face_info->eyeware_prescription == 1) checked @endif value="1"
-                        id="radio1" type="radio"  @if(!empty($attestation_info) ) disabled @endif>
+                        id="radio1" type="radio"  @if(!empty($head_and_face_info) ) disabled @endif>
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
                     <input name="eyeware_prescription" @if (empty($head_and_face_info) || $head_and_face_info->eyeware_prescription == 0) checked @endif value="0"
-                        id="radio2" type="radio"  @if(!empty($attestation_info) ) disabled @endif>
+                        id="radio2" type="radio"  @if(!empty($head_and_face_info) ) disabled @endif>
                     <label for="radio2">No</label>
                 </div>
             </div>

@@ -191,7 +191,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{ $find_me_here->county ?? '' }}" name="county" type="text"
-                    class="form-control wizard-required" id="county"  @if(!empty($attestation_info) ) disabled @endif>
+                    class="form-control wizard-required" id="county"  @if(!empty($find_me_here) ) disabled @endif>
                 <label for="county" class="wizard-form-text-label">2.13 County</label>
                 <p class="text_danger form_error"></p>
             </div>

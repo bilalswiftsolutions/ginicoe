@@ -7,7 +7,7 @@
             <div class="form-group">
                 <label for="dominant_hand_writing_side" class="wizard-form-text-label">12.1 What is your dominant hand
                     writing side?</label>
-                <select class="form-control" name="dominant_hand_writing_side" id="dominant_hand_writing_side"  @if(!empty($attestation_info) ) disabled @endif>
+                <select class="form-control" name="dominant_hand_writing_side" id="dominant_hand_writing_side"  @if(!empty($twin_identifier_info) ) disabled @endif>
                     <option></option>
                     <option value="ambidextrous" @if (!empty($twin_identifier_info) && $twin_identifier_info->dominant_hand_writing_side == 'ambidextrous') selected @endif>Ambidextrous</option>
                     <option value="left_handed" @if (!empty($twin_identifier_info) && $twin_identifier_info->dominant_hand_writing_side == 'left_handed') selected @endif>Left Handed</option>
@@ -87,7 +87,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <textarea name="twin_difference_description" type="text" class="form-control wizard-"
-                    id="twin_difference_description"  @if(!empty($attestation_info) ) disabled @endif>{{ $twin_identifier_info->twin_difference_description ?? '' }}</textarea>
+                    id="twin_difference_description"  @if(!empty($twin_identifier_info) ) disabled @endif>{{ $twin_identifier_info->twin_difference_description ?? '' }}</textarea>
                 <label for="twin_difference_description" class="wizard-form-text-label">12.7 Please tell us what best
                     describes the difference between you and your twin.
                     Physical Differences??</label>
