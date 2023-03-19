@@ -47,7 +47,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->place_of_birth ?? ''}}" name="place_of_birth" type="text" class="form-control wizard-required" id="place_of_birth"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="place_of_birth" class="wizard-form-text-label">15.5 What is your place of birth?</label>
+                <label for="place_of_birth" class="wizard-form-text-label">15.5 What is your place of birth? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->name_of_hospital_you_born_in ?? ''}}" name="name_of_hospital_you_born_in" type="text" class="form-control wizard-required" id="name_of_hospital_you_born_in"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="name_of_hospital_you_born_in" class="wizard-form-text-label">15.6 What is the name of the hospital that you were born? </label>
+                <label for="name_of_hospital_you_born_in" class="wizard-form-text-label">15.6 What is the name of the hospital that you were born?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->name_of_mid_wife ?? ''}}" name="name_of_mid_wife" type="text" class="form-control wizard-required" id="name_of_mid_wife"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="name_of_mid_wife" class="wizard-form-text-label">15.7 If no hospital, what is the name of the mid-wife? </label>
+                <label for="name_of_mid_wife" class="wizard-form-text-label">15.7 If no hospital, what is the name of the mid-wife?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->first_name_of_mid_wife ?? ''}}" name="first_name_of_mid_wife" type="text" class="form-control wizard-required" id="first_name_of_mid_wife"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="first_name_of_mid_wife" class="wizard-form-text-label">15.8 First name of mid-wife?</label>
+                <label for="first_name_of_mid_wife" class="wizard-form-text-label">15.8 First name of mid-wife? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -81,7 +81,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->last_name_of_mid_wife ?? ''}}" name="last_name_of_mid_wife" type="text" class="form-control wizard-required" id="last_name_of_mid_wife"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="last_name_of_mid_wife" class="wizard-form-text-label">15.9 Last name of mid-wife?</label>
+                <label for="last_name_of_mid_wife" class="wizard-form-text-label">15.9 Last name of mid-wife? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -90,7 +90,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->exact_location_of_first_reponder ?? ''}}" name="exact_location_of_first_reponder" type="text" class="form-control wizard-required" id="exact_location_of_first_reponder"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="exact_location_of_first_reponder" class="wizard-form-text-label">15.10 If no mid-wife where was the exact location of the first responder for your birth?   </label>
+                <label for="exact_location_of_first_reponder" class="wizard-form-text-label">15.10 If no mid-wife where was the exact location of the first responder for your birth?   <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span> </label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -98,7 +98,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->address_description ?? ''}}" name="address_description" type="text" class="form-control wizard-required" id="address_description"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="address_description" class="wizard-form-text-label">15.11 Street, highway, bridge, tunnel, or please describe in detail.</label>
+                <label for="address_description" class="wizard-form-text-label">15.11 Street, highway, bridge, tunnel, or please describe in detail. <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -107,7 +107,7 @@
         <div class="col-md-12 col-lg-12 mb-4">
             <div class="form-group">
         
-                <label for="" class="wizard-form-text-label">If Not a hospital, then what was the address of your birth?</label>
+                <label for="" class="wizard-form-text-label">If Not a hospital, then what was the address of your birth?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                
             </div>
         </div>
@@ -116,7 +116,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->birth_house_address ?? ''}}" name="birth_house_address" type="text" class="form-control wizard-required" id="birth_house_address"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="birth_house_address" class="wizard-form-text-label">15.12 House Address</label>
+                <label for="birth_house_address" class="wizard-form-text-label">15.12 House Address  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -125,7 +125,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->birth_street ?? ''}}" name="birth_street" type="text" class="form-control wizard-required" id="birth_street"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="birth_street" class="wizard-form-text-label">15.13 Street</label>
+                <label for="birth_street" class="wizard-form-text-label">15.13 Street  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -134,7 +134,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->birth_country ?? ''}}" name="birth_country" type="text" class="form-control wizard-required" id="birth_country"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="birth_country" class="wizard-form-text-label">15.14 Country</label>
+                <label for="birth_country" class="wizard-form-text-label">15.14 Country  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -142,7 +142,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
 
-                <label for="birth_state" class="wizard-form-text-label">15.15 State</label>
+                <label for="birth_state" class="wizard-form-text-label">15.15 State  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <select class="form-control" name="birth_state" id="birth_state"  @if(!empty($family_and_medical_info) ) disabled @endif>
                     <option></option>
                     <option value="{{ $family_and_medical_info->birth_state ?? '' }}" selected>
@@ -207,7 +207,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                <label for="birth_city" class="wizard-form-text-label">15.16 City</label>
+                <label for="birth_city" class="wizard-form-text-label">15.16 City <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <select class="form-control" name="birth_city" id="birth_city" required  @if(!empty($family_and_medical_info) ) disabled @endif>
                     <option value="{{ $family_and_medical_info->birth_city ?? '' }}" selected>
                         {{ $family_and_medical_info->birth_city ?? '' }}</option>
@@ -221,7 +221,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->birth_zipcode ?? ''}}" name="birth_zipcode" type="text" class="form-control wizard-required" id="birth_zipcode"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="birth_zipcode" class="wizard-form-text-label">15.17 Zip code</label>
+                <label for="birth_zipcode" class="wizard-form-text-label">15.17 Zip code <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -229,7 +229,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->birth_address_description ?? ''}}" name="birth_address_description" type="text" class="form-control wizard-required" id="birth_address_description"  @if(!empty($family_and_medical_info) ) disabled @endif>
-                <label for="birth_address_description" class="wizard-form-text-label">15.18 If no address, then please describe the location in detail.</label>
+                <label for="birth_address_description" class="wizard-form-text-label">15.18 If no address, then please describe the location in detail. <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>
@@ -238,7 +238,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$family_and_medical_info->your_age ?? ''}}" name="your_age" type="number" class="form-control wizard-required" id="your_age">
-                <label for="your_age" class="wizard-form-text-label">15.19 What is your age today?</label>
+                <label for="your_age" class="wizard-form-text-label">15.19 What is your age today? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>

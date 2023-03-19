@@ -59,7 +59,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                11.5 Have you ever had facial plastic surgery?
+                11.5 Have you ever had facial plastic surgery?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 <div class="wizard-form-radio">
                     <input onclick="facial_plastic_surgery_check()" name="facial_plastic_surgery" value="1"
                         id="radio1" type="radio" @if (!empty($distinguish_identifier_info) && $distinguish_identifier_info->facial_plastic_surgery == 1) checked @endif  @if(!empty($distinguish_identifier_info) ) disabled @endif>
@@ -76,7 +76,7 @@
             @if (empty($distinguish_identifier_info) || $distinguish_identifier_info->facial_plastic_surgery == 0) style="display: none;" @endif>
             <div class="col-md-6 col-lg-6 pb-4">
                 <label for="" class="wizard-form-text-label">11.6 where on your face
-                    was your surgery? </label>
+                    was your surgery?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-6">
@@ -147,7 +147,7 @@
                         <input name="plastic_surgeon_name" type="number" class="form-control wizard-required"
                             id="plastic_surgeon_name" value="{{$distinguish_identifier_info->plastic_surgeon_name ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="plastic_surgeon_name" class="wizard-form-text-label">11.9 What is the name of the
-                            facial plastic surgeon who performed your last surgery?</label>
+                            facial plastic surgeon who performed your last surgery?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                         <input name="first_name_of_surgeon" type="text" class="form-control wizard-required"
                             id="first_name_of_surgeon" value="{{$distinguish_identifier_info->first_name_of_surgeon ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="first_name_of_surgeon" class="wizard-form-text-label">11.9 First Name of
-                            Surgeon</label>
+                            Surgeon  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <input name="last_name_of_surgeon" type="text" class="form-control wizard-required"
                             id="last_name_of_surgeon" value="{{$distinguish_identifier_info->last_name_of_surgeon ?? '' }}"  @if(!empty($distinguish_identifier_info) ) disabled @endif>
                         <label for="last_name_of_surgeon" class="wizard-form-text-label">11.9 Last Name of
-                            Surgeon</label>
+                            Surgeon <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                         <p class="text_danger form_error"></p>
                     </div>
                 </div>

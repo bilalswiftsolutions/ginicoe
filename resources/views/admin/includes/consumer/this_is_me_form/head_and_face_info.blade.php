@@ -90,7 +90,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                <label for="eye_color" class="wizard-form-text-label">9.5 What is your natural eye color?
+                <label for="eye_color" class="wizard-form-text-label">9.5 What is your natural eye color? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 </label>
                 <select class="form-control" name="eye_color" id="eye_color"  @if(!empty($head_and_face_info) ) disabled @endif>
                     <option></option>
@@ -111,7 +111,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                9.6 Do you require prescription eyewear?
+                9.6 Do you require prescription eyewear?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 <div class="wizard-form-radio">
                     <input name="eyeware_prescription" @if (!empty($head_and_face_info) && $head_and_face_info->eyeware_prescription == 1) checked @endif value="1"
                         id="radio1" type="radio"  @if(!empty($head_and_face_info) ) disabled @endif>

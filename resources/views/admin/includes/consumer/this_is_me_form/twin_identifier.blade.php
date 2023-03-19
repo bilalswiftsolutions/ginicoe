@@ -6,7 +6,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="dominant_hand_writing_side" class="wizard-form-text-label">12.1 What is your dominant hand
-                    writing side?</label>
+                    writing side? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <select class="form-control" name="dominant_hand_writing_side" id="dominant_hand_writing_side"  @if(!empty($twin_identifier_info) ) disabled @endif>
                     <option></option>
                     <option value="ambidextrous" @if (!empty($twin_identifier_info) && $twin_identifier_info->dominant_hand_writing_side == 'ambidextrous') selected @endif>Ambidextrous</option>
@@ -90,7 +90,7 @@
                     id="twin_difference_description"  @if(!empty($twin_identifier_info) ) disabled @endif>{{ $twin_identifier_info->twin_difference_description ?? '' }}</textarea>
                 <label for="twin_difference_description" class="wizard-form-text-label">12.7 Please tell us what best
                     describes the difference between you and your twin.
-                    Physical Differences??</label>
+                    Physical Differences?? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>
         </div>

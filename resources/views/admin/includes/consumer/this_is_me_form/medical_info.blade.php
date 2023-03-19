@@ -133,7 +133,7 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                14.9 Do you want Law Enforcement to know that you are disabled?
+                14.9 Do you want Law Enforcement to know that you are disabled?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 <div class="wizard-form-radio">
                     <input name="want_to_know_law_inforcement" @if (!empty($medical_info) && $medical_info->want_to_know_law_inforcement == 1) checked @endif
                         value="1" id="radio1" type="radio">
@@ -179,7 +179,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14a. Anxiety Disorders </label>
+                    <label for="" class="wizard-form-text-label">14a. Anxiety Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -240,7 +240,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14h. Bipolar and Related Disorders </label>
+                    <label for="" class="wizard-form-text-label">14h. Bipolar and Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -313,7 +313,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14q. Depressive Disorders </label>
+                    <label for="" class="wizard-form-text-label">14q. Depressive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -385,7 +385,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14x. Disruptive Disorders </label>
+                    <label for="" class="wizard-form-text-label">14x. Disruptive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -441,7 +441,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14dd. Dissociative Disorders </label>
+                    <label for="" class="wizard-form-text-label">14dd. Dissociative Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -477,7 +477,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14hh. Eating Disorders </label>
+                    <label for="" class="wizard-form-text-label">14hh. Eating Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -527,7 +527,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14oo. Neurocognitive Disorders </label>
+                    <label for="" class="wizard-form-text-label">14oo. Neurocognitive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -554,7 +554,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14rr. Neurodevelopmental Disorders</label>
+                    <label for="" class="wizard-form-text-label">14rr. Neurodevelopmental Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -606,7 +606,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14xx. Obsessive-Compulsive Disorders</label>
+                    <label for="" class="wizard-form-text-label">14xx. Obsessive-Compulsive Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -654,7 +654,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14fff. Personality Disorders</label>
+                    <label for="" class="wizard-form-text-label">14fff. Personality Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -738,7 +738,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14qqqq. Schizophrenia </label>
+                    <label for="" class="wizard-form-text-label">14qqqq. Schizophrenia  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -777,7 +777,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14wwww. Somatic Symptom Disorders</label>
+                    <label for="" class="wizard-form-text-label">14wwww. Somatic Symptom Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -814,7 +814,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14bbbb. Stress-Related Disorders </label>
+                    <label for="" class="wizard-form-text-label">14bbbb. Stress-Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -852,7 +852,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14gggg. Substance-Related Disorders</label>
+                    <label for="" class="wizard-form-text-label">14gggg. Substance-Related Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">

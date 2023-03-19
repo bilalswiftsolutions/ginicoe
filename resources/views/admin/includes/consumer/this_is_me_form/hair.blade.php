@@ -6,7 +6,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
 
-                <label for="natural_hair_color" class="wizard-form-text-label">10.1 What is your natural hair color?
+                <label for="natural_hair_color" class="wizard-form-text-label">10.1 What is your natural hair color?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 </label>
                 <select class="form-control" name="natural_hair_color" id="natural_hair_color"  @if(!empty($hair_info) ) disabled @endif>
                     <option></option>

@@ -1320,3 +1320,10 @@ currentDiv
     .find(".step-counter")
     .addClass("text-white");
 currentDiv.nextAll(".stepper-item").removeClass("active completed");
+
+function add_disable_property(input_names)
+{
+    input_names.forEach(function(element, index, array) {
+        $(`#${element}`).prop('disabled',true)
+      });
+}

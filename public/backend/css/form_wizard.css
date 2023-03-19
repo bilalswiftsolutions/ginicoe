@@ -52,7 +52,7 @@ body {
     outline: 0;
   }
   .form-wizard .wizard-form-radio input[type="radio"]:checked {
-    background-color: #fb1647;
+    background-color: #5854d6;
   }
   .form-wizard .wizard-form-radio input[type="radio"]:checked::before {
     content: "";
@@ -162,7 +162,7 @@ body {
     transition: 0.2s linear all;
   }
   .form-wizard .focus-input .wizard-form-text-label {
-    color: #d65470;
+    color: #5854d6;
     top: -18px;
     transition: 0.2s linear all;
     font-size: 12px;

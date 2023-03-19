@@ -6,7 +6,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
 
-                <label for="race" class="wizard-form-text-label">4.1 What Race do you most see yourself as today?
+                <label for="race" class="wizard-form-text-label">4.1 What Race do you most see yourself as today? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 </label>
                 <select class="form-control" name="race" id="race" required  @if(!empty($ethnicity_info) ) disabled @endif>
                     <option></option>
@@ -119,6 +119,6 @@
         <a  href="javascript:;" onclick="returnLater('fieldset_four','consumer_this_is_me')" class="form-wizard-return-btn float-left mr-3">Pause & Return Later</a>
 
         {{-- <a href="javascript:;"  onclick="previousStep('enthnicity_bar','gender_identity_bar')" class="form-wizard-previous-btn float-left">Previous</a> --}}
-        <a onclick="checkFieldSetEthnicityInformation()" href="javascript:;" id="ethnicity_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
+        <a onclick="checkFieldSetEthnicityInformation();add_disable_property(['race']);" href="javascript:;" id="ethnicity_information_button" class="form-wizard-next-btn  float-right">Save & Continue</a>
     </div>
 </fieldset>
