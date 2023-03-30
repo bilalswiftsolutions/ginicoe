@@ -6,7 +6,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
 
-                <label for="race" class="wizard-form-text-label">4.1 What Race do you most see yourself as today? <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
+                <label for="race" class="wizard-form-text-label">4.1 What Race or Protected Group do you most see yourself as today <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 </label>
                 <select class="form-control" name="race" id="race" required  @if(!empty($ethnicity_info) ) disabled @endif>
                     <option></option>

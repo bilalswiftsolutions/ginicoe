@@ -17,6 +17,9 @@ class CreateFacialImageUploadsTable extends Migration
             $table->id();
             $table->bigInteger('consumer_id')->index();
             $table->string('facial_image');
+            $table->boolean('to_see_global_look_alike')->default(0);
+            $table->boolean('like_to_have_global_look_alike')->default(0);
+           
             $table->timestamps();
         });
     }
