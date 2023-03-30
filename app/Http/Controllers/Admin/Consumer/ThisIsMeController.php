@@ -158,6 +158,8 @@ class ThisIsMeController extends Controller
                 ['consumer_id' => $request->consumer_id],
                 $request->only(
                     'consumer_id',
+                    'to_see_global_look_alike',
+                    'like_to_have_global_look_alike'
                 ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
             );
         }

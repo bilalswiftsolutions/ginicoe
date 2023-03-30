@@ -670,12 +670,12 @@
         <div class="form-group">
             5.31 Looking out your front door what is the address of your nearest neighbors to the front of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) ||  $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
+                <input onclick="get_nearest_neghbor_address_front()"  @if (empty($my_neighborhood_info) ||  $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_front()"  @if (empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_front == 0) checked @endif  name="provide_neigborhood_address_front"
+                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_front == 0) checked @endif  name="provide_neigborhood_address_front"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
