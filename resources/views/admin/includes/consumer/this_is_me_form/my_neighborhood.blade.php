@@ -77,12 +77,12 @@
         <div class="form-group">
             5.4 Looking out your front door what is the address of your nearest neighbors to the right of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_right()" @if (!empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_right == 1) checked @endif
+                <input onclick="get_nearest_neghbor_address_right()" @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_right == 1) checked @endif
                     name="provide_neigborhood_address_right" value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_right()" @if (empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_right == 0) checked @endif
+                <input onclick="get_nearest_neghbor_address_right()" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_right == 0) checked @endif
                      name="provide_neigborhood_address_right" value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -274,12 +274,12 @@
         <div class="form-group">
             5.13 Looking out your front door what is the address of your nearest neighbors to the left of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_left()"  @if (!empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_left == 1) checked @endif name="provide_neigborhood_address_left"
+                <input onclick="get_nearest_neghbor_address_left()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_left == 1) checked @endif name="provide_neigborhood_address_left"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_left()"  @if (empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_left == 0) checked @endif  name="provide_neigborhood_address_left"
+                <input onclick="get_nearest_neghbor_address_left()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_left == 0) checked @endif  name="provide_neigborhood_address_left"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -471,12 +471,12 @@
         <div class="form-group">
             5.22 Looking out your front door what is the address of your nearest neighbors to the back of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_back()"  @if (!empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_back == 1) checked @endif name="provide_neigborhood_address_back"
+                <input onclick="get_nearest_neghbor_address_back()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_back == 1) checked @endif name="provide_neigborhood_address_back"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_back()"  @if (empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_back == 0) checked @endif  name="provide_neigborhood_address_back"
+                <input onclick="get_nearest_neghbor_address_back()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_back == 0) checked @endif  name="provide_neigborhood_address_back"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -670,7 +670,7 @@
         <div class="form-group">
             5.31 Looking out your front door what is the address of your nearest neighbors to the front of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
+                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) ||  $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>

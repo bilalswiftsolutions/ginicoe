@@ -28,12 +28,12 @@
             <div class="form-group">
                8.2  Do you wish to opt-in for ‘counter-part consent’ to see your global look alike?
                 <div class="wizard-form-radio">
-                    <input   @if(!empty($travel_info) && $travel_info->to_see_global_look_alike == 1) checked @endif name="to_see_global_look_alike"
+                    <input   @if(!empty($facial_image) && $facial_image->to_see_global_look_alike == 1) checked @endif name="to_see_global_look_alike"
                         value="1" id="radio1" type="radio">
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
-                    <input    @if(empty($travel_info) || $travel_info->to_see_global_look_alike == 0) checked @endif name="to_see_global_look_alike"
+                    <input    @if(empty($facial_image) || $facial_image->to_see_global_look_alike == 0) checked @endif name="to_see_global_look_alike"
                         value="0" id="radio2" type="radio">
                     <label for="radio2">No</label>
                 </div>
@@ -44,12 +44,12 @@
             <div class="form-group">
                8.3  Do you wish to opt-in for ‘counter-part consent’ to have your global look alike(s) see you? 
                 <div class="wizard-form-radio">
-                    <input   @if(!empty($travel_info) && $travel_info->like_to_have_global_look_alike == 1) checked @endif name="like_to_have_global_look_alike"
+                    <input   @if(!empty($facial_image) && $facial_image->like_to_have_global_look_alike == 1) checked @endif name="like_to_have_global_look_alike"
                         value="1" id="radio1" type="radio">
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
-                    <input   @if(empty($travel_info) || $travel_info->like_to_have_global_look_alike == 0) checked @endif name="like_to_have_global_look_alike"
+                    <input   @if(empty($facial_image) || $facial_image->like_to_have_global_look_alike == 0) checked @endif name="like_to_have_global_look_alike"
                         value="0" id="radio2" type="radio">
                     <label for="radio2">No</label>
                 </div>
