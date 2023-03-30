@@ -52,7 +52,7 @@
         <li class="nav-item @if($conName[1] == 'dashboard') active @endif">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="fas fa-fw fa-home"></i>
-                <span>@if(session('role_id') ==  1) Admin @else {{session('name')}} @endif Dashboard</span>
+                <span>@if(session('role_id') ==  1) Admin @else @if(substr(session('name'), -1) != 's')  {{session('name')}}'s @else {{session('name')}}'  @endif @endif Dashboard</span>
 
             </a>
         </li>
@@ -63,7 +63,7 @@
         <li class="nav-item @if($conName[2] == 'this-is-me') active @endif">
             <a class="nav-link" href="{{ route('admin.consumer.this_is_me') }}">
                 <i class="fas fa-fw fa-user"></i>
-                <span>This Is Me</span>
+                <span>Update My Info</span>
 
             </a>
         </li>

@@ -35,7 +35,7 @@ class ThisIsMeController extends Controller
             'employment_info',
             'charge_card_info',
             'family_and_medical_info',
-            'this_is_me_return_back_data','facial_image'
+            'this_is_me_return_back_data', 'facial_image'
         ])->where('id', session('id'))->first();
         $my_pidegree_info = $consumer->my_pidegree_info;
         $find_me_here = $consumer->find_me_here;
@@ -125,7 +125,7 @@ class ThisIsMeController extends Controller
                     break;
                 case 'facial_image_upload':
 
-                    return response()->json(['success'=>true,'data'=> $this->store_facial_image_upload($request)]);
+                    return response()->json(['success' => true, 'data' => $this->store_facial_image_upload($request)]);
                     break;
                 case 'medical_information':
                     $this->store_medical_info($request);
@@ -150,17 +150,17 @@ class ThisIsMeController extends Controller
     }
     public function store_facial_image_upload($request)
     {
-        if(in_array($request->file->extension(),['png','jpg','jpeg'])){
-        // Store the uploaded file in the public/uploads directory
-        $imageName = time() . '.' . $request->file->extension();
-        $request->file->move(public_path('facial_uploads'), $imageName);
-        return   FacialImageUpload::updateOrCreate(
-            ['consumer_id' => $request->consumer_id],
-            $request->only(
-                'consumer_id',
-            ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
-        );
-    }
+        if (in_array($request->file->extension(), ['png', 'jpg', 'jpeg'])) {
+            // Store the uploaded file in the public/uploads directory
+            $imageName = time() . '.' . $request->file->extension();
+            $request->file->move(public_path('facial_uploads'), $imageName);
+            return   FacialImageUpload::updateOrCreate(
+                ['consumer_id' => $request->consumer_id],
+                $request->only(
+                    'consumer_id',
+                ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
+            );
+        }
     }
     public function store_attestation_info($request)
     {
@@ -185,17 +185,31 @@ class ThisIsMeController extends Controller
                 'alien_id_number',
                 'country_of_issuance_foriegn_country',
                 'foreign_passport_number',
-                'country_of_issuance_foreign_passport',
                 'are_you_on_visa',
                 'visa_number',
                 'us_permit',
                 'us_govt_id_number',
                 'us_driving_license_number',
                 'us_state',
-                'foreign_country_driving_license_number',
-                'foreign_dl_number',
-                'foreign_id_number',
-                'us_education_doc',
+                'state_driver_license_no',
+                'state_id',
+                'state_id_no',
+                'state_hunting',
+                'state_hunting_no',
+                'state_fishing',
+                'state_fishing_no',
+                'state_pilot_license',
+                'state_pilot_license_no',
+                'state_handgun_firearm',
+                'state_handgun_firearm_no',
+                'state_medicaid',
+                'state_medicaid_no',
+                'state_medicare',
+                'state_medicare_no',
+                'us_military_branch',
+                'us_military_branch_no',
+                'bureau_of_indian_affair_card_no',
+                'tribal_id_card_no',
                 'witsec',
                 'old_first_name',
                 'old_last_name',
@@ -611,6 +625,10 @@ class ThisIsMeController extends Controller
 
     public function store_find_me_here($request)
     {
+
+        $random_bytes = random_bytes(32); // generates 16 random bytes
+        $random_string = bin2hex($random_bytes);
+        Admin::where('id', $request->consumer_id)->update(['guid' => 'CUSA'. $this->get_state_abbriviation($request). $request->consumer_id . $random_string]);
         return FindMeHere::updateOrCreate(['consumer_id' => $request->consumer_id], $request->only(
             'consumer_id',
             'house_address',
@@ -667,6 +685,64 @@ class ThisIsMeController extends Controller
         ));
     }
 
+    public function get_state_abbriviation($request)
+    {
+        $states = array(
+            'Alabama' => 'AL',
+            'Alaska' => 'AK',
+            'Arizona' => 'AZ',
+            'Arkansas' => 'AR',
+            'California' => 'CA',
+            'Colorado' => 'CO',
+            'Connecticut' => 'CT',
+            'Delaware' => 'DE',
+            'Florida' => 'FL',
+            'Georgia' => 'GA',
+            'Hawaii' => 'HI',
+            'Idaho' => 'ID',
+            'Illinois' => 'IL',
+            'Indiana' => 'IN',
+            'Iowa' => 'IA',
+            'Kansas' => 'KS',
+            'Kentucky' => 'KY',
+            'Louisiana' => 'LA',
+            'Maine' => 'ME',
+            'Maryland' => 'MD',
+            'Massachusetts' => 'MA',
+            'Michigan' => 'MI',
+            'Minnesota' => 'MN',
+            'Mississippi' => 'MS',
+            'Missouri' => 'MO',
+            'Montana' => 'MT',
+            'Nebraska' => 'NE',
+            'Nevada' => 'NV',
+            'New Hampshire' => 'NH',
+            'New Jersey' => 'NJ',
+            'New Mexico' => 'NM',
+            'New York' => 'NY',
+            'North Carolina' => 'NC',
+            'North Dakota' => 'ND',
+            'Ohio' => 'OH',
+            'Oklahoma' => 'OK',
+            'Oregon' => 'OR',
+            'Pennsylvania' => 'PA',
+            'Rhode Island' => 'RI',
+            'South Carolina' => 'SC',
+            'South Dakota' => 'SD',
+            'Tennessee' => 'TN',
+            'Texas' => 'TX',
+            'Utah' => 'UT',
+            'Vermont' => 'VT',
+            'Virginia' => 'VA',
+            'Washington' => 'WA',
+            'West Virginia' => 'WV',
+            'Wisconsin' => 'WI',
+            'Wyoming' => 'WY',
+        );
+        $state_name = $request->state;
+        $state_abbr = $states[$state_name];
+        return $state_abbr;
+    }
     public function store_my_pidegree_info($request)
     {
         return MyPidegreeInformation::updateOrCreate(['consumer_id' => $request->consumer_id], $request->only(

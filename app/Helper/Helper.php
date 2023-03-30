@@ -9,6 +9,8 @@ class Helper
 
    public static function auth_admin()
    {
-     return Admin::where('role_id',session('role_id'))->first();
+    
+    
+     return Admin::with(['role'])->where('id',session('id'))->first();
    }
 }

@@ -21,17 +21,33 @@ class CreateTravelInformationTable extends Migration
             $table->string('alien_id_number')->nullable();
             $table->string('country_of_issuance_foriegn_country')->nullable();
             $table->string('foreign_passport_number')->nullable();
-            $table->string('country_of_issuance_foreign_passport')->nullable();
             $table->string('are_you_on_visa')->nullable();
             $table->string('visa_number')->nullable();
             $table->string('us_permit')->nullable();
             $table->string('us_govt_id_number')->nullable();
             $table->string('us_driving_license_number')->nullable();
             $table->string('us_state')->nullable();
-            $table->string('foreign_country_driving_license_number')->nullable();
-            $table->string('foreign_dl_number')->nullable();
-            $table->string('foreign_id_number')->nullable();
-            $table->string('us_education_doc')->nullable();
+            $table->string('state_driver_license_no')->nullable();
+            $table->string('state_id')->nullable();
+            $table->string('state_id_no')->nullable();
+            $table->string('state_hunting')->nullable();
+            $table->string('state_hunting_no')->nullable();
+            $table->string('state_fishing')->nullable();
+            $table->string('state_fishing_no')->nullable();
+            $table->string('state_pilot_license')->nullable();
+            $table->string('state_pilot_license_no')->nullable();
+            $table->string('state_handgun_firearm')->nullable();
+            $table->string('state_handgun_firearm_no')->nullable();
+            $table->string('state_medicaid')->nullable();
+            $table->string('state_medicaid_no')->nullable();
+            $table->string('state_medicare')->nullable();
+            $table->string('state_medicare_no')->nullable();
+            $table->string('us_military_branch')->nullable();
+
+            $table->string('us_military_branch_no')->nullable();
+            $table->string('bureau_of_indian_affair_card_no')->nullable();
+
+            $table->string('tribal_id_card_no')->nullable();
             $table->string('witsec')->nullable();
             $table->string('old_first_name')->nullable();
             $table->string('old_last_name')->nullable();

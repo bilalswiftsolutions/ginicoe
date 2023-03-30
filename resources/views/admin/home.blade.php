@@ -14,11 +14,24 @@
         $total_pending_orders = DB::table('orders')
             ->where('payment_status', 'Pending')
             ->count();
+
+            
+            
+            $admin = \App\Helper\Helper::auth_admin();
+            
+        
+     
     @endphp
 
     <div class="row">
-        <div class="col-xl-12 col-md-12 mb-2">
+        <div class="col-xl-6 col-md-6 mb-2">
             <h1 class="h3 mb-3 text-gray-800">Dashboard</h1>
+        </div>
+        <div class="col-xl-6 col-md-6 mb-2 " >
+           
+            <div style="float: right;"">
+            <span style="color:black;font-weight:bold;">GUID:</span> @if(!empty($admin->guid)) <span style="color:rgb(27, 99, 244);float:right"> {{$admin->guid}} </span> @else <span style="color:rgb(212, 9, 16);"> Not Assigned Yet </span> @endif
+            </div>
         </div>
     </div>
     @if (session('role_id') == 1)
@@ -158,11 +171,7 @@
     @endif
     <!-- // Box End -->
     @if (session('role_id') != 1)
-        @php
-            
-            $admin = \App\Helper\Helper::auth_admin();
-            
-        @endphp
+        
 
         @if ($admin->role->role_name == 'Consumer')
             @include('admin.includes.cards.consumer')

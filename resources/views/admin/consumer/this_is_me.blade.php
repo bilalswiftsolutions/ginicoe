@@ -161,7 +161,7 @@
 
                               <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_sixteen') active @endif" onclick="switchFieldset('fieldset_sixteen',this)" id="travel_info_bar">
                                 <div class="step-counter">16</div>
-                                <div class="step-name mt-3" style="transform: rotate(-45deg);">Travel Info</div>
+                                <div class="step-name mt-3" style="transform: rotate(-45deg);">Special Licenses</div>
                               </div>
 
                               <div class="stepper-item @if(!empty($this_is_me_return_back_data) && $this_is_me_return_back_data->fieldset_id == 'fieldset_seventeen') active @endif" onclick="switchFieldset('fieldset_seventeen',this)" id="attestation_bar">
