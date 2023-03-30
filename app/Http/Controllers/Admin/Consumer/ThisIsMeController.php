@@ -150,6 +150,7 @@ class ThisIsMeController extends Controller
     }
     public function store_facial_image_upload($request)
     {
+        if(!empty($request->file)){
         if (in_array($request->file->extension(), ['png', 'jpg', 'jpeg'])) {
             // Store the uploaded file in the public/uploads directory
             $imageName = time() . '.' . $request->file->extension();
@@ -163,6 +164,17 @@ class ThisIsMeController extends Controller
                 ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
             );
         }
+    }else{
+     
+        return   FacialImageUpload::updateOrCreate(
+            ['consumer_id' => $request->consumer_id],
+            $request->only(
+                'consumer_id',
+                'to_see_global_look_alike',
+                'like_to_have_global_look_alike'
+            ) 
+        );
+    }
     }
     public function store_attestation_info($request)
     {
