@@ -95,7 +95,7 @@ Route::get('/run-commands', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:clear');
     Artisan::call('route:cache');
-    return redirect()->back()->with('success','Command Run successfully');
+    return 'Command Run successfully';
 });
 
 
