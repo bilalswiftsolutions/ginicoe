@@ -37,13 +37,13 @@ $("#this_is_me_form").validate({
             alphabet_only: true,
         },
         middle_initial: {
-            required: true,
+            required: false,
             minlength: 1,
             maxlength: 1,
             alphabet_only: true,
         },
         suffix: {
-            required: true,
+            required: false,
             minlength: 2,
             maxlength: 8,
             alphabet_only: true,
@@ -57,7 +57,7 @@ $("#this_is_me_form").validate({
         
         },
         nick_name: {
-            required: true,
+            required: false,
             minlength: 8,
             maxlength: 32,
             alphabet_only: true,
@@ -104,7 +104,7 @@ $("#this_is_me_form").validate({
             required: true,
         },
         city: {
-            required: true,
+            required: false,
         },
         town: {
             required: false,
@@ -132,17 +132,17 @@ $("#this_is_me_form").validate({
             maxlength: 30,
         },
         district: {
-            required: true,
-            minlength: 3,
-            maxlength: 30,
-        },
-        county: {
             required: false,
             minlength: 3,
             maxlength: 30,
         },
-        neighborhood_name: {
+        county: {
             required: true,
+            minlength: 3,
+            maxlength: 30,
+        },
+        neighborhood_name: {
+            required: false,
             minlength: 4,
             maxlength: 30,
         },
@@ -154,12 +154,12 @@ $("#this_is_me_form").validate({
         },
 
         urbanization_name: {
-            required: true,
+            required: false,
           
         },
 
         house_type: {
-            required: true,
+            required: false,
         },
 
         house_number: {
@@ -206,12 +206,12 @@ $("#this_is_me_form").validate({
             zipcode: true,
         },
         height:{
-            required: true,
+            required: false,
             maxlength:10,
             minlength:1,
         },
         weight:{
-            required: true,
+            required: false,
             maxlength:10,
             minlength:1,
         },
@@ -433,7 +433,7 @@ $("#this_is_me_form").validate({
             maxlength: 32,
         },
         employer_name: {
-            required: true,
+            required: false,
             maxlength: 26,
         },
         job_title: {
@@ -441,7 +441,7 @@ $("#this_is_me_form").validate({
             maxlength: 26,
         },
         employer_identification_number: {
-            required: true,
+            required: false,
             maxlength: 16,
         },
         anual_salary_last_year: {
@@ -464,7 +464,7 @@ $("#this_is_me_form").validate({
             maxlength: 16,
         },
         nickname_1: {
-            required: true,
+            required: false,
             maxlength: 25,
         },
         primary_first_name_1: {
@@ -472,7 +472,7 @@ $("#this_is_me_form").validate({
             maxlength: 24,
         },
         primary_mi_1: {
-            required: true,
+            required: false,
             maxlength: 20,
         },
         primary_last_name_1: {
@@ -542,26 +542,26 @@ $("#this_is_me_form").validate({
         },
 
         charge_card_to_protect_2: {
-            required: true,
+            
         },
         card_number_2: {
-            required: true,
+         
             maxlength: 16,
         },
         nickname_2: {
-            required: true,
+          
             maxlength: 25,
         },
         primary_first_name_2: {
-            required: true,
+            required: false,
             maxlength: 24,
         },
         primary_mi_2: {
-            required: true,
+            required: false,
             maxlength: 20,
         },
         primary_last_name_2: {
-            required: true,
+            required: false,
             maxlength: 20,
         },
         secondary_first_name_2: {
@@ -575,36 +575,36 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_2: {},
         name_of_bank_2: {
-            required: true,
+          
             maxlength: true,
         },
         expiry_date_2: {
-            required: true,
+         
             maxlength: 20,
         },
 
         charge_card_to_protect_5: {
-            required: true,
+       
             maxlength: 16,
         },
         card_number_5: {
-            required: true,
+        
             maxlength: 16,
         },
         nickname_5: {
-            required: true,
+         
             maxlength: 25,
         },
         primary_first_name_5: {
-            required: true,
+          
             maxlength: 24,
         },
         primary_mi_5: {
-            required: true,
+          
             maxlength: 20,
         },
         primary_last_name_5: {
-            required: true,
+           
             maxlength: 20,
         },
         secondary_first_name_5: {
@@ -618,36 +618,36 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_5: {},
         name_of_bank_5: {
-            required: true,
+          
             maxlength: true,
         },
         expiry_date_5: {
-            required: true,
+            
             maxlength: 20,
         },
 
         charge_card_to_protect_4: {
-            required: true,
+          
             maxlength: 16,
         },
         card_number_4: {
-            required: true,
+            
             maxlength: 16,
         },
         nickname_4: {
-            required: true,
+            
             maxlength: 25,
         },
         primary_first_name_4: {
-            required: true,
+           
             maxlength: 24,
         },
         primary_mi_4: {
-            required: true,
+           
             maxlength: 20,
         },
         primary_last_name_4: {
-            required: true,
+            
             maxlength: 20,
         },
         secondary_first_name_4: {
@@ -661,15 +661,15 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_4: {},
         name_of_bank_4: {
-            required: true,
+       
             maxlength: true,
         },
         expiry_date_4: {
-            required: true,
+           
             maxlength: 20,
         },
         chin_description: {
-            required: false,
+          
             maxlength: 50,
         },
         eyes_description: {

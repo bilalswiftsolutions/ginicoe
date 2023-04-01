@@ -123,7 +123,7 @@
             <div class="form-group">
                
                 <label for="us_state" class="wizard-form-text-label">16.12 state</label>
-                <select class="form-control" name="us_state" id="us_state" required>
+                <select class="form-control" name="us_state" id="us_state" >
                     <option></option>
                     <option value="{{ $travel_info->us_state ?? ''  ?? '' }}" selected>
                         {{ $travel_info->us_state ?? '' }}</option>
@@ -190,7 +190,7 @@
             <div class="form-group">
                
                 <label for="state_driver_license" class="wizard-form-text-label">16.13 State Driver's License</label>
-               <select class="form-control" name="state_driver_license" id="state_driver_license" required>
+               <select class="form-control" name="state_driver_license" id="state_driver_license" >
                     <option></option>
                     <option value="{{ $travel_info->state_driver_license ?? ''  ?? '' }}" selected>
                         {{ $travel_info->state_driver_license ?? '' }}</option>
@@ -265,7 +265,7 @@
             <div class="form-group">
                
                 <label for="state_id" class="wizard-form-text-label">16.15 State ID</label>
-                <select class="form-control" name="state_id" id="state_id" required>
+                <select class="form-control" name="state_id" id="state_id" >
                     <option></option>
                     <option value="{{ $travel_info->state_id ?? ''  ?? '' }}" selected>
                         {{ $travel_info->state_id ?? '' }}</option>
@@ -413,7 +413,7 @@
             <div class="form-group">
                
                 <label for="state_fishing" class="wizard-form-text-label">16.19 State Fishing</label>
-                <select class="form-control" name="state_fishing" id="state_fishing" required>
+                <select class="form-control" name="state_fishing" id="state_fishing" >
                     <option></option>
                     <option value="{{ $travel_info->state_fishing ?? ''  ?? '' }}" selected>
                         {{ $travel_info->state_fishing ?? '' }}</option>
@@ -487,7 +487,7 @@
             <div class="form-group">
                
                 <label for="state_pilot_license" class="wizard-form-text-label">16.21 State Pilot License</label>
-                <select class="form-control" name="state_pilot_license" id="state_pilot_license" required>
+                <select class="form-control" name="state_pilot_license" id="state_pilot_license" >
                     <option></option>
                     <option value="{{ $travel_info->state_pilot_license ?? ''  ?? '' }}" selected>
                         {{ $travel_info->state_pilot_license ?? '' }}</option>
@@ -561,7 +561,7 @@
             <div class="form-group">
                
                 <label for="state_handgun_firearm" class="wizard-form-text-label">16.23 State Handgun or Firearm</label>
-                <select class="form-control" name="state_handgun_firearm" id="state_handgun_firearm" required>
+                <select class="form-control" name="state_handgun_firearm" id="state_handgun_firearm" >
                     <option></option>
                     <option value="{{ $travel_info->state_handgun_firearm ?? ''  ?? '' }}" selected>
                         {{ $travel_info->state_handgun_firearm ?? '' }}</option>

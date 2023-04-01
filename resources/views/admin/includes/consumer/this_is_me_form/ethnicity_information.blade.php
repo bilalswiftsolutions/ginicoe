@@ -38,7 +38,7 @@
             <div class="form-group">
               
                 <label for="marital_status" class="wizard-form-text-label">4.2 What is your current Marital Status?</label>
-                <select class="form-control" name="marital_status" id="marital_status" required>
+                <select class="form-control" name="marital_status" id="marital_status" >
                     <option></option>
                     <option value="divorced" @if (!empty($ethnicity_info) && $ethnicity_info->marital_status == 'divorced') selected @endif>Divorced</option>
                     <option value="domestic_partners" @if (!empty($ethnicity_info) && $ethnicity_info->marital_status == 'domestic_partners') selected @endif>Domestic Partners</option>
@@ -60,7 +60,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="weight" value="{{$ethnicity_info->weight ?? ''}}" type="number" class="form-control wizard-required"
-                    id="weight" required>
+                    id="weight" >
                 <label for="weight" class="wizard-form-text-label">4.3 Weight (lbs)</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -69,7 +69,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="height" value="{{$ethnicity_info->height ?? ''}}" type="number" class="form-control wizard-required"
-                    id="height"  required>
+                    id="height"  >
                 <label for="height" class="wizard-form-text-label">4.4 Height (inches)</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -80,7 +80,7 @@
 
                 <label for="middle_initial" class="wizard-form-text-label">4.5 What complexion or hue or pigmentation do
                     others most see your face today? </label>
-                <select class="form-control" name="complexion" id="complexion" required>
+                <select class="form-control" name="complexion" id="complexion" >
                     <option></option>
                     <option value="albinism" @if(!empty($ethnicity_info) && $ethnicity_info->complexion == 'albinism') selected @endif>Albinism</option>
                     <option value="black" @if(!empty($ethnicity_info) && $ethnicity_info->complexion == 'black') selected @endif>Black</option>

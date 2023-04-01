@@ -9,7 +9,7 @@
                 <label for="neighborhood_race_right" class="wizard-form-text-label">5.1 what race are your nearest
                     neighbors to the right of you?
                 </label>
-                <select class="form-control" name="neighborhood_race_right" id="neighborhood_race_right" required>
+                <select class="form-control" name="neighborhood_race_right" id="neighborhood_race_right" >
                     <option></option>
                     <option value="plahnet52" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'plahnet52') selected @endif>PLAHNET52 52 (5A’s &
                         2H’s)</option>
@@ -52,7 +52,7 @@
             <div class="form-group">
                 <input value="{{ $my_neighborhood_info->name_of_neighborhood_household_head_right ?? '' }}"
                     name="name_of_neighborhood_household_head_right" type="text" class="form-control wizard-required"
-                    id="name_of_neighborhood_household_head_right" required>
+                    id="name_of_neighborhood_household_head_right" >
                 <label for="weight" class="wizard-form-text-label">5.2 What is the last name of the head of household
                     of your nearest neighbor to the right?</label>
                 <p class="text_danger form_error"></p>
@@ -126,7 +126,7 @@
             <div class="form-group">
 
                 <label for="neighborhood_state_right" class="wizard-form-text-label">5.8 State</label>
-                <select class="form-control" name="neighborhood_state_right" id="neighborhood_state_right" required>
+                <select class="form-control" name="neighborhood_state_right" id="neighborhood_state_right" >
                     <option></option>
                     <option value="{{ $my_neighborhood_info->neighborhood_state_right ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_state_right ?? '' }}</option>
@@ -189,7 +189,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="neighborhood_city_right" class="wizard-form-text-label">5.9 City</label>
-                <select class="form-control" name="neighborhood_city_right" id="neighborhood_city_right" required>
+                <select class="form-control" name="neighborhood_city_right" id="neighborhood_city_right" >
                     <option value="{{ $my_neighborhood_info->neighborhood_city_right ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_city_right ?? '' }}</option>
                 </select>
@@ -249,7 +249,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <input value="{{ $my_neighborhood_info->name_of_neighborhood_household_head_left ?? '' }}" name="name_of_neighborhood_household_head_left" type="text"
-                    class="form-control wizard-required" id="name_of_neighborhood_household_head_left" required>
+                    class="form-control wizard-required" id="name_of_neighborhood_household_head_left" >
                 <label for="weight" class="wizard-form-text-label">5.11 What is the last name of the head of
                     household of your nearest neighbor to the left?</label>
                 <p class="text_danger form_error"></p>
@@ -320,7 +320,7 @@
             <div class="form-group">
 
                 <label for="neighborhood_state_left" class="wizard-form-text-label">5.17 State</label>
-                <select class="form-control" name="neighborhood_state_left" id="neighborhood_state_left" required>
+                <select class="form-control" name="neighborhood_state_left" id="neighborhood_state_left" >
                     <option></option>
                     <option value="{{ $my_neighborhood_info->neighborhood_state_left ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_state_left ?? '' }}</option>
@@ -383,7 +383,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="neighborhood_city_left" class="wizard-form-text-label">5.18 City</label>
-                <select class="form-control" name="neighborhood_city_left" id="neighborhood_city_left" required>
+                <select class="form-control" name="neighborhood_city_left" id="neighborhood_city_left" >
                     <option value="{{ $my_neighborhood_info->neighborhood_city_left ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_city_left ?? '' }}</option>
                 </select>
@@ -445,7 +445,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <input value="{{$my_neighborhood_info->name_of_neighborhood_household_head_back ?? ''}}" name="name_of_neighborhood_household_head_back" type="text"
-                    class="form-control wizard-required" id="name_of_neighborhood_household_head_back" required>
+                    class="form-control wizard-required" id="name_of_neighborhood_household_head_back" >
                 <label for="weight" class="wizard-form-text-label">5.20 What is the last name of the head of
                     household
                     of your nearest neighbor to the back?</label>
@@ -517,7 +517,7 @@
             <div class="form-group">
 
                 <label for="neighborhood_state_back" class="wizard-form-text-label">5.26 State</label>
-                <select class="form-control" name="neighborhood_state_back" id="neighborhood_state_back" required>
+                <select class="form-control" name="neighborhood_state_back" id="neighborhood_state_back" >
                     <option></option>
                     <option value="{{ $my_neighborhood_info->neighborhood_state_back ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_state_back ?? '' }}</option>
@@ -580,7 +580,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="neighborhood_city_back" class="wizard-form-text-label">5.27 City</label>
-                <select class="form-control" name="neighborhood_city_back" id="neighborhood_city_back" required>
+                <select class="form-control" name="neighborhood_city_back" id="neighborhood_city_back" >
                     <option value="{{ $my_neighborhood_info->neighborhood_city_back ?? '' }}" selected>
                         {{ $my_neighborhood_info->neighborhood_city_back ?? '' }}</option>
                 </select>
@@ -644,7 +644,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
                 <input value="{{$my_neighborhood_info->name_of_neighborhood_household_head_front ?? ''}}" name="name_of_neighborhood_household_head_front" type="text"
-                    class="form-control wizard-required" id="name_of_neighborhood_household_head_front" required>
+                    class="form-control wizard-required" id="name_of_neighborhood_household_head_front" >
                 <label for="weight" class="wizard-form-text-label">5.29 What is the last name of the head of
                     household
                     of your nearest neighbor to the front?</label>

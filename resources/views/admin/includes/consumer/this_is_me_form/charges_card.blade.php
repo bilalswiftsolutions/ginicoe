@@ -49,7 +49,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input  value="{{$charge_card_info->nickname_1 ?? ''}}" name="nickname_1" type="text" class="form-control wizard-required" id="nickname_1" required>
+                <input  value="{{$charge_card_info->nickname_1 ?? ''}}" name="nickname_1" type="text" class="form-control wizard-required" id="nickname_1" >
                 <label for="nickname_1" class="wizard-form-text-label">7.2 Nickname</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -68,7 +68,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->primary_mi_1 ?? ''}}" name="primary_mi_1" type="text" class="form-control wizard-required" id="primary_mi_1"
-                    required>
+                    >
                 <label for="primary_mi_1" class="wizard-form-text-label">7.4 Primary Card Holder MI</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -169,7 +169,7 @@
 
                 <label for="name_of_bank_1" class="wizard-form-text-label">7.11 Name of the Bank that issued my card
                     is?</label>
-                <select class="form-control" name="name_of_bank_1" id="name_of_bank_1">
+                <select class="form-control" name="name_of_bank_1" id="name_of_bank_1" required>
                     <option></option>
                     <option value="american_express" @if(!empty($charge_card_info) && $charge_card_info->name_of_bank_1 == 'american_express') selected @endif>American Express</option>
                     <option value="bank_of_america" @if(!empty($charge_card_info) && $charge_card_info->name_of_bank_1 == 'bank_of_america') selected @endif>Bank of America</option>
@@ -192,7 +192,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->expiry_date_1 ?? date('Y-m-d') }}" name="expiry_date_1" type="date"
-                    class="form-control wizard-required" id="expiry_date_1">
+                    class="form-control wizard-required" id="expiry_date_1" required>
                 <label for="expiry_date_1" class="wizard-form-text-label">7.12 Expiry Date</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -245,7 +245,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{$charge_card_info->card_number_2 ?? ''}}" name="card_number_2" type="text" class="form-control wizard-required" id="card_number_2"
-                    required>
+                    >
                 <label for="card_number_2" class="wizard-form-text-label">7.13 Card Number</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -254,7 +254,8 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->nickname_2 ?? ''}}" name="nickname_2" type="text" class="form-control wizard-required" id="nickname_2"
-                    required>
+                    
+                >
                 <label for="nickname_2" class="wizard-form-text-label">7.16 Nickname</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -263,7 +264,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->primary_first_name_2 ?? ''}}" name="primary_first_name_2" type="text" class="form-control wizard-required"
-                    id="primary_first_name_2" required>
+                    id="primary_first_name_2" >
                 <label for="primary_first_name_2" class="wizard-form-text-label">7.17 Primary Card Holder First
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -273,7 +274,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->primary_mi_2 ?? ''}}" name="primary_mi_2" type="text" class="form-control wizard-required" id="primary_mi_2"
-                    required>
+                    >
                 <label for="primary_mi_2" class="wizard-form-text-label">7.18 Primary Card Holder MI</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -282,7 +283,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input  value="{{$charge_card_info->primary_last_name_2 ?? ''}}" name="primary_last_name_2" type="text" class="form-control wizard-required"
-                    id="primary_last_name_2" required>
+                    id="primary_last_name_2" >
                 <label for="primary_last_name_2" class="wizard-form-text-label">7.19 Primary Card Holder Last
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -448,7 +449,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="card_number_3" value="{{$charge_card_info->card_number_3 ?? ''}}" type="text" class="form-control wizard-required" id="card_number_3"
-                    required>
+                    >
                 <label for="card_number_3" class="wizard-form-text-label">7.28 Card Number</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -457,7 +458,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="nickname_3"  value="{{$charge_card_info->nickname_3 ?? ''}}" type="text" class="form-control wizard-required" id="nickname_3"
-                    required>
+                    >
                 <label for="nickname_3" class="wizard-form-text-label">7.29 Nickname</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -466,7 +467,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_first_name_3"   value="{{$charge_card_info->primary_first_name_3 ?? ''}}" type="text" class="form-control wizard-required"
-                    id="primary_first_name_3" required>
+                    id="primary_first_name_3" >
                 <label for="primary_first_name_3" class="wizard-form-text-label">7.30 Primary Card Holder First
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -476,7 +477,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_mi_3"   value="{{$charge_card_info->primary_mi_3 ?? ''}}" type="text" class="form-control wizard-required" id="primary_mi_3"
-                    required>
+                    >
                 <label for="primary_mi_3" class="wizard-form-text-label">7.31 Primary Card Holder MI</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -485,7 +486,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_last_name_3"  value="{{$charge_card_info->primary_last_name_3 ?? ''}}" type="text" class="form-control wizard-required"
-                    id="primary_last_name_3" required>
+                    id="primary_last_name_3" >
                 <label for="primary_last_name_3" class="wizard-form-text-label">7.32 Primary Card Holder Last
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -653,7 +654,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="card_number_4"  value="{{$charge_card_info->card_number_4 ??'' }}" type="text" class="form-control wizard-required" id="card_number_4"
-                    required>
+                    >
                 <label for="card_number_4" class="wizard-form-text-label">7.41 Card Number</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -662,7 +663,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="nickname_4"   value="{{$charge_card_info->nickname_4 ??'' }}" type="text" class="form-control wizard-required" id="nickname_4"
-                    required>
+                    >
                 <label for="nickname_4" class="wizard-form-text-label">7.42 Nickname</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -671,7 +672,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_first_name_4"   value="{{$charge_card_info->primary_first_name_4 ??'' }}" type="text" class="form-control wizard-required"
-                    id="primary_first_name_4" required>
+                    id="primary_first_name_4" >
                 <label for="primary_first_name_4" class="wizard-form-text-label">7.43 Primary Card Holder First
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -681,7 +682,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_mi_4"   value="{{$charge_card_info->primary_mi_4 ??'' }}" type="text" class="form-control wizard-required" id="primary_mi_4"
-                    required>
+                    >
                 <label for="primary_mi_4" class="wizard-form-text-label">7.44 Primary Card Holder MI</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -690,7 +691,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_last_name_4"   value="{{$charge_card_info->primary_last_name_4 ??'' }}" type="text" class="form-control wizard-required"
-                    id="primary_last_name_4" required>
+                    id="primary_last_name_4" >
                 <label for="primary_last_name_4" class="wizard-form-text-label">7.45 Primary Card Holder Last
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -856,7 +857,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="card_number_5"   value="{{$charge_card_info->card_number_5 ?? '' }}" type="text" class="form-control wizard-required" id="card_number_5"
-                    required>
+                    >
                 <label for="card_number_5" class="wizard-form-text-label">7.54 Card Number</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -865,7 +866,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="nickname_5"  value="{{$charge_card_info->nickname_5 ?? '' }}" type="text" class="form-control wizard-required" id="nickname_5"
-                    required>
+                    >
                 <label for="nickname_5" class="wizard-form-text-label">7.55 Nickname</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -874,7 +875,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_first_name_5"  value="{{$charge_card_info->primary_first_name_5 ?? '' }}" type="text" class="form-control wizard-required"
-                    id="primary_first_name_5" required>
+                    id="primary_first_name_5" >
                 <label for="primary_first_name_5" class="wizard-form-text-label">7.56 Primary Card Holder First
                     Name</label>
                 <p class="text_danger form_error"></p>
@@ -884,7 +885,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_mi_5"  value="{{$charge_card_info->primary_mi_5 ?? '' }}"  type="text" class="form-control wizard-required" id="primary_mi_5"
-                    required>
+                    >
                 <label for="primary_mi_5" class="wizard-form-text-label">7.57 Primary Card Holder MI</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -893,7 +894,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="primary_last_name_5"  value="{{$charge_card_info->primary_last_name_5 ?? '' }}" type="text" class="form-control wizard-required"
-                    id="primary_last_name_5" required>
+                    id="primary_last_name_5" >
                 <label for="primary_last_name_5" class="wizard-form-text-label">7.58 Primary Card Holder Last
                     Name</label>
                 <p class="text_danger form_error"></p>

@@ -16,7 +16,7 @@ class CreateFacialImageUploadsTable extends Migration
         Schema::create('facial_image_uploads', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id')->index();
-            $table->string('facial_image');
+            $table->string('facial_image')->nullable();
             $table->boolean('to_see_global_look_alike')->default(0);
             $table->boolean('like_to_have_global_look_alike')->default(0);
            

@@ -9,7 +9,7 @@
                 <label for="chin_description" class="wizard-form-text-label">9.1 What best describe your chin as you see
                     it?
                 </label>
-                <select class="form-control" name="chin_description" id="chin_description" required>
+                <select class="form-control" name="chin_description" id="chin_description" >
                     <option></option>
                     <option value="bi_lateral_dimples_cheek" @if (!empty($head_and_face_info) && $head_and_face_info->chin_description === 'bi_lateral_dimples_cheek') selected @endif>
                         Bi-Lateral Dimples Cheek</option>
@@ -31,7 +31,7 @@
                 <label for="eyes_description" class="wizard-form-text-label">9.2 What best describe your eyes as you see
                     it?
                 </label>
-                <select class="form-control" name="eyes_description" id="eyes_description" required>
+                <select class="form-control" name="eyes_description" id="eyes_description" >
                     <option></option>
                     <option value="eye_eccentricity" @if (!empty($head_and_face_info) && $head_and_face_info->eyes_description === 'eye_eccentricity') selected @endif>Eye Eccentricity
                     </option>
@@ -52,7 +52,7 @@
                 <label for="hair_description" class="wizard-form-text-label">9.3 What best describe your hair as you see
                     it?
                 </label>
-                <select class="form-control" name="hair_description" id="hair_description" required>
+                <select class="form-control" name="hair_description" id="hair_description" >
                     <option></option>
                     <option value="head_eccentricity" @if (!empty($head_and_face_info) && $head_and_face_info->hair_description === 'head_eccentricity') selected @endif>Head
                         Eccentricity</option>
@@ -72,7 +72,7 @@
                     see
                     it?
                 </label>
-                <select class="form-control" name="mouth_description" id="mouth_description" required>
+                <select class="form-control" name="mouth_description" id="mouth_description" >
                     <option></option>
                     <option value="mouth_curvature" @if (!empty($head_and_face_info) && $head_and_face_info->mouth_description === 'mouth_curvature') selected @endif>Mouth Curvature
                     </option>

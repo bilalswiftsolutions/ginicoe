@@ -16,10 +16,10 @@ class CreateEmploymentInformationTable extends Migration
         Schema::create('employment_information', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id');
-            $table->string('employer_name');
-            $table->string('job_title');
-            $table->string('employer_identification_number');
-            $table->string('anual_salary_last_year');
+            $table->string('employer_name')->nullable();
+            $table->string('job_title')->nullable();
+            $table->string('employer_identification_number')->nullable();
+            $table->string('anual_salary_last_year')->nullable();
             $table->boolean('are_you_active_memeber_of_labour_union')->default(0);
             $table->string('labor_union_name')->nullable();
             $table->string('your_union_membership_number')->nullable();

@@ -9,7 +9,7 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$employment_info->employer_name ?? ''}}" name="employer_name" type="text" class="form-control wizard-required" id="employer_name" required>
+                <input value="{{$employment_info->employer_name ?? ''}}" name="employer_name" type="text" class="form-control wizard-required" id="employer_name" >
                 <label for="weight" class="wizard-form-text-label">6.1 Employer's Name</label>
                 <p class="text_danger form_error"></p>
             </div>
@@ -26,7 +26,8 @@
 
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input value="{{$employment_info->employer_identification_number ?? ''}}" name="employer_identification_number" type="text" class="form-control wizard-required" id="employer_identification_number" required>
+                <input value="{{$employment_info->employer_identification_number ?? ''}}" name="employer_identification_number" type="text" class="form-control wizard-required" id="employer_identification_number" 
+                >
                 <label for="employer_identification_number" class="wizard-form-text-label">6.3 Employer Identification Number</label>
                 <p class="text_danger form_error"></p>
             </div>

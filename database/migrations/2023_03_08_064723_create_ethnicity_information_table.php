@@ -16,11 +16,11 @@ class CreateEthnicityInformationTable extends Migration
         Schema::create('ethnicity_information', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id');
-            $table->string('race');
-            $table->string('marital_status');
-            $table->string('complexion');
-            $table->string('weight');
-            $table->string('height');            
+            $table->string('race')->nullable();
+            $table->string('marital_status')->nullable();
+            $table->string('complexion')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('height')->nullable();            
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="sex_at_birth" class="wizard-form-text-label">3.1 Sex Assigned at Birth <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
-                <select class="form-control" name="sex_at_birth" id="sex_at_birth" required  @if(!empty($gender_identity_info) ) disabled @endif>
+                <select class="form-control" name="sex_at_birth" id="sex_at_birth" required  @if(!empty($gender_identity_info) ) disabled @endif >
                     <option></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->sex_at_birth == 'choose_not_to_disclose') selected @endif value="choose_not_to_disclose"></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->sex_at_birth == 'female') selected @endif value="female">Female</option>
@@ -23,7 +23,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="legal_sex" class="wizard-form-text-label">3.2 Legal Sex</label>
-                <select class="form-control" name="legal_sex" id="legal_sex" required>
+                <select class="form-control" name="legal_sex" id="legal_sex" >
                     <option></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->legal_sex == 'female') selected @endif value="female">Female</option>        
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->legal_sex == 'male') selected @endif value="male">Male</option>
@@ -37,7 +37,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="self_identify_sex" class="wizard-form-text-label">3.3 What Gender do you self-identify as today</label>
-                <select class="form-control" name="self_identify_sex" id="self_identify_sex" required>
+                <select class="form-control" name="self_identify_sex" id="self_identify_sex" >
                     <option></option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->self_identify_sex == '"androgyn') selected @endif value="androgyn">Androgyn</option>
                     <option @if(!empty($gender_identity_info) && $gender_identity_info->self_identify_sex == 'bisexual_as_female') selected @endif  value="bisexual_as_female">Bi-Sexual Accept Me A Female</option>

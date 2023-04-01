@@ -16,13 +16,13 @@ class CreateMyPidegreeInformationTable extends Migration
         Schema::create('my_pidegree_information', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id');
-            $table->string('fname',50);
-            $table->string('lname',50);
-            $table->string('middle_initial',50);
-            $table->string('suffix',50);
-            $table->string('nick_name',50);
-            $table->date('date_of_birth',50);
-            $table->string('social_security_no',50);
+            $table->string('fname',50)->nullable();
+            $table->string('lname',50)->nullable();
+            $table->string('middle_initial',50)->nullable();
+            $table->string('suffix',50)->nullable();
+            $table->string('nick_name',50)->nullable();
+            $table->date('date_of_birth',50)->nullable();
+            $table->string('social_security_no',50)->nullable();
             $table->string('cpn_no',50)->nullable();
             $table->boolean('us_vetran')->default(0);
             $table->boolean('consumer_presently_incarcerated')->default(0);

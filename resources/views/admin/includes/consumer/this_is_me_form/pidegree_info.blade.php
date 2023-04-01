@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="suffix" value="{{$my_pidegree_info->suffix ?? ''}}"  value="" type="text" class="form-control wizard-required">
+                <input name="suffix" value="{{$my_pidegree_info->suffix ?? ''}}" type="text" class="form-control wizard-required">
                 <label for="suffix" class="wizard-form-text-label">1.4 Suffix</label>
                 <p class="text_danger form_error"></p>
 

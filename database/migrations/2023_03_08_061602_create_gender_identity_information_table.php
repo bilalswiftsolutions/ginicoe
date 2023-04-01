@@ -16,9 +16,9 @@ class CreateGenderIdentityInformationTable extends Migration
         Schema::create('gender_identity_information', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('consumer_id');
-            $table->string('sex_at_birth');
-            $table->string('legal_sex');
-            $table->string('self_identify_sex');
+            $table->string('sex_at_birth')->nullable();
+            $table->string('legal_sex')->nullable();
+            $table->string('self_identify_sex')->nullable();
             
             $table->timestamps();
         });
