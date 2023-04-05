@@ -12,3 +12,4 @@
 <script src="{{ asset('public/frontend/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('public/backend/js/jquery.mask.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places,geometry,visualization&key=AIzaSyDfMtkZ0Ym31Ywi1A6rdpiE8BT8SXCwmSw"></script>

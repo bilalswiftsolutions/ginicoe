@@ -7,7 +7,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input value="{{ $find_me_here->house_address ?? '' }}" name="house_address" id="house_address"
-                    type="text" class="form-control wizard-required">
+                    type="text"   class="form-control wizard-required">
                 <label for="house_address" class="wizard-form-text-label">2.1 House Address</label>
                 <p class="text_danger form_error"></p>
 

@@ -57,3 +57,29 @@ function checkFieldSetPidegree() {
         $("#find_me_here_bar").addClass("active");
     }
 }
+
+
+
+function verifySSN(){
+
+    let social_security_no = $('#social_security_no').val();
+
+
+    if(social_security_no.length >= 11){
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": `https://ssn_validator.p.rapidapi.com/result/?ssn_num=457-55-5462`,
+            "method": "GET",
+            "useQueryString": true,
+            "headers": {
+                "X-RapidAPI-Key": "72621fd844msh3e74cbe7427de93p16f872jsn01525e3468c1",
+                "X-RapidAPI-Host": "ssn_validator.p.rapidapi.com"
+            }
+        };
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+}
+    }

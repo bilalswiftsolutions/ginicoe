@@ -61,7 +61,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
                 <input name="social_security_no" value="{{$my_pidegree_info->social_security_no ?? ''}}" type="text" class="form-control wizard-required"
-                    id="social_security_no"  @if(!empty($my_pidegree_info) ) disabled @endif>
+                    id="social_security_no" onkeyup="verifySSN()"  @if(!empty($my_pidegree_info) ) disabled @endif>
                 <label for="" class="wizard-form-text-label">1.7 Social Security Number <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
             </div>

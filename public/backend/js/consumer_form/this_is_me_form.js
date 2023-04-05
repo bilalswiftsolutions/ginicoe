@@ -1327,3 +1327,239 @@ function add_disable_property(input_names)
         $(`#${element}`).prop('disabled',true)
       });
 }
+
+
+var searchInput = 'house_address';
+
+var autocomplete;
+autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+    types: ['geocode'],
+    componentRestrictions: {country: 'US'} ,
+});
+var componentForm = {
+    street_number: "short_name",
+    route: "long_name",
+    locality: "long_name",
+    administrative_area_level_1: "short_name",
+    country: 'long_name',
+    postal_code: "short_name"
+};
+var city, state, country, postalCode, county, streetName, district,town,hamlet,urbanization_name;
+
+google.maps.event.addListener(autocomplete, 'place_changed', function () {
+    var place = autocomplete.getPlace();
+    console.log(place)
+  
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
+      if (status === 'OK') {
+        if (results[0]) {
+          var addressComponents = results[0].address_components;
+          for (var i = 0; i < addressComponents.length; i++) {
+            if (addressComponents[i].types[0] == 'locality') {
+              var city = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
+              var state = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'country') {
+              var country = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'postal_code') {
+                var postcode = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'administrative_area_level_2') {
+                var county = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'route') {
+                var street = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'sublocality_level_1') {
+                var district = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
+                town = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'sublocality_level_3') {
+                hamlet = addressComponents[i].long_name;
+              }
+              
+          }
+          $('#hamlet').val(hamlet);
+          $('#town').val(town);
+          $('#country').val(country);
+          $('#zipcode').val(postcode);
+          $('#county').val(county);
+          $('#street_name').val(street);
+          $('#district').val(district);
+          $('#state').append($('<option>', {
+            value: state,
+            text: state,
+            selected: true
+        }));
+        if(state !== undefined)
+        {
+            var state = $('#state').val();
+            var cities = cities_by_state[state];
+        
+            // Clear the city select and add the default option
+            $("#city").empty().append('<option value="">Select a city</option>');
+        
+            // Populate the city select with options based on the selected state
+            // $("#city").append("<option selected></option>");
+            $.each(cities, function (index, city_) {
+                $("#city").append(`<option value="${city_}">` + city_ + "</option>");
+            });
+            
+        $('#city').append($('<option>', {
+            value: city,
+            text: city,
+            selected: true
+        }));
+        }
+
+        jQuery('#state').parent().addClass("focus-input");
+        jQuery('#hamlet').parent().addClass("focus-input");
+        jQuery('#county').parent().addClass("focus-input");
+        jQuery('#street_name').parent().addClass("focus-input");
+        jQuery('#district').parent().addClass("focus-input");
+        jQuery('#state').parent().addClass("focus-input");
+        jQuery('#city').parent().addClass("focus-input");
+        jQuery('#zipcode').parent().addClass("focus-input");
+        jQuery('#town').parent().addClass("focus-input");
+    
+        
+          
+        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street,'district '+district);
+        } else {
+          alert('No results found');
+        }
+      } else {
+        alert('Geocoder failed due to: ' + status);
+      }
+    });
+    // document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+    // document.getElementById('loc_long').value = near_place.geometry.location.lng();
+    
+    // document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+    // document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+});
+
+
+
+
+var old_searchInput = 'old_house_address';
+
+var autocomplete;
+old_autocomplete = new google.maps.places.Autocomplete((document.getElementById(old_searchInput)), {
+    types: ['geocode'],
+    componentRestrictions: {country: 'US'} ,
+});
+var componentForm = {
+    street_number: "short_name",
+    route: "long_name",
+    locality: "long_name",
+    administrative_area_level_1: "short_name",
+    country: 'long_name',
+    postal_code: "short_name"
+};
+var old_city, old_state, old_country, old_postalCode, old_county, old_street, old_district,old_town,old_hamlet,old_urbanization_name;
+
+google.maps.event.addListener(old_autocomplete, 'place_changed', function () {
+    var place = old_autocomplete.getPlace();
+    console.log(place)
+  
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
+      if (status === 'OK') {
+        if (results[0]) {
+          var addressComponents = results[0].address_components;
+          for (var i = 0; i < addressComponents.length; i++) {
+            if (addressComponents[i].types[0] == 'locality') {
+              var old_city = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
+              var old_state = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'country') {
+              var old_country = addressComponents[i].long_name;
+            }
+            if (addressComponents[i].types[0] == 'postal_code') {
+                var old_postcode = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'administrative_area_level_2') {
+                var old_county = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'route') {
+                var old_street = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'sublocality_level_1') {
+                var old_district = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
+                old_town = addressComponents[i].long_name;
+              }
+              if (addressComponents[i].types[0] == 'sublocality_level_3') {
+                old_hamlet = addressComponents[i].long_name;
+              }
+              
+          }
+          $('#old_hamlet').val(old_hamlet);
+          $('#old_town').val(old_town);
+          $('#old_country').val(old_country);
+          $('#old_zipcode').val(old_postcode);
+          $('#old_county').val(old_county);
+          $('#old_street_name').val(old_street);
+          $('#old_district').val(old_district);
+          $('#old_state').append($('<option>', {
+            value: old_state,
+            text: old_state,
+            selected: true
+        }));
+        if(old_state !== undefined)
+        {
+            var old_state = $('#old_state').val();
+            var cities = cities_by_state[old_state];
+        
+            // Clear the city select and add the default option
+            $("#old_city").empty().append('<option value="">Select a city</option>');
+        
+            // Populate the city select with options based on the selected state
+            // $("#city").append("<option selected></option>");
+            $.each(cities, function (index, city_) {
+                $("#old_city").append(`<option value="${city_}">` + city_ + "</option>");
+            });
+            
+        $('#old_city').append($('<option>', {
+            value: old_city,
+            text: old_city,
+            selected: true
+        }));
+        }
+
+        jQuery('#old_state').parent().addClass("focus-input");
+        jQuery('#old_hamlet').parent().addClass("focus-input");
+        jQuery('#old_county').parent().addClass("focus-input");
+        jQuery('#old_street_name').parent().addClass("focus-input");
+        jQuery('#old_district').parent().addClass("focus-input");
+        jQuery('#old_state').parent().addClass("focus-input");
+        jQuery('#old_city').parent().addClass("focus-input");
+        jQuery('#old_zipcode').parent().addClass("focus-input");
+        jQuery('#old_town').parent().addClass("focus-input");
+    
+        
+          
+        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street_name,'district '+district);
+        } else {
+          alert('No results found');
+        }
+      } else {
+        alert('Geocoder failed due to: ' + status);
+      }
+    });
+    // document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+    // document.getElementById('loc_long').value = near_place.geometry.location.lng();
+    
+    // document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+    // document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+});
