@@ -44,7 +44,10 @@ function submitAttestation() {
         $("#attestation_bar").children("div").eq(0).addClass("text-white");
         $("#attestation_bar").removeClass("active");
         toastr.success("Form Completed");
+       setTimeout(()=>{
         location.reload();
+
+       },5000)
     }
 }
 
