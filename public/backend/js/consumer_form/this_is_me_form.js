@@ -1438,6 +1438,8 @@ google.maps.event.addListener(autocomplete, 'place_changed', function () {
         alert('Geocoder failed due to: ' + status);
       }
     });
+    $("#latitude").val(place.geometry["location"].lat());
+    $("#longitude").val(place.geometry["location"].lng());
     // document.getElementById('loc_lat').value = near_place.geometry.location.lat();
     // document.getElementById('loc_long').value = near_place.geometry.location.lng();
     
@@ -1557,6 +1559,9 @@ google.maps.event.addListener(old_autocomplete, 'place_changed', function () {
         alert('Geocoder failed due to: ' + status);
       }
     });
+
+    $("#old_latitude").val(place.geometry["location"].lat());
+    $("#old_longitude").val(place.geometry["location"].lng());
     // document.getElementById('loc_lat').value = near_place.geometry.location.lat();
     // document.getElementById('loc_long').value = near_place.geometry.location.lng();
     

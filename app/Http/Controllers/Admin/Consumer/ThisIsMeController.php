@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Consumer;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ConsumerThisIsMeMail;
 use App\Models\Admin\Admin;
 use App\Models\Admin\Consumer\AttestationInformation;
 use App\Models\Admin\Consumer\ChargeCardInformation;
@@ -23,6 +24,7 @@ use App\Models\Admin\Consumer\TwinIdentifierInformation;
 use App\Models\Admin\FieldsetReturnBackData;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ThisIsMeController extends Controller
 {
@@ -150,42 +152,64 @@ class ThisIsMeController extends Controller
     }
     public function store_facial_image_upload($request)
     {
-        if(!empty($request->file)){
-        if (in_array($request->file->extension(), ['png', 'jpg', 'jpeg'])) {
-            // Store the uploaded file in the public/uploads directory
-            $imageName = time() . '.' . $request->file->extension();
-            $request->file->move(public_path('facial_uploads'), $imageName);
+        if (!empty($request->file)) {
+            if (in_array($request->file->extension(), ['png', 'jpg', 'jpeg'])) {
+                // Store the uploaded file in the public/uploads directory
+                $imageName = time() . '.' . $request->file->extension();
+                $request->file->move(public_path('facial_uploads'), $imageName);
+                return   FacialImageUpload::updateOrCreate(
+                    ['consumer_id' => $request->consumer_id],
+                    $request->only(
+                        'consumer_id',
+                        'to_see_global_look_alike',
+                        'like_to_have_global_look_alike'
+                    ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
+                );
+            }
+        } else {
+
             return   FacialImageUpload::updateOrCreate(
                 ['consumer_id' => $request->consumer_id],
                 $request->only(
                     'consumer_id',
                     'to_see_global_look_alike',
                     'like_to_have_global_look_alike'
-                ) + ['facial_image' => asset('public/facial_uploads/' . $imageName)]
+                )
             );
         }
-    }else{
-     
-        return   FacialImageUpload::updateOrCreate(
-            ['consumer_id' => $request->consumer_id],
-            $request->only(
-                'consumer_id',
-                'to_see_global_look_alike',
-                'like_to_have_global_look_alike'
-            ) 
-        );
-    }
     }
     public function store_attestation_info($request)
     {
-        return AttestationInformation::updateOrCreate(
-            ['consumer_id' => $request->consumer_id],
-            $request->only(
-                'consumer_id',
-                'how_you_heared_about_us',
-                'i_confirm_data_is_accurate'
-            )
-        );
+        try {
+
+            $attestation_info = AttestationInformation::updateOrCreate(
+                ['consumer_id' => $request->consumer_id],
+                $request->only(
+                    'consumer_id',
+                    'how_you_heared_about_us',
+                    'i_confirm_data_is_accurate'
+                )
+            );
+
+            $message = "Thank you for signing up to become a Ginicoe Member.
+            We will perform some checking on our end before we can begin to protect your credit and debit card transaction.s
+            Please be patient.
+            If we require any additional info, we will contact you by mail.
+            
+            Ginicoe will never telephone you asking for information.
+            Ginicoe will never text you asking for information.
+            
+            Your data will never be sold.
+            
+            From all of our Ginicoe Associates, thank you once again for signing up.
+            We will email you once we are completed on our end.
+            Please be well.";
+           
+            Mail::to(session('email'))->send(new ConsumerThisIsMeMail('Thank you for signing up to become a Ginicoe Member', $message));
+            return $attestation_info;
+        } catch (Exception $e) {
+
+        }
     }
 
     public function store_travel_info($request)
@@ -642,7 +666,7 @@ class ThisIsMeController extends Controller
 
         $random_bytes = random_bytes(32); // generates 16 random bytes
         $random_string = bin2hex($random_bytes);
-        Admin::where('id', $request->consumer_id)->update(['guid' => 'CUSA'. $this->get_state_abbriviation($request). $request->consumer_id . $random_string]);
+        Admin::where('id', $request->consumer_id)->update(['guid' => 'CUSA' . $this->get_state_abbriviation($request) . $request->consumer_id . $random_string]);
         return FindMeHere::updateOrCreate(['consumer_id' => $request->consumer_id], $request->only(
             'consumer_id',
             'house_address',

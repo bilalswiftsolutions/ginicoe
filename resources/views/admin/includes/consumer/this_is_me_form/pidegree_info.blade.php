@@ -19,8 +19,8 @@
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
-                <input name="lname" value="{{$my_pidegree_info->lname ?? ''}}" type="text" class="form-control wizard-required">
-                <label for="lname" class="wizard-form-text-label">1.3 Last Name</label>
+                <input name="lname" value="{{$my_pidegree_info->lname ?? ''}}" type="text" class="form-control wizard-required"   @if(!empty($my_pidegree_info) ) disabled @endif>
+                <label for="lname" class="wizard-form-text-label">1.3 Last Name <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 <p class="text_danger form_error"></p>
 
             </div>

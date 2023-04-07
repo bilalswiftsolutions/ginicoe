@@ -358,14 +358,14 @@
     <hr>
     <div class="col-md-12 col-lg-12">
         <div class="form-group">
-            2.24 Have you lived at this address for 2 years or more?
+            2.24 Have you lived at this address for 2 years or more?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
             <div class="wizard-form-radio">
-                <input onclick="living_for_two_year()" @if (!empty($find_me_here) && $find_me_here->living_for_two_years == 1) checked @endif
+                <input onclick="living_for_two_year()"  @if(!empty($my_pidegree_info) ) disabled @endif  @if (!empty($find_me_here) && $find_me_here->living_for_two_years == 1) checked @endif
                     name="living_for_two_years" value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="living_for_two_year()" @if (empty($find_me_here) || $find_me_here->living_for_two_years == 0) checked @endif
+                <input onclick="living_for_two_year()"  @if(!empty($my_pidegree_info) ) disabled @endif @if (empty($find_me_here) || $find_me_here->living_for_two_years == 0) checked @endif
                     name="living_for_two_years" value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>

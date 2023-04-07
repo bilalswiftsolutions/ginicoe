@@ -111,15 +111,15 @@
 
         <div class="col-md-6 col-lg-6">
             <div class="form-group">
-                9.6 Do you require prescription eyewear?  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
+                9.6 Do you require prescription eyewear? 
                 <div class="wizard-form-radio">
                     <input name="eyeware_prescription" @if (!empty($head_and_face_info) && $head_and_face_info->eyeware_prescription == 1) checked @endif value="1"
-                        id="radio1" type="radio"  @if(!empty($head_and_face_info) ) disabled @endif>
+                        id="radio1" type="radio" >
                     <label for="radio1">Yes</label>
                 </div>
                 <div class="wizard-form-radio">
                     <input name="eyeware_prescription" @if (empty($head_and_face_info) || $head_and_face_info->eyeware_prescription == 0) checked @endif value="0"
-                        id="radio2" type="radio"  @if(!empty($head_and_face_info) ) disabled @endif>
+                        id="radio2" type="radio">
                     <label for="radio2">No</label>
                 </div>
             </div>

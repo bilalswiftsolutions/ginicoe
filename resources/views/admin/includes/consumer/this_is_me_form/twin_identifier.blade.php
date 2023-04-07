@@ -22,6 +22,8 @@
                 <label for="are_you_twin" class="wizard-form-text-label">12.2 Are you a </label>
                 <select class="form-control" name="are_you_twin" id="are_you_twin">
                     <option></option>
+                    <option value="not_applicable" @if(!empty($twin_identifier_info) && $twin_identifier_info->are_you_twin === 'not_applicable') selected @endif>
+                        Not Applicable</option>
                     <option value="conjoined_or_siamese_twins" @if(!empty($twin_identifier_info) && $twin_identifier_info->are_you_twin === 'conjoined_or_siamese_twins') selected @endif>
                         Conjoined or Siamese twins</option>
                     <option value="different_birthday_twin" @if(!empty($twin_identifier_info) && $twin_identifier_info->are_you_twin === 'different_birthday_twin') selected @endif>Different

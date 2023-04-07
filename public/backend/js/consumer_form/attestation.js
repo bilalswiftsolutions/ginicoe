@@ -43,8 +43,8 @@ function submitAttestation() {
         $("#attestation_bar").addClass("completed");
         $("#attestation_bar").children("div").eq(0).addClass("text-white");
         $("#attestation_bar").removeClass("active");
-        toastr.success("Form Completed");
-        location.reload();
+        // toastr.success("Form Completed");
+        // location.reload();
     }
 }
 
