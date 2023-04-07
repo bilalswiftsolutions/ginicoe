@@ -53,7 +53,7 @@
         <li class="nav-item @if($conName[1] == 'dashboard') active @endif">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="fas fa-fw fa-home"></i>
-                <span>@if(session('role_id') ==  1) Admin @else @if(substr(session('name'), -1) != 's')  {{session('name')}}'s @else {{session('name')}}'  @endif @endif Dashboard</span>
+                <span>@if(session('role_id') ==  1) Admin @else @if(substr(session('name'), -1) != 's')  {{session('name')}}'s @else {{session('name')}}'  @endif @endif Dashboard - Welcome Back</span>
 
             </a>
         </li>
