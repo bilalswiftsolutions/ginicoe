@@ -191,7 +191,7 @@ class ThisIsMeController extends Controller
                 )
             );
 
-            $message = "Thank you for signing up to become a Ginicoe Member.
+            $message = "<pre>Thank you for signing up to become a Ginicoe Member.
             We will perform some checking on our end before we can begin to protect your credit and debit card transaction.s
             Please be patient.
             If we require any additional info, we will contact you by mail.
@@ -203,7 +203,7 @@ class ThisIsMeController extends Controller
             
             From all of our Ginicoe Associates, thank you once again for signing up.
             We will email you once we are completed on our end.
-            Please be well.";
+            Please be well.</pre>";
            
             Mail::to(session('email'))->send(new ConsumerThisIsMeMail('Thank you for signing up to become a Ginicoe Member', $message));
             return $attestation_info;
