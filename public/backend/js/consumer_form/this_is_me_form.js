@@ -1131,7 +1131,7 @@ function store_this_is_me_form_data(data, next_button_id,goto_next =true) {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/ginicoe/admin/consumer/this-is-me-store";
+    url = "/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1162,7 +1162,7 @@ function store_this_is_me_form_data_image(data, next_button_id) {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/ginicoe/admin/consumer/this-is-me-store";
+    url = "/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1302,7 +1302,7 @@ function returnLater(fieldset, module) {
   
 
     store_this_is_me_form_data(data, null, false) 
-    url = "/ginicoe/admin/consumer/return-later";
+    url = "/admin/consumer/return-later";
     $.ajax({
         type: "get",
         url: url,
