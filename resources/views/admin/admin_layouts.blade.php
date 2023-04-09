@@ -42,7 +42,9 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
-            <div class="sidebar-brand-text mx-3">Admin Panel</div>
+            <div class="sidebar-brand-text mx-3">
+                <i class="fas fa-fw fa-home"></i>
+                User Dashboard</div>
         </a>
 
         <!-- Divider -->
@@ -85,7 +87,7 @@
         
         <li class="nav-item">
             <a class="nav-link"href="javascript:void;" onclick="switchFieldsetFromSideBar('fieldset_three','gender_identity_bar')">
-                <span class="ml-1">3. Gender Identity Information</span>
+                <span class="ml-1">3. Gender Identity</span>
 
             </a>
         </li>

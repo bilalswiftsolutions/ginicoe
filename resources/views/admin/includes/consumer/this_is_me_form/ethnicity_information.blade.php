@@ -25,7 +25,8 @@
                     <option value="tribal_entities" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'tribal_entities') selected="selected" @endif>Tribal entities</option>
                     <option value="decline" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'decline') selected="selected" @endif>Decline</option>
                     <option value="other_combination_not_described" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'other_combination_not_described') selected="selected" @endif>Other Combination Not Described</option>
-                    <option value="other" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'other') selected="selected" @endif>Other</option>
+                    <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400</option>
+
                     <option value="white" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'white') selected="selected" @endif>White</option>
                 </select>
                 <p class="text_danger form_error"></p>

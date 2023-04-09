@@ -192,11 +192,10 @@ class ThisIsMeController extends Controller
             );
 
             $message = "";
-           
+
             Mail::to(session('email'))->send(new ConsumerThisIsMeMail('Thank you for signing up to become a Ginicoe Member', $message));
             return $attestation_info;
         } catch (Exception $e) {
-
         }
     }
 
@@ -628,6 +627,13 @@ class ThisIsMeController extends Controller
     public function store_ethnicity_info($request)
     {
 
+        $admin = Admin::find($request->consumer_id);
+
+        if (empty($admin->guid)) {
+            $random_bytes = random_bytes(32); // generates 16 random bytes
+            $random_string = bin2hex($random_bytes);
+            Admin::where('id', $request->consumer_id)->update(['guid' => 'CUSA' . $this->get_state_abbriviation($request) . $this->getP52Info($request) . $request->consumer_id . $random_string]);
+        }
         return EthnicityInformation::updateOrCreate(['consumer_id' => $request->consumer_id], $request->only(
             'consumer_id',
             'race',
@@ -637,6 +643,14 @@ class ThisIsMeController extends Controller
             'middle_initial',
             'complexion'
         ));
+    }
+    public function getP52Info($request)
+    {
+        if ($request->race == 'white') {
+            return 'W';
+        } else {
+            return 'P52';
+        }
     }
 
     public function store_gender_identity_info($request)
@@ -652,9 +666,7 @@ class ThisIsMeController extends Controller
     public function store_find_me_here($request)
     {
 
-        $random_bytes = random_bytes(32); // generates 16 random bytes
-        $random_string = bin2hex($random_bytes);
-        Admin::where('id', $request->consumer_id)->update(['guid' => 'CUSA' . $this->get_state_abbriviation($request) . $request->consumer_id . $random_string]);
+
         return FindMeHere::updateOrCreate(['consumer_id' => $request->consumer_id], $request->only(
             'consumer_id',
             'house_address',
@@ -765,8 +777,13 @@ class ThisIsMeController extends Controller
             'Wisconsin' => 'WI',
             'Wyoming' => 'WY',
         );
-        $state_name = $request->state;
-        $state_abbr = $states[$state_name];
+        $state_abbr = null;
+        if (FindMeHere::where('consumer_id', $request->consumer_id)->exists()) {
+            $find_me_here = FindMeHere::where('consumer_id', $request->consumer_id)->first();
+            $state_name = $find_me_here->state;
+            if (!empty($state_name))
+                $state_abbr = $states[$state_name];
+        }
         return $state_abbr;
     }
     public function store_my_pidegree_info($request)

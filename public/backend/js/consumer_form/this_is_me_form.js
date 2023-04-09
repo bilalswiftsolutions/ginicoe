@@ -491,7 +491,10 @@ $("#this_is_me_form").validate({
         secondary_card_holder_relationship_1: {},
         name_of_bank_1: {
             required: true,
-            maxlength: true,
+            
+            alphabet_only:true,
+            maxlength: 20,
+
         },
         expiry_date_1: {
             required: true,
@@ -533,8 +536,10 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_3: {},
         name_of_bank_3: {
-            required: true,
-            maxlength: true,
+        
+            maxlength: 20,
+            alphabet_only:true,
+
         },
         expiry_date_3: {
             required: true,
@@ -575,8 +580,9 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_2: {},
         name_of_bank_2: {
-          
-            maxlength: true,
+            maxlength: 20,
+            alphabet_only:true,
+
         },
         expiry_date_2: {
          
@@ -618,8 +624,9 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_5: {},
         name_of_bank_5: {
-          
-            maxlength: true,
+            maxlength: 20,
+            alphabet_only:true,
+
         },
         expiry_date_5: {
             
@@ -661,8 +668,8 @@ $("#this_is_me_form").validate({
         },
         secondary_card_holder_relationship_4: {},
         name_of_bank_4: {
-       
-            maxlength: true,
+            alphabet_only:true,
+            maxlength: 20,
         },
         expiry_date_4: {
            
@@ -1124,7 +1131,7 @@ function store_this_is_me_form_data(data, next_button_id,goto_next =true) {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/admin/consumer/this-is-me-store";
+    url = "/ginicoe/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1155,7 +1162,7 @@ function store_this_is_me_form_data_image(data, next_button_id) {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    url = "/admin/consumer/this-is-me-store";
+    url = "/ginicoe/admin/consumer/this-is-me-store";
     $.ajax({
         type: "post",
         url: url,
@@ -1295,7 +1302,7 @@ function returnLater(fieldset, module) {
   
 
     store_this_is_me_form_data(data, null, false) 
-    url = "/admin/consumer/return-later";
+    url = "/ginicoe/admin/consumer/return-later";
     $.ajax({
         type: "get",
         url: url,

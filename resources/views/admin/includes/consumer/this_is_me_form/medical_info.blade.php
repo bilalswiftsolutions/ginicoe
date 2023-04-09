@@ -240,7 +240,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14h. Bipolar and Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14b. Bipolar and Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -313,7 +313,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14q. Depressive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14c. Depressive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -385,7 +385,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14x. Disruptive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14d. Disruptive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -441,7 +441,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14dd. Dissociative Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14e. Dissociative Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -477,7 +477,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14hh. Eating Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14f. Eating Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -527,7 +527,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14oo. Neurocognitive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14g. Neurocognitive Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -554,7 +554,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14rr. Neurodevelopmental Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14h. Neurodevelopmental Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -606,7 +606,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14xx. Obsessive-Compulsive Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14i. Obsessive-Compulsive Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -654,7 +654,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14fff. Personality Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14j. Personality Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -738,7 +738,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14qqqq. Schizophrenia  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14k. Schizophrenia  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -777,7 +777,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14wwww. Somatic Symptom Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14l. Somatic Symptom Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -814,7 +814,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14bbbb. Stress-Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14m. Stress-Related Disorders  <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -852,7 +852,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14gggg. Substance-Related Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14n. Substance-Related Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
@@ -893,8 +893,296 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4 col-lg-4">
+            </div>
+          
+
+
+
+
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 pb-4">
+                    <label for="" class="wizard-form-text-label">14m. Physical Ailments</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->abdominal_aortic_aneurysm == '1') checked @endif
+                                    class="form-check-input" id="abdominal_aortic_aneurysm"
+                                    name="abdominal_aortic_aneurysm"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="abdominal_aortic_aneurysm">Abdominal aortic aneurysm</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acne == '1') checked @endif
+                                    class="form-check-input" id="acne"
+                                    name="acne"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acne">Acne</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_cholecystitis == '1') checked @endif
+                                    class="form-check-input" id="acute_cholecystitis"
+                                    name="acute_cholecystitis"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_cholecystitis">Acute cholecystitis</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_lymphoblastic_leukaemia == '1') checked @endif
+                                    class="form-check-input" id="acute_lymphoblastic_leukaemia"
+                                    name="acute_lymphoblastic_leukaemia"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_lymphoblastic_leukaemia">Acute lymphoblastic leukaemia</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_lymphoblastic_leukaemia_children == '1') checked @endif
+                                    class="form-check-input" id="acute_lymphoblastic_leukaemia_children"
+                                    name="acute_lymphoblastic_leukaemia_children"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_lymphoblastic_leukaemia_children">Acute lymphoblastic leukaemia: Children</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_lymphoblastic_leukaemia_teenagers_and_young_adults == '1') checked @endif
+                                    class="form-check-input" id="acute_lymphoblastic_leukaemia_teenagers_and_young_adults"
+                                    name="acute_lymphoblastic_leukaemia_teenagers_and_young_adults"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_lymphoblastic_leukaemia_teenagers_and_young_adults">Acute lymphoblastic leukaemia: Teenagers and young adults</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_myeloid_leukaemia == '1') checked @endif
+                                    class="form-check-input" id="acute_myeloid_leukaemia"
+                                    name="acute_myeloid_leukaemia"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_myeloid_leukaemia">Acute myeloid leukaemia</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_myeloid_leukaemia_children == '1') checked @endif
+                                    class="form-check-input" id="acute_myeloid_leukaemia_children"
+                                    name="acute_myeloid_leukaemia_children"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_myeloid_leukaemia_children">Acute myeloid leukaemia: Children</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_myeloid_leukaemia_teenagers_and_young_adults == '1') checked @endif
+                                    class="form-check-input" id="acute_myeloid_leukaemia_teenagers_and_young_adults"
+                                    name="acute_myeloid_leukaemia_teenagers_and_young_adults"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_myeloid_leukaemia_teenagers_and_young_adults">Acute myeloid leukaemia: Teenagers and young adults</label>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->acute_pancreatitis == '1') checked @endif
+                                    class="form-check-input" id="acute_pancreatitis"
+                                    name="acute_pancreatitis"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="acute_pancreatitis">Acute pancreatitis</label>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input type="checkbox" @if (!empty($medical_info) && $medical_info->addison_disease == '1') checked @endif
+                                    class="form-check-input" id="addison_disease"
+                                    name="addison_disease"  @if(!empty($medical_info) ) disabled @endif>
+                                <label class="form-check-label" for="addison_disease">Addison's disease</label>
+                            </div>
+
+                           
+
+                            
+
+
+                    
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 pb-4">
+                    <label for="" class="wizard-form-text-label"></label>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->alcohol_related_liver_disease == '1') checked @endif
+                                class="form-check-input" id="alcohol_related_liver_disease"
+                                name="alcohol_related_liver_disease"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="alcohol_related_liver_disease">Alcohol-related liver disease</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->allergic_rhinitis == '1') checked @endif
+                                class="form-check-input" id="allergic_rhinitis"
+                                name="allergic_rhinitis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="allergic_rhinitis">Allergic rhinitis</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->allergies == '1') checked @endif
+                                class="form-check-input" id="allergies"
+                                name="allergies"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="allergies">Allergies</label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->alzheimer_disease == '1') checked @endif
+                                class="form-check-input" id="alzheimer_disease"
+                                name="alzheimer_disease"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="alzheimer_disease">Alzheimer's disease</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->anal_cancer == '1') checked @endif
+                                class="form-check-input" id="anal_cancer"
+                                name="anal_cancer"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="anal_cancer">Anal cancer</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->anaphylaxis == '1') checked @endif
+                                class="form-check-input" id="anaphylaxis"
+                                name="anaphylaxis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="anaphylaxis">Anaphylaxis</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->angioedema == '1') checked @endif
+                                class="form-check-input" id="angioedema"
+                                name="angioedema"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="angioedema">Angioedema</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->ankylosing_spondylitis == '1') checked @endif
+                                class="form-check-input" id="ankylosing_spondylitis"
+                                name="ankylosing_spondylitis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="ankylosing_spondylitis">Ankylosing spondylitis</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->anorexia_nervosa == '1') checked @endif
+                                class="form-check-input" id="anorexia_nervosa"
+                                name="anorexia_nervosa"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="anorexia_nervosa">Anorexia nervosa</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->anxiety == '1') checked @endif
+                                class="form-check-input" id="anxiety"
+                                name="anxiety"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="anxiety">Anxiety</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->anxiety_disorders_in_children == '1') checked @endif
+                                class="form-check-input" id="anxiety_disorders_in_children"
+                                name="anxiety_disorders_in_children"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="anxiety_disorders_in_children">Anxiety disorders in children</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->appendicitis == '1') checked @endif
+                                class="form-check-input" id="appendicitis"
+                                name="appendicitis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="appendicitis">Appendicitis</label>
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 pb-4">
+                    <label for="" class="wizard-form-text-label"></label>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->arthritis == '1') checked @endif
+                                class="form-check-input" id="arthritis"
+                                name="arthritis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="arthritis">Arthritis</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->asbestosis == '1') checked @endif
+                                class="form-check-input" id="asbestosis"
+                                name="asbestosis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="asbestosis">Asbestosis</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->asthma == '1') checked @endif
+                                class="form-check-input" id="asthma"
+                                name="asthma"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="asthma">Asthma</label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->atopic_eczema == '1') checked @endif
+                                class="form-check-input" id="atopic_eczema"
+                                name="atopic_eczema"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="atopic_eczema">Atopic eczema</label>
+                        </div>
+
+                        
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->attention_deficit_hyperactivity_disorder_adhd == '1') checked @endif
+                                class="form-check-input" id="attention_deficit_hyperactivity_disorder_adhd"
+                                name="attention_deficit_hyperactivity_disorder_adhd"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="attention_deficit_hyperactivity_disorder_adhd">Attention deficit hyperactivity disorder (ADHD)</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->autistic_spectrum_disorder_asd == '1') checked @endif
+                                class="form-check-input" id="autistic_spectrum_disorder_asd"
+                                name="autistic_spectrum_disorder_asd"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="autistic_spectrum_disorder_asd">Autistic spectrum disorder (ASD)</label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->bacterial_vaginosis == '1') checked @endif
+                                class="form-check-input" id="bacterial_vaginosis"
+                                name="bacterial_vaginosis"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="bacterial_vaginosis">Bacterial vaginosis</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->benign_prostate_enlargement == '1') checked @endif
+                                class="form-check-input" id="benign_prostate_enlargement"
+                                name="benign_prostate_enlargement"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="benign_prostate_enlargement">Benign prostate enlargement</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->bile_duct_cancer_cholangiocarcinoma == '1') checked @endif
+                                class="form-check-input" id="bile_duct_cancer_cholangiocarcinoma"
+                                name="bile_duct_cancer_cholangiocarcinoma"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="bile_duct_cancer_cholangiocarcinoma">Bile duct cancer (cholangiocarcinoma)</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->binge_eating == '1') checked @endif
+                                class="form-check-input" id="binge_eating"
+                                name="binge_eating"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="binge_eating">Binge eating</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" @if (!empty($medical_info) && $medical_info->bipolar_disorder == '1') checked @endif
+                                class="form-check-input" id="bipolar_disorder"
+                                name="bipolar_disorder"  @if(!empty($medical_info) ) disabled @endif>
+                            <label class="form-check-label" for="bipolar_disorder">Bipolar disorder</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+
+        
     </div>
 
     <div class="form-group clearfix">
