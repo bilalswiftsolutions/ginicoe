@@ -119,7 +119,6 @@ class CreateMedicalInformationTable extends Migration
             $table->boolean('anaphylaxis')->default(0);
             $table->boolean('angioedema')->default(0);
             $table->boolean('ankylosing_spondylitis')->default(0);
-            $table->boolean('anorexia_nervosa')->default(0);
             $table->boolean('anxiety')->default(0);
             $table->boolean('anxiety_disorders_in_children')->default(0);
             $table->boolean('appendicitis')->default(0);
