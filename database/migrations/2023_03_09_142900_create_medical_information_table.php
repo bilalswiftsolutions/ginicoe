@@ -100,6 +100,7 @@ class CreateMedicalInformationTable extends Migration
             $table->boolean('stimulant_use_disorder')->default(0);
             $table->boolean('tobacco_use_disorder')->default(0);
             $table->boolean('gambling_disorder')->default(0);
+            
             $table->boolean('abdominal_aortic_aneurysm')->default(0);
             $table->boolean('acne')->default(0);
             $table->boolean('acute_cholecystitis')->default(0);
