@@ -52,8 +52,8 @@ function submitAttestation() {
 }
 
 function review_form() {
-    $("fieldset").removeClass("show");
-    $("fieldset").addClass("show");
+    $(".wizard-fieldset").hide();
+    $(".wizard-fieldset").show();
     $(".clearfix").hide();
     $("#all_form_submit").show();
 }
