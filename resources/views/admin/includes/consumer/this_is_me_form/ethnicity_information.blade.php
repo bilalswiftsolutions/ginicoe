@@ -6,13 +6,12 @@
         <div class="col-md-4 col-lg-4">
             <div class="form-group">
 
-                <label for="race" class="wizard-form-text-label">4.1 What Race or Protected Group do you most see yourself as today <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
+                <label for="race" class="wizard-form-text-label">4.1 What Race or PLAHNET52 Group do you most see yourself today <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span>
                 </label>
                 <select class="form-control" name="race" id="race" required  @if(!empty($ethnicity_info) ) disabled @endif>
                     <option></option>
-                    <option value="plahnet52" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'plahnet52') selected="selected" @endif>PLAHNET52 52 (5A’s & 2H’s)</option>
                     <option value="pacific_islander_americans" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'pacific_islander_americans') selected="selected" @endif>Pacific Islander Americans</option>
-                    <option value="lgbtq" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'lgbtq') selected="selected" @endif>LGBTQ</option>
+                    <option value="lgbtq" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'lgbtq') selected="selected" @endif>LGBTQ+</option>
                     <option value="african_americans" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'african_americans') selected="selected" @endif>African Americans</option>
                     <option value="asian" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'asian') selected="selected" @endif>Asian</option>
                     <option value="asian_indians" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'asian_indians') selected="selected" @endif>Asian Indians</option>
@@ -25,7 +24,7 @@
                     <option value="tribal_entities" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'tribal_entities') selected="selected" @endif>Tribal entities</option>
                     <option value="decline" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'decline') selected="selected" @endif>Decline</option>
                     <option value="other_combination_not_described" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'other_combination_not_described') selected="selected" @endif>Other Combination Not Described</option>
-                    <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400</option>
+                    <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400 e.g. Muslims, Disabled, impoverished</option>
 
                     <option value="white" @if(!empty($ethnicity_info) && $ethnicity_info->race == 'white') selected="selected" @endif>White</option>
                 </select>

@@ -92,6 +92,7 @@
     left: 0;
     right: 0;
     white-space: nowrap; /* Prevent step name from wrapping */
+    transform: rotate(-45deg); 
   
 }
 
@@ -103,7 +104,7 @@
     <div class="card shadow mb-4">
 
 
-        <div class="col-lg-12 col-md-12">
+        <div class="col-lg-12 col-md-12" style="margin-top:5%;">
             <div class="form-wizard">
                 <form id="this_is_me_form" action="" method="post" role="form">
                     <div class="form-wizard-header mt-4">

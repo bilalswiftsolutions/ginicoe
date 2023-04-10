@@ -40,17 +40,13 @@
                 <label for="anual_salary_last_year" class="wizard-form-text-label">6.4 What was your annual income last year? </label>
                 <select class="form-control" name="anual_salary_last_year" id="anual_salary_last_year" required>
                     <option></option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '0_30000') selected  @endif value="0_30000">0 - 30,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '30000_50000') selected  @endif value="30000_50000">30,000 - 50,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '50000_60000') selected @endif value="50000_60000">50,000 - 60,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '60000_75000') selected @endif value="60000_75000">60,000 - 75,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '75000_90000') selected @endif value="75000_90000">75,000 - 90,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '90000_125000') selected @endif value="90000_125000">90,000 - 125,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '125000_150000') selected @endif value="125000_150000">125,000 - 150,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '150000_200000') selected @endif value="150000_200000">150,000 - 200,000</option>
-                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '200000_500000') selected @endif value="200000_500000">200,000 - 500,000</option>
+                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '125000_150000') selected  @endif value="125000_150000">125,000 - 150,000</option>
+                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '150000_200000') selected  @endif value="150000_200000">150,000 - 200,000</option>
+                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '200000_250000') selected @endif value="200000_250000">200,000 - 250,000</option>
+                    <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '250000_500000') selected @endif value="250000_500000">250,000 - 500,000</option>
                     <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '500000_1000000') selected @endif value="500000_1000000">500,000 - 1,000,000</option>
                     <option @if(!empty($employment_info) && $employment_info->anual_salary_last_year == '1000000_plus') selected @endif value="1000000_plus">1,000,000+</option>
+
 
                 </select>
                 <p class="text_danger form_error"></p>

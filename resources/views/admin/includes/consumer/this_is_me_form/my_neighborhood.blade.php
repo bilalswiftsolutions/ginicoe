@@ -11,11 +11,10 @@
                 </label>
                 <select class="form-control" name="neighborhood_race_right" id="neighborhood_race_right" >
                     <option></option>
-                    <option value="plahnet52" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'plahnet52') selected @endif>PLAHNET52 52 (5A’s &
-                        2H’s)</option>
+                 
                     <option value="pacific_islander_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'pacific_islander_americans') selected @endif>Pacific
                         Islander Americans</option>
-                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'lgbtq') selected @endif>LGBTQ</option>
+                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'lgbtq') selected @endif>LGBTQ+</option>
                     <option value="african_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'african_americans') selected @endif>African
                         Americans</option>
                     <option value="asian" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'asian') selected @endif>Asian</option>
@@ -37,7 +36,7 @@
                     <option value="decline" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'decline') selected @endif>Decline</option>
                     <option value="other_combination_not_described" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'other_combination_not_described') selected @endif>
                         Other Combination Not Described</option>
-                    <option value="other" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'other') selected @endif>Other</option>
+                        <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400 e.g. Muslims, Disabled, impoverished</option>
                     <option value="white" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_right== 'white') selected @endif>White</option>
                 </select>
                 <p class="text_danger form_error"></p>
@@ -77,12 +76,12 @@
         <div class="form-group">
             5.4 Looking out your front door what is the address of your nearest neighbors to the right of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_right()" @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_right == 1) checked @endif
+                <input onclick="get_nearest_neghbor_address_right()" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_right == 1) checked @endif
                     name="provide_neigborhood_address_right" value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_right()" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_right == 0) checked @endif
+                <input onclick="get_nearest_neghbor_address_right()" @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_right == 0) checked @endif
                      name="provide_neigborhood_address_right" value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -209,11 +208,10 @@
                 </label>
                 <select class="form-control" name="neighborhood_race_left" id="neighborhood_race_left" required>
                     <option></option>
-                    <option value="plahnet52" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'plahnet52') selected @endif>PLAHNET52 52 (5A’s &
-                        2H’s)</option>
+                   
                     <option value="pacific_islander_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'pacific_islander_americans') selected @endif>Pacific
                         Islander Americans</option>
-                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'lgbtq') selected @endif>LGBTQ</option>
+                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'lgbtq') selected @endif>LGBTQ+</option>
                     <option value="african_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'african_americans') selected @endif>African
                         Americans</option>
                     <option value="asian" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'asian') selected @endif>Asian</option>
@@ -235,7 +233,7 @@
                     <option value="decline" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'decline') selected @endif>Decline</option>
                     <option value="other_combination_not_described" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'other_combination_not_described') selected @endif>
                         Other Combination Not Described</option>
-                    <option value="other" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'other') selected @endif>Other</option>
+                    <option value="other" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== '15_cfr') selected @endif>15 C.F.R. §1400 e.g. Muslims, Disabled, impoverished</option>
                     <option value="white" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_left== 'white') selected @endif>White</option>
                 </select>
                 <p class="text_danger form_error"></p>
@@ -274,12 +272,12 @@
         <div class="form-group">
             5.13 Looking out your front door what is the address of your nearest neighbors to the left of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_left()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_left == 1) checked @endif name="provide_neigborhood_address_left"
+                <input onclick="get_nearest_neghbor_address_left()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_left == 1) checked @endif name="provide_neigborhood_address_left"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_left()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_left == 0) checked @endif  name="provide_neigborhood_address_left"
+                <input onclick="get_nearest_neghbor_address_left()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_left == 0) checked @endif  name="provide_neigborhood_address_left"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -405,11 +403,10 @@
                 </label>
                 <select class="form-control" name="neighborhood_race_back" id="neighborhood_race_back" required>
                     <option></option>
-                    <option value="plahnet52" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'plahnet52') selected @endif>PLAHNET52 52 (5A’s &
-                        2H’s)</option>
+                  
                     <option value="pacific_islander_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'pacific_islander_americans') selected @endif>Pacific
                         Islander Americans</option>
-                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'lgbtq') selected @endif>LGBTQ</option>
+                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'lgbtq') selected @endif>LGBTQ+</option>
                     <option value="african_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'african_americans') selected @endif>African
                         Americans</option>
                     <option value="asian" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'asian') selected @endif>Asian</option>
@@ -431,7 +428,7 @@
                     <option value="decline" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'decline') selected @endif>Decline</option>
                     <option value="other_combination_not_described" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'other_combination_not_described') selected @endif>
                         Other Combination Not Described</option>
-                    <option value="other" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'other') selected @endif>Other</option>
+                        <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400 e.g. Muslims, Disabled, impoverished</option>
                     <option value="white" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_back== 'white') selected @endif>White</option>
                 </select>
                 <p class="text_danger form_error"></p>
@@ -471,12 +468,12 @@
         <div class="form-group">
             5.22 Looking out your front door what is the address of your nearest neighbors to the back of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_back()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_back == 1) checked @endif name="provide_neigborhood_address_back"
+                <input onclick="get_nearest_neghbor_address_back()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_back == 1) checked @endif name="provide_neigborhood_address_back"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_back()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_back == 0) checked @endif  name="provide_neigborhood_address_back"
+                <input onclick="get_nearest_neghbor_address_back()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_back == 0) checked @endif  name="provide_neigborhood_address_back"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>
@@ -604,11 +601,10 @@
                 </label>
                 <select class="form-control" name="neighborhood_race_front" id="neighborhood_race_front" required>
                     <option></option>
-                    <option value="plahnet52" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'plahnet52') selected @endif>PLAHNET52 52 (5A’s &
-                        2H’s)</option>
+            
                     <option value="pacific_islander_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'pacific_islander_americans') selected @endif>Pacific
                         Islander Americans</option>
-                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'lgbtq') selected @endif>LGBTQ</option>
+                    <option value="lgbtq" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'lgbtq') selected @endif>LGBTQ+</option>
                     <option value="african_americans" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'african_americans') selected @endif>African
                         Americans</option>
                     <option value="asian" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'asian') selected @endif>Asian</option>
@@ -630,7 +626,7 @@
                     <option value="decline" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'decline') selected @endif>Decline</option>
                     <option value="other_combination_not_described" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'other_combination_not_described') selected @endif>
                         Other Combination Not Described</option>
-                    <option value="other" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'other') selected @endif>Other</option>
+                        <option value="15_cfr" @if(!empty($ethnicity_info) && $ethnicity_info->race == '15_cfr') selected="selected" @endif>15 C.F.R. §1400 e.g. Muslims, Disabled, impoverished</option>
                     <option value="white" @if (!empty($my_neighborhood_info) && $my_neighborhood_info->neighborhood_race_front== 'white') selected @endif>White</option>
                 </select>
                 <p class="text_danger form_error"></p>
@@ -670,12 +666,12 @@
         <div class="form-group">
             5.31 Looking out your front door what is the address of your nearest neighbors to the front of you?
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_front()"  @if (empty($my_neighborhood_info) ||  $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
+                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) &&  $my_neighborhood_info->provide_neigborhood_address_front == 1) checked @endif name="provide_neigborhood_address_front"
                     value="1" id="radio1" type="radio">
                 <label for="radio1">Yes</label>
             </div>
             <div class="wizard-form-radio">
-                <input onclick="get_nearest_neghbor_address_front()"  @if (!empty($my_neighborhood_info) && $my_neighborhood_info->provide_neigborhood_address_front == 0) checked @endif  name="provide_neigborhood_address_front"
+                <input onclick="get_nearest_neghbor_address_front()"  @if (empty($my_neighborhood_info) || $my_neighborhood_info->provide_neigborhood_address_front == 0) checked @endif  name="provide_neigborhood_address_front"
                     value="0" id="radio2" type="radio">
                 <label for="radio2">No</label>
             </div>

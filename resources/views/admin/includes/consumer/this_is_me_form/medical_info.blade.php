@@ -852,7 +852,7 @@
 
             <div class="col-md-4 col-lg-4">
                 <div class="col-md-12 col-lg-12 pb-4">
-                    <label for="" class="wizard-form-text-label">14n. Substance-Related Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
+                    <label for="" class="wizard-form-text-label">14o. Substance-Related Disorders <span data-toggle="tooltip" title="You can not change this field once you submit"  class="permanent_color">(Permanent)</span></label>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
