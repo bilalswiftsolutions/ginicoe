@@ -14,13 +14,36 @@
         </div>
     </div>
 
-    <div class="page-content">
+    <div @if($slug != 'donate') class="page-content" @endif>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div @if($slug == 'donate') class="col-md-8" @else class="col-md-12" @endif>
                     {!! $dynamic_page_detail->dynamic_page_content !!}
                 </div>
+                @if($slug == 'donate')
+                <div  class="col-md-4">
+                    
+                    
+                      
+                       
+                        <div class=" mt_20">
+                            <h4>Donate with Stripe</h4>
+    
+                           <a href="https://donate.stripe.com/test_4gweVvdnda34bgQcMM" target="_blank" class="btn btn-primary" > Donate</a>
+                            @php
+                                $cents = 0;
+                            @endphp
+    
+                  
+                        </div>
+    
+                    
+                </div>
+                @endif
             </div>
         </div>
     </div>
+
+     
 @endsection
+

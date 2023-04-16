@@ -14,6 +14,6 @@ class PageController extends Controller
         if(!$dynamic_page_detail) {
             return abort(404);
         }
-        return view('pages.dynamic_page', compact('g_setting','dynamic_page_detail'));
+        return view('pages.dynamic_page', compact('g_setting','dynamic_page_detail','slug'));
     }
 }
