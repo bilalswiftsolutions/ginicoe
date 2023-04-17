@@ -17,19 +17,19 @@
     <div @if($slug != 'donate') class="page-content" @endif>
         <div class="container">
             <div class="row">
-                <div @if($slug == 'donate') class="col-md-8" @else class="col-md-12" @endif>
+                <div @if($slug == 'donate') class="col-md-7" @else class="col-md-12" @endif>
                     {!! $dynamic_page_detail->dynamic_page_content !!}
                 </div>
                 @if($slug == 'donate')
-                <div  class="col-md-4">
+                <div  class="col-md-5">
                     
                     
                       
                        
                         <div class=" mt_20">
-                            <h4>Donate with Stripe</h4>
+                            <h5>Online Payment | check | Trekker Volunteer</h5>
     
-                           <a href="https://donate.stripe.com/test_4gweVvdnda34bgQcMM" target="_blank" class="btn btn-primary" > Donate</a>
+                           <a href="https://donate.stripe.com/test_4gweVvdnda34bgQcMM" target="_blank" class="btn btn-primary" >Click to Donate</a>
                             @php
                                 $cents = 0;
                             @endphp
