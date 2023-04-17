@@ -17,11 +17,11 @@
     <div @if($slug != 'donate') class="page-content" @endif>
         <div class="container">
             <div class="row">
-                <div @if($slug == 'donate') class="col-md-9" @else class="col-md-12" @endif>
+                <div @if($slug == 'donate') class="col-md-12" @else class="col-md-12" @endif>
                     {!! $dynamic_page_detail->dynamic_page_content !!}
                 </div>
                 @if($slug == 'donate')
-                <div  class="col-md-3">
+                <div  class="col-md-2">
                     
                     
                       
