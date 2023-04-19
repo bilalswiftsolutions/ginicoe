@@ -18,25 +18,8 @@
     <div @if ($slug != 'donate') class="page-content" @endif>
         <div class="container">
             <div class="row">
-                @if ($slug == 'donate')
-                    <div class="col-md-12">
-
-
-
-
-                        <div class=" mt_20 mb_20">
-                            <h5>Online Payment | Check | Trekker Volunteer</h5>
-
-                            <a href="https://donate.stripe.com/test_4gweVvdnda34bgQcMM" target="_blank"
-                                class="btn btn-primary">Click to Donate</a>
-
-
-                        </div>
-
-
-                    </div>
-                @endif
-                <div @if ($slug == 'donate') class="col-md-12" @else class="col-md-12" @endif>
+               
+                <div  class="col-md-12">
                     {!! $dynamic_page_detail->dynamic_page_content !!}
                 </div>
 

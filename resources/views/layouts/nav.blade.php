@@ -91,13 +91,28 @@
                         @else
                            
                             @foreach ($dynamic_pages as $row)
-                              @if(!in_array($row->dynamic_page_slug,['api-terms-of-use','children-online-privacy-policy','online-tracking-and-advertisement']))
+                              @if(!in_array($row->dynamic_page_slug,['api-terms-of-use','children-online-privacy-policy','online-tracking-and-advertisement','trekker-volunteer','donate']))
                                 <li class="nav-item">
                                     <a href="{{ url('page/' . $row->dynamic_page_slug) }}"
                                         class="nav-link">{{ $row->dynamic_page_name }}</a>
                                 </li>
                                 @endif
                             @endforeach
+
+                            <li class="nav-item">
+                                <a href="javascript:void(0);" class="nav-link dropdown-toggle">Donate</a>
+                                <ul class="dropdown-menu">
+                                    @foreach ($dynamic_pages as $row)
+                                    @if(in_array($row->dynamic_page_slug,['trekker-volunteer','donate']))
+                                      <li class="nav-item">
+                                          <a href="{{ url('page/' . $row->dynamic_page_slug) }}"
+                                              class="nav-link">{{ $row->dynamic_page_name }}</a>
+                                      </li>
+                                      @endif
+                                  @endforeach
+                                </ul>
+                            </li>
+                         
                             {{-- <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link dropdown-toggle">Pages</a>
                             <ul class="dropdown-menu">
