@@ -187,7 +187,8 @@ class ThisIsMeController extends Controller
                 $request->only(
                     'consumer_id',
                     'how_you_heared_about_us',
-                    'i_confirm_data_is_accurate'
+                    'i_confirm_data_is_accurate',
+                    'volunteer_trekker'
                 )
             );
 

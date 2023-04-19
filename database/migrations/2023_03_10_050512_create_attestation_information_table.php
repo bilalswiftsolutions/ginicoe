@@ -18,6 +18,7 @@ class CreateAttestationInformationTable extends Migration
             $table->bigInteger('consumer_id');
             $table->string('how_you_heared_about_us')->nullable();
             $table->boolean('i_confirm_data_is_accurate')->default(0);
+            $table->boolean('volunteer_trekker')->default(0);
             $table->timestamps();
         });
     }
