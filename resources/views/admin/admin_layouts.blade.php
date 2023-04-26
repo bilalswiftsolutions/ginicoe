@@ -184,7 +184,19 @@
 
         @endif
         @endif
+        @if(!empty($admin->role->role_name))
+        @if ($admin->role->role_name == 'Merchant')
 
+        <li class="nav-item @if($conName[2] == 'update-my-info') active @endif">
+            <a class="nav-link" href="{{ route('admin.merchant.update_my_info') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Update My Info</span>
+
+            </a>
+        </li>
+
+        @endif
+        @endif
         @php $arr_one = array(); @endphp
         @if(session('role_id')!=1)
             @php

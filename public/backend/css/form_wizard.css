@@ -95,6 +95,7 @@ body {
     min-width: 120px;
     padding: 10px;
     text-align: center;
+    border-color: #1cc88a;
   }
 
   .form-wizard .form-wizard-next-btn-without-click, .form-wizard .form-wizard-previous-btn,.form-wizard .form-wizard-return-btn,.form-wizard .form-wizard-review-btn,  .form-wizard .form-wizard-submit {

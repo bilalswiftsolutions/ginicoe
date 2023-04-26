@@ -47,6 +47,7 @@ use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\WhyChooseController;
 use App\Http\Controllers\Admin\JobController as JobControllerForAdmin;
 use App\Http\Controllers\Admin\FaqController as FaqControllerForAdmin;
+use App\Http\Controllers\Admin\Merchant\UpdateMyInfoController;
 use App\Http\Controllers\Admin\ProductController as ProductControllerForAdmin;
 use App\Http\Controllers\Admin\OrderController as OrderControllerForAdmin;
 use App\Http\Controllers\Admin\RegisterController;
@@ -666,5 +667,13 @@ Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']]
     Route::post('/this-is-me-store', [ThisIsMeController::class, 'this_is_me_store']);
     Route::get('/return-later', [ThisIsMeController::class,'return_later']);
 
+
+});
+
+Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa']], function () {
+    Route::get('/update-my-info', [UpdateMyInfoController::class, 'index'])->name('admin.merchant.update_my_info');
+  
+
+    Route::post('/update-my-info', [UpdateMyInfoController::class, 'store'])->name('admin.merchant.update_my_info.store');
 
 });

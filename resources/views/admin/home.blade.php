@@ -176,7 +176,7 @@
         @if ($admin->role->role_name == 'Consumer')
             @include('admin.includes.cards.consumer')
         @endif
-        @if ($admin->role->role_name == 'Merchent')
+        @if ($admin->role->role_name == 'Merchant')
             @include('admin.includes.cards.merchent')
         @endif
         @if ($admin->role->role_name == 'Bank')

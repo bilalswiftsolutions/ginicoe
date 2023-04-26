@@ -96,6 +96,8 @@
                 <p>Rewards for volunteers are recognition, house, cash, and intangible perks.</p>
                 <p>To learn more, download the app from the Google Play Store or Apple Store.</p>
                 <p>Trekker needs to be verified before your start date. e.g. organization, school, researcher, etc.</p>
+                <p>To get started, Complete the SignUp as a Consumer form. You will be guided to Trekker Volunteer.</p>
+                <p>You are no longer accepting the things you cannot change. You are changing the things you cannot accept.</p>
             </div>
         </div>
          <div class="col-md-6 col-lg-6">
