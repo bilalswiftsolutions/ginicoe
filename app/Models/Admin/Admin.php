@@ -37,7 +37,9 @@ class Admin extends Model
         'token',
         'photo',
         'role_id',
-        'phone'
+        'phone',
+        'date_of_birth',
+        'parent_guid'
     ];
     public function oldPassword()
     {

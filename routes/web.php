@@ -179,6 +179,7 @@ Route::get('admin/login', [LoginControllerForAdmin::class, 'index'])->name('admi
 Route::post('admin/login/store', [LoginControllerForAdmin::class, 'store'])->name('admin.login.store');
 Route::get('admin/register', [RegisterController::class, 'index'])->name('admin.register');
 Route::post('admin/register/store', [RegisterController::class, 'store'])->name('admin.register.store');
+Route::get('admin/check-guid', [RegisterController::class, 'check_guid']);
 Route::get('admin/registration/verify/{token}/{email}', [RegisterController::class, 'verify']);
 Route::get('admin/logout', [LogoutControllerForAdmin::class, 'index'])->name('admin.logout');
 Route::get('admin/forget-password', [ForgetPasswordControllerForAdmin::class, 'index'])->name('admin.forget_password');
@@ -189,6 +190,7 @@ Route::post('admin/reset-password/update', [ResetPasswordControllerForAdmin::cla
 Route::get('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'index'])->name('2fa.index');
 Route::post('admin/2fa', [App\Http\Controllers\TwoFAController::class, 'store'])->name('2fa.post');
 Route::get('admin/2fa/reset', [App\Http\Controllers\TwoFAController::class, 'resend'])->name('2fa.resend');
+
 
 
 Route::group(['middleware' => '2fa'], function () {
@@ -672,8 +674,6 @@ Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']]
 
 Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa']], function () {
     Route::get('/update-my-info', [UpdateMyInfoController::class, 'index'])->name('admin.merchant.update_my_info');
-  
-
     Route::post('/update-my-info', [UpdateMyInfoController::class, 'store'])->name('admin.merchant.update_my_info.store');
 
 });

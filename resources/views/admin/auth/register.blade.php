@@ -57,8 +57,9 @@
                                                         placeholder="Password">
                                                     <p style="color:red"></p>
                                                 </div>
-                                                <div class="col-md-1 col-sm-1 col-lg-1" >
-                                                    <i class="fa fa-question mt-2 " data-toggle="tooltip" title="Your account security is important to us. Please create a strong password that is at least 8 characters long and includes a mix of uppercase and lowercase letters, numbers, and special characters such as !@#$%^&*"></i>
+                                                <div class="col-md-1 col-sm-1 col-lg-1">
+                                                    <i class="fa fa-question mt-2 " data-toggle="tooltip"
+                                                        title="Your account security is important to us. Please create a strong password that is at least 8 characters long and includes a mix of uppercase and lowercase letters, numbers, and special characters such as !@#$%^&*"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,6 +67,16 @@
                                             <input id="confirm_password" type="password"
                                                 class="form-control form-control-user" name="confirm_password"
                                                 placeholder="Confirm Password">
+                                            <p style="color:red"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="date_of_birth" type="text" class="form-control form-control-user"
+                                                name="date_of_birth" placeholder="Date of Birth" required>
+                                            <p style="color:red"></p>
+                                        </div>
+                                        <div class="form-group" id="parent_guid_section">
+                                            <input id="parent_guid" type="text" class="form-control form-control-user"
+                                                name="parent_guid" placeholder="Enter Parent GUID">
                                             <p style="color:red"></p>
                                         </div>
                                         <div class="form-group">
@@ -89,6 +100,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <button type="submit" class="btn btn-primary btn-user btn-block">SignUp</button>
                                     </form>
                                     <hr>
@@ -112,6 +124,65 @@
     </div>
 
     <script>
+        $('#parent_guid_section').hide()
+        $(document).ready(function() {
+            $('#date_of_birth').datepicker({
+                format: 'yyyy-mm-dd',
+
+                autoclose: true,
+            });
+
+            $('#date_of_birth').on('changeDate', function() {
+                const selectedDate = $(this).datepicker('getDate');
+                const currentDate = new Date();
+
+                const age = calculateAge(selectedDate, currentDate);
+
+                if (age < 13) {
+                    $('#parent_guid_section').show()
+                    $("#parent_guid").prop("required", true);
+
+                    // alert('You must be at least 13 years old to use this service.');
+
+                } else {
+                    $('#parent_guid_section').hide()
+                    $("#parent_guid").prop("required", false);
+                }
+            });
+        });
+        $.validator.addMethod("guid_exists", function(value, element) {
+            var isValid = false;
+            $.ajax({
+                type: "GET",
+                url: "/admin/check-guid",
+                data: {
+                    guid: $(element).val()
+                },
+                async: false,
+                success: function(data) {
+                    if(data.exist)
+                    isValid = true
+                }
+            });
+            return isValid;
+        }, "Invalid value");
+
+        function calculateAge(birthDate, currentDate) {
+            const ageDiffMs = currentDate - birthDate;
+            const ageDiffDate = new Date(ageDiffMs);
+
+            const years = ageDiffDate.getUTCFullYear() - 1970;
+            const months = ageDiffDate.getUTCMonth();
+            const days = ageDiffDate.getUTCDate() - 1;
+
+            let age = years;
+
+            if (months > 0 || (months === 0 && days > 0)) {
+                age += 1;
+            }
+
+            return age;
+        }
         $("#adminRegisterForm").validate({
 
             errorPlacement: function(error, element) {
@@ -161,8 +232,13 @@
                 },
                 role_id: {
                     required: true,
+                },
+                date_of_birth: {
+                    required: true,
+                },
+                parent_guid:{
+                    guid_exists: true,
                 }
-
 
             },
             messages: {

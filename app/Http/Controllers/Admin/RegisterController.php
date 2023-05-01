@@ -66,7 +66,8 @@ class RegisterController extends Controller
                 'email' => 'required|email|unique:admins',
                 'password' => 'required|min:8|max:32',
                 'confirm_password' => 'required|same:password',
-                'phone' => 'required'
+                'phone' => 'required',
+                'date_of_birth'=>'required',
             ],
             [],
             [
@@ -94,6 +95,8 @@ class RegisterController extends Controller
         $data['photo'] = "user-1.jpg";
         $data['status'] = 1;
         $data['phone'] = "+1".$request->phone;
+        $data['parent_guid'] = $request->parent_guid;
+        $data['date_of_birth'] = $request->date_of_birth;
 
         $admin->fill($data)->save();
         OldPassword::create(['admin_id' => $admin->id, 'password' => $admin->password]);
@@ -221,5 +224,10 @@ class RegisterController extends Controller
             return strpos($string_to_check, $bank) !== false;
         });
         return $matches;
+    }
+
+    public function check_guid(Request $request)
+    {    
+        return response()->json(['exist'=>Admin::where('guid',$request->guid)->exists()]);
     }
 }

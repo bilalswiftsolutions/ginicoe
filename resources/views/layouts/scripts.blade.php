@@ -45,3 +45,4 @@
 <script src="{{ asset('public/frontend/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
