@@ -73,7 +73,7 @@ class DonationController extends Controller
                     'donation_type' => 'one_time'
                 ]);
             } else {
-                $stripeProductId = 'prod_NpMuwxu2jHrrGk';
+                $stripeProductId = 'prod_NpTqgk1m50kCbl';
                 $existingCustomer = \Stripe\Customer::all(["email" => $email])->data[0] ?? null;
 
                 if ($existingCustomer) {
