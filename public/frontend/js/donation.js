@@ -76,6 +76,7 @@ $(document).ready(function () {
             if (error) {
                 toastr.error("An error occurred: " + error.message);
                 donateButton.prop("disabled", false);
+                $("#donate_button_spinner").hide();
                 return;
             }
           
