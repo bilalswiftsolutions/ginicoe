@@ -30,17 +30,7 @@ use App\Models\Admin\Role;
 
 class Admin extends Model
 {
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'token',
-        'photo',
-        'role_id',
-        'phone',
-        'date_of_birth',
-        'parent_guid'
-    ];
+    protected $guarded = [];
     public function oldPassword()
     {
         return $this->hasMany(OldPassword::class, 'admin_id')->orderBy('id', 'desc')->limit(4);

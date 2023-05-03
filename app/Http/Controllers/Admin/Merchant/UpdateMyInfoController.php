@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Merchant;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Admin;
 use App\Models\Admin\Merchant\Merchant;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class UpdateMyInfoController extends Controller
                 $request[$key] = 0;
             }
         }
-        Merchant::updateOrCreate(
+     $merchant =    Merchant::updateOrCreate(
             ['merchant_id' => session('id')],
             $request->only(
                 'business_legal_name',
@@ -101,7 +102,82 @@ class UpdateMyInfoController extends Controller
                 'help_description'
             )
         );
+   
+        $admin = Admin::find(session('id'));
+    
+        if (empty($admin->guid)) {
+         
+            $random_bytes = random_bytes(32); // generates 16 random bytes
+            $random_string = bin2hex($random_bytes);
+            $guid =  'MUSA' . $this->get_state_abbriviation($request) . session('id') . $random_string;
+          
+            Admin::where('id', session('id'))->update(['guid' => $guid]);
+        }
 
         return back()->with('success','Your Information saved successfully');
+    }
+
+    public function get_state_abbriviation($request)
+    {
+        $states = array(
+            'Alabama' => 'AL',
+            'Alaska' => 'AK',
+            'Arizona' => 'AZ',
+            'Arkansas' => 'AR',
+            'California' => 'CA',
+            'Colorado' => 'CO',
+            'Connecticut' => 'CT',
+            'Delaware' => 'DE',
+            'Florida' => 'FL',
+            'Georgia' => 'GA',
+            'Hawaii' => 'HI',
+            'Idaho' => 'ID',
+            'Illinois' => 'IL',
+            'Indiana' => 'IN',
+            'Iowa' => 'IA',
+            'Kansas' => 'KS',
+            'Kentucky' => 'KY',
+            'Louisiana' => 'LA',
+            'Maine' => 'ME',
+            'Maryland' => 'MD',
+            'Massachusetts' => 'MA',
+            'Michigan' => 'MI',
+            'Minnesota' => 'MN',
+            'Mississippi' => 'MS',
+            'Missouri' => 'MO',
+            'Montana' => 'MT',
+            'Nebraska' => 'NE',
+            'Nevada' => 'NV',
+            'New Hampshire' => 'NH',
+            'New Jersey' => 'NJ',
+            'New Mexico' => 'NM',
+            'New York' => 'NY',
+            'North Carolina' => 'NC',
+            'North Dakota' => 'ND',
+            'Ohio' => 'OH',
+            'Oklahoma' => 'OK',
+            'Oregon' => 'OR',
+            'Pennsylvania' => 'PA',
+            'Rhode Island' => 'RI',
+            'South Carolina' => 'SC',
+            'South Dakota' => 'SD',
+            'Tennessee' => 'TN',
+            'Texas' => 'TX',
+            'Utah' => 'UT',
+            'Vermont' => 'VT',
+            'Virginia' => 'VA',
+            'Washington' => 'WA',
+            'West Virginia' => 'WV',
+            'Wisconsin' => 'WI',
+            'Wyoming' => 'WY',
+        );
+        $state_abbr = null;
+       
+            
+            $state_name = $request->state_legal;
+            if (!empty($state_name))
+                $state_abbr = $states[$state_name];
+        
+        return $state_abbr;
     }
 }
