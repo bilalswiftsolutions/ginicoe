@@ -1,31 +1,35 @@
-@if($g_setting->google_analytic_status == 'Show')
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ $g_setting->google_analytic_tracking_id }}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+@if ($g_setting->google_analytic_status == 'Show')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $g_setting->google_analytic_tracking_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-84213520-6');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84213520-6');
+    </script>
 @endif
 
 
-@if($g_setting->cookie_consent_status == 'Show')
-<script>
-    window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#000"
+@if ($g_setting->cookie_consent_status == 'Show')
+    <script>
+        window.addEventListener("load", function() {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#000"
+                    },
+                    "button": {
+                        "background": "#f1d600"
+                    }
                 },
-                "button": {
-                    "background": "#f1d600"
-                }
-            },
-            "position": "bottom-left"
-        })});
-</script>
+                "position": "bottom-left"
+            })
+        });
+    </script>
 @endif
 
 <!-- All JS -->
@@ -44,5 +48,15 @@
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <script src="{{ asset('public/frontend/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('public/frontend/js/extra_validation.js') }}"></script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    const stripe = Stripe('{{ env('STRIPE_PUBLIC_KEY') }}');
+    console.log('stripe',stripe)
+</script>
+<script src="{{ asset('public/frontend/js/donation.js') }}"></script>
+
+

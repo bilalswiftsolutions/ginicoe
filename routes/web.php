@@ -68,6 +68,7 @@ use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\BlogController as BlogControllerForFront;
 use App\Http\Controllers\Front\CategoryController as CategoryControllerForFront;
 use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\DonationController;
 use App\Http\Controllers\Front\FaqController as FaqControllerForFront;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\JobController as JobControllerForFront;
@@ -140,6 +141,8 @@ Route::post('subscription', [SubscriptionController::class, 'index'])->name('fro
 Route::get('subscriber/verify/{token}/{email}', [SubscriptionController::class, 'verify']);
 Route::get('terms-and-conditions', [TermController::class, 'index'])->name('front.term');
 Route::get('privacy-policy', [PrivacyController::class, 'index'])->name('front.privacy');
+Route::post('/donate', [DonationController::class, 'donate'])->name('donate');
+
 
 
 /* --------------------------------------- */

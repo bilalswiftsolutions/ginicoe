@@ -659,7 +659,13 @@
     </div>
 
     @include('layouts.scripts_footer')
-
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate');
+        }
+    </script>
 </body>
 
 </html>
