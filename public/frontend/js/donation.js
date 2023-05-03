@@ -81,7 +81,7 @@ $(document).ready(function () {
           
             // Submit the form with the token to the server
             $.ajax({
-                url: "/ginicoe/donate",
+                url: "/donate",
                 method: "POST",
                 headers: {
                     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
