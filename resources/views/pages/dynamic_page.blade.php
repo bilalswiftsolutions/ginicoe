@@ -283,7 +283,7 @@
                                         <a class="btn buy_button btn-block" href="#">Buy Now</a>
                                     </th>
                                     <th style="background-color: #E8B923">
-                                        <span class="ptable-title">STANDARD<small>(recommended)<br></small></span>
+                                        <span class="ptable-title">STANDARD<small></small><br>(recommended)</span>
                                         <span class="ptable-price">$14.99 p/mo or<br>$179.88 p/yr or<br>$0.49 p/day</span><br>
                                         <a class="btn buy_button btn-block" href="#">Buy Now</a>
                                     </th>
