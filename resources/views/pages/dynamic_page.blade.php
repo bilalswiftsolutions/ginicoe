@@ -277,22 +277,22 @@
                                     <th style="background-color: #23E89C;">
                                         <span class="ptable-title">basic</span>
                                         <span class="ptable-price">$10.99 p/mo or<br>$131.88 p/yr or<br>.36¢ p/day</span><br>
-                                        <a class="btn buy_button btn-block" href="#">Buy Now</a>
+                                        <a class="btn buy_button btn-block  mt-5" href="#">Buy Now</a>
                                     </th>
                                     <th style="background-color: #E8B923">
                                         <span class="ptable-title">STANDARD<small><br>(recommended)</small></span>
                                         <span class="ptable-price">$14.99 p/mo or<br>$179.88 p/yr or<br>$0.49 p/day</span>
-                                        <a class="btn buy_button btn-block" href="#">Buy Now</a>
+                                        <a class="btn buy_button btn-block mt-5" href="#">Buy Now</a>
                                     </th>
                                     <th style="background-color: #E5E4E2;">
                                         <span class="ptable-title">PLUS<small><br>(most popular*)<br></small></span>
                                         <span class="ptable-price">$29.99 p/mo or<br>$359.88 p/yr or<br>$0.99 p/day</span>
-                                        <a class="btn buy_button btn-block" href="#">Buy Now</a>
+                                        <a href="#"> <img style="width:100%;" src="{{asset('public/buy-now.gif')}}" alt="Buy Now" class="btn-gif"></a>
                                     </th>
                                     <th style="background-color: #800080;color:white;">
                                         <span class="ptable-title">ELITE</span>
                                         <span class="ptable-price">$39.99 p/mo or<br>$479.88 p/yr or<br>$1.31 p/day</span><br>
-                                        <a class="btn buy_button btn-block" href="#">Buy Now</a>
+                                        <a class="btn buy_button btn-block  mt-5" href="#">Buy Now</a>
                                     </th>
                                 </tr>
                             </thead>
@@ -747,7 +747,7 @@
                                     
                                     </td>
                                     <td style="background-color: #E5E4E2">
-                                        <a class="btn  buy_button btn-block " href="#">Buy Now</a>
+                                        <a href="#"> <img style="width:100%;" src="{{asset('public/buy-now.gif')}}" alt="Buy Now" class="btn-gif"></a>
                                     </td>
                                     <td style="background-color: #E5E4E2">
 
@@ -984,10 +984,10 @@
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
-                                    <td style="background-color: #23E89C;"><a class="btn  buy_button btn-block " href="#">Buy Now</a></td>
-                                    <td style="background-color: #E8B923 "><a class="btn  buy_button btn-block " href="#">Buy Now</a></td>
-                                    <td style="background-color: #E5E4E2;"><a class="btn  buy_button btn-block " href="#">Buy Now</a></td>
-                                    <td style="background-color: #800080 ;"><a class="btn  buy_button btn-block " href="#">Buy Now</a></td>
+                                    <td style="background-color: #23E89C;"><a class="btn  buy_button btn-block mt-5" href="#">Buy Now</a></td>
+                                    <td style="background-color: #E8B923 "><a class="btn  buy_button btn-block  mt-5" href="#">Buy Now</a></td>
+                                    <td style="background-color: #E5E4E2;"><a href="#"> <img style="width:100%; " src="{{asset('public/buy-now.gif')}}" alt="Buy Now" class="btn-gif"></a></td>
+                                    <td style="background-color: #800080 ;"><a class="btn  buy_button btn-block  mt-5" href="#">Buy Now</a></td>
                                 </tr>
                             </tbody>
                         </table>
