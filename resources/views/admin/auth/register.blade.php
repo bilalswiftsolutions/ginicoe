@@ -69,16 +69,7 @@
                                                 placeholder="Confirm Password">
                                             <p style="color:red"></p>
                                         </div>
-                                        <div class="form-group">
-                                            <input id="date_of_birth" type="text" class="form-control form-control-user"
-                                                name="date_of_birth" placeholder="Date of Birth" required>
-                                            <p style="color:red"></p>
-                                        </div>
-                                        <div class="form-group" id="parent_guid_section">
-                                            <input id="parent_guid" type="text" class="form-control form-control-user"
-                                                name="parent_guid" placeholder="Enter Parent GUID">
-                                            <p style="color:red"></p>
-                                        </div>
+                                      
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="row">

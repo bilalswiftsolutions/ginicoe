@@ -71,8 +71,10 @@
             <div class="container mt-4">
                 <h2 class="mb-4">As a certified Ginicoe Trekker, you must have:</h2>
                 <ul>
-                    <li>Excellent data management skills to accurately enter data and verify discrepancies to help build comprehensive records.</li>
-                    <li>Take every possible legal and ethical step to collect and report data about the non-respondent consumer(s).</li>
+                    <li>Excellent data management skills to accurately enter data and verify discrepancies to help build
+                        comprehensive records.</li>
+                    <li>Take every possible legal and ethical step to collect and report data about the non-respondent
+                        consumer(s).</li>
                     <li>Returning to the housing unit multiple times and similar steps.</li>
                     <li>Hours are 9am – 9pm local time.</li>
                 </ul>
@@ -96,21 +98,40 @@
                 <p>Rewards for volunteers are recognition, house, cash, and intangible perks.</p>
                 <p>To learn more, download the app from the Google Play Store or Apple Store.</p>
                 <p>Trekker needs to be verified before your start date. e.g. organization, school, researcher, etc.</p>
-                <p>To get started, Complete the SignUp as a Consumer form. You will be guided to Trekker Volunteer.</p>
-                <p>You are no longer accepting the things you cannot change. You are changing the things you cannot accept.</p>
+                <p>You will take an Oath to protect the data.
+                    "I will not disclose any personally identifiable information (PII) contained in the mobile app, race
+                    mapping, or other data obtained for or prepared by the Ginicoe Corporation or it's agents to any
+                    person or persons either during or after my volunteer service."
+                </p>
+                <p>You are no longer accepting the things you cannot change. You are changing the things you cannot
+                    accept.</p>
             </div>
         </div>
-         <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-6">
             <div class="form-group">
 
                 <div class="form-check">
-                    <input @if (!empty($attestation_info) && $attestation_info->volunteer_trekker == 1) checked @endif  type="checkbox"
-                        class="form-check-input" name="volunteer_trekker" id="volunteer_trekker">
-                    <label class="form-check-label" for="volunteer_trekker">I confirm to be volunteer trekker</label>
+                    <input @if (!empty($attestation_info) && $attestation_info->volunteer_trekker == 1) checked @endif type="checkbox" class="form-check-input"
+                        name="volunteer_trekker" id="volunteer_trekker">
+                    <label class="form-check-label" for="volunteer_trekker">I voluntarly wish to join the Social Justice
+                        Warrior Team
+                    </label>
 
                 </div>
             </div>
+
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">“I am sure that most [builders] are as much against discrimination as I
+                                am, but I think they are either bound by custom or fear of financial loss.”</p>
+                            <footer class="blockquote-footer">Joseph Eichler <cite title="Source Title">July 1, 1958
+                                    resigning from The National Association of Home Builders</cite></footer>
+                        </blockquote>
+                    </div>
+            
+
         </div>
+
     </div>
     <div class="form-group clearfix">
         <a href="javascript:;" onclick="returnLater('fieldset_seventeen','consumer_this_is_me')"

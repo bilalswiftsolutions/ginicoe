@@ -67,7 +67,7 @@ class RegisterController extends Controller
                 'password' => 'required|min:8|max:32',
                 'confirm_password' => 'required|same:password',
                 'phone' => 'required',
-                'date_of_birth'=>'required',
+              
             ],
             [],
             [
@@ -95,8 +95,9 @@ class RegisterController extends Controller
         $data['photo'] = "user-1.jpg";
         $data['status'] = 1;
         $data['phone'] = "+1".$request->phone;
-        $data['parent_guid'] = $request->parent_guid;
-        $data['date_of_birth'] = $request->date_of_birth;
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['role_id'] = $request->role_id;
 
         $admin->fill($data)->save();
         OldPassword::create(['admin_id' => $admin->id, 'password' => $admin->password]);
