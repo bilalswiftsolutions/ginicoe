@@ -262,13 +262,7 @@
                     </div>
                 @endif --}}
 
-                <div class="col-md-12">
-                    {!! $dynamic_page_detail->dynamic_page_content !!}
-                </div>
-
-            </div>
-
-            @if ($slug === 'prices')
+                @if ($slug === 'prices')
                 <div class="pricing_p">
                     <h3 style="font-weight:bold" class="text-left">CONSUMER PRICES</h3>
                     <div class="pricing_p-table table-responsive">
@@ -999,6 +993,14 @@
 
                 </div>
             @endif
+
+                <div class="col-md-12">
+                    {!! $dynamic_page_detail->dynamic_page_content !!}
+                </div>
+
+            </div>
+
+          
         </div>
 
     </div>
