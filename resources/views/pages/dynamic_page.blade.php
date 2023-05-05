@@ -179,6 +179,9 @@
                 background-color: #0FFF50;
                 color: black
             }
+            .ptable-price {
+                text-transform: lowercase;
+}
         </style>
     @endif
     <div class="page-banner"
@@ -286,7 +289,7 @@
                                         <span class="ptable-price">$29.99 p/mo or<br>$359.88 p/yr or<br>$0.99 p/day</span>
                                         <a class="btn buy_button btn-block" href="#">Buy Now</a>
                                     </th>
-                                    <th style="background-color: #800080;">
+                                    <th style="background-color: #800080;color:white;">
                                         <span class="ptable-title">ELITE</span>
                                         <span class="ptable-price">$39.99 p/mo or<br>$479.88 p/yr or<br>$1.31 p/day</span><br>
                                         <a class="btn buy_button btn-block" href="#">Buy Now</a>
@@ -537,56 +540,56 @@
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">16. Credit Card Transactions Physical Stores Only</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">17. Debit Card Transactions, Physical Store Only</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">18. Human Resource Hiring</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">19. IRS Refunds</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">20. Your Face on our Jumbo-Tron Billboard in Times Square</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">21. Non-Bank Intermediaries e.g. Walmart check cashing, etc. industrial loan org.</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">22. Payday lenders</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-check-square green"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 
                                 
@@ -610,49 +613,49 @@
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">24. Debit Card Transactions Online, Mobile & Physical Stores</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">25. Department Store Cards</span><br><span class="ptable-title">26. Amazon.com Store Card<br>Belk’s • Costco Anywhere Visa® Card by Citi • Home Depot • Kays Jewelers • Lowes • Lowe's Store Card • Macy’s • Nordstroms • Saks Fifth Avenue Store Card  • Staples® Credit Card • Target Credit Card • TJX Store Card • Victoria's Secret Credit Card • Walmart® Store Card<br>Don’t see your store card listed – Drop Us A Line</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">27. Insurance Fraud Prevention</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">28. Mortgage Fraud Prevention</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">29. Oil Credit Card Transactions, All<br>30. Oil Debit Card Transactions, All<br>AdBlue • Amoco • Bp • Chevron • Circle K • ExxonMobil • Flying J • Marathon • Pilot • Texaco • Shell • Sheetz • Sunoco • Total Pass • United Oil Fleet Card<br>Don’t see your oil card listed – Drop Us A Line</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                 </tr>
                                 <tr>
                                     <td><span class="ptable-title">31. Motels Lodging<br>0–9<br>• 66 Motel (Needles)<br>• 66 Motel (Tulsa)<br>A<br>• A.G. Gaston Motel<br>• Alamo Plaza Hotel Courts<br>• Algiers Motel incident<br>• Atlanta Cabana Motel<br>• Aztec Motel<br>B<br>• Belvidere Café, Motel, and Gas Station<br>• The Big Texan Steak Ranch<br>• Blue Bonnet Court<br>• Blue Gables Motel<br>• Blue Swallow Motel<br>• Boots Court Motel<br>• Border Inn<br>• Buckhorn Baths Motel<br>• Budget Host<br>C<br>• Cactus Motor Lodge<br>• Caribbean Motel<br>• Chateau Bleu Motel<br>• Clown Motel<br>• Coral Court Motel<br>• The Creek South Beach<br>• Cross Country Inn<br>• Crystal River Tourist Camp<br>D<br>• De Anza Motor Lodge<br>• Down-East Village Restaurant & Motel<br>• Downtowner Motor Inn<br>E<br>• Econo Lodge<br>• El Campo Tourist Courts<br>• El Rancho Hotel & Motel<br>• El Vado Auto Court<br>F<br>• The Flanders Hotel<br>G<br>• The Gobbler<br>H<br>• Heilman Villas<br>• Hermitage Motor Inn<br>• Hilltop Lodge<br>• Hiway House<br>• Holiday Inn<br>I<br>• Imperial 400<br>K<br>• Knights Inn<br>L<br>• La Mesa Motel<br>• La Puerta Lodge<br>• Lazy A Motel<br>• Log Cabin Motel (Pinedale, Wyoming)<br>• Web Long House and Motel<br>• Lorraine Motel<br>• Loveless Cafe<br>• Luna Lodge<br>M<br>• Madonna Inn<br>• Masters Inn<br>• Midtown Motor Lodge<br>• Modern Auto Court<br>• Motel 6<br>• Motel Inn<br>• Mountain View Auto Court<br>• Munger-Moss Motel<br>N<br>• National Civil Rights Museum<br>P<br>• Panamint Springs<br>• Park Motel<br>• Piedras Blancas Motel<br>R<br>• Rainbow Court<br>• Red Caboose Motel<br>• Red Carpet Inn<br>• Red Crown Tourist Court<br>• Red Roof Inn<br>31. Motels Lodging<br>S<br>• Safari Motel<br>• Scottish Inns<br>• South Wind Motel<br>• Star Lite Motel<br>• Super 8 (hotel)<br>T<br>• Tewa Lodge<br>• Thunderbird Lodge (Chinle, Arizona)<br>• Thunderbird Motel<br>• Tower Court<br>• Travelodge<br>• Tropical Inn<br>• Tucson Inn<br>• Twin Bridges Motor Hotel<br>• Twin Pines Lodge and Cabin Camp<br>V<br>• Vagabond Inn<br>• Vibe Hotel<br>W<br>• Wagon Wheel Motel, Café and Station<br>• Wagon Wheel, Oxnard, California<br>• Waikiki Village Motel<br>• Warm Mineral Springs Motel<br>• Wigwam Motel<br>• Wildwoods Shore Resort Historic District<br>• Williams Deluxe Cabins<br>Don’t see your motel listed – Drop Us A Line</span></td>
                                     <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                     <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                    <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                    <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
 
                                     </tr>
                                     <tr>
@@ -660,21 +663,21 @@
                                         <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                        <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                        <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                     </tr>
                                     <tr>
                                         <td><span class="ptable-title">33. Real Estate Title Fraud Prevention</span></td>
                                         <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                        <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                        <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                     </tr>
                                     <tr>
                                         <td><span class="ptable-title">34. Rent–a–Cars<br>A<br>ACE Rent a Car<br>Alamo Rent a Car<br>American Car Rental Association<br>Auto Europe<br>Avis Budget Group<br>Avis Car Rental<br>B<br>Budget Rent a Car<br>C<br>Canvas (car company)<br>City CarShare<br>Cruise America<br>E<br>Enterprise Holdings<br>Enterprise Rent-A-Car<br>F<br>Flexcar<br>Fox Rent A Car<br>J<br>JustShareIt<br>K<br>Kemwel<br>M<br>Maven (car sharing)<br>N<br>National Car Rental<br>R<br>Rent-a-Wreck<br>U<br>Uhaul Car Share<br>Z<br>Zipcar<br>Don’t see your car rental listed – Drop Us A Line</span></td>
                                         <td style="background-color: #23E89C;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E8B923;"><i class="fas fa-times-circle red"></i></td>
                                         <td style="background-color: #E5E4E2;"><i class="fas fa-check-square green"></i></td>
-                                        <td style="background-color: #800080;"><i class="fas fa-check-square green"></i></td>
+                                        <td style="background-color: #800080;color:white;"><i class="fas fa-check-square green"></i></td>
                                     </tr>
                                 
                                     <tr>
@@ -881,7 +884,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                 </tr>
@@ -896,7 +899,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                 </tr>
@@ -911,7 +914,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                 </tr>
@@ -926,7 +929,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                 </tr>
@@ -941,7 +944,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                     
@@ -958,7 +961,7 @@
                                     <td style="background-color: #E5E4E2;">
                                         <i class="fas fa-times-circle red"></i>
                                     </td>
-                                    <td style="background-color: #800080;">
+                                    <td style="background-color: #800080;color:white;">
                                         <i class="fas fa-check-square green"></i>
                                     </td>
                                 </tr>
@@ -977,7 +980,6 @@
                                     <td style="background-color: #800080">
                                     </td>
                                     <td style="background-color: #800080">
-                                        <a class="btn  buy_button btn-block " href="#">Buy Now</a>
                                     </td>
                                 </tr>
                                 <tr>
