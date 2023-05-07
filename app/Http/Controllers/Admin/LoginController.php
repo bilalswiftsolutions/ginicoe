@@ -37,14 +37,22 @@ class LoginController extends Controller
     {
         $check_email = Admin::where('email', $request->email)->first();
         if ($check_email) {
+
+            if (date('Y-m-d H:i:s') < date('Y-m-d H:i:s', strtotime($check_email->locked_until_date))) {
+                $until_time = $check_email->locked_until_date;
+                throw ValidationException::withMessages(['after_lock_account_message' => __("Your account has been Locked until. {$until_time}")]);
+            }
             if (Cache::get("try_{$check_email->id}") == 5) {
                 Cache::increment("try_{$check_email->id}");
                 throw ValidationException::withMessages(['lock_account_warning' => __('Your account will be blocked in another wrong attempt')]);
             }
             if (Cache::get("try_{$check_email->id}") >= 5) {
-                Admin::where('email', $request->email)->update(['status' => 0]);
+                $current_time = date("Y-m-d H:i:s");
+                $new_time = date("Y-m-d H:i:s", strtotime("+30 minutes", strtotime($current_time)));
+
+                Admin::where('email', $request->email)->update(['locked_until_date' => $new_time]);
                 Cache::forget("try_{$check_email->id}");
-                throw ValidationException::withMessages(['lock_account_message' => __('Your account has been blocked. Contact your administrator')]);
+                throw ValidationException::withMessages(['lock_account_message' => __("Your account has been locked until {$new_time}")]);
             }
         }
         $request->validate([
