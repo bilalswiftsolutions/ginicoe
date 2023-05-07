@@ -72,6 +72,7 @@ use App\Http\Controllers\Front\DonationController;
 use App\Http\Controllers\Front\FaqController as FaqControllerForFront;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\JobController as JobControllerForFront;
+use App\Http\Controllers\Front\PackageController;
 use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\Front\PhotoGalleryController;
 use App\Http\Controllers\Front\PrivacyController;
@@ -84,6 +85,7 @@ use App\Http\Controllers\Front\TeamMemberController as TeamMemberControllerForFr
 use App\Http\Controllers\Front\TermController;
 use App\Http\Controllers\Front\VideoGalleryController;
 use App\Http\Controllers\Front\WhyChooseController as FrontWhyChooseController;
+use App\Http\Controllers\Webhook\StripeWebhookController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -142,6 +144,9 @@ Route::get('subscriber/verify/{token}/{email}', [SubscriptionController::class, 
 Route::get('terms-and-conditions', [TermController::class, 'index'])->name('front.term');
 Route::get('privacy-policy', [PrivacyController::class, 'index'])->name('front.privacy');
 Route::post('/donate', [DonationController::class, 'donate'])->name('donate');
+Route::get('/go-to-package-payment/{package_name}', [PackageController::class, 'goto_payment_page'])->name('front.goto.payment.page');
+// Webhook routes
+Route::post('/stripe-webhook', [StripeWebhookController::class, 'index']);
 
 
 
