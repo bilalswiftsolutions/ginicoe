@@ -56,6 +56,7 @@
 <script>
     const stripe = Stripe('{{ env('STRIPE_PUBLIC_KEY') }}');
     console.log('stripe',stripe)
+
 </script>
 <script src="{{ asset('public/frontend/js/donation.js') }}"></script>
 
