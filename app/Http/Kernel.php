@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'customer' => \App\Http\Middleware\CustomerMiddleware::class,
         '2fa' => \App\Http\Middleware\Check2FA::class,
         'consumer' => \App\Http\Middleware\Consumer::class,
+        'bank' => \App\Http\Middleware\Bank::class,
     ];
 }

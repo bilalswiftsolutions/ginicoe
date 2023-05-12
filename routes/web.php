@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Bank\UpdateMyInfoController as BankUpdateMyInfoController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CustomerController;
@@ -680,8 +681,14 @@ Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']]
 
 });
 
-Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa']], function () {
+Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa','merchant']], function () {
     Route::get('/update-my-info', [UpdateMyInfoController::class, 'index'])->name('admin.merchant.update_my_info');
     Route::post('/update-my-info', [UpdateMyInfoController::class, 'store'])->name('admin.merchant.update_my_info.store');
+
+});
+
+Route::group(['prefix' => 'admin/bank', 'middleware' => ['2fa','bank']], function () {
+    Route::get('/update-my-info', [BankUpdateMyInfoController::class, 'index'])->name('admin.bank.update_my_info');
+    Route::post('/update-my-info', [BankUpdateMyInfoController::class, 'store'])->name('admin.bank.update_my_info.store');
 
 });

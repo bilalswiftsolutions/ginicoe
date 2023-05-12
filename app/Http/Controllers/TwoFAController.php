@@ -10,13 +10,15 @@ use Session;
 
 class TwoFAController extends Controller
 {
-    
+
     public function index()
     {
-      
+        if (empty(session('id'))) {
+            return redirect()->route('admin.login');
+        }
         return view('admin.auth.2fa');
     }
-  
+
     /**
      * Write code on Method
      *
@@ -25,19 +27,19 @@ class TwoFAController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'code'=>'required',
+            'code' => 'required',
         ]);
 
         $find = AdminCode::where('admin_id', session('id'))
-                        ->where('code', $request->code)
-                        ->where('updated_at', '>=', now()->subMinutes(2))
-                        ->first();
-  
+            ->where('code', $request->code)
+            ->where('updated_at', '>=', now()->subMinutes(2))
+            ->first();
+
         if (!is_null($find)) {
             Session::put('user_2fa', session('id'));
             return redirect()->route('admin.dashboard');
         }
-  
+
         return back()->with('error', 'You entered wrong code.');
     }
     /**
@@ -48,8 +50,8 @@ class TwoFAController extends Controller
     public function resend()
     {
         Admin::find(session('id'))->generateCode();
-       
-  
+
+
         return back()->with('success', 'We sent you code on your mobile number.');
     }
 }
