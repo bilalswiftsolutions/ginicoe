@@ -39,6 +39,7 @@ class UpdateMyInfoController extends Controller
             'check_cashing_company',
             'commercial_banks',
             'community_bank',
+            'state',
             'community_development_financial_institution',
             'credit_union',
             'discount_brokerage_bonds',

@@ -45,9 +45,10 @@
                                 <p class="text_danger form_error"></p>
                             </div>
                         </div>
+
                     </div>
 
-
+                    <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <div class="form-group">
                             <select name="primary_job_title" class="form-control wizard-required" id="primary_job_title">
@@ -222,6 +223,7 @@
                                 info?</label>
                             <p class="text_danger form_error"></p>
                         </div>
+                    </div>
                     </div>
                     <div class="col-md-12 col-lg-12">
                         <div class="form-group">
@@ -451,6 +453,67 @@
                         </div>
                     </div>
 
+                    <div class="col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <select class="form-control" name="state" id="state">
+                                <option>Select State</option>
+                                <option value="Alabama" {{ optional($bank)->state == 'Alabama' ? 'selected' : '' }}>Alabama</option>
+                                <option value="Alaska" {{ optional($bank)->state == 'Alaska' ? 'selected' : '' }}>Alaska</option>
+                                <option value="Arizona" {{ optional($bank)->state == 'Arizona' ? 'selected' : '' }}>Arizona</option>
+                                <option value="Arkansas" {{ optional($bank)->state == 'Arkansas' ? 'selected' : '' }}>Arkansas</option>
+                                <option value="California" {{ optional($bank)->state == 'California' ? 'selected' : '' }}>California</option>
+                                <option value="Colorado" {{ optional($bank)->state == 'Colorado' ? 'selected' : '' }}>Colorado</option>
+                                <option value="Connecticut" {{ optional($bank)->state == 'Connecticut' ? 'selected' : '' }}>Connecticut</option>
+                                <option value="Delaware" {{ optional($bank)->state == 'Delaware' ? 'selected' : '' }}>Delaware</option>
+                                <option value="District Of Columbia" {{ optional($bank)->state == 'District Of Columbia' ? 'selected' : '' }}>District Of Columbia</option>
+                                <option value="Florida" {{ optional($bank)->state == 'Florida' ? 'selected' : '' }}>Florida</option>
+                                <option value="Georgia" {{ optional($bank)->state == 'Georgia' ? 'selected' : '' }}>Georgia</option>
+                                <option value="Hawaii" {{ optional($bank)->state == 'Hawaii' ? 'selected' : '' }}>Hawaii</option>
+                                <option value="Idaho" {{ optional($bank)->state == 'Idaho' ? 'selected' : '' }}>Idaho</option>
+                                <option value="Illinois" {{ optional($bank)->state == 'Illinois' ? 'selected' : '' }}>Illinois</option>
+                                <option value="Indiana" {{ optional($bank)->state == 'Indiana' ? 'selected' : '' }}>Indiana</option>
+                                <option value="Iowa" {{ optional($bank)->state == 'Iowa' ? 'selected' : '' }}>Iowa</option>
+                                <option value="Kansas" {{ optional($bank)->state == 'Kansas' ? 'selected' : '' }}>Kansas</option>
+                                <option value="Kentucky" {{ optional($bank)->state == 'Kentucky' ? 'selected' : '' }}>Kentucky</option>
+                                <option value="Louisiana" {{ optional($bank)->state == 'Louisiana' ? 'selected' : '' }}>Louisiana</option>
+                                <option value="Maine" {{ optional($bank)->state == 'Maine' ? 'selected' : '' }}>Maine</option>
+                                <option value="Maryland" {{ optional($bank)->state == 'Maryland' ? 'selected' : '' }}>Maryland</option>
+                                <option value="Massachusetts" {{ optional($bank)->state == 'Massachusetts' ? 'selected' : '' }}>Massachusetts</option>
+                                <option value="Michigan" {{ optional($bank)->state == 'Michigan' ? 'selected' : '' }}>Michigan</option>
+                                <option value="Minnesota" {{ optional($bank)->state == 'Minnesota' ? 'selected' : '' }}>Minnesota</option>
+                                <option value="Mississippi" {{ optional($bank)->state == 'Mississippi' ? 'selected' : '' }}>Mississippi</option>
+                                <option value="Missouri" {{ optional($bank)->state == 'Missouri' ? 'selected' : '' }}>Missouri</option>
+                                <option value="Montana" {{ optional($bank)->state == 'Montana' ? 'selected' : '' }}>Montana</option>
+                                <option value="Nebraska" {{ optional($bank)->state == 'Nebraska' ? 'selected' : '' }}>Nebraska</option>
+                                <option value="Nevada" {{ optional($bank)->state == 'Nevada' ? 'selected' : '' }}>Nevada</option>
+                                <option value="New Hampshire" {{ optional($bank)->state == 'New Hampshire' ? 'selected' : '' }}>New Hampshire</option>
+                                <option value="New Jersey" {{ optional($bank)->state == 'New Jersey' ? 'selected' : '' }}>New Jersey</option>
+                                <option value="New Mexico" {{ optional($bank)->state == 'New Mexico' ? 'selected' : '' }}>New Mexico</option>
+                                <option value="New York" {{ optional($bank)->state == 'New York' ? 'selected' : '' }}>New York</option>
+                                <option value="North Carolina" {{ optional($bank)->state == 'North Carolina' ? 'selected' : '' }}>North Carolina</option>
+                                <option value="North Dakota" {{ optional($bank)->state == 'North Dakota' ? 'selected' : '' }}>North Dakota</option>
+                                <option value="Ohio" {{ optional($bank)->state == 'Ohio' ? 'selected' : '' }}>Ohio</option>
+                                <option value="Oklahoma" {{ optional($bank)->state == 'Oklahoma' ? 'selected' : '' }}>Oklahoma</option>
+                                <option value="Oregon" {{ optional($bank)->state == 'Oregon' ? 'selected' : '' }}>Oregon</option>
+                                <option value="Pennsylvania" {{ optional($bank)->state == 'Pennsylvania' ? 'selected' : '' }}>Pennsylvania</option>
+                                <option value="Rhode Island" {{ optional($bank)->state == 'Rhode Island' ? 'selected' : '' }}>Rhode Island</option>
+                                <option value="South Carolina" {{ optional($bank)->state == 'South Carolina' ? 'selected' : '' }}>South Carolina</option>
+                                <option value="South Dakota" {{ optional($bank)->state == 'South Dakota' ? 'selected' : '' }}>South Dakota</option>
+                                <option value="Tennessee" {{ optional($bank)->state == 'Tennessee' ? 'selected' : '' }}>Tennessee</option>
+                                <option value="Texas" {{ optional($bank)->state == 'Texas' ? 'selected' : '' }}>Texas</option>
+                                <option value="Utah" {{ optional($bank)->state == 'Utah' ? 'selected' : '' }}>Utah</option>
+                                <option value="Vermont" {{ optional($bank)->state == 'Vermont' ? 'selected' : '' }}>Vermont</option>
+                                <option value="Virginia" {{ optional($bank)->state == 'Virginia' ? 'selected' : '' }}>Virginia</option>
+                                <option value="Washington" {{ optional($bank)->state == 'Washington' ? 'selected' : '' }}>Washington</option>
+                                <option value="West Virginia"{{ optional($bank)->state == 'West Virginia' ? 'selected' : '' }}>West Virginia</option>
+                                <option value="Wisconsin" {{ optional($bank)->state == 'Wisconsin' ? 'selected' : '' }}>Wisconsin</option>
+                                <option value="Wyoming" {{ optional($bank)->state == 'Wyoming' ? 'selected' : '' }}>Wyoming</option>
+                                </select>
+                            
+                            <label for="state" class="wizard-form-text-label">7. State</label>
+                            <p class="text_danger form_error"></p>
+                        </div>
+                    </div>
                     <div class="col-md-6 col-lg-6">
                         <div class="form-group">
                             <label for="fi_operate_accross_state">8. Does Your FI Operate Across State Lines?</label>
@@ -810,7 +873,7 @@
 
 
                     </div>
-
+                    <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <div class="form-group">
                             <input name="bank_identification_no" type="number" class="form-control wizard-required"
@@ -835,13 +898,13 @@
                             <p class="text_danger form_error"></p>
                         </div>
                     </div>
-
+                    </div>
                     <div class="col-md-12 col-lg-12">
                         <div class="form-group">
                             <label style="font-weight:bold; font-size:150%">13. What is portfolio size?</label>
                         </div>
                     </div>
-                    
+                    <div class="row">  
                     <div class="col-md-6 col-lg-6">
                         <div class="form-group">
                             <input name="mortage_loans" type="number" class="form-control wizard-required"
@@ -884,6 +947,7 @@
                             <textarea name="help_description" class="form-control wizard-required" id="help_description">{{ !empty($bank) ? $bank->help_description : '' }}</textarea>
                             <p class="text_danger form_error"></p>
                         </div>
+                    </div>
                     </div>
                     
                     <div class="form-group clearfix">

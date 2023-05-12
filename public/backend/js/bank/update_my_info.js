@@ -56,6 +56,9 @@ $("#update_my_info_form").validate({
             required:true,
             maxlength: 10,
         },
+        state:{
+            required:true,
+        },
         help_description:{
             required:true,
             maxlength: 500,

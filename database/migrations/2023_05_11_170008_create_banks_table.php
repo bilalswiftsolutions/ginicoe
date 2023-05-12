@@ -98,6 +98,7 @@ return new class extends Migration
             $table->string('mortage_loans')->nullable(0);
             $table->string('credit_card')->nullable(0);
             $table->string('debit_card')->nullable(0);
+            $table->string('state')->nullable(0);
             $table->string('wealth_advisor')->nullable(0);
             $table->text('help_description')->nullable();
 
