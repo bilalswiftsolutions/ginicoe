@@ -681,7 +681,7 @@ Route::group(['prefix' => 'admin/consumer', 'middleware' => ['2fa', 'consumer']]
 
 });
 
-Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa','merchant']], function () {
+Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa']], function () {
     Route::get('/update-my-info', [UpdateMyInfoController::class, 'index'])->name('admin.merchant.update_my_info');
     Route::post('/update-my-info', [UpdateMyInfoController::class, 'store'])->name('admin.merchant.update_my_info.store');
 
