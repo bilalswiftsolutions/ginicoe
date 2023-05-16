@@ -40,6 +40,7 @@ class UpdateMyInfoController extends Controller
                 'zip_physical',
                 'state_physical',
                 'city_physical',
+                'business_description',
                 'first_name',
                 'mi',
                 'last_name',

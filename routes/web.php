@@ -48,6 +48,7 @@ use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\WhyChooseController;
 use App\Http\Controllers\Admin\JobController as JobControllerForAdmin;
 use App\Http\Controllers\Admin\FaqController as FaqControllerForAdmin;
+use App\Http\Controllers\Admin\Govt\UpdateMyInfoController as GovtUpdateMyInfoController;
 use App\Http\Controllers\Admin\Merchant\UpdateMyInfoController;
 use App\Http\Controllers\Admin\ProductController as ProductControllerForAdmin;
 use App\Http\Controllers\Admin\OrderController as OrderControllerForAdmin;
@@ -690,5 +691,11 @@ Route::group(['prefix' => 'admin/merchant', 'middleware' => ['2fa','merchant']],
 Route::group(['prefix' => 'admin/bank', 'middleware' => ['2fa','bank']], function () {
     Route::get('/update-my-info', [BankUpdateMyInfoController::class, 'index'])->name('admin.bank.update_my_info');
     Route::post('/update-my-info', [BankUpdateMyInfoController::class, 'store'])->name('admin.bank.update_my_info.store');
+
+});
+
+Route::group(['prefix' => 'admin/govt', 'middleware' => ['2fa','govt']], function () {
+    Route::get('/update-my-info', [GovtUpdateMyInfoController::class, 'index'])->name('admin.govt.update_my_info');
+    Route::post('/update-my-info', [GovtUpdateMyInfoController::class, 'store'])->name('admin.govt.update_my_info.store');
 
 });

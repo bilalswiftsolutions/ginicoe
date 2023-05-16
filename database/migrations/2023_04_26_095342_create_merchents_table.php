@@ -83,13 +83,13 @@ class CreateMerchentsTable extends Migration
             $table->boolean('card_data_store_third_party_only')->default(0);
             $table->boolean('card_data_store_both')->default(0);
             $table->boolean('pci_dss_compliant')->default(0);
-
+            $table->string('business_description')->nullable();
             $table->string('qsa_name')->nullable();
             $table->date('compliance_date')->nullable();
             $table->date('last_scan_date')->nullable();
-            
+
             $table->text('help_description')->nullable();
-        
+
 
 
             $table->timestamps();

@@ -61,7 +61,7 @@ $("#update_my_info_form").validate({
         },
         help_description:{
             required:true,
-            maxlength: 500,
+            maxlength: 140,
         },
         bank_identification_no:{
             required:true,

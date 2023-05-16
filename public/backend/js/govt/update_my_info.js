@@ -1062,76 +1062,6 @@ var cities_by_state = {
     Vermont: ["Burlington"],
 };
 
-$("#state_physical").change(function () {
-    var state = $(this).val();
-    var cities = cities_by_state[state];
-
-    // Clear the city select and add the default option
-    $("#city_physical")
-        .empty()
-        .append('<option value="">Select a city</option>');
-
-    // Populate the city select with options based on the selected state
-    // $("#city").append("<option selected></option>");
-    $.each(cities, function (index, city) {
-        $("#city_physical").append(
-            `<option value="${city}">` + city + "</option>"
-        );
-    });
-});
-
-$("#ownership_state").change(function () {
-    var state = $(this).val();
-    var cities = cities_by_state[state];
-
-    // Clear the city select and add the default option
-    $("#ownership_city")
-        .empty()
-        .append('<option value="">Select a city</option>');
-
-    // Populate the city select with options based on the selected state
-    // $("#city").append("<option selected></option>");
-    $.each(cities, function (index, city) {
-        $("#ownership_city").append(
-            `<option value="${city}">` + city + "</option>"
-        );
-    });
-});
-
-$("#bank_account_manager_state").change(function () {
-    var state = $(this).val();
-    var cities = cities_by_state[state];
-
-    // Clear the city select and add the default option
-    $("#bank_account_manager_city")
-        .empty()
-        .append('<option value="">Select a city</option>');
-
-    // Populate the city select with options based on the selected state
-    // $("#city").append("<option selected></option>");
-    $.each(cities, function (index, city) {
-        $("#bank_account_manager_city").append(
-            `<option value="${city}">` + city + "</option>"
-        );
-    });
-});
-
-$("#state_legal").change(function () {
-    var state = $(this).val();
-    var cities = cities_by_state[state];
-
-    // Clear the city select and add the default option
-    $("#city_legal").empty().append('<option value="">Select a city</option>');
-
-    // Populate the city select with options based on the selected state
-    // $("#city").append("<option selected></option>");
-    $.each(cities, function (index, city) {
-        $("#city_legal").append(
-            `<option value="${city}">` + city + "</option>"
-        );
-    });
-});
-
 $.validator.addMethod(
     "zipcode",
     function (value) {
@@ -1146,9 +1076,6 @@ $.validator.addMethod(
     },
     "Use only Char"
 );
-$.validator.addMethod("alphanumericSpecial", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z0-9\s\.,\-_'"]*$/.test(value);
-  }, "Please enter a valid input.");
 
 $("#update_my_info_form").validate({
     errorPlacement: function (error, element) {
@@ -1161,607 +1088,94 @@ $("#update_my_info_form").validate({
         }
     },
     rules: {
-        business_legal_name: {
-            required: true,
+        
+        first_name:{
+            required:true,
             maxlength: 20,
         },
-        business_dba_name: {
+
+        last_name:{
+            required:true,
             maxlength: 20,
         },
-        business_legal_address: {
-            maxlength: 40,
-            required: true,
+        
+        help_description:{
+            required:true,
+            maxlength: 140,
         },
-        state_legal: {
-            required: true,
-            maxlength: 20,
+        title:{
+            required:true,
+
         },
-        city_legal: {
-            required: true,
-            maxlength: 20,
+        building_no:{
+            required:true,
         },
-        zip_legal: {
-            required: true,
-            zipcode: true,
+        street_name:{
+            required:true,
+            maxlength:30,
         },
-        business_physical_address: {
-            maxlength: 40,
+        urbanization_name:{
+            required:true,
+          
         },
-        zip_physical: {
-            zipcode: true,
+        state:{
+            required:true,
+            
         },
-        state_physical: {
-            maxlength: 20,
+
+        city:{
+            required:true,
+           
         },
-        city_physical: {
-            maxlength: 20,
+        county:{
+            required:true,
+            maxlength:30,
         },
-        first_name: {
-            maxlength: 20,
+
+        zipcode:{
+            required:true,
+           
+            zipcode:true,
+
         },
-        mi: {
-            maxlength: 1,
-        },
-        last_name: {
-            maxlength: 20,
-        },
-        telephone_number: {
-            maxlength: 11,
-        },
-        toll_free_number: {
-            maxlength: 10,
-        },
-        fax_number: {
-            maxlength: 10,
-        },
-        mobile_phone: {
-            maxlength: 13,
-        },
-        email_address: {
-            email: true,
-            maxlength: 30,
-            noemail:true,
-        },
-        federal_tax_id: {
-            maxlength: 9,
-        },
-        owner_partner:{
-            maxlength:20,
-        },
-        ownership_first_name:{
-            maxlength:20,
-        },
-        ownership_mi:{
-            maxlength:1,
-        },
-        ownership_last_name:{
-            maxlength:20,
-        },
-        ownership_ssn:{
-            maxlength:9,
-        },
-        ownership_title:{
-            maxlength:20,
-        },
-        ownership_telephone:{
-            maxlength: 11,
-        },
-        ownership_percentage:{
+        country_code:{
+            required:true,
             maxlength:3,
-            digits:true,
         },
-        ownership_dob:{
-            date:true,
+         street_name:{
+            required:true,
+            maxlength:30,
         },
-        ownership_home_address:{
-            maxlength:40,
-        },
-        ownership_state:{
-            maxlength:20,
 
-        },
-        ownership_city:{
-            maxlength:20,
-        },
-        ownership_zip:{
-            zipcode:true,
-        },
-        business_structure:{
-            maxlength:20,
-        },
-        num_employees:{
-            maxlength:25,
-        },
-        sales_per_month:{
-            maxlength:25,
-
-        },
-        bank_name:{
-            maxlength:20,
-        },
-        bank_account_manager_fn:{
-            maxlength:20,
-        },
-        bank_account_manager_ln:{
-            maxlength:20,
-        },
-        bank_account_manager_address:{
-            maxlength:20,
-        },
-        bank_account_manager_state:{
-            maxlength:20,
-        },
-        bank_account_manager_city:{
-            maxlength:20,
-
-        },
-        bank_account_manager_postal_code:{
-            zipcode:true,
-        },
-        bank_account_manager_telephone_number:{
+        primary_telephone_no:{
+            required:true,
             maxlength:11,
         },
-        bank_account_manager_email:{
-            email:true,
-            maxlength:35,
-            noemail:true,
-        },
-        ein_number:{
-            maxlength:9,
-        },
-        primary_line_of_business:{
-            maxlength:20,
-        },
-        merchant_duns_number:{
-            maxlength:9,
-        },
-        pos_estimated_number:{
-            maxlength:3,
-        },
-        pos_manufacturer:{
-            maxlength:50,
-        },
-        when:{
-            maxlength:20,
-        },
-        third_party_vendor:{
-            maxlength:20,
-        },
-        third_party_name:{
-            maxlength:20,
-        },
-        third_party_version:{
-            maxlength:20,
-        },
-        third_party_name_transactions:{
-            maxlength:20,
-        },
-        qsa_name:{
-            maxlength:20
-        },
-        compliance_date:{
-            date:true,
-        },
-        last_scan_date:{
-            date:true,
-        },
-        help_description:{
-            maxlength:140,
-            alphanumericSpecial:true,
-        },
 
+        agency_name:{
+            required:true,
+            maxlength:30,
+        },
+      
+
+       
+
+
+        
     },
     messages: {},
-
-   
-    
 });
 
- function getinput()
-{
-    console.log('as')
-    $("input").each(function() {
-        if (!$(this).valid()) {
+$("#state").change(function () {
+    var state = $(this).val();
+    var cities = cities_by_state[state];
 
-          console.log("Field not valid: " + $(this).attr("name"));
-        }
-      });
-}
+    // Clear the city select and add the default option
+    $("#city").empty().append('<option value="">Select a city</option>');
 
-// legal business address
-$("#business_legal_address").keyup(function(){
-var searchInput = 'business_legal_address';
-var autocomplete;
-autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    types: ['geocode'],
-    componentRestrictions: {country: 'US'} ,
-});
-var componentForm = {
-    street_number: "short_name",
-    route: "long_name",
-    locality: "long_name",
-    administrative_area_level_1: "short_name",
-    country: 'long_name',
-    postal_code: "short_name"
-};
-console.log('hell',autocomplete)
-var city, state, country, postalCode, county, streetName, district,town,hamlet,urbanization_name;
-
-google.maps.event.addListener(autocomplete, 'place_changed', function () {
-    var place = autocomplete.getPlace();
-    console.log(place)
- 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
-      if (status === 'OK') {
-        if (results[0]) {
-          var addressComponents = results[0].address_components;
-          for (var i = 0; i < addressComponents.length; i++) {
-            if (addressComponents[i].types[0] == 'locality') {
-              var city = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
-              var state = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'country') {
-              var country = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'postal_code') {
-                var postcode = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'administrative_area_level_2') {
-                var county = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'route') {
-                var street = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'sublocality_level_1') {
-                var district = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
-                town = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'sublocality_level_3') {
-                hamlet = addressComponents[i].long_name;
-              }
-              
-          }
-         
-          $('#zip_legal').val(postcode);
-          $('#state_legal').append($('<option>', {
-            value: state,
-            text: state,
-            selected: true
-        }));
-        if(state !== undefined)
-        {
-            var state = $('#state').val();
-            var cities = cities_by_state[state];
-        
-            // Clear the city select and add the default option
-            $("#city_legal").empty().append('<option value="">Select a city</option>');
-        
-            // Populate the city select with options based on the selected state
-            // $("#city").append("<option selected></option>");
-            $.each(cities, function (index, city_) {
-                $("#city_legal").append(`<option value="${city_}">` + city_ + "</option>");
-            });
-            
-        $('#city_legal').append($('<option>', {
-            value: city,
-            text: city,
-            selected: true
-        }));
-        }
-
-        jQuery('#state_legal').parent().addClass("focus-input");
-
-        jQuery('#city_legal').parent().addClass("focus-input");
-        jQuery('#zip_legal').parent().addClass("focus-input");  
-          
-        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street,'district '+district);
-        } else {
-          alert('No results found');
-        }
-      } else {
-        alert('Geocoder failed due to: ' + status);
-      }
+    // Populate the city select with options based on the selected state
+    // $("#city").append("<option selected></option>");
+    $.each(cities, function (index, city) {
+        $("#city").append(`<option value="${city}">` + city + "</option>");
     });
-    $("#latitude").val(place.geometry["location"].lat());
-    $("#longitude").val(place.geometry["location"].lng());
-    // document.getElementById('loc_lat').value = near_place.geometry.location.lat();
-    // document.getElementById('loc_long').value = near_place.geometry.location.lng();
-    
-    // document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
-    // document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
 });
-});
-//
-
-
-
-//physical address
-$("#business_physical_address").keyup(function(){
-var searchInput = 'business_physical_address';
-var autocomplete;
-autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    types: ['geocode'],
-    componentRestrictions: {country: 'US'} ,
-});
-var componentForm = {
-    street_number: "short_name",
-    route: "long_name",
-    locality: "long_name",
-    administrative_area_level_1: "short_name",
-    country: 'long_name',
-    postal_code: "short_name"
-};
-
-var city, state, country, postalCode, county, streetName, district,town,hamlet,urbanization_name;
-
-google.maps.event.addListener(autocomplete, 'place_changed', function () {
-    var place = autocomplete.getPlace();
- 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
-      if (status === 'OK') {
-        if (results[0]) {
-          var addressComponents = results[0].address_components;
-          for (var i = 0; i < addressComponents.length; i++) {
-            if (addressComponents[i].types[0] == 'locality') {
-              var city = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
-              var state = addressComponents[i].long_name;
-            }
-        
-            if (addressComponents[i].types[0] == 'postal_code') {
-                var postcode = addressComponents[i].long_name;
-              }
-           
-              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
-                town = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'sublocality_level_3') {
-                hamlet = addressComponents[i].long_name;
-              }
-              
-          }
-         
-          $('#zip_physical').val(postcode);
-          $('#state_physical').append($('<option>', {
-            value: state,
-            text: state,
-            selected: true
-        }));
-        if(state !== undefined)
-        {
-            var state = $('#state_physical').val();
-            var cities = cities_by_state[state];
-        
-            // Clear the city select and add the default option
-            $("#city_physical").empty().append('<option value="">Select a city</option>');
-        
-            // Populate the city select with options based on the selected state
-            // $("#city").append("<option selected></option>");
-            $.each(cities, function (index, city_) {
-                $("#city_physical").append(`<option value="${city_}">` + city_ + "</option>");
-            });
-            
-        $('#city_physical').append($('<option>', {
-            value: city,
-            text: city,
-            selected: true
-        }));
-        }
-
-        jQuery('#state_physical').parent().addClass("focus-input");
-
-        jQuery('#city_physical').parent().addClass("focus-input");
-        jQuery('#zip_physical').parent().addClass("focus-input");  
-          
-        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street,'district '+district);
-        } else {
-          alert('No results found');
-        }
-      } else {
-        alert('Geocoder failed due to: ' + status);
-      }
-    });
-
-   
-});
-});
-///
-
-
-//home address
-$("#ownership_home_address").keyup(function(){
-var searchInput = 'ownership_home_address';
-var autocomplete;
-autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    types: ['geocode'],
-    componentRestrictions: {country: 'US'} ,
-});
-var componentForm = {
-    street_number: "short_name",
-    route: "long_name",
-    locality: "long_name",
-    administrative_area_level_1: "short_name",
-    country: 'long_name',
-    postal_code: "short_name"
-};
-
-var city, state, country, postalCode, county, streetName, district,town,hamlet,urbanization_name;
-
-google.maps.event.addListener(autocomplete, 'place_changed', function () {
-    var place = autocomplete.getPlace();
- 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
-      if (status === 'OK') {
-        if (results[0]) {
-          var addressComponents = results[0].address_components;
-          for (var i = 0; i < addressComponents.length; i++) {
-            if (addressComponents[i].types[0] == 'locality') {
-              var city = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
-              var state = addressComponents[i].long_name;
-            }
-        
-            if (addressComponents[i].types[0] == 'postal_code') {
-                var postcode = addressComponents[i].long_name;
-              }
-           
-              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
-                town = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'sublocality_level_3') {
-                hamlet = addressComponents[i].long_name;
-              }
-              
-          }
-         
-          $('#ownership_zip').val(postcode);
-          $('#ownership_state').append($('<option>', {
-            value: state,
-            text: state,
-            selected: true
-        }));
-        if(state !== undefined)
-        {
-            var state = $('#ownership_state').val();
-            var cities = cities_by_state[state];
-        
-            // Clear the city select and add the default option
-            $("#ownership_city").empty().append('<option value="">Select a city</option>');
-        
-            // Populate the city select with options based on the selected state
-            // $("#city").append("<option selected></option>");
-            $.each(cities, function (index, city_) {
-                $("#ownership_city").append(`<option value="${city_}">` + city_ + "</option>");
-            });
-            
-        $('#ownership_city').append($('<option>', {
-            value: city,
-            text: city,
-            selected: true
-        }));
-        }
-
-        jQuery('#ownership_state').parent().addClass("focus-input");
-
-        jQuery('#ownership_city').parent().addClass("focus-input");
-        jQuery('#ownership_zip').parent().addClass("focus-input");  
-          
-        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street,'district '+district);
-        } else {
-          alert('No results found');
-        }
-      } else {
-        alert('Geocoder failed due to: ' + status);
-      }
-    });
-
-   
-});
-});
-//
-
-
-
-//account manager address
-$("#bank_account_manager_address").keyup(function(){
-  
-var searchInput = 'bank_account_manager_address';
-var autocomplete;
-autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    types: ['geocode'],
-    componentRestrictions: {country: 'US'} ,
-});
-var componentForm = {
-    street_number: "short_name",
-    route: "long_name",
-    locality: "long_name",
-    administrative_area_level_1: "short_name",
-    country: 'long_name',
-    postal_code: "short_name"
-};
-
-var city, state, country, postalCode, county, streetName, district,town,hamlet,urbanization_name;
-
-google.maps.event.addListener(autocomplete, 'place_changed', function () {
-    var place = autocomplete.getPlace();
- 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'placeId': place.place_id}, function(results, status) {
-      if (status === 'OK') {
-        if (results[0]) {
-          var addressComponents = results[0].address_components;
-          for (var i = 0; i < addressComponents.length; i++) {
-            if (addressComponents[i].types[0] == 'locality') {
-              var city = addressComponents[i].long_name;
-            }
-            if (addressComponents[i].types[0] == 'administrative_area_level_1') {
-              var state = addressComponents[i].long_name;
-            }
-        
-            if (addressComponents[i].types[0] == 'postal_code') {
-                var postcode = addressComponents[i].long_name;
-              }
-           
-              if (addressComponents[i].types[0] == 'administrative_area_level_3') {
-                town = addressComponents[i].long_name;
-              }
-              if (addressComponents[i].types[0] == 'sublocality_level_3') {
-                hamlet = addressComponents[i].long_name;
-              }
-              
-          }
-         
-          $('#bank_account_manager_zipcode').val(postcode);
-          $('#bank_account_manager_state').append($('<option>', {
-            value: state,
-            text: state,
-            selected: true
-        }));
-        if(state !== undefined)
-        {
-            var state = $('#bank_account_manager_state').val();
-            var cities = cities_by_state[state];
-        
-            // Clear the city select and add the default option
-            $("#bank_account_manager_city").empty().append('<option value="">Select a city</option>');
-        
-            // Populate the city select with options based on the selected state
-            // $("#city").append("<option selected></option>");
-            $.each(cities, function (index, city_) {
-                $("#bank_account_manager_city").append(`<option value="${city_}">` + city_ + "</option>");
-            });
-            
-        $('#bank_account_manager_city').append($('<option>', {
-            value: city,
-            text: city,
-            selected: true
-        }));
-        }
-
-        jQuery('#bank_account_manager_state').parent().addClass("focus-input");
-
-        jQuery('#bank_account_manager_city').parent().addClass("focus-input");
-        jQuery('#bank_account_manager_zipcode').parent().addClass("focus-input");  
-          
-        //   console.log('urbanization_name '+urbanization_name,'hamlet '+hamlet,'town '+town,'city '+city, 'state '+state, 'country '+country,'county '+county,'street '+street,'district '+district);
-        } else {
-          alert('No results found');
-        }
-      } else {
-        alert('Geocoder failed due to: ' + status);
-      }
-    });
-
-   
-});
-});
-//

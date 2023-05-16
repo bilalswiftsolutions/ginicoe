@@ -14,8 +14,7 @@
                             <div class="form-group">
                                 <input name="business_legal_name" value="{{optional($merchant)->business_legal_name ?? ''}}" type="text"
                                     class="form-control wizard-required" id="business_legal_name">
-                                <label for="business_legal_name" class="wizard-form-text-label">1. Business Legal
-                                    Name</label>
+                                <label for="business_legal_name" class="wizard-form-text-label">1. Business Legal Coordinates</label>
                                 <p class="text_danger form_error"></p>
                             </div>
                         </div>
@@ -232,7 +231,7 @@
                             <div class="form-group">
                                 <input name="first_name"   value="{{optional($merchant)->first_name ?? ''}}" type="text"
                                     class="form-control wizard-required" id="first_name">
-                                <label for="first_name" class="wizard-form-text-label">11. First Name</label>
+                                <label for="first_name" class="wizard-form-text-label">11. First Name of New Member</label>
                                 <p class="text_danger form_error"></p>
                             </div>
                         </div>
@@ -313,7 +312,7 @@
 
                         <div class="col-md-12 col-lg-12">
                             <div class="form-group">
-                                <label style="font-weight:bold; font-size:150%">Ownership Information?
+                                <label style="font-weight:bold; font-size:150%">Ownership Information
                                 </label>
 
                             </div>
@@ -563,7 +562,7 @@
                                     <option value="75000_100000" {{ optional($merchant)->sales_per_month == '75000_100000' ? 'selected' : '' }}>$75000-$100000</option>
                                     <option value="100000_plus" {{ optional($merchant)->sales_per_month == '100000_plus' ? 'selected' : '' }}>$100000+</option>
                                 </select>
-                                <label for="sales_per_month" class="wizard-form-text-label">36. What are your sales in
+                                <label for="sales_per_month" class="wizard-form-text-label">36. What are your sales in U.S. Dollars per month?
                                 </label>
                             </div>
                         </div>
@@ -794,9 +793,52 @@
                                     class="form-control wizard-required" id="merchant_duns_number" pattern="[0-9]{9}">
                             </div>
                         </div>
+                        <div class="col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <label style="font-weight:bold; font-size:150%">POINT OF SALE INFO
+                                </label>
+
+                            </div>
+                        </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="pos_estimated_number" class="wizard-form-text-label">53. What is the Estimated
+                                <label for="business_description" class="wizard-form-text-label">53. What Industry best describes your business?</label>
+                                <select name="business_description" class="form-control wizard-required"
+                                id="business_description">
+                                <option value="accommodation_and_food_services" @if (!empty($merchant) && $merchant->business_description == 'accommodation_and_food_services') selected @endif>Accommodation and Food Services</option>
+                                <option value="administrative_and_support_and_waste_management_and_remediation_services" @if (!empty($merchant) && $merchant->business_description == 'administrative_and_support_and_waste_management_and_remediation_services') selected @endif>Administrative and Support and Waste Management and Remediation Services</option>
+                                <option value="agriculture" @if (!empty($merchant) && $merchant->business_description == 'agriculture') selected @endif>Agriculture</option>
+                                <option value="arts_entertainment_and_recreation" @if (!empty($merchant) && $merchant->business_description == 'arts_entertainment_and_recreation') selected @endif>Arts, Entertainment and Recreation</option>
+                                <option value="electric" @if (!empty($merchant) && $merchant->business_description == 'electric') selected @endif>Electric</option>
+                                <option value="gas" @if (!empty($merchant) && $merchant->business_description == 'gas') selected @endif>Gas</option>
+                                <option value="solar_water_and_sewage" @if (!empty($merchant) && $merchant->business_description == 'solar_water_and_sewage') selected @endif>Solar water and sewage <sub ddm></option>
+                                <option value="wind" @if (!empty($merchant) && $merchant->business_description == 'wind') selected @endif>Wind <sub ddm></option>
+                                <option value="construction" @if (!empty($merchant) && $merchant->business_description == 'construction') selected @endif>Construction</option>
+                                <option value="educational_services" @if (!empty($merchant) && $merchant->business_description == 'educational_services') selected @endif>Educational Services</option>
+                                <option value="finance_and_insurance" @if (!empty($merchant) && $merchant->business_description == 'finance_and_insurance') selected @endif>Finance and Insurance</option>
+                                <option value="fishing_and_forestry" @if (!empty($merchant) && $merchant->business_description == 'fishing_and_forestry') selected @endif>Fishing, and Forestry</option>
+                                <option value="health_care_and_social_assistance" @if (!empty($merchant) && $merchant->business_description == 'health_care_and_social_assistance') selected @endif>Health Care and Social Assistance</option>
+                                <option value="hunting" @if (!empty($merchant) && $merchant->business_description == 'hunting') selected @endif>Hunting</option>
+                                <option value="information_technology" @if (!empty($merchant) && $merchant->business_description == 'information_technology') selected @endif>Information Technology</option>
+                                <option value="management_of_companies" @if (!empty($merchant) && $merchant->business_description == 'management_of_companies') selected @endif>Management of Companies (holding companies)</option>
+                                <option value="manufacturing" @if (!empty($merchant) && $merchant->business_description == 'manufacturing') selected @endif>Manufacturing</option>
+                                <option value="mining" @if (!empty($merchant) && $merchant->business_description == 'mining') selected @endif>Mining</option>
+                                <option value="other_services" @if (!empty($merchant) && $merchant->business_description == 'other_services') selected @endif>Other Services</option>
+                                <option value="professional_scientific_and_technical_services" @if (!empty($merchant) && $merchant->business_description == 'professional_scientific_and_technical_services') selected @endif>Professional, Scientific, and Technical Services</option>
+                                <option value="real_estate_and_rental_and_leasing" @if (!empty($merchant) && $merchant->business_description == 'real_estate_and_rental_and_leasing') selected @endif>Real-estate and Rental and Leasing</option>
+                                <option value="retail_trade" @if (!empty($merchant) && $merchant->business_description == 'retail_trade') selected @endif>Retail Trade</option>
+                                <option value="transportation_and_warehousing" @if (!empty($merchant) && $merchant->business_description == 'transportation_and_warehousing') selected @endif>Transportation and Warehousing</option>
+                                <option value="travel" @if (!empty($merchant) && $merchant->business_description == 'travel') selected @endif>Travel</option>
+                                <option value="utilities" @if (!empty($merchant) && $merchant->business_description == 'utilities') selected @endif>Utilities</option>
+                                <option value="utility_company" @if (!empty($merchant) && $merchant->business_description == 'utility_company') selected @endif>Utility Company</option>
+                                <option value="wholesale_trade" @if (!empty($merchant) && $merchant->business_description == 'wholesale_trade') selected @endif>Wholesale Trade</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="pos_estimated_number" class="wizard-form-text-label">54. What is the Estimated
                                     number of POS?</label>
                                 <input name="pos_estimated_number" value="{{optional($merchant)->pos_estimated_number ?? ''}}" type="number"
                                     class="form-control wizard-required" id="pos_estimated_number" min="1"
@@ -806,7 +848,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="pos_manufacturer" class="wizard-form-text-label">54. Who is your POS
+                                <label for="pos_manufacturer" class="wizard-form-text-label">55. Who is your POS
                                     Manufacturer?</label>
                                 <select name="pos_manufacturer" class="form-control wizard-required"
                                     id="pos_manufacturer">
@@ -858,15 +900,16 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="when" class="wizard-form-text-label">55. If yes, When?</label>
-                                <input name="when"   value="{{optional($merchant)->when ?? ''}}" type="text" class="form-control wizard-required"
+                                <label for="when" class="wizard-form-text-label">56. Have you experienced an account data compromise?
+                                    If yes, when</label>
+                                <input name="when"   value="{{optional($merchant)->when ?? ''}}" type="date" class="form-control wizard-required"
                                     id="when">
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="use_pos">56. Do you use point of sale terminal hardware and software, or a PCI
+                                <label for="use_pos">57. Do you use point of sale terminal hardware and software, or a PCI
                                     DSS Certified Internet Gateway Provider, supplied by a merchant service provider, and do
                                     you confirm that you do not store cardholder data?</label>
                                 <div class="wizard-form-radio">
@@ -882,7 +925,7 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="third_party_vendor" class="wizard-form-text-label">57. If No, then what third
+                                <label for="third_party_vendor" class="wizard-form-text-label">58. If No, then what third
                                     party software company / vendor
                                     did you purchase your POS application from?</label>
                                 <input name="third_party_vendor"   value="{{optional($merchant)->third_party_vendor ?? ''}}" type="text"
@@ -892,7 +935,7 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="third_party_name" class="wizard-form-text-label">58. What is the name of the
+                                <label for="third_party_name" class="wizard-form-text-label">59. What is the name of the
                                     third party software?</label>
                                 <input name="third_party_name"   value="{{optional($merchant)->third_party_name ?? ''}}" type="text"
                                     class="form-control wizard-required" id="third_party_name">
@@ -901,16 +944,16 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="third_party_version" class="wizard-form-text-label">59. What version
+                                <label for="third_party_version" class="wizard-form-text-label">60. What version
                                     number?</label>
-                                <input name="third_party_version"   value="{{optional($merchant)->third_party_version ?? ''}}" type="text"
+                                <input name="third_party_version"   value="{{optional($merchant)->third_party_version ?? ''}}" type="number"
                                     class="form-control wizard-required" id="third_party_version">
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="transactions_third_party">60. Do your transactions process through any other
+                                <label for="transactions_third_party">61. Do your transactions process through any other
                                     third parties, web hosting companies or gateways?</label>
                                 <div class="wizard-form-radio">
                                     <input name="transactions_third_party"  @if(optional($merchant)->transactions_third_party == 1) checked  @endif value="1" id="transactions_yes"
@@ -927,7 +970,7 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="third_party_name_transactions" class="wizard-form-text-label">61. If yes, with
+                                <label for="third_party_name_transactions" class="wizard-form-text-label">62. If yes, with
                                     whom?</label>
                                 <input name="third_party_name_transactions"   value="{{optional($merchant)->third_party_name_transactions ?? ''}}" type="text"
                                     class="form-control wizard-required" id="third_party_name_transactions">
@@ -936,7 +979,7 @@
 
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="cardholder_data">62. Do you or your vendor - receive, pass, transmit or store -
+                                <label for="cardholder_data">63. Do you or your vendor - receive, pass, transmit or store -
                                     the full cardholder number, electronically?</label>
                                 <div class="wizard-form-radio">
                                     <input name="cardholder_data"  @if(optional($merchant)->cardholder_data == 1) checked  @endif value="1" id="cardholder_data_yes"
@@ -951,7 +994,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="card_data_store">63. If yes, where is the card data stored?</label>
+                                <label for="card_data_store">64. If yes, where is the card data stored?</label>
 
 
                             </div>
@@ -973,7 +1016,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="pci_dss_compliant">64. Are you or your vendor PCI/DSS compliant?</label>
+                                <label for="pci_dss_compliant">65. Are you or your vendor PCI/DSS compliant?</label>
                                 <div class="wizard-form-radio">
                                     <input name="pci_dss_compliant"  @if(optional($merchant)->pci_dss_compliant == 1) checked  @endif value="1" id="pci_dss_compliant_yes"
                                         type="radio">
@@ -988,7 +1031,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="qsa_name" class="wizard-form-text-label">65. What is the name of your
+                                <label for="qsa_name" class="wizard-form-text-label">66. What is the name of your
                                     Qualified Security Assessor?</label>
                                 <input name="qsa_name"   value="{{optional($merchant)->qsa_name ?? ''}}" type="text"
                                     class="form-control wizard-required" id="qsa_name">
@@ -997,7 +1040,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="compliance_date" class="wizard-form-text-label">66. Date of Compliance</label>
+                                <label for="compliance_date" class="wizard-form-text-label">67. Date of Compliance</label>
                                 <input name="compliance_date"   value="{{optional($merchant)->compliance_date ?? ''}}" type="date"
                                     class="form-control wizard-required" id="compliance_date">
                                 <p class="text_danger form_error"></p>
@@ -1005,15 +1048,15 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="form-group">
-                                <label for="last_scan_date" class="wizard-form-text-label">67. Date of last scan</label>
+                                <label for="last_scan_date" class="wizard-form-text-label">68. Date of last scan</label>
                                 <input name="last_scan_date"   value="{{optional($merchant)->last_scan_date ?? ''}}" type="date"
                                     class="form-control wizard-required" id="last_scan_date">
                                 <p class="text_danger form_error"></p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6">
+                        <div class="col-md-8 col-lg-8">
                             <div class="form-group">
-                                <label for="help_description" class="wizard-form-text-label">68. Describe in Detail How
+                                <label for="help_description" class="wizard-form-text-label">69. Describe in Detail How
                                     Ginicoe Can Help You.</label>
                                 <textarea name="help_description" class="form-control wizard-required" id="help_description">{{optional($merchant)->help_description ?? ''}}</textarea>
                                 <p class="text_danger form_error"></p>
@@ -1024,7 +1067,7 @@
                     </div>
                     <div class="form-group clearfix">
 
-                        <button class="form-wizard-next-btn float-right" style="color:white">Submit</button>
+                        <button class="btn btn-success float-right" style="color:white" onclick="getinput()">Submit</button>
                     </div>
                 </div>
 

@@ -212,6 +212,21 @@
         @endif
         @endif
         {{-- Bank::form page --}}
+          {{-- GOVT::form page --}}
+          @if(!empty($admin->role->role_name))
+          @if ($admin->role->role_name == 'Govt')
+  
+          <li class="nav-item @if($conName[2] == 'update-my-info') active @endif">
+              <a class="nav-link" href="{{ route('admin.govt.update_my_info') }}">
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>Update My Info</span>
+  
+              </a>
+          </li>
+  
+          @endif
+          @endif
+          {{-- GOVT::form page --}}
         @php $arr_one = array(); @endphp
         @if(session('role_id')!=1)
             @php
