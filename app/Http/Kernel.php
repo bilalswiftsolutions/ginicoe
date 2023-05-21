@@ -69,5 +69,7 @@ class Kernel extends HttpKernel
         'merchant' => \App\Http\Middleware\Merchant::class,
         'bank' => \App\Http\Middleware\Bank::class,
         'govt' => \App\Http\Middleware\Govt::class,
+        'education' => \App\Http\Middleware\Education::class,
+        'healthcare' => \App\Http\Middleware\Healthcare::class,
     ];
 }

@@ -36,6 +36,7 @@ use App\Http\Controllers\Admin\ProfileChangeController as ProfileChangeControlle
 use App\Http\Controllers\Admin\CategoryController as CategoryControllerForAdmin;
 use App\Http\Controllers\Admin\BlogController as BlogControllerForAdmin;
 use App\Http\Controllers\Admin\Consumer\ThisIsMeController;
+use App\Http\Controllers\Admin\Education\UpdateMyInfoController as EducationUpdateMyInfoController;
 use App\Http\Controllers\Admin\ProjectController as ProjectControllerForAdmin;
 use App\Http\Controllers\Admin\ServiceController as ServiceControllerForAdmin;
 use App\Http\Controllers\Admin\ShippingController;
@@ -49,6 +50,7 @@ use App\Http\Controllers\Admin\WhyChooseController;
 use App\Http\Controllers\Admin\JobController as JobControllerForAdmin;
 use App\Http\Controllers\Admin\FaqController as FaqControllerForAdmin;
 use App\Http\Controllers\Admin\Govt\UpdateMyInfoController as GovtUpdateMyInfoController;
+use App\Http\Controllers\Admin\Healthcare\UpdateMyInfoController as HealthcareUpdateMyInfoController;
 use App\Http\Controllers\Admin\Merchant\UpdateMyInfoController;
 use App\Http\Controllers\Admin\ProductController as ProductControllerForAdmin;
 use App\Http\Controllers\Admin\OrderController as OrderControllerForAdmin;
@@ -697,5 +699,17 @@ Route::group(['prefix' => 'admin/bank', 'middleware' => ['2fa','bank']], functio
 Route::group(['prefix' => 'admin/govt', 'middleware' => ['2fa','govt']], function () {
     Route::get('/update-my-info', [GovtUpdateMyInfoController::class, 'index'])->name('admin.govt.update_my_info');
     Route::post('/update-my-info', [GovtUpdateMyInfoController::class, 'store'])->name('admin.govt.update_my_info.store');
+
+});
+
+Route::group(['prefix' => 'admin/education', 'middleware' => ['2fa','education']], function () {
+    Route::get('/update-my-info', [EducationUpdateMyInfoController::class, 'index'])->name('admin.education.update_my_info');
+    Route::post('/update-my-info', [EducationUpdateMyInfoController::class, 'store'])->name('admin.education.update_my_info.store');
+
+});
+
+Route::group(['prefix' => 'admin/healthcare', 'middleware' => ['2fa','healthcare']], function () {
+    Route::get('/update-my-info', [HealthcareUpdateMyInfoController::class, 'index'])->name('admin.healthcare.update_my_info');
+    Route::post('/update-my-info', [HealthcareUpdateMyInfoController::class, 'store'])->name('admin.healthcare.update_my_info.store');
 
 });
